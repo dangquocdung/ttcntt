@@ -30,10 +30,10 @@ Route::get('/them-tin-tuc', 'HomeController@getThemTinTuc');
 Route::post('/them-tin-tuc', 'HomeController@postThemTintuc');
 
 Route::get('/', function () {
-    return view('welcome');
-    // $dichvu = DichVu::all();
-    // $doingu = User::all();
-    // return view('trangchu',['dichvu'=>$dichvu, 'doingu'=>$doingu]);
+    // return view('welcome');
+    $dichvu = DichVu::all();
+    $doingu = User::all();
+    return view('trangchu',['dichvu'=>$dichvu, 'doingu'=>$doingu]);
 });
 
 Route::get('/gioi-thieu', function () {
