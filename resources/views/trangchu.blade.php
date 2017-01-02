@@ -1,117 +1,60 @@
+@extends('flayout.index')
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="web design, web app, software">
-    <meta name="author" content="Đặng Quốc Dũng">
-      <title>Trung tâm CNTT & TT tỉnh Hà Tĩnh</title>
-    <base href="http://mysterious-hamlet-10437.herokuapp.com/">
-    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="css/jquery.eeyellow.Timeline.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/my.css">
-  </head>
 
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Laravel</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-              <li class="active"><a href="/">Trang chủ</a></li>
+
+@section('title')
+  <title>Trung tâm CNTT & TT tỉnh Hà Tĩnh</title>
+@endsection
+
+@section('menu-active')
+  <li class="active"><a href="/">Trang chủ</a></li>
   <li><a href="/gioi-thieu">Giới thiệu</a></li>
   <li><a href="/nang-luc">Năng lực</a></li>
   <li><a href="/dich-vu">Dịch vụ</a></li>
   <li><a href="/tin-tuc">Tin tức - Sự kiện</a></li>
   <li><a href="/lien-he">Liên hệ</a></li>
+@endsection
 
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li>
-                          <li ><a href="/login"><i class="fa fa-user"></i></a></li>
-                      </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+@section('content')
 
 <div class="showcase">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0"
-                  class="active"
-                ></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"
-                  class=""
-                ></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"
-                  class=""
-                ></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"
-                  class=""
-                ></li>
-            </ol>
+    <?php $i=0 ?>
+    @foreach ($dichvu as $dv)
+      <li data-target="#carousel-example-generic" data-slide-to="{{ $i }}"
+        @if ($i == 0)
+          class="active"
+        @else
+          class=""
+        @endif
+        ></li>
+      <?php $i++ ?>
+    @endforeach
+  </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-                      <div class="item active">
-              <img src="/img/tuvanqlda.jpg" alt="">
+    <?php $i=0 ?>
+    @foreach ($dichvu as $dv)
+      @if ($i == 0)
+        <div class="item active">
+      @else
+        <div class="item">
+      @endif
+        <img src="/img/{{$dv->hinh}}.jpg" alt="">
         <div class="carousel-caption">
-          <h3>Tư vấn - Quản lý Dự án</h3>
+          <h3>{{$dv->ten}}</h3>
           <div class="hidden-sm hidden-xs">
-            <p>Tư vấn, quản lý các dự án, hạng mục công việc về các lĩnh vực công nghệ thông tin, truyền thông, xuất bản và báo chí.</h3>
+            <p>{{$dv->diengiai}}</h3>
           </div>
 
         </div>
       </div>
-                        <div class="item">
-              <img src="/img/thietke.jpg" alt="">
-        <div class="carousel-caption">
-          <h3>Truyền thông Đa phương tiện</h3>
-          <div class="hidden-sm hidden-xs">
-            <p>Nghiên cứu, thiết kế, xây dựng các sản phẩm và dịch vụ Công nghệ thông tin, Truyền thông Xuất bản và báo chí.</h3>
-          </div>
-
-        </div>
-      </div>
-                        <div class="item">
-              <img src="/img/hatangmang.jpg" alt="">
-        <div class="carousel-caption">
-          <h3>Dịch vụ mạng và Hạ tầng</h3>
-          <div class="hidden-sm hidden-xs">
-            <p>Hoạt động quản trị vận hành cơ sở hạ tầng công nghệ thông tin và truyền thông. Dịch vụ thiết kế triển khai hệ thống mạng. Dịch vụ bảo trì phần cứng.</h3>
-          </div>
-
-        </div>
-      </div>
-                        <div class="item">
-              <img src="/img/antt.jpg" alt="">
-        <div class="carousel-caption">
-          <h3>Đào tạo &amp; Tổ chức sự kiện.</h3>
-          <div class="hidden-sm hidden-xs">
-            <p>Tổ chức thực hiện các sự kiện, hội nghị, hội thảo, họp báo, triển lãm; phổ biến, tuyên truyền chính sách của ngành, các ứng dụng công nghệ thông tin.</h3>
-          </div>
-
-        </div>
-      </div>
-            </div>
+      <?php $i++ ?>
+    @endforeach
+  </div>
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -150,42 +93,17 @@
         <h2>Dịch vụ của chúng tôi</h2>
       </div>
 
-              <div class="col-md-3">
-          <i class="fa fa-users"></i>
+      @foreach ($dichvu as $dv)
+        <div class="col-md-3">
+          <i class="fa {{$dv->fa}}"></i>
 
           <div class="block-dichvu">
 
-            <h3>Tư vấn - Quản lý Dự án</h3>
-            <p>Tư vấn, quản lý các dự án, hạng mục công việc về các lĩnh vực công nghệ thông tin, truyền thông, xuất bản và báo chí.</p>
+            <h3>{{$dv->ten}}</h3>
+            <p>{{$dv->diengiai}}</p>
           </div>
         </div>
-              <div class="col-md-3">
-          <i class="fa fa-youtube-play"></i>
-
-          <div class="block-dichvu">
-
-            <h3>Truyền thông Đa phương tiện</h3>
-            <p>Nghiên cứu, thiết kế, xây dựng các sản phẩm và dịch vụ Công nghệ thông tin, Truyền thông Xuất bản và báo chí.</p>
-          </div>
-        </div>
-              <div class="col-md-3">
-          <i class="fa fa-cogs"></i>
-
-          <div class="block-dichvu">
-
-            <h3>Dịch vụ mạng và Hạ tầng</h3>
-            <p>Hoạt động quản trị vận hành cơ sở hạ tầng công nghệ thông tin và truyền thông. Dịch vụ thiết kế triển khai hệ thống mạng. Dịch vụ bảo trì phần cứng.</p>
-          </div>
-        </div>
-              <div class="col-md-3">
-          <i class="fa fa-graduation-cap"></i>
-
-          <div class="block-dichvu">
-
-            <h3>Đào tạo &amp; Tổ chức sự kiện.</h3>
-            <p>Tổ chức thực hiện các sự kiện, hội nghị, hội thảo, họp báo, triển lãm; phổ biến, tuyên truyền chính sách của ngành, các ứng dụng công nghệ thông tin.</p>
-          </div>
-        </div>
+      @endforeach
 
     </div>
   </div>
@@ -285,132 +203,17 @@
     <div class="row">
       <h2>Đội ngũ</h2>
       <div id="owl-demo" class="owl-carousel owl-theme">
-                  <div class="item">
+        @foreach ($doingu as $dn)
+          <div class="item">
             <h1>1</h1>
 
-            <p>Dương Văn Tuấn</p>
-            <p>Giám Đốc</p>
-            <p></p>
+            <p>{{$dn->name}}</p>
+            <p>{{$dn->chucvu}}</p>
+            <p>{{$dn->dienthoai}}</p>
 
           </div>
 
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Nguyễn Thanh Lâm</p>
-            <p>P.Giám Đốc</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Đặng Quốc Dũng</p>
-            <p>P. Giám Đốc</p>
-            <p>039.3854474</p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Lê Văn Đương</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Nguyễn Thị Vân</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Hoàng Dương Liễu</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Nguyễn Tiến Dũng</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Phạm Thị Thanh Hải</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Nguyễn Mạnh Hoàng</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Trần Xuân Sơn</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Lê Viết Kiên</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Đậu Minh Phúc</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Phạm Thị Phương</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
-                  <div class="item">
-            <h1>1</h1>
-
-            <p>Chu Bá Dũng</p>
-            <p>0</p>
-            <p></p>
-
-          </div>
-
+        @endforeach
 
       </div>
 
@@ -438,123 +241,4 @@
 </div>
 <div id = "sample" style = "width:100%; height:400px;"></div>
 
-
-
-    <div class="section-c">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <h2>Đăng kí nhận tin</h2>
-            <br />
-            <p>Cung cấp địa chỉ email để nhận bản tin điện tử của chúng tôi.</p>
-            <hr />
-            <form>
-              <input type="text" class="form-control input-lg" placeholder="Địa chỉ Email">
-              <br />
-              <button class="btn btn-primary btn-lg btn-block">Đăng kí</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-
-      <div class="container">
-          <p>Copyright © 2016. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.eeyellow.Timeline.js"></script>
-
-    <script type="text/javascript">
-
-      $(document).ready(function() {
-
-        $('.VivaTimeline').vivaTimeline({
-          carousel: true,
-          carouselTime: 3000
-        });
-      });
-
-    </script>
-    <script type="text/javascript">
-
-      $(document).ready(function() {
-
-        var owl = $("#owl-demo");
-
-        owl.owlCarousel({
-            items : 10, //10 items above 1000px browser width
-            itemsDesktop : [1000,5], //5 items between 1000px and 901px
-            itemsDesktopSmall : [900,3], // betweem 900px and 601px
-            itemsTablet: [600,2], //2 items between 600 and 0
-            itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-        });
-
-        // Custom Navigation Events
-        $(".next").click(function(){
-          owl.trigger('owl.next');
-        })
-        $(".prev").click(function(){
-          owl.trigger('owl.prev');
-        })
-        $(".play").click(function(){
-          owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-        })
-        $(".stop").click(function(){
-          owl.trigger('owl.stop');
-        })
-
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        })
-
-      });
-
-    </script>
-
-    <!-- Google Map js -->
-            <script src="https://maps.googleapis.com/maps/api/js"></script>
-            <script>
-                function initialize() {
-                  var mapOptions = {
-                    zoom: 15,
-                    scrollwheel: false,
-                    center: new google.maps.LatLng(18.335534, 105.906581)
-                  };
-
-                  var map = new google.maps.Map(document.getElementById('sample'),
-                      mapOptions);
-
-
-                  var marker = new google.maps.Marker({
-                    position: map.getCenter(),
-                    animation:google.maps.Animation.BOUNCE,
-                    icon: 'img/map-marker.png',
-                    map: map
-                  });
-
-                }
-
-                google.maps.event.addDomListener(window, 'load', initialize);
-            </script>
-
-    </body>
-    </html>
+@endsection
