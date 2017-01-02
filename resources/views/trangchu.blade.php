@@ -9,7 +9,7 @@
     <meta name="keywords" content="web design, web app, software">
     <meta name="author" content="Đặng Quốc Dũng">
       <title>Trung tâm CNTT & TT tỉnh Hà Tĩnh</title>
-    <base href="http://localhost:8000/">
+    <base href="http://mysterious-hamlet-10437.herokuapp.com/">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
     <link rel="stylesheet" href="css/jquery.eeyellow.Timeline.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
