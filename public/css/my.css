@@ -1,0 +1,42 @@
+.panel-body {
+
+    text-align: justify;
+}
+
+.events-desc {
+  text-align: justify;
+}
+
+.events-header{
+  margin-bottom: 5px;
+}
+
+.section-a .fa {
+    border-radius: 5px;
+}
+
+.section-a .block-dichvu {
+  border-radius: 5px;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.chitiettin img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 10px;
+
+}
+
+.chitiettin{
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.chitiettin h2{
+  text-align: center;
+  margin-bottom: 30px;
+}

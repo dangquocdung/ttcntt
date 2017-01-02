@@ -1,0 +1,23 @@
+<div class="list-group">
+  <a href="#" class="list-group-item active">
+    Sản phẩm - Dịch vụ
+  </a>
+  <a href="/dich-vu" class="list-group-item">Tư vấn, quản lý các dự án, hạng mục công việc về các lĩnh vực công nghệ thông tin, truyền thông, xuất bản và báo chí.</a>
+  <a href="/dich-vu" class="list-group-item">Nghiên cứu, thiết kế, xây dựng các sản phẩm và dịch vụ công nghệ thông tin, truyền thông, xuất bản và báo chí.</a>
+  <a href="/dich-vu" class="list-group-item">Hoạt động quản trị, vận hành cơ sở hạ tầng công nghệ thông tin và truyền thông.</a>
+  <a href="/dich-vu" class="list-group-item">Đào tạo & Tổ chức sự kiện.</a>
+</div>
+
+<div class="list-group">
+  <a href="#" class="list-group-item active">
+    Năng lực
+  </a>
+  <a href="/nang-luc" class="list-group-item">Năng lực tư vấn Lập & Quản lý dự án</a>
+  <a href="/nang-luc" class="list-group-item">Năng lực tư vấn Giám sát</a>
+  <a href="/nang-luc" class="list-group-item">Năng lực tư vấn Đấu thầu</a>
+
+</div>
+
+<div class="list-group">
+
+</div>
