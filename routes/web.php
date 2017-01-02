@@ -26,8 +26,8 @@ Route::get('/home', 'BackController@index');
 Route::get('/them-lich-cong-tac', 'BackController@getThemLichCongTac');
 Route::post('/them-lich-cong-tac', 'BackController@postThemLichCongTac');
 
-Route::get('/them-tin-tuc', 'HomeController@getThemTinTuc');
-Route::post('/them-tin-tuc', 'HomeController@postThemTintuc');
+Route::get('/them-tin-tuc', 'BackController@getThemTinTuc');
+Route::post('/them-tin-tuc', 'BackController@postThemTintuc');
 
 Route::get('/', function () {
     // return view('trangchu');
@@ -63,3 +63,7 @@ Route::get('/bien-dao-viet-nam', function () {
     return view('biendao');
 });
 Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
