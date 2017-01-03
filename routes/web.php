@@ -49,8 +49,8 @@ Route::get('/home', 'BackController@index');
 
 Route::get('/', function () {
     // return view('trangchu');
-    $dichvu = DichVu::all();
-    $doingu = User::all();
+    $dichvu = DichVu::orderby('id','asc')->get();
+    $doingu = User::orderby('id','desc')->get();
     return view('trangchu',['dichvu'=>$dichvu, 'doingu'=>$doingu]);
 });
 
