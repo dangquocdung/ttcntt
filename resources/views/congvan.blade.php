@@ -52,9 +52,13 @@
                                       <p>Ngày tháng: {{$cv->ngaydang}}<p>
                                       <p>Số văn bản: {{$cv->socv}}<p>
                                       <p>Tiêu đề: {{$cv->tieude}}</p>
-                                      <p>Văn bản: {{$cv->vanban}}</p>
                                       <p>Người đăng: {{$cv->user->name}}</p>
-                                      <p>Ghi chú: {{$lct->ghichu}}</p>
+                                      <p>Ghi chú: {{$cv->ghichu}}</p>
+                                      <a href="/upload/pdf/{{$cv->vanban}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                      <a href="/upload/pdf/{{$cv->vanban}}"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+                                      <a href="/upload/pdf/{{$cv->vanban}}"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+
+
                                     </div>
                                   </div>
                               </div>
