@@ -51,6 +51,13 @@ class BackController extends Controller
 
     }
 
+    public function getXoaLichCongTac($id)
+    {
+        $lct = LichCongTac::find($id);
+        $lct->delete();
+        return redirect('lich-cong-tac');
+    }
+
     public function getThemTinTuc()
     {
         return view('blayout.themtintuc');
@@ -92,6 +99,12 @@ class BackController extends Controller
 
         return redirect('tin-tuc');
 
+    }
+    public function getXoaTinTuc($id)
+    {
+        $tin = TinTuc::find($id);
+        $tin->delete();
+        return redirect('tin-tuc');
     }
 
 
@@ -139,6 +152,13 @@ class BackController extends Controller
 
         return redirect('cong-van');
 
+    }
+
+    public function getXoaCongVan($id)
+    {
+        $cv = CongVan::find($id);
+        $cv->delete();
+        return redirect('cong-van');
     }
 
 

@@ -51,8 +51,11 @@
                   </a>
 
                   <ul class="dropdown-menu" role="menu">
-                      <li><a href="them-lich-cong-tac">Lịch công tác</a></li>
-                      <li><a href="them-tin-tuc">Đăng Tin tức</a></li>
+                      <li><a href="admin/them-lich-cong-tac">Lịch công tác</a></li>
+                      <li><a href="admin/them-tin-tuc">Đăng Tin tức</a></li>
+                      <li><a href="admin/them-cong-van">Đăng Công văn - Tài liệu</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/">Trang chủ</a></li>
                       <li class="divider"></li>
                       <li>
                           <a href="{{ url('/logout') }}"

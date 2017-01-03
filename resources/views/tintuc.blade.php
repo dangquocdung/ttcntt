@@ -41,18 +41,27 @@
                     <div class="time">{{$tt->ngaydang}}</div>
                     <div class="events">
                         <div class="events-header">
-                          <a href="/tin-tuc/{{$tt->id}}">{{$tt->tieude}}</a>
+                          <a href="">{{$tt->tieude}}</a>
+                          @if (Auth::user())
+                            <div class="sua-xoa-item">
+                              <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/admin/sua-tin-tuc/{{$tt->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                              <a onclick="return confirm('Bạn muốn xóa mục này?')" href="/admin/xoa-tin-tuc/{{$tt->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            </div>
+                          @endif
 
                         </div>
                         <div class="events-body">
                             <div class="row">
-                              <div class="col-md-6 pull-left">
+                                <div class="col-md-6 pull-left">
                                     <img class="events-object img-responsive img-rounded" src="upload/tintuc/{{$tt->urlhinh}}" />
+
                                 </div>
                                 <div class="events-desc">
                                   {{$tt->tomtat}}
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
                 </dd>

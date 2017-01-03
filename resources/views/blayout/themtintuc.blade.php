@@ -22,7 +22,7 @@
             <h4 class="panel-title">Thêm Tin tức - Sự kiện</h4>
           </div>
           <div class="panel-body">
-            <form action="them-tin-tuc" method="POST" enctype="multipart/form-data">
+            <form action="admin/them-tin-tuc" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
                 <input type="hidden" name="ngaydang" value="<?php echo date('Y-m-d'); ?>"/>

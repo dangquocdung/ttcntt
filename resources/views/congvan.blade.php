@@ -45,7 +45,15 @@
                           <div class="events">
                               <div class="events-header">
                                 <a href="/cong-van/{{$cv->id}}">{{$cv->socv}}</a>
+                                @if (Auth::user())
+                                  <div class="sua-xoa-item">
+                                    <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/admin/sua-cong-van/{{$cv->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a onclick="return confirm('Bạn muốn xóa mục này?')" href="/admin/xoa-cong-van/{{$cv->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                  </div>
+                                @endif
+
                               </div>
+
                               <div class="events-body">
                                   <div class="row">
                                     <div class="events-desc">
@@ -57,6 +65,7 @@
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a>
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+
 
 
                                     </div>

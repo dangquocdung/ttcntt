@@ -21,16 +21,31 @@ use App\LichCongTac;
 
 Auth::routes();
 
+Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
+
+  Route::get('/them-lich-cong-tac', 'BackController@getThemLichCongTac');
+  Route::post('/them-lich-cong-tac', 'BackController@postThemLichCongTac');
+  Route::get('/xoa-lich-cong-tac/{id}', 'BackController@getXoaLichCongTac');
+  Route::get('/sua-lich-cong-tac/{id}', 'BackController@getSuaLichCongTac');
+  Route::post('/sua-lich-cong-tac/{id}', 'BackController@postSuaLichCongTac');
+
+  Route::get('/them-tin-tuc', 'BackController@getThemTinTuc');
+  Route::post('/them-tin-tuc', 'BackController@postThemTintuc');
+  Route::get('/xoa-tin-tuc/{id}', 'BackController@getXoaTinTuc');
+  Route::get('/sua-tin-tuc/{id}', 'BackController@getSuaTinTuc');
+  Route::post('/sua-tin-tuc/{id}', 'BackController@postSuaTinTuc');
+
+  Route::get('/them-cong-van', 'BackController@getThemCongVan');
+  Route::post('/them-cong-van', 'BackController@postThemCongVan');
+  Route::get('/xoa-cong-van/{id}', 'BackController@getXoaCongVan');
+  Route::get('/sua-cong-van/{id}', 'BackController@getSuaCongVan');
+  Route::post('/sua-cong-van/{id}', 'BackController@postSuaCongVan');
+
+});
+
 Route::get('/home', 'BackController@index');
 
-Route::get('/them-lich-cong-tac', 'BackController@getThemLichCongTac');
-Route::post('/them-lich-cong-tac', 'BackController@postThemLichCongTac');
 
-Route::get('/them-tin-tuc', 'BackController@getThemTinTuc');
-Route::post('/them-tin-tuc', 'BackController@postThemTintuc');
-
-Route::get('/them-cong-van', 'BackController@getThemCongVan');
-Route::post('/them-cong-van', 'BackController@postThemCongVan');
 
 Route::get('/', function () {
     // return view('trangchu');

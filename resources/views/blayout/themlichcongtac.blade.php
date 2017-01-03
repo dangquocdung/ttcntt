@@ -22,7 +22,7 @@
             <h4 class="panel-title">Thêm lịch công tác</h4>
           </div>
           <div class="panel-body">
-            <form action="them-lich-cong-tac" method="POST">
+            <form action="admin/them-lich-cong-tac" method="POST">
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
                 <div class="form-group">

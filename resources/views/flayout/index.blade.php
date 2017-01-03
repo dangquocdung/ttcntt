@@ -40,7 +40,7 @@
             <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
             <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li>
             @if (Auth::guest())
-              <li ><a href="/login"><i class="fa fa-user"></i></a></li>
+              <li ><a href="/login"><i class="fa fa-user"></i>  Login</a></li>
             @else
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -48,9 +48,8 @@
                   </a>
 
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="them-lich-cong-tac">Lịch công tác</a></li>
-                    <li><a href="them-tin-tuc">Đăng Tin tức</a></li>
-                      <li class="divider"></li>
+                    <li><a href="home">Trang Quản trị</a></li>
+
                       <li>
                           <a href="{{ url('/logout') }}"
                               onclick="event.preventDefault();

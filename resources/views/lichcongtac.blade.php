@@ -45,6 +45,12 @@
                           <div class="events">
                               <div class="events-header">
                                 <a href="/lich-cong-tac/{{$lct->user_id}}">{{$lct->user->name}}</a>
+                                @if (Auth::user())
+                                  <div class="sua-xoa-item">
+                                    <a onclick="return confirm('Bạn muốn sửa mục này??')" href="/admin/sua-lich-cong-tac/{{$lct->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a onclick="return confirm('Bạn muốn xóa mục này??')" href="/admin/xoa-lich-cong-tac/{{$lct->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                  </div>
+                                @endif
                               </div>
                               <div class="events-body">
                                   <div class="row">
@@ -55,6 +61,7 @@
                                       <p>Bắt đầu: {{$lct->batdau}}</p>
                                       <p>Kết thúc (dự kiến): {{$lct->ketthuc}}</p>
                                       <p>Ghi chú: {{$lct->ghichu}}</p>
+
                                     </div>
                                   </div>
                               </div>
