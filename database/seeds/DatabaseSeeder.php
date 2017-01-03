@@ -91,7 +91,7 @@ class CongVanTableSeeder extends Seeder
 
         DB::table('congvan')->delete();
         DB::table('congvan')->insert([
-            ['user_id' => '3','ngaythang'=>date("2017-1-1"), 'giodang'=>'8:00:00', 'socv'=>'123/CV', 'tieude'=>'Tieu de van ban', 'vanban'=>'Noidung cong van', 'ghichu'=>'ghichu']
+            ['user_id' => '3','ngaydang'=>date("2017-1-1"), 'giodang'=>'8:00:00', 'socv'=>'123/CV', 'tieude'=>'Tieu de van ban', 'vanban'=>'Noidung cong van', 'ghichu'=>'ghichu']
           ]);
     }
 }
