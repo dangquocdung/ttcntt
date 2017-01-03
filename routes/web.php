@@ -29,6 +29,9 @@ Route::post('/them-lich-cong-tac', 'BackController@postThemLichCongTac');
 Route::get('/them-tin-tuc', 'BackController@getThemTinTuc');
 Route::post('/them-tin-tuc', 'BackController@postThemTintuc');
 
+Route::get('/them-cong-van', 'BackController@getThemCongVan');
+Route::post('/them-cong-van', 'BackController@postThemCongVan');
+
 Route::get('/', function () {
     // return view('trangchu');
     $dichvu = DichVu::all();

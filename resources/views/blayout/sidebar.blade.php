@@ -11,6 +11,17 @@
 
 <div class="list-group">
   <a href="#" class="list-group-item active">
+    Công văn - Tài liệu
+  </a>
+  <a href="/#" class="list-group-item">Danh sách</a>
+  <a href="/them-cong-van" class="list-group-item">Thêm</a>
+  <a href="/#" class="list-group-item">Sửa</a>
+  <a href="/#" class="list-group-item">Xóa</a>
+
+</div>
+
+<div class="list-group">
+  <a href="#" class="list-group-item active">
     Tin tức - Sự kiện
   </a>
   <a href="/#" class="list-group-item">Danh sách</a>

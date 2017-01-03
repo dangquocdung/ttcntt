@@ -94,4 +94,10 @@ class BackController extends Controller
     }
 
 
+    public function getThemCongVan()
+    {
+        return view('blayout.themcongvan');
+    }
+
+
 }
