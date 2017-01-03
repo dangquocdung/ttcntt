@@ -106,13 +106,12 @@ class BackController extends Controller
         $cv->user_id = $request->user_id;
         $cv->ngaydang = $request->ngaydang;
         $cv->giodang = $request->giodang;
-
-
-
+        $cv->socv = $request->socv;
         $cv->tieude = $request->tieude;
-        $cv->tieudekhongdau = changeTitle($request->tieude);
+        // $cv->tieudekhongdau = changeTitle($request->tieude);
+        $cv->ghichu = $request->ghichu;
 
-        $tin->ngaydang = $request->ngaydang;
+        $cv->ngaydang = $request->ngaydang;
 
         if ($request->hasfile('vanban')){
 
@@ -126,17 +125,17 @@ class BackController extends Controller
             $Hinh = str_random(4)."_name";
           }
 
-          $file->move("upload/vanban/pdf/",$Hinh);
+          $file->move("upload/vanban/pdf",$Hinh);
 
-          $tin->urlhinh = $Hinh;
+          $cv->vanban = $Hinh;
 
         }else{
 
-          $tin->urlhinh = "";
+          $cv->vanban = "";
 
         }
 
-        $tin->save();
+        $cv->save();
 
         return redirect('cong-van');
 
