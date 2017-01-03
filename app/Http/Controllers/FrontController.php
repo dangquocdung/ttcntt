@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\LichCongTac;
+use App\CongVan;
 
 class FrontController extends Controller
 {
