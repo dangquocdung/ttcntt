@@ -76,7 +76,7 @@
       </div>
       <!--section title-->
       <div class="col-md-4">
-        <a href="http://congbao.hatinh.gov.vn"><img alt=" " src="http://icti-hcm.gov.vn/sites/default/files/images/cosodulieu-vbpl.jpg"></a>
+        <a href="cong-van"><img alt=" " src="http://icti-hcm.gov.vn/sites/default/files/images/cosodulieu-vbpl.jpg"></a>
       </div>
       <!--section title-->
       <div class="col-md-4">
