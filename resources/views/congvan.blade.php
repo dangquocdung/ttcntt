@@ -29,31 +29,31 @@
       <div class="col-md-8">
         <div class="VivaTimeline">
           <dl>
-            @foreach ($ngaythang as $nt)
-              <dt>{{$nt->ngaythang}}</dt>
+            @foreach ($ngaydang as $nd)
+              <dt>{{$nd->ngaydang}}</dt>
 
                   <?php $i=1 ?>
-                  @foreach ($lichcongtac as $lct)
-                    @if ($lct->ngaythang == $nt->ngaythang)
+                  @foreach ($congvan as $cv)
+                    @if ($cv->ngaydang == $nd->ngaydang)
                       @if ( $i%2 == 1)
                         <dd class="pos-left clearfix">
                       @else
                         <dd class="pos-right clearfix">
                       @endif
                           <div class="circ"></div>
-                          <div class="time">{{$lct->batdau}}</div>
+                          <div class="time">{{$cv->giodang}}</div>
                           <div class="events">
                               <div class="events-header">
-                                <a href="/lich-cong-tac/{{$lct->user_id}}">{{$lct->user->name}}</a>
+                                <a href="/cong-van/{{$cv->id}}">{{$cv->socv}}</a>
                               </div>
                               <div class="events-body">
                                   <div class="row">
                                     <div class="events-desc">
-                                      <p>Ngày tháng: {{$lct->ngaythang}}<p>
-                                      <p>Nội dung: {{$lct->noidung}}<p>
-                                      <p>Địa điểm: {{$lct->diadiem}}</p>
-                                      <p>Bắt đầu: {{$lct->batdau}}</p>
-                                      <p>Kết thúc (dự kiến): {{$lct->ketthuc}}</p>
+                                      <p>Ngày tháng: {{$cv->ngaydang}}<p>
+                                      <p>Số văn bản: {{$cv->socv}}<p>
+                                      <p>Tiêu đề: {{$cv->tieude}}</p>
+                                      <p>Văn bản: {{$cv->vanban}}</p>
+                                      <p>Người đăng: {{$cv->user->name}}</p>
                                       <p>Ghi chú: {{$lct->ghichu}}</p>
                                     </div>
                                   </div>

@@ -13,4 +13,10 @@ class FrontController extends Controller
       $lichcongtac = LichCongTac::orderby('ngaythang', 'desc')->orderby('batdau', 'desc')->get();
       return view('lichcongtac',['lichcongtac'=>$lichcongtac, 'ngaythang'=>$ngaythang]);
   }
+
+  public function getCongVan() {
+      $ngaydang = CongVan::select('ngaydang')->orderby('ngaydang','desc')->groupby('ngaydang')->get();
+      $congvan = CongVan::orderby('ngaydang', 'desc')->orderby('giodang', 'desc')->get();
+      return view('congvan',['congvan'=>$congvan, 'ngaydang'=>$ngaydang]);
+  }
 }

@@ -63,6 +63,7 @@ Route::get('/bien-dao-viet-nam', function () {
     return view('biendao');
 });
 Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
+Route::get('/cong-van', 'FrontController@getCongVan');
 
 Auth::routes();
 
