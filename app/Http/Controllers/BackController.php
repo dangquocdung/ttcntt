@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\LichCongTac;
 use App\TinTuc;
+use App\CongVan;
 
 class BackController extends Controller
 {
@@ -58,7 +59,7 @@ class BackController extends Controller
     public function postThemTinTuc(Request $request){
 
         $tin = new TinTuc;
-
+        $tin->user_id = $request->user_id;
         $tin->tieude = $request->tieude;
         $tin->tieudekhongdau = changeTitle($request->tieude);
         $tin->tomtat = $request->tomtat;
@@ -97,6 +98,48 @@ class BackController extends Controller
     public function getThemCongVan()
     {
         return view('blayout.themcongvan');
+    }
+
+    public function postThemCongVan(Request $request){
+
+        $cv = new CongVan;
+        $cv->user_id = $request->user_id;
+        $cv->ngaydang = $request->ngaydang;
+        $cv->giodang = $request->giodang;
+
+
+
+        $cv->tieude = $request->tieude;
+        $cv->tieudekhongdau = changeTitle($request->tieude);
+
+        $tin->ngaydang = $request->ngaydang;
+
+        if ($request->hasfile('vanban')){
+
+          $file = $request->file('vanban');
+
+          $name = $file->getClientOriginalName();
+
+          $Hinh = str_random(4)."_".$name;
+
+          while (file_exists("upload/vanban/pdf/".$Hinh)){
+            $Hinh = str_random(4)."_name";
+          }
+
+          $file->move("upload/vanban/pdf/",$Hinh);
+
+          $tin->urlhinh = $Hinh;
+
+        }else{
+
+          $tin->urlhinh = "";
+
+        }
+
+        $tin->save();
+
+        return redirect('cong-van');
+
     }
 
 

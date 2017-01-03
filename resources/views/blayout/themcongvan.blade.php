@@ -19,31 +19,45 @@
       <div class="col-md-8">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">Thêm Tin tức - Sự kiện</h4>
+            <h4 class="panel-title">Thêm Công văn - Tài Liệu</h4>
           </div>
           <div class="panel-body">
-            <form action="them-tin-tuc" method="POST" enctype="multipart/form-data">
+            <form action="them-cong-van" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
                 <input type="hidden" name="ngaydang" value="<?php echo date('Y-m-d'); ?>"/>
+                
+                <div class="form-group">
+                  <label>Thời gian</label>
+                  <input type="time" class="form-control" name="giodang" value="giodang">
+                </div>
+                <script type="text/javascript">
+                  $(function(){
+                    $('input[type="time"][value="giodang"]').each(function(){
+                      var d = new Date(),
+                          h = d.getHours(),
+                          m = d.getMinutes();
+                      if(h < 10) h = '0' + h;
+                      if(m < 10) m = '0' + m;
+                      $(this).attr({
+                        'value': h + ':' + m
+                      });
+                    });
+                  });
+                </script>
 
                 <div class="form-group">
-                  <label>Tiêu đề</label>
-                  <input type="text" class="form-control" name="tieude" placeholder="Nhập Tiêu đề" required="" autofocus="">
+                  <label>Số / Kí hiệu văn bản</label>
+                  <input type="text" class="form-control" name="socv" placeholder="Nhập Số / Kí hiệu văn bản" required="" autofocus="" />
                 </div>
                 <div class="form-group">
-                  <label>Tóm tắt</label>
-                  <textarea type="text" class="form-control" name="tomtat" rows="3" placeholder="Nhập tóm tắt" required=""></textarea>
+                  <label>Tiêu đề Văn bản</label>
+                  <input type="text" class="form-control" name="tieude" placeholder="Nhập Tiêu đề văn bản" required="" />
                 </div>
                 <div class="form-group">
-                    <label>Hình Ảnh</label>
-                    <input type="file" name="hinhanh" />
+                    <label>File Văn bản</label>
+                    <input type="file" name="vanban" required="" />
                 </div>
-                <div class="form-group">
-                    <label>Nội dung</label>
-                    <textarea name="noidung" id="demo" class="form-control ckeditor" rows="5"></textarea>
-                </div>
-                <script src="//cdn.ckeditor.com/4.6.1/basic/ckeditor.js"></script>
 
                 <div class="form-group">
                   <label>Ghi chú</label>
