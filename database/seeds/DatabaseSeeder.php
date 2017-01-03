@@ -76,6 +76,28 @@ class LichCongTacTableSeeder extends Seeder
     }
 }
 
+class CongVanTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // $this->call(UsersTableSeeder::class);
+
+
+        DB::table('congvan')->delete();
+        DB::table('congvan')->insert([
+            ['user_id' => '3','ngaythang'=>date("2017-1-1"), 'noidung' => 'noidung', 'diadiem'=>'diadiem', 'batdau'=>'8:00:00', 'ketthuc'=>'10:30:15', 'ghichu'=>'ghichu'],
+            ['user_id' => '3','ngaythang'=>date("2017-1-1"), 'noidung' => 'noidung', 'diadiem'=>'diadiem', 'batdau'=>'9:00:00', 'ketthuc'=>'10:30:15', 'ghichu'=>'ghichu'],
+            ['user_id' => '3','ngaythang'=>date("2017-1-2"), 'noidung' => 'noidung', 'diadiem'=>'diadiem', 'batdau'=>'10:00:00', 'ketthuc'=>'10:30:15', 'ghichu'=>'ghichu'],
+            ['user_id' => '3','ngaythang'=>date("2017-1-2"), 'noidung' => 'noidung', 'diadiem'=>'diadiem', 'batdau'=>'11:00:00', 'ketthuc'=>'12:30:15', 'ghichu'=>'ghichu']
+            ]);
+    }
+}
+
 class DoiNguTableSeeder extends Seeder
 {
     /**
