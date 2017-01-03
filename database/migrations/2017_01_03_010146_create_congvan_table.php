@@ -22,7 +22,7 @@ class CreateCongvanTable extends Migration
             $table->time('giodang');
             $table->string('socv');
             $table->string('tieude');
-            $table->string('vanban');            
+            $table->string('vanban');
             $table->string('ghichu');
             $table->timestamps();
         });
@@ -36,9 +36,6 @@ class CreateCongvanTable extends Migration
     public function down()
     {
         //
-        public function down()
-        {
-            Schema::dropIfExists('congvan');
-        }
+        Schema::dropIfExists('congvan');      
     }
 }
