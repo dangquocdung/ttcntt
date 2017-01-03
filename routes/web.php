@@ -83,7 +83,3 @@ Route::get('/bien-dao-viet-nam', function () {
 Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
 
 Route::get('/cong-van', 'FrontController@getCongVan');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
