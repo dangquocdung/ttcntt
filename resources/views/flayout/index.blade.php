@@ -92,7 +92,7 @@
     <footer>
 
       <div class="container">
-          <p>Copyright DangQuocDung © 2016. All rights reserved.</p>
+          <p>Copyright Đặng Quốc Dũng © 2017. All rights reserved.</p>
       </div>
     </footer>
 

@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Đăng nhập</a>
+          <a class="navbar-brand" href="#">Trang Đăng nhập</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
 
@@ -80,7 +80,7 @@
       <p>Copyright Đặng Quốc Dũng, &copy; 2017</p>
     </footer>
 
-  
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

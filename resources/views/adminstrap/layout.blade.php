@@ -158,7 +158,7 @@
     </section>
 
     <footer id="footer">
-      <p>Copyright DangQuocDung, &copy; 2017. All rights reserved.</p>
+      <p>Copyright Đặng Quốc Dũng, &copy; 2017. All rights reserved.</p>
     </footer>
 
 <!-- Modals -->
