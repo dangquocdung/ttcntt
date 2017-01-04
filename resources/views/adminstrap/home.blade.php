@@ -19,13 +19,13 @@
     </div>
     <div class="col-md-3">
       <div class="well dash-box">
-        <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{$stt}}</h2>
+        <h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> {{$stt}}</h2>
         <h4>Tin tức</h4>
       </div>
     </div>
     <div class="col-md-3">
       <div class="well dash-box">
-        <h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> {{$scv}}</h2>
+        <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{$scv}}</h2>
         <h4>Công văn</h4>
       </div>
     </div>

@@ -46,7 +46,7 @@ class UsersTableSeeder extends Seeder
               ['name' => 'Phạm Thị Thanh Hải', 'email' => 'gdha1606@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
               ['name' => 'Nguyễn Mạnh Hoàng', 'email' => 'hoangchungsg@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
               ['name' => 'Trần Xuân Sơn', 'email' => 'xuansonpc@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Lê Viết Kiên', 'email' => 'kientechnology@gmail.comphuc4t.ht@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              ['name' => 'Lê Viết Kiên', 'email' => 'kientechnology@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
               ['name' => 'Đậu Minh Phúc', 'email' => 'phuc4t.ht@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
               ['name' => 'Phạm Thị Phương', 'email' => 'phamthiphuong11@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
               ['name' => 'Chu Bá Dũng', 'email' => 'dung0951070225@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0']
