@@ -11,8 +11,10 @@
   <li><a href="/gioi-thieu">Giới thiệu</a></li>
   <li><a href="/nang-luc">Năng lực</a></li>
   <li><a href="/dich-vu">Dịch vụ</a></li>
-  <li><a href="/tin-tuc">Tin tức - Sự kiện</a></li>
-  <li class="active"><a href="/lien-he">Liên hệ</a></li>
+  <li><a href="/lich-cong-tac">Lịch Công tác</a></li>
+  <li class="active"><a href="/cong-van">Công văn</a></li>
+  <li><a href="/tin-tuc">Tin tức</a></li>
+  <li><a href="/lien-he">Liên hệ</a></li>
 @endsection
 
 @section('content')
