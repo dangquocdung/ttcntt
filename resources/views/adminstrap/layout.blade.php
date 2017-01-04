@@ -86,7 +86,7 @@
         <div class="row">
           <div class="col-md-3">
             <div class="list-group">
-              <a href="index.html" class="list-group-item active main-color-bg">
+              <a href="adminstrap" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Cá nhân
               </a>
               <a href="/adminstrap/lich-cong-tac" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Lịch công tác <span class="badge">{{$lct1}}</span></a>
@@ -138,6 +138,15 @@
                       {{$i}}%
                 </div>
               </div>
+            </div>
+
+            <div class="list-group">
+              <a href="adminstrap" class="list-group-item active main-color-bg">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Điều hành công việc
+              </a>
+              <a href="/adminstrap/lich-cong-tac" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Lịch công tác <span class="badge">{{$lct1}}</span></a>
+              <a href="/adminstrap/tin-tuc-su-kien" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tin tức đã đăng <span class="badge">{{$tt1}}</span></a>
+              <a href="/adminstrap/cong-van-tai-lieu" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Công văn đã đăng <span class="badge">{{$cv1}}</span></a>
             </div>
           </div>
           <div class="col-md-9">

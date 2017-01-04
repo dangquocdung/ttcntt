@@ -204,12 +204,12 @@
       <h2>Đội ngũ</h2>
       <div id="owl-demo" class="owl-carousel owl-theme">
         @foreach ($doingu as $dn)
-          <div class="item">
-            <h1>1</h1>
+          <div class="item2">
+            <img src="upload/team/{{$dn->tenhinh}}" alt="">
 
-            <p>{{$dn->name}}</p>
-            <p>{{$dn->chucvu}}</p>
-            <p>{{$dn->dienthoai}}</p>
+            <p class="name">{{$dn->name}}</p>
+            <p class="chucvu">{{$dn->chucvu}}</p>
+            <p class="didong">{{$dn->didong}}</p>
 
           </div>
 
@@ -226,6 +226,7 @@
     </div>
   </div>
 </div>
+
 
 <div class="section-e">
   <div class="container">
