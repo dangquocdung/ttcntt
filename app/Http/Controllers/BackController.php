@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+
 use App\LichCongTac;
 use App\TinTuc;
 use App\CongVan;
+use App\User;
 
 class BackController extends Controller
 {
@@ -17,6 +24,22 @@ class BackController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        $stv = User::count();
+        view()->share('stv',$stv);
+
+        $thanhvien = User::orderby('id','asc')->get();
+        view()->share('thanhvien',$thanhvien);
+
+        $slct = LichCongTac::count();
+        view()->share('slct',$slct);
+
+        $stt = TinTuc::count();
+        view()->share('stt',$stt);
+
+        $scv = CongVan::count();
+        view()->share('scv',$scv);
+
     }
 
     /**
@@ -25,10 +48,19 @@ class BackController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function index()
+    public function getAdminStrap()
+
     {
-      return view('home');
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+      return view('adminstrap.home',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1 ]);
     }
+
+
     public function getThemLichCongTac()
     {
         return view('blayout.themlichcongtac');
@@ -37,7 +69,7 @@ class BackController extends Controller
     public function postThemLichCongTac(Request $request){
 
         $lct = new LichCongTac;
-        $lct->user_id = $request->user_id;
+        $lct->user_id = Auth::user()->id;
         $lct->ngaythang = $request->ngaythang;
         $lct->noidung = $request->noidung;
         $lct->diadiem = $request->diadiem;
@@ -47,7 +79,7 @@ class BackController extends Controller
 
         $lct->save();
 
-        return redirect('lich-cong-tac');
+        return redirect('adminstrap');
 
     }
 
@@ -66,7 +98,7 @@ class BackController extends Controller
     public function postThemTinTuc(Request $request){
 
         $tin = new TinTuc;
-        $tin->user_id = $request->user_id;
+        $tin->user_id = Auth::user()->id;
         $tin->tieude = $request->tieude;
         $tin->tieudekhongdau = changeTitle($request->tieude);
         $tin->tomtat = $request->tomtat;
@@ -97,7 +129,7 @@ class BackController extends Controller
 
         $tin->save();
 
-        return redirect('tin-tuc');
+        return redirect('adminstrap');
 
     }
     public function getXoaTinTuc($id)
@@ -116,9 +148,10 @@ class BackController extends Controller
     public function postThemCongVan(Request $request){
 
         $cv = new CongVan;
-        $cv->user_id = $request->user_id;
+        $cv->user_id = Auth::user()->id;
         $cv->ngaydang = $request->ngaydang;
-        $cv->giodang = $request->giodang;
+        $giodang = Carbon::now();
+        $cv->giodang = $giodang->toTimeString();
         $cv->socv = $request->socv;
         $cv->tieude = $request->tieude;
         // $cv->tieudekhongdau = changeTitle($request->tieude);
@@ -150,7 +183,7 @@ class BackController extends Controller
 
         $cv->save();
 
-        return redirect('cong-van');
+        return redirect('adminstrap');
 
     }
 
@@ -159,6 +192,45 @@ class BackController extends Controller
         $cv = CongVan::find($id);
         $cv->delete();
         return redirect('cong-van');
+    }
+
+    public function getLichCongTac()
+    {
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+      $lichcongtac = LichCongTac::where('user_id','=',Auth::user()->id)->orderby('id','desc')->get();
+
+      return view('adminstrap.lichcongtac',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'lichcongtac'=>$lichcongtac ]);
+    }
+
+    public function getTinTuc()
+    {
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+      $tintuc = TinTuc::where('user_id','=',Auth::user()->id)->orderby('id','desc')->get();
+
+      return view('adminstrap.tintuc',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'tintuc'=>$tintuc ]);
+    }
+
+    public function getCongVan()
+    {
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+      $congvan = CongVan::where('user_id','=',Auth::user()->id)->orderby('id','desc')->get();
+
+      return view('adminstrap.congvan',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'congvan'=>$congvan ]);
     }
 
 

@@ -45,10 +45,10 @@
                           <div class="events">
                               <div class="events-header">
                                 <a href="/cong-van/{{$cv->id}}">{{$cv->socv}}</a>
-                                @if (Auth::user())
+                                @if (Auth::user() && Auth::user()->quyen==1)
                                   <div class="sua-xoa-item">
-                                    <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/admin/sua-cong-van/{{$cv->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                    <a onclick="return confirm('Bạn muốn xóa mục này?')" href="/admin/xoa-cong-van/{{$cv->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                    <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/adminstrap/sua-cong-van/{{$cv->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a onclick="return confirm('Bạn muốn xóa mục này?')" href="/adminstrap/xoa-cong-van/{{$cv->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
                                   </div>
                                 @endif
 

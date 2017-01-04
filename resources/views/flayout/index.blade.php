@@ -48,7 +48,7 @@
                   </a>
 
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="home">Trang Quản trị</a></li>
+                    <li><a href="/adminstrap">Trang Quản trị</a></li>
 
                       <li>
                           <a href="{{ url('/logout') }}"
@@ -92,7 +92,7 @@
     <footer>
 
       <div class="container">
-          <p>Copyright © 2016. All rights reserved.</p>
+          <p>Copyright DangQuocDung © 2016. All rights reserved.</p>
       </div>
     </footer>
 

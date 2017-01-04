@@ -41,11 +41,11 @@
                     <div class="time">{{$tt->ngaydang}}</div>
                     <div class="events">
                         <div class="events-header">
-                          <a href="">{{$tt->tieude}}</a>
-                          @if (Auth::user())
+                          <a href="tin-tuc/{{$tt->id}}">{{$tt->tieude}}</a>
+                          @if (Auth::user() && Auth::user()->quyen==1)
                             <div class="sua-xoa-item">
-                              <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/admin/sua-tin-tuc/{{$tt->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                              <a onclick="return confirm('Bạn muốn xóa mục này?')" href="/admin/xoa-tin-tuc/{{$tt->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                              <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/adminstrap/sua-tin-tuc/{{$tt->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                              <a onclick="return confirm('Bạn muốn xóa mục này?')" href="/adminstrap/xoa-tin-tuc/{{$tt->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
                             </div>
                           @endif
 

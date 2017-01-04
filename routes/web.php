@@ -21,7 +21,13 @@ use App\LichCongTac;
 
 Auth::routes();
 
-Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
+
+
+Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
+
+  Route::get('/', 'BackController@getAdminStrap');
+
+
 
   Route::get('/them-lich-cong-tac', 'BackController@getThemLichCongTac');
   Route::post('/them-lich-cong-tac', 'BackController@postThemLichCongTac');
@@ -41,9 +47,12 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
   Route::get('/sua-cong-van/{id}', 'BackController@getSuaCongVan');
   Route::post('/sua-cong-van/{id}', 'BackController@postSuaCongVan');
 
+  Route::get('/lich-cong-tac','BackController@getLichCongTac' );
+  Route::get('/tin-tuc-su-kien','BackController@getTinTuc' );
+  Route::get('/cong-van-tai-lieu','BackController@getCongVan' );
+
 });
 
-Route::get('/home', 'BackController@index');
 
 
 
