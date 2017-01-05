@@ -60,7 +60,7 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
 Route::get('/', function () {
     // return view('trangchu');
     $dichvu = DichVu::orderby('id','asc')->get();
-    $doingu = User::orderby('id','asc')->get();
+    $doingu = User::->where('didong','<>','null')orderby('id','asc')->get();
     return view('trangchu',['dichvu'=>$dichvu, 'doingu'=>$doingu]);
 });
 
