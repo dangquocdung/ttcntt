@@ -25,7 +25,7 @@
           <a class="navbar-brand" href="#">Welcome, {{ Auth::user()->name }}</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          @if (Auth::user()->quyen == 1 )
+          @if (Auth::user()->quyen > 1 )
           <ul class="nav navbar-nav">
             <li class="active"><a href="adminstrap">Bảng Điều khiển</a></li>
             <li><a href="lich-cong-tac-all">Lịch</a></li>
