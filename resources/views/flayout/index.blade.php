@@ -39,6 +39,7 @@
             <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
             <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
             <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
+
             @if (Auth::guest())
               <li ><a href="/login"><i class="fa fa-user"></i></a></li>
             @else
