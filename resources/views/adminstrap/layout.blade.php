@@ -25,12 +25,14 @@
           <a class="navbar-brand" href="#">Welcome, {{ Auth::user()->name }}</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <!-- <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Bảng Điều khiển</a></li>
-            <li><a href="pages.html">Pages</a></li>
-            <li><a href="posts.html">Posts</a></li>
-            <li><a href="users.html">Users</a></li>
-          </ul> -->
+          @if (Auth::user()->quyen == 1 )
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="adminstrap">Bảng Điều khiển</a></li>
+            <li><a href="lich-cong-tac-all">Lịch</a></li>
+            <li><a href="tin-tuc-all">Tin tức</a></li>
+            <li><a href="cong-van-all">Công văn</a></li>
+          </ul>
+          @endif
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="#">Welcome, {{ Auth::user()->name }}</a></li> -->
             <li><a href="/">Trang chủ</a></li>

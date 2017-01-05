@@ -76,3 +76,8 @@
   font-weight: bold !important;
 
 }
+
+.btn-link {
+    width: 100%;
+    text-align: right;
+  }

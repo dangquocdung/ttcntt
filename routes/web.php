@@ -20,6 +20,7 @@ use App\LichCongTac;
 */
 
 Auth::routes();
+Route::get('home', 'BackController@getAdminStrap');
 
 
 
