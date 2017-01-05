@@ -52,6 +52,15 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
   Route::get('/tin-tuc-su-kien','BackController@getTinTuc' );
   Route::get('/cong-van-tai-lieu','BackController@getCongVan' );
 
+
+
+});
+
+
+Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){
+
+  Route::get('/', 'DieuHanhController@getDieuHanhCongViec');
+
 });
 
 

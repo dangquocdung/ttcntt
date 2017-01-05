@@ -27,8 +27,8 @@
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="adminstrap">Bảng Điều khiển</a></li>
-            <li><a href="adminstrap/dieu-hanh-cong-viec">Điều hành công việc</a></li>
+            <li><a href="adminstrap">Bảng Điều khiển</a></li>
+            <li class="active"><a href="adminstrap/dieu-hanh-cong-viec">Điều hành công việc</a></li>
             @if (Auth::user()->quyen > 1 )
             <li><a href="adminstrap/lich-cong-tac-all">Lịch</a></li>
             <li><a href="adminstrap/tin-tuc-all">Tin tức</a></li>
@@ -59,18 +59,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap">Bảng điều khiển</a> <small> dùng để quản trị nội dung</small></h1>
+            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap/dieu-hanh-cong-viec">E-Office</a> <small> Văn phòng điện tử</small></h1>
           </div>
           <div class="col-md-2">
             <div class="dropdown create">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Tạo Nội dung
+                Tạo mới
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a type="button" data-toggle="modal" data-target="#addLichCongTac">Thêm Lịch công tác</a></li>
-                <li><a type="button" data-toggle="modal" data-target="#addTinTuc">Thêm Tin tức - Sự kiện</a></li>
-                <li><a type="button" data-toggle="modal" data-target="#addCongVan">Thêm Công văn - Tài liệu</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#">Thêm Công việc</a></li>
               </ul>
             </div>
           </div>
@@ -81,7 +79,7 @@
     <section id="breadcrumb">
       <div class="container">
         <ol class="breadcrumb">
-          <li class="active">Dashboard</li>
+          <li class="active">Điều hành công việc</li>
         </ol>
       </div>
     </section>
@@ -90,68 +88,18 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <div class="list-group">
-              <a href="adminstrap" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Cá nhân
-              </a>
-              <a href="/adminstrap/lich-cong-tac" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Lịch công tác <span class="badge">{{$lct1}}</span></a>
-              <a href="/adminstrap/tin-tuc-su-kien" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tin tức đã đăng <span class="badge">{{$tt1}}</span></a>
-              <a href="/adminstrap/cong-van-tai-lieu" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Công văn đã đăng <span class="badge">{{$cv1}}</span></a>
-            </div>
 
-            <div class="well">
-              <h4>Tỉ lệ đầu việc</h4>
-              <div class="progress">
-                <?php
-                 if ($slct>0){
-                   $i = ($lct1/$slct)*100;
-
-                 }else{
-                   $i = 0;
-                 }
-                 ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                    {{$i}}%
-                </div>
-              </div>
-              <h4>Tỉ lệ đăng tin </h4>
-              <div class="progress">
-                <?php
-                 if ($stt>0){
-                   $i = ($tt1/$stt)*100;
-
-                 }else{
-                   $i = 0;
-                 }
-                 ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                      {{$i}}%
-                </div>
-              </div>
-
-              <h4>Tỉ lệ đăng công văn </h4>
-              <div class="progress">
-                <?php
-                 if ($scv>0){
-                   $i = ($cv1/$scv)*100;
-
-                 }else{
-                   $i = 0;
-                 }
-                ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                      {{$i}}%
-                </div>
-              </div>
-            </div>
 
             <div class="list-group">
               <a href="adminstrap" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Điều hành công việc
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Điều hành công việc cá nhân
               </a>
-              <a href="adminstrap" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Tạo việc <span class="badge"></span></a>
-              <a href="adminstrap" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đầu việc chưa xử lý <span class="badge">2</span></a>
-              <a href="adminstrap" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đầu việc đang xử lý <span class="badge">3</span></a>
+              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Sắp hết hạn <span class="badge"></span></a>
+              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tất cả <span class="badge">2</span></a>
+              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Trể hạn <span class="badge">3</span></a>
+              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Chưa xử lý <span class="badge"></span></a>
+              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đang xử lý <span class="badge">2</span></a>
+              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đã xử lý <span class="badge">3</span></a>
             </div>
           </div>
           <div class="col-md-9">
