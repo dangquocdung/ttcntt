@@ -41,7 +41,18 @@
             <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
 
             @if (Auth::guest())
-              <li ><a href="/login"><i class="fa fa-user"></i></a></li>
+              <li >
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user"></i> <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="/login">Đăng nhập</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/register">Đăng ký</a></li>
+                  </ul>
+                </div>
+              </li>
             @else
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
