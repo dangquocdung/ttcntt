@@ -38,7 +38,7 @@
           <div class="well">
               <h4>NĂNG LỰC TƯ VẤN LẬP DỰ ÁN & QUẢN LÝ DỰ ÁN</h4>
               <p>(Theo Nghị định 102/2009/NĐ-CP ngày 06 tháng 11 năm 2009 của Chính phủ về quản lý ứng dụng công nghệ thông tin sử dụng nguồn vốn ngân sách nhà nước)</p>
-              <p>Hiện nay, Trung tâm CNTT-TT thành phố Hồ Chí Minh có đủ năng lực tư vấn lập và quản lý dự án đầu tư ứng dụng CNTT như sau:</p>
+              <p>Hiện nay, Trung tâm CNTT-TT tỉnh Hà Tĩnh có đủ năng lực tư vấn lập và quản lý dự án đầu tư ứng dụng CNTT như sau:</p>
               <p>- Phạm vi hoạt động: cấp độ 2, dự án nhóm C.</p>
               <p>- Có 07 người có trình độ đại học chuyên ngành công nghệ thông tin, đại học chuyên ngành kinh tế, tài chính phù hợp với yêu cầu của dự án; trong đó có 01 người có đủ điều kiện làm Chủ trì thiết kế sơ bộ Cấp độ 2.</p>
 
@@ -47,7 +47,7 @@
           <div class="well">
               <h4>NĂNG LỰC TƯ VẤN GIÁM SÁT</h4>
               <p>(Theo Nghị định 102/2009/NĐ-CP ngày 06 tháng 11 năm 2009 của Chính phủ về quản lý ứng dụng công nghệ thông tin sử dụng nguồn vốn ngân sách nhà nước)</p>
-              <p>Hiện nay, Trung tâm CNTT-TT thành phố Hồ Chí Minh có đủ năng lực tư vấn giám sát đầu tư ứng dụng CNTT.</p>
+              <p>Hiện nay, Trung tâm CNTT-TT tỉnh Hà Tĩnh có đủ năng lực tư vấn giám sát đầu tư ứng dụng CNTT.</p>
               <p>Nhân sự tham giá có trình độ đại học chuyên ngành công nghệ thông tin, đã được bồi dưỡng về nghiệp vụ quản lý, đầu tư ứng dụng công nghệ thông tin (thuộc bộ môn giám sát thi công).</p>
           </div>
 
