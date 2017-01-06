@@ -33,7 +33,7 @@
             @if (Auth::user()->quyen > 1 )
             <li><a href="adminstrap/lich-cong-tac-all">Lịch</a></li>
             <li><a href="adminstrap/tin-tuc-all">Tin tức</a></li>
-            <li><a href="adminstrap/cong-van-all">Công văn</a></li>
+            <li><a href="adminstrap/van-ban-all">Công văn</a></li>
             @endif
           </ul>
 
