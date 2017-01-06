@@ -30,7 +30,20 @@
     <div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title">Điền thông tin theo mẫu</h4>
+          <h4 class="panel-title">Thông tin liên hệ</h4>
+        </div>
+        <div class="panel-body">
+
+          <label>Trung tâm Công Nghệ Thông Tin và Truyền Thông tỉnh Hà Tĩnh</label>
+          <label>Địa chỉ: số 18 đường 26-3, TP. Hà Tĩnh, tỉnh Hà Tĩnh</label>
+          <label>Điện thoại: 0393.853926</label>
+
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Gởi Tin nhắn</h4>
         </div>
         <div class="panel-body">
           <form>
@@ -53,7 +66,7 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title">Địa chỉ</h4>
+          <h4 class="panel-title">Bản đồ</h4>
         </div>
         <div class="panel-body">
           <div id = "googleMap" style = "width:100%; height:400px;"></div>
