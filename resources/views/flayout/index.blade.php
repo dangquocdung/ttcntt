@@ -177,7 +177,7 @@
     </script>
 
     <!-- Google Map js -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO9yp86ymyfp8k4aZgorw-qfABVxrX8HM&callback=initMap" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO9yp86ymyfp8k4aZgorw-qfABVxrX8HM&callback=initMap" type="text/javascript"></script>
     <script>
         function initialize() {
           var mapOptions = {
