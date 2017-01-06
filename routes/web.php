@@ -41,6 +41,10 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
   Route::get('/xoa-van-ban/{id}', 'BackController@getXoaCongVan');
   Route::put('/sua-van-ban/{id}', 'BackController@putSuaCongVan');
 
+  Route::get('/lich-cong-tac-all', 'BackController@getLichCongTacAll');
+  Route::get('/tin-tuc-all', 'BackController@getTinTucAll');
+  Route::get('/van-ban-all', 'BackController@getVanBanAll');
+
 });
 
 Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){

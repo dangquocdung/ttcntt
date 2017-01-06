@@ -237,7 +237,7 @@ class BackController extends Controller
         // $cv->tieudekhongdau = changeTitle($request->tieude);
         $cv->ghichu = $request->ghichu;
 
-      
+
 
         if ($request->hasfile('vanban')){
 
@@ -308,6 +308,47 @@ class BackController extends Controller
 
       return view('adminstrap.vanban',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'vanban'=>$vanban ]);
     }
+
+    public function getLichCongTacAll()
+    {
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+      $lichcongtac = LichCongTac::orderby('id','desc')->get();
+
+      return view('adminstrap.lichcongtac-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'lichcongtac'=>$lichcongtac ]);
+    }
+
+    public function getTinTucAll()
+    {
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+      $tintuc = TinTuc::orderby('id','desc')->get();
+
+      return view('adminstrap.tintuc-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'tintuc'=>$tintuc ]);
+    }
+
+    public function getVanBanAll()
+    {
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+      $vanban = CongVan::orderby('id','desc')->get();
+
+      return view('adminstrap.vanban-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'vanban'=>$vanban ]);
+    }
+
+
 
 
 }

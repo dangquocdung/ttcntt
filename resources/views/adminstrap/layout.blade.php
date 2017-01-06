@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   </head>
   <body>
 
@@ -145,14 +146,7 @@
               </div>
             </div>
 
-            <div class="list-group">
-              <a href="adminstrap" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Điều hành công việc
-              </a>
-              <a href="adminstrap" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Tạo việc <span class="badge"></span></a>
-              <a href="adminstrap" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đầu việc chưa xử lý <span class="badge">2</span></a>
-              <a href="adminstrap" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đầu việc đang xử lý <span class="badge">3</span></a>
-            </div>
+
           </div>
           <div class="col-md-9">
             <!-- Website Overview -->
@@ -367,16 +361,8 @@
           readURL(this);
       });
 
-      $('.chonhinh').change(function(){
-
-      })
-
-
-
-
-
-
-
     </script>
+
+
   </body>
 </html>

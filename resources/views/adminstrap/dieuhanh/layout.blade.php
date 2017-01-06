@@ -101,6 +101,53 @@
               <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đang xử lý <span class="badge">2</span></a>
               <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đã xử lý <span class="badge">3</span></a>
             </div>
+
+            <div class="well">
+              <h4>Tỉ lệ đầu việc</h4>
+              <div class="progress">
+                <?php
+                 if ($slct>0){
+                   $i = ($lct1/$slct)*100;
+
+                 }else{
+                   $i = 0;
+                 }
+                 ?>
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
+                    {{$i}}%
+                </div>
+              </div>
+              <h4>Tỉ lệ đăng tin </h4>
+              <div class="progress">
+                <?php
+                 if ($stt>0){
+                   $i = ($tt1/$stt)*100;
+
+                 }else{
+                   $i = 0;
+                 }
+                 ?>
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
+                      {{$i}}%
+                </div>
+              </div>
+
+              <h4>Tỉ lệ đăng công văn </h4>
+              <div class="progress">
+                <?php
+                 if ($scv>0){
+                   $i = ($cv1/$scv)*100;
+
+                 }else{
+                   $i = 0;
+                 }
+                ?>
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
+                      {{$i}}%
+                </div>
+              </div>
+            </div>
+            
           </div>
           <div class="col-md-9">
             <!-- Website Overview -->
