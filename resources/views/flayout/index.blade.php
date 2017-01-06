@@ -10,12 +10,16 @@
     @yield('title')
     <base href="{{asset('')}}">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="css/jquery.eeyellow.Timeline.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="/css/jquery.eeyellow.Timeline.css">
+    <link rel="stylesheet" href="/css/jquery.superbox.css">
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/owl.transitions.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/my.css">
+
+
+
   </head>
 
   <body>
@@ -108,15 +112,14 @@
       </div>
     </footer>
 
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/jquery.eeyellow.Timeline.js"></script>
 
+
     <script type="text/javascript">
-
       $(document).ready(function() {
-
         $('.VivaTimeline').vivaTimeline({
           carousel: true,
           carouselTime: 3000
@@ -174,30 +177,30 @@
     </script>
 
     <!-- Google Map js -->
-            <script src="https://maps.googleapis.com/maps/api/js"></script>
-            <script>
-                function initialize() {
-                  var mapOptions = {
-                    zoom: 15,
-                    scrollwheel: false,
-                    center: new google.maps.LatLng(18.335534, 105.906581)
-                  };
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+          var mapOptions = {
+            zoom: 15,
+            scrollwheel: false,
+            center: new google.maps.LatLng(18.335534, 105.906581)
+          };
 
-                  var map = new google.maps.Map(document.getElementById('sample'),
-                      mapOptions);
+          var map = new google.maps.Map(document.getElementById('sample'),
+              mapOptions);
 
 
-                  var marker = new google.maps.Marker({
-                    position: map.getCenter(),
-                    animation:google.maps.Animation.BOUNCE,
-                    icon: 'img/map-marker.png',
-                    map: map
-                  });
+          var marker = new google.maps.Marker({
+            position: map.getCenter(),
+            animation:google.maps.Animation.BOUNCE,
+            icon: 'img/map-marker.png',
+            map: map
+          });
 
-                }
+        }
 
-                google.maps.event.addDomListener(window, 'load', initialize);
-            </script>
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
     </body>
     </html>

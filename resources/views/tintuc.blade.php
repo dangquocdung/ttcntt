@@ -12,7 +12,7 @@
   <li><a href="/nang-luc">Năng lực</a></li>
   <li><a href="/dich-vu">Dịch vụ</a></li>
   <li><a href="/lich-cong-tac">Lịch Công tác</a></li>
-  <li><a href="/cong-van">Công văn</a></li>
+  <li><a href="/van-ban">Văn bản</a></li>
   <li class="active"><a href="/tin-tuc">Tin tức</a></li>
   <li><a href="/lien-he">Liên hệ</a></li>
 @endsection
@@ -43,7 +43,8 @@
                     <div class="time">{{$tt->ngaydang}}</div>
                     <div class="events">
                         <div class="events-header">
-                          <a href="tin-tuc/{{$tt->id}}">{{$tt->tieude}}</a>
+                          {{$tt->tieude}}
+
                           @if (Auth::user() && Auth::user()->quyen==1)
                             <div class="sua-xoa-item">
                               <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/adminstrap/sua-tin-tuc/{{$tt->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -55,12 +56,15 @@
                         <div class="events-body">
                             <div class="row">
                                 <div class="col-md-6 pull-left">
-                                    <img class="events-object img-responsive img-rounded" src="upload/tintuc/{{$tt->urlhinh}}" />
+                                    <a href="tin-tuc/{{$tt->id}}"><img class="events-object img-responsive img-rounded" src="upload/tintuc/{{$tt->urlhinh}}" /></a>
 
                                 </div>
                                 <div class="events-desc">
                                   {{$tt->tomtat}}
                                 </div>
+
+
+
 
                             </div>
 

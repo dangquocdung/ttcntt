@@ -12,7 +12,7 @@
   <li><a href="/nang-luc">Năng lực</a></li>
   <li><a href="/dich-vu">Dịch vụ</a></li>
   <li><a href="/lich-cong-tac">Lịch Công tác</a></li>
-  <li><a href="/cong-van">Công văn</a></li>
+  <li><a href="/van-ban">Văn bản</a></li>
   <li><a href="/tin-tuc">Tin tức</a></li>
   <li><a href="/lien-he">Liên hệ</a></li>
 @endsection
@@ -34,6 +34,11 @@
           <h4 class="panel-title">Giới thiệu</h4>
         </div>
         <div class="panel-body">
+
+            <a href="upload/ttcntt-tt-ht.jpg">
+              <img class="img-responsive" src="upload/ttcntt-tt-ht.jpg" style="display:block; margin:0 auto; border-radius:5px" width="80%">
+            </a>
+            <br>
 
             <p>Trung tâm Công nghệ thông tin và Truyền thông Hà Tĩnh (HaTinh Information Communication Technology Center - HTIICTC) được thành lập theo Quyết định số Số: 1889/QĐ-UBND Hà Tĩnh, ngày 12 tháng 7 năm 2007 của UBND tỉnh Hà Tĩnh với chức năng giúp Sở Thông tin và Truyền thông triển khai các hoạt động sự nghiệp về công nghệ thông tin, bưu chính, viễn thông hỗ trợ cho nhiệm vụ quản lý nhà nước của Sở.</p>
             <h3>NHIỆM VỤ CỤ THỂ</h3>

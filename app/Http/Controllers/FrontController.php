@@ -18,6 +18,6 @@ class FrontController extends Controller
   public function getCongVan() {
       $ngaydang = CongVan::select('ngaydang')->orderby('ngaydang','desc')->groupby('ngaydang')->get();
       $congvan = CongVan::orderby('ngaydang', 'desc')->orderby('giodang', 'desc')->get();
-      return view('congvan',['congvan'=>$congvan, 'ngaydang'=>$ngaydang]);
+      return view('vanban',['congvan'=>$congvan, 'ngaydang'=>$ngaydang]);
   }
 }

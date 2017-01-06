@@ -2,7 +2,7 @@
 @section('content')
 <div class="panel panel-default">
   <div class="panel-heading main-color-bg">
-    <h3 class="panel-title">Tin tức đã đăng của {{ Auth::user()->name }}</h3>
+    <h3 class="panel-title">Văn bản đã đăng của {{ Auth::user()->name }}</h3>
   </div>
   <div class="panel-body">
     <div class="row">
@@ -15,60 +15,57 @@
         <table class="table table-striped table-hover">
           <tr>
             <th>Ngày đăng</th>
+            <th>Số / Kí hiệu</th>
             <th>Tiêu đề</th>
-            <th>Hình ảnh</th>
-            <th>Tóm tắt</th>
+            <th>Văn bản</th>
             <th>Ghi chú</th>
+
             <th></th>
           </tr>
-          @foreach($tintuc as $tt)
+          @foreach($vanban as $vb)
           <tr>
-            <td>{{$tt->ngaydang}}</td>
-            <td>{{$tt->tieude}}</td>
-            <td><img src="upload/tintuc/{{$tt->urlhinh}}" height="30px"></td>
-            <td>{{$tt->tomtat}}</td>
-            <td>{{$tt->ghichu}}</td>
+            <td>{{$vb->ngaydang}}</td>
+            <td>{{$vb->socv}}</td>
+            <td>{{$vb->tieude}}</td>
+            <td style="text-align: center;"><a href="/upload/vanban/pdf/{{$vb->vanban}}" target="_blank"><span class="glyphicon glyphicon-file"></span></a></td>
+            <td>{{$vb->ghichu}}</td>
 
             <td>
-              <a class="btn btn-default" onclick="return confirm('Bạn muốn sửa mục này??')" data-toggle="modal" data-target="#editTinTuc{{$tt->id}}">Edit</a>
-              <a class="btn btn-danger" onclick="return confirm('Bạn muốn xóa mục này??')" href="/adminstrap/xoa-tin-tuc/{{$tt->id}}">Delete</a>
+              <a class="btn btn-default" onclick="return confirm('Bạn muốn sửa mục này??')" data-toggle="modal" data-target="#editVanBan{{$vb->id}}">Edit</a>
+              <a class="btn btn-danger" onclick="return confirm('Bạn muốn xóa mục này??')" href="/adminstrap/xoa-van-ban/{{$vb->id}}">Delete</a>
             </td>
           </tr>
 
           <!-- Edit TinTuc -->
-          <div class="modal fade" id="editTinTuc{{$tt->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal fade" id="editVanBan{{$vb->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
-                <form action="adminstrap/sua-tin-tuc/{{$tt->id}}" method="POST" enctype="multipart/form-data">
+                <form action="adminstrap/sua-van-ban/{{$vb->id}}" method="POST" enctype="multipart/form-data">
                   <input type="hidden" name="_method" value="PUT">
                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Sửa Tin Tức</h4>
+                    <h4 class="modal-title" id="myModalLabel">Sửa Văn Bản</h4>
                   </div>
                   <div class="modal-body">
                     <div class="form-group">
-                      <label>Tiêu Đề</label>
-                      <input type="text" class="form-control" name="tieude" value="{{$tt->tieude}}" required="" autofocus="">
+                      <label>Số / Kí hiệu văn bản</label>
+                      <input type="text" class="form-control" name="socv" value="{{$vb->socv}}" required="" autofocus="" />
                     </div>
                     <div class="form-group">
-                      <label>Tóm Tắt</label>
-                      <textarea class="form-control" name="tomtat">{{$tt->tomtat}}</textarea>
+                      <label>Tiêu đề Văn bản</label>
+                      <input type="text" class="form-control" name="tieude" value="{{$vb->tieude}}" required="" />
                     </div>
                     <div class="form-group">
-                      <label>Hình ảnh</label>
-                      <input type="file" name="hinhanh" />
-                      <br>
-                      <img src="upload/tintuc/{{ $tt->urlhinh }}" width="50%" style="display:block; margin: 0 auto" />
+                        <label>File Văn bản</label>
+                        <input type="file" name="vanban"/>
                     </div>
-                    <div class="form-group">
-                      <label>Nội dung</label>
-                      <textarea class="form-control" name="noidung" required="" autofocus="">{{$tt->noidung}}</textarea>
-                    </div>
+
                     <div class="form-group">
                       <label>Ghi chú</label>
-                      <textarea class="form-control" name="ghichu">{{$tt->ghichu}}</textarea>
+                      <textarea class="form-control" name="ghichu" rows="3">{{$vb->ghichu}}</textarea>
                     </div>
+
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>

@@ -12,7 +12,7 @@
   <li><a href="/nang-luc">Năng lực</a></li>
   <li><a href="/dich-vu">Dịch vụ</a></li>
   <li><a href="/lich-cong-tac">Lịch Công tác</a></li>
-  <li class="active"><a href="/cong-van">Công văn</a></li>
+  <li class="active"><a href="/van-ban">Văn bản</a></li>
   <li><a href="/tin-tuc">Tin tức</a></li>
   <li><a href="/lien-he">Liên hệ</a></li>
 @endsection
@@ -20,7 +20,7 @@
 @section('content')
 <div class="title-bar">
   <div class="container">
-    <h1>Công văn - Tài liệu</h1>
+    <h1>Văn bản - Tài liệu</h1>
   </div>
 </div>
 
@@ -46,7 +46,7 @@
                           <div class="time">{{$cv->giodang}}</div>
                           <div class="events">
                               <div class="events-header">
-                                <a href="/cong-van/{{$cv->id}}">{{$cv->socv}}</a>
+                                {{$cv->socv}}
                                 @if (Auth::user() && Auth::user()->quyen==1)
                                   <div class="sua-xoa-item">
                                     <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/adminstrap/sua-cong-van/{{$cv->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>

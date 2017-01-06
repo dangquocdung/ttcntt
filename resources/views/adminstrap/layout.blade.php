@@ -70,7 +70,7 @@
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                 <li><a type="button" data-toggle="modal" data-target="#addLichCongTac">Thêm Lịch công tác</a></li>
                 <li><a type="button" data-toggle="modal" data-target="#addTinTuc">Thêm Tin tức - Sự kiện</a></li>
-                <li><a type="button" data-toggle="modal" data-target="#addCongVan">Thêm Công văn - Tài liệu</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#addVanBan">Thêm Văn bản - Tài liệu</a></li>
               </ul>
             </div>
           </div>
@@ -95,8 +95,8 @@
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Cá nhân
               </a>
               <a href="/adminstrap/lich-cong-tac" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Lịch công tác <span class="badge">{{$lct1}}</span></a>
-              <a href="/adminstrap/tin-tuc-su-kien" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tin tức đã đăng <span class="badge">{{$tt1}}</span></a>
-              <a href="/adminstrap/cong-van-tai-lieu" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Công văn đã đăng <span class="badge">{{$cv1}}</span></a>
+              <a href="/adminstrap/tin-tuc" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tin tức đã đăng <span class="badge">{{$tt1}}</span></a>
+              <a href="/adminstrap/van-ban" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Công văn đã đăng <span class="badge">{{$cv1}}</span></a>
             </div>
 
             <div class="well">
@@ -267,7 +267,9 @@
             </div>
             <div class="form-group">
                 <label>Hình Ảnh</label>
-                <input type="file" name="hinhanh" />
+                <input type="file" id="imgInp" name="hinhanh" />
+                <br>
+                <img id="blah" src="" width="80%" style="display:block; margin: 0 auto"/>
             </div>
             <div class="form-group">
                 <label>Nội dung</label>
@@ -292,10 +294,10 @@
 </div>
 
 <!-- Add Cong Van -->
-<div class="modal fade" id="addCongVan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="addVanBan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <form action="adminstrap/them-cong-van" method="POST" enctype="multipart/form-data">
+      <form action="adminstrap/them-van-ban" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="_token" value="{{csrf_token()}}"/>
           <input type="hidden" name="ngaydang" value="<?php echo date('Y-m-d'); ?>"/>
 
@@ -346,5 +348,35 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      $("#imgInp").change(function(){
+          readURL(this);
+      });
+
+      $('.chonhinh').change(function(){
+
+      })
+
+
+
+
+
+
+
+    </script>
   </body>
 </html>

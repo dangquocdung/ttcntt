@@ -61,10 +61,7 @@ class BackController extends Controller
     }
 
 
-    public function getThemLichCongTac()
-    {
-        return view('blayout.themlichcongtac');
-    }
+
 
     public function postThemLichCongTac(Request $request){
 
@@ -79,21 +76,31 @@ class BackController extends Controller
 
         $lct->save();
 
-        return redirect('adminstrap');
+        return redirect('adminstrap/lich-cong-tac');
 
     }
+
+    public function putSuaLichCongTac(Request $request, $id)
+    {
+        $lct = LichCongTac::find($id);
+        $lct->noidung = $request->noidung;
+        $lct->diadiem = $request->diadiem;
+        $lct->batdau = $request->batdau;
+        $lct->ketthuc = $request->ketthuc;
+        $lct->ghichu = $request->ghichu;
+        $lct->save();
+        return redirect('adminstrap/lich-cong-tac');
+    }
+
 
     public function getXoaLichCongTac($id)
     {
         $lct = LichCongTac::find($id);
         $lct->delete();
-        return redirect('lich-cong-tac');
+        return redirect('adminstrap/lich-cong-tac');
     }
 
-    public function getThemTinTuc()
-    {
-        return view('blayout.themtintuc');
-    }
+
 
     public function postThemTinTuc(Request $request){
 
@@ -129,21 +136,55 @@ class BackController extends Controller
 
         $tin->save();
 
-        return redirect('adminstrap');
+        return redirect('adminstrap/tin-tuc');
 
     }
+
+    public function putSuaTinTuc(Request $request, $id){
+
+        $tin = TinTuc::find($id);
+        $tin->tieude = $request->tieude;
+        $tin->tieudekhongdau = changeTitle($request->tieude);
+        $tin->tomtat = $request->tomtat;
+        $tin->noidung = $request->noidung;
+        $tin->ghichu = $request->ghichu;
+
+
+
+        if ($request->hasfile('hinhanh')){
+
+          $file = $request->file('hinhanh');
+
+          $name = $file->getClientOriginalName();
+
+          $Hinh = str_random(4)."_".$name;
+
+          while (file_exists("upload/tintuc/".$Hinh)){
+            $Hinh = str_random(4)."_name";
+          }
+
+          $file->move("upload/tintuc",$Hinh);
+
+          $tin->urlhinh = $Hinh;
+
+        }
+
+        $tin->save();
+
+        return redirect('adminstrap/tin-tuc');
+
+    }
+
+
     public function getXoaTinTuc($id)
     {
         $tin = TinTuc::find($id);
         $tin->delete();
-        return redirect('tin-tuc');
+        return redirect('adminstrap/tin-tuc');
     }
 
 
-    public function getThemCongVan()
-    {
-        return view('blayout.themcongvan');
-    }
+
 
     public function postThemCongVan(Request $request){
 
@@ -183,7 +224,42 @@ class BackController extends Controller
 
         $cv->save();
 
-        return redirect('adminstrap');
+        return redirect('adminstrap/van-ban');
+
+    }
+
+    public function putSuaCongVan(Request $request, $id){
+
+        $cv = CongVan::find($id);
+
+        $cv->socv = $request->socv;
+        $cv->tieude = $request->tieude;
+        // $cv->tieudekhongdau = changeTitle($request->tieude);
+        $cv->ghichu = $request->ghichu;
+
+      
+
+        if ($request->hasfile('vanban')){
+
+          $file = $request->file('vanban');
+
+          $name = $file->getClientOriginalName();
+
+          $Hinh = str_random(4)."_".$name;
+
+          while (file_exists("upload/vanban/pdf/".$Hinh)){
+            $Hinh = str_random(4)."_name";
+          }
+
+          $file->move("upload/vanban/pdf",$Hinh);
+
+          $cv->vanban = $Hinh;
+
+        }
+
+        $cv->save();
+
+        return redirect('adminstrap/van-ban');
 
     }
 
@@ -191,7 +267,7 @@ class BackController extends Controller
     {
         $cv = CongVan::find($id);
         $cv->delete();
-        return redirect('cong-van');
+        return redirect('adminstrap/van-ban');
     }
 
     public function getLichCongTac()
@@ -220,7 +296,7 @@ class BackController extends Controller
       return view('adminstrap.tintuc',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'tintuc'=>$tintuc ]);
     }
 
-    public function getCongVan()
+    public function getVanBan()
     {
       $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
 
@@ -228,9 +304,9 @@ class BackController extends Controller
 
       $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
 
-      $congvan = CongVan::where('user_id','=',Auth::user()->id)->orderby('id','desc')->get();
+      $vanban = CongVan::where('user_id','=',Auth::user()->id)->orderby('id','desc')->get();
 
-      return view('adminstrap.congvan',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'congvan'=>$congvan ]);
+      return view('adminstrap.vanban',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'vanban'=>$vanban ]);
     }
 
 

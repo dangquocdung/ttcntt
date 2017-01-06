@@ -10,7 +10,7 @@
   <li><a href="/nang-luc">Năng lực</a></li>
   <li><a href="/dich-vu">Dịch vụ</a></li>
   <li><a href="/lich-cong-tac">Lịch Công tác</a></li>
-  <li><a href="/cong-van">Công văn</a></li>
+  <li><a href="/van-ban">Văn bản</a></li>
   <li><a href="/tin-tuc">Tin tức</a></li>
   <li><a href="/lien-he">Liên hệ</a></li>
 @endsection
@@ -76,7 +76,7 @@
       </div>
       <!--section title-->
       <div class="col-md-4">
-        <a href="cong-van"><img alt=" " src="http://icti-hcm.gov.vn/sites/default/files/images/cosodulieu-vbpl.jpg"></a>
+        <a href="van-ban"><img alt=" " src="http://icti-hcm.gov.vn/sites/default/files/images/cosodulieu-vbpl.jpg"></a>
       </div>
       <!--section title-->
       <div class="col-md-4">
@@ -218,10 +218,10 @@
       </div>
 
       <div class="customNavigation">
-        <a class="btn prev">Previous</a>
-        <a class="btn next">Next</a>
-        <a class="btn play">Autoplay</a>
-        <a class="btn stop">Stop</a>
+        <a class="btn prev">Trước</a>
+        <a class="btn next">Sau</a>
+        <a class="btn play">Tự động</a>
+        <a class="btn stop">Dừng</a>
       </div>
     </div>
   </div>

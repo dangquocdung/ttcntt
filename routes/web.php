@@ -22,45 +22,29 @@ use App\LichCongTac;
 Auth::routes();
 Route::get('home', 'BackController@getAdminStrap');
 
-
-
 Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
 
   Route::get('/', 'BackController@getAdminStrap');
+  Route::get('/lich-cong-tac', 'BackController@getLichCongTac');
+  Route::get('/tin-tuc', 'BackController@getTinTuc');
+  Route::get('/van-ban', 'BackController@getVanBan');
 
-
-
-  Route::get('/them-lich-cong-tac', 'BackController@getThemLichCongTac');
   Route::post('/them-lich-cong-tac', 'BackController@postThemLichCongTac');
+  Route::put('/sua-lich-cong-tac/{id}', 'BackController@putSuaLichCongTac');
   Route::get('/xoa-lich-cong-tac/{id}', 'BackController@getXoaLichCongTac');
-  Route::get('/sua-lich-cong-tac/{id}', 'BackController@getSuaLichCongTac');
-  Route::post('/sua-lich-cong-tac/{id}', 'BackController@postSuaLichCongTac');
 
-  Route::get('/them-tin-tuc', 'BackController@getThemTinTuc');
   Route::post('/them-tin-tuc', 'BackController@postThemTintuc');
   Route::get('/xoa-tin-tuc/{id}', 'BackController@getXoaTinTuc');
-  Route::get('/sua-tin-tuc/{id}', 'BackController@getSuaTinTuc');
-  Route::post('/sua-tin-tuc/{id}', 'BackController@postSuaTinTuc');
+  Route::put('/sua-tin-tuc/{id}', 'BackController@putSuaTinTuc');
 
-  Route::get('/them-cong-van', 'BackController@getThemCongVan');
-  Route::post('/them-cong-van', 'BackController@postThemCongVan');
-  Route::get('/xoa-cong-van/{id}', 'BackController@getXoaCongVan');
-  Route::get('/sua-cong-van/{id}', 'BackController@getSuaCongVan');
-  Route::post('/sua-cong-van/{id}', 'BackController@postSuaCongVan');
-
-  Route::get('/lich-cong-tac','BackController@getLichCongTac' );
-  Route::get('/tin-tuc-su-kien','BackController@getTinTuc' );
-  Route::get('/cong-van-tai-lieu','BackController@getCongVan' );
-
-
+  Route::post('/them-van-ban', 'BackController@postThemCongVan');
+  Route::get('/xoa-van-ban/{id}', 'BackController@getXoaCongVan');
+  Route::put('/sua-van-ban/{id}', 'BackController@putSuaCongVan');
 
 });
 
-
 Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){
-
   Route::get('/', 'DieuHanhController@getDieuHanhCongViec');
-
 });
 
 
@@ -101,4 +85,4 @@ Route::get('/bien-dao-viet-nam', function () {
 });
 Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
 
-Route::get('/cong-van', 'FrontController@getCongVan');
+Route::get('/van-ban', 'FrontController@getCongVan');

@@ -12,7 +12,7 @@
   <li><a href="/nang-luc">Năng lực</a></li>
   <li class="active"><a href="/dich-vu">Dịch vụ</a></li>
   <li><a href="/lich-cong-tac">Lịch Công tác</a></li>
-  <li><a href="/cong-van">Công văn</a></li>
+  <li><a href="/van-ban">Văn bản</a></li>
   <li><a href="/tin-tuc">Tin tức</a></li>
   <li><a href="/lien-he">Liên hệ</a></li>
 @endsection
