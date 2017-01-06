@@ -240,6 +240,6 @@
     </div>
   </div>
 </div>
-<div id = "sample" style = "width:100%; height:400px;"></div>
+<div id = "googleMap" style = "width:100%; height:400px;"></div>
 
 @endsection

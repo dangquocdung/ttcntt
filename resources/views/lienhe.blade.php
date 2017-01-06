@@ -50,6 +50,15 @@
             </form>
         </div>
       </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Địa chỉ</h4>
+        </div>
+        <div class="panel-body">
+          <div id = "googleMap" style = "width:100%; height:400px;"></div>
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
       @include('flayout.sidebar')

@@ -186,7 +186,7 @@
             center: new google.maps.LatLng(18.335534, 105.906581)
           };
 
-          var map = new google.maps.Map(document.getElementById('sample'),
+          var map = new google.maps.Map(document.getElementById('googleMap'),
               mapOptions);
 
 
