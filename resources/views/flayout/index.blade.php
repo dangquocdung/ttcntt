@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" style="float:none">
+          <a class="navbar-brand" style="float:none" href="/">
 
             <img src="upload/logo.png" alt="HaTinhITC">
 
