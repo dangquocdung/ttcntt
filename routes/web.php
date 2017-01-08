@@ -46,6 +46,12 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
   Route::get('/van-ban-all', 'BackController@getVanBanAll');
 
   Route::post('/lich-cong-tac-all/tim-kiem', 'BackController@postLichCongTacAllTimKiem');
+  Route::post('/tin-tuc-all/tim-kiem', 'BackController@postTinTucAllTimKiem');
+  Route::post('/van-ban-all/tim-kiem', 'BackController@postVanBanAllTimKiem');
+
+  Route::post('/lich-cong-tac/tim-kiem', 'BackController@postLichCongTacTimKiem');
+  Route::post('/tin-tuc/tim-kiem', 'BackController@postTinTucTimKiem');
+  Route::post('/van-ban/tim-kiem', 'BackController@postVanBanTimKiem');
 
 });
 

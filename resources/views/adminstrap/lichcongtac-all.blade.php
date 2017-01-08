@@ -10,8 +10,12 @@
               <!-- <input class="form-control" type="submit" placeholder="Filter Pages..."> -->
               <form action="adminstrap/lich-cong-tac-all/tim-kiem" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                <input class="form-control" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" placeholder="Filter Pages..." name="timkiem">
+                <div class="input-group">
+                  <input class="form-control" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" placeholder="Filter Pages..." name="timkiem">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Tìm</button>
+                  </span>
+                </div><!-- /input-group -->
               </form>
 
           </div>
