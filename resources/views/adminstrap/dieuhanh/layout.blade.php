@@ -103,51 +103,28 @@
             </div>
 
             <div class="well">
-              <h4>Tỉ lệ đầu việc</h4>
+              <h4>Đã hoàn thành</h4>
               <div class="progress">
-                <?php
-                 if ($slct>0){
-                   $i = ($lct1/$slct)*100;
-
-                 }else{
-                   $i = 0;
-                 }
-                 ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                    {{$i}}%
-                </div>
-              </div>
-              <h4>Tỉ lệ đăng tin </h4>
-              <div class="progress">
-                <?php
-                 if ($stt>0){
-                   $i = ($tt1/$stt)*100;
-
-                 }else{
-                   $i = 0;
-                 }
-                 ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                      {{$i}}%
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    60%
                 </div>
               </div>
 
-              <h4>Tỉ lệ đăng công văn </h4>
+              <h4>Chưa hoàn thành</h4>
               <div class="progress">
-                <?php
-                 if ($scv>0){
-                   $i = ($cv1/$scv)*100;
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                    40%
+                </div>
+              </div>
 
-                 }else{
-                   $i = 0;
-                 }
-                ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                      {{$i}}%
+              <h4>Chậm tiến độ</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                    20%
                 </div>
               </div>
             </div>
-            
+
           </div>
           <div class="col-md-9">
             <!-- Website Overview -->
