@@ -69,20 +69,17 @@
     <div class="row">
 
       <!--section title-->
-      <div class="col-md-3">
+      <div class="col-md-4">
+        <a href="http://www.hatinh.gov.vn/"><img src="/upload/banner/congttdt.jpg"></a>
+      </div>
+
+      <!--section title-->
+      <div class="col-md-4">
         <a href="http://113.160.178.189:8686/"><img src="/upload/banner/dbnganh.jpg"></a>
       </div>
 
       <!--section title-->
-      <div class="col-md-3">
-        <a href="/lich-cong-tac"><img src="/upload/banner/lichct.jpg"></a>
-      </div>
-      <!--section title-->
-      <div class="col-md-3">
-        <a href="van-ban"><img src="/upload/banner/vanban.jpg"></a>
-      </div>
-      <!--section title-->
-      <div class="col-md-3">
+      <div class="col-md-4">
         <a href="/bien-dao-viet-nam"><img src="/upload/banner/biendao.jpg"></a>
       </div>
     </div>
