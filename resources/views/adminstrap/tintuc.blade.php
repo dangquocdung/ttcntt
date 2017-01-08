@@ -6,16 +6,17 @@
   </div>
   <div class="panel-body">
     <div class="row">
-          <div class="col-md-12">
-            <form action="adminstrap/tin-tuc/tim-kiem" method="post">
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <div class="input-group">
-                <input class="form-control" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" placeholder="Filter Pages..." name="timkiem">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="submit">Tìm</button>
-                </span>
-              </div><!-- /input-group -->
-            </form>
+      <div class="col-md-12">
+        <form action="adminstrap/tin-tuc/tim-kiem" method="post">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <div class="input-group">
+            <input class="form-control" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" placeholder="Filter Pages..." name="timkiem">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">Tìm</button>
+            </span>
+          </div><!-- /input-group -->
+        </form>
+      </div>
     </div>
     <br>
     <div class="table-responsive">
