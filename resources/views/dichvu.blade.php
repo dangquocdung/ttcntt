@@ -44,11 +44,10 @@
 
             </div>
             <div class="well">
-                <h4>Nghiên cứu, thiết kế, xây dựng các sản phẩm và dịch vụ công nghệ thông tin, truyền thông, xuất bản và báo chí.</h4>
-                <p>Nghiên cứu, thiết kế, xây dựng chương trình, đề án và ứng dụng các tiến bộ khoa học, công nghệ về các lĩnh vực trên.</p>
-                <p>Triển khai và phối hợp vận hành các mô hình, giải pháp công nghệ và các hoạt động nghiên cứu ứng dụng trong các lĩnh vực trên.</p>
+                <h4>Thiết kế & cho thuê ứng dụng CNTT trong Cải cách hành chính và Chính phủ điện tử.</h4>
                 <p>Thiết kế xây dựng công trình công nghệ thông tin: thiết kế phần mềm và hệ thống phần mềm; thiết kế cơ sở dữ liệu và hệ thống cơ sở dữ liệu; thiết kế hệ thống máy tính (thiết kế, tạo lập trang chủ internet, thiết kế hệ thống máy tính tích hợp với phần cứng, phần mềm và với các công nghệ truyền thông).</p>
-                <p>Thiết kế bo mạch điện tử, mạch tích hợp … cho ngành công nghiệp điện tử;</p>
+                <p>Nghiên cứu, thiết kế, xây dựng chương trình, đề án và ứng dụng các tiến bộ khoa học, công nghệ về các lĩnh vực trên.</p>
+                <p>Triển khai, cho thuê và phối hợp vận hành các mô hình, giải pháp công nghệ và các hoạt động nghiên cứu ứng dụng trong các lĩnh vực trên.</p>
                 <p>Hợp tác, phối hợp tổ chức, thực hiện các chương trình hợp tác, liên kết, chuyên đề nghiên cứu khoa học với các tổ chức, cá nhân trong và ngoài nước.</p>
                 <p>Thực hiện dịch vụ thu thập, lưu trữ, xử lý và cung cấp thông tin.</p>
               </div>
