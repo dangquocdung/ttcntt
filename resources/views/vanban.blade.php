@@ -47,7 +47,7 @@
                           <div class="events">
                               <div class="events-header">
                                 {{$cv->socv}}
-                                @if (Auth::user() && Auth::user()->quyen==1)
+                                @if (Auth::user() && Auth::user()->quyen==2)
                                   <div class="sua-xoa-item">
                                     <a onclick="return confirm('Bạn muốn sửa mục này?')" href="/adminstrap/sua-cong-van/{{$cv->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                     <a onclick="return confirm('Bạn muốn xóa mục này?')" href="/adminstrap/xoa-cong-van/{{$cv->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
