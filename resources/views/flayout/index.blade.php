@@ -35,7 +35,7 @@
 
           <a class="navbar-brand" style="float:none">
 
-            <img src="upload/logo.png" alt="HaTinhITC" width="80%" style="padding: 10px 0">
+            <img src="upload/logo.png" alt="HaTinhITC" style="padding: 10px 0">
 
           </a>
 
