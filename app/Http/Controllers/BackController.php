@@ -363,12 +363,6 @@ class BackController extends Controller
 
       return view('adminstrap.lichcongtac-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'lichcongtac'=>$lichcongtac]);
 
-
-
-
     }
-
-
-
 
 }
