@@ -69,16 +69,21 @@
     <div class="row">
 
       <!--section title-->
-      <div class="col-md-4">
-        <a href="/lich-cong-tac"><img alt=" " src="http://icti-hcm.gov.vn/sites/default/files/images/lichct.jpg"></a>
+      <div class="col-md-3">
+        <a href="http://113.160.178.189:8686/"><img src="/upload/banner/dbnganh.jpg"></a>
+      </div>
+
+      <!--section title-->
+      <div class="col-md-3">
+        <a href="/lich-cong-tac"><img src="/upload/banner/lichct.jpg"></a>
       </div>
       <!--section title-->
-      <div class="col-md-4">
-        <a href="van-ban"><img alt=" " src="http://icti-hcm.gov.vn/sites/default/files/images/cosodulieu-vbpl.jpg"></a>
+      <div class="col-md-3">
+        <a href="van-ban"><img src="/upload/banner/vanban.jpg"></a>
       </div>
       <!--section title-->
-      <div class="col-md-4">
-        <a href="/bien-dao-viet-nam"><img alt=" " src="http://icti-hcm.gov.vn/sites/default/files/images/biendao.jpg"></a>
+      <div class="col-md-3">
+        <a href="/bien-dao-viet-nam"><img src="/upload/banner/biendao.jpg"></a>
       </div>
     </div>
   </div>
