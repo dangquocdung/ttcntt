@@ -98,7 +98,7 @@
           <div class="block-dichvu">
 
             <h3>{{$dv->ten}}</h3>
-            <p>{{$dv->diengiai}}</p>
+            <p>{!!$dv->diengiai!!}</p>
           </div>
         </div>
       @endforeach
