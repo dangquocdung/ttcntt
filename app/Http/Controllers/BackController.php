@@ -349,6 +349,26 @@ class BackController extends Controller
     }
 
 
+    public function postLichCongTacAllTimKiem(Request $request){
+
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+      $noidung = $request->timkiem;
+
+      $lichcongtac = LichCongTac::where('noidung','like',"%$noidung%")->orderby('id','desc')->get();
+
+      return view('adminstrap.lichcongtac-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'lichcongtac'=>$lichcongtac]);
+
+
+
+
+    }
+
+
 
 
 }

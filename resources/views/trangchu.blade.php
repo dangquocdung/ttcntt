@@ -46,9 +46,7 @@
         <img src="/img/{{$dv->hinh}}.jpg" alt="">
         <div class="carousel-caption">
           <h3>{{$dv->ten}}</h3>
-          <div class="hidden-sm hidden-xs">
-            <p>{{$dv->diengiai}}</h3>
-          </div>
+          
 
         </div>
       </div>

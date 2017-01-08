@@ -45,6 +45,8 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
   Route::get('/tin-tuc-all', 'BackController@getTinTucAll');
   Route::get('/van-ban-all', 'BackController@getVanBanAll');
 
+  Route::post('/lich-cong-tac-all/tim-kiem', 'BackController@postLichCongTacAllTimKiem');
+
 });
 
 Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){

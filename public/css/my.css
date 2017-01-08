@@ -1,5 +1,10 @@
+.showcase{
+  padding: 0 !important;
+}
+
+
 .showcase h3{
-  color: red;
+  color: orange;
   font-size: 32px;
 }
 
@@ -81,3 +86,11 @@
     width: 100%;
     text-align: right;
   }
+
+.carousel-caption {
+  top: 0px !important;
+}
+
+.navbar-brand > img {
+    display:inline !important; 
+}

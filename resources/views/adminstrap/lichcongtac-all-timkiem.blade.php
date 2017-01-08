@@ -2,15 +2,13 @@
 @section('content')
 <div class="panel panel-default">
   <div class="panel-heading main-color-bg">
-    <h3 class="panel-title">Lịch công tác</h3>
+    <h3 class="panel-title">Lịch công tác. Tìm kiếm theo nội dung: {{$timkiem}}</h3>
   </div>
   <div class="panel-body">
     <div class="row">
           <div class="col-md-12">
               <!-- <input class="form-control" type="submit" placeholder="Filter Pages..."> -->
               <form action="adminstrap/lich-cong-tac-all/tim-kiem" method="post">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
                 <input class="form-control" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" placeholder="Filter Pages..." name="timkiem">
               </form>
 

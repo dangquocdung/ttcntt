@@ -32,7 +32,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">{{ config('app.name', 'Laravel') }}</a>
+
+          <a class="navbar-brand" style="float:none">
+
+            <img src="upload/logo.png" alt="HaTinhITC" width="80%" style="padding: 10px 0">
+
+          </a>
+
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
