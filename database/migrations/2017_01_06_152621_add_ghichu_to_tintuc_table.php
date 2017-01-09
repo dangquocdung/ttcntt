@@ -13,11 +13,7 @@ class AddGhichuToTintucTable extends Migration
      */
     public function up()
     {
-        Schema::table('tintuc', function (Blueprint $table) {
 
-          $table->text('ghichu')->nullable();
-
-        });
     }
 
     /**
@@ -27,10 +23,6 @@ class AddGhichuToTintucTable extends Migration
      */
     public function down()
     {
-        Schema::table('tintuc', function (Blueprint $table) {
-            //
-            $table->dropColumn('ghichu');
-
-        });
+        
     }
 }

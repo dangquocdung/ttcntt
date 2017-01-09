@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HT ITC | Dashboard</title>
+    <title>HT ITC | Bảng Điều Khiển</title>
     <base href="{{asset('')}}">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -79,13 +79,13 @@
       </div>
     </header>
 
-    <section id="breadcrumb">
+    <!-- <section id="breadcrumb">
       <div class="container">
         <ol class="breadcrumb">
           <li class="active">Dashboard</li>
         </ol>
       </div>
-    </section>
+    </section> -->
 
     <section id="main">
       <div class="container">

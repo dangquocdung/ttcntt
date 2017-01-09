@@ -13,11 +13,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        // $this->call(DoiNguTableSeeder::class);
-        // $this->call(DichVuTableSeeder::class);
+
         // $this->call(TinTucTableSeeder::class);
         // $this->call(LichCongTacTableSeeder::class);
-        $this->call(CongVanTableSeeder::class);
+        // $this->call(CongVanTableSeeder::class);
+
+        $this->call(DichVuTableSeeder::class);
+        $this->call(PhongBanTableSeeder::class);
+        $this->call(ChucVuTableSeeder::class);
 
     }
 }
@@ -96,22 +99,6 @@ class CongVanTableSeeder extends Seeder
     }
 }
 
-class DoiNguTableSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-      DB::table('doingu')->delete();
-      DB::table('doingu')->insert([
-          'hoten' => 'Đặng Quốc Dũng', 'tenkhongdau'=>changeTitle('Đặng Quốc Dũng'), 'chucvu'=>'P.Giám Đốc', 'email' => 'dungthinhvn@gmail.com', 'codinh'=>'9999999', 'didong'=>'0986242487', 'hinh'=>'dungdq1'
-      ]);
-
-    }
-}
 
 class DichVuTableSeeder extends Seeder
 {
@@ -125,8 +112,8 @@ class DichVuTableSeeder extends Seeder
       DB::table('dichvu')->delete();
       DB::table('dichvu')->insert([
           ['ten' => 'Tư vấn - Quản lý Dự án', 'tenkhongdau'=>changeTitle('Tư vấn - Quản lý Dự án'), 'hinh'=>'tuvanqlda', 'diengiai' => 'Tư vấn, quản lý các dự án, hạng mục công việc về các lĩnh vực công nghệ thông tin, truyền thông, xuất bản và báo chí.', 'fa'=>'fa-users'],
-          ['ten' => 'Truyền thông Đa phương tiện', 'tenkhongdau'=>changeTitle('Truyền thông Đa phương tiện'), 'hinh'=>'thietke', 'diengiai' => 'Nghiên cứu, thiết kế, xây dựng các sản phẩm và dịch vụ Công nghệ thông tin, Truyền thông Xuất bản và báo chí.', 'fa'=>'fa-youtube-play'],
-          ['ten' => 'Dịch vụ mạng và Hạ tầng', 'tenkhongdau'=>changeTitle('Dịch vụ mạng và Hạ tầng'), 'hinh'=>'hatangmang', 'diengiai' => 'Hoạt động quản trị vận hành cơ sở hạ tầng công nghệ thông tin và truyền thông. Dịch vụ thiết kế triển khai hệ thống mạng. Dịch vụ bảo trì phần cứng.', 'fa'=>'fa-cogs'],
+          ['ten' => 'Ứng dụng CNTT trong CCHC và Chính phủ điện tử', 'tenkhongdau'=>changeTitle('Ứng dụng CNTT trong CCHC và Chính phủ điện tử'), 'hinh'=>'thietke', 'diengiai' => '<p>Thiết kế, xây dựng, cho thuê công trình công nghệ thông tin:</p><p>Phần mềm và hệ thống phần mềm</p><p>Cơ sở dữ liệu và hệ thống cơ sở dữ liệu</p><p>Cho thuê trọn gói hệ thống CNTT trong Cải cách hành chính</p>', 'fa'=>'fa-youtube-play'],
+          ['ten' => 'Dịch vụ mạng và Hạ tầng', 'tenkhongdau'=>changeTitle('Dịch vụ mạng và Hạ tầng'), 'hinh'=>'hatangmang', 'diengiai' => '<p>Hoạt động quản trị vận hành cơ sở hạ tầng công nghệ thông tin và truyền thông.</p><p> Dịch vụ thiết kế triển khai hệ thống mạng.</p><p> Dịch vụ bảo trì phần cứng.</p>', 'fa'=>'fa-cogs'],
           ['ten' => 'Đào tạo & Tổ chức sự kiện.', 'tenkhongdau'=>changeTitle('Đào tạo & Tổ chức sự kiện.'), 'hinh'=>'antt', 'diengiai' => 'Tổ chức thực hiện các sự kiện, hội nghị, hội thảo, họp báo, triển lãm; phổ biến, tuyên truyền chính sách của ngành, các ứng dụng công nghệ thông tin.', 'fa'=>'fa-graduation-cap']
       ]);
 
@@ -144,8 +131,55 @@ class TinTucTableSeeder extends Seeder
     {
       DB::table('tintuc')->delete();
       DB::table('tintuc')->insert([
-          ['user_id' => '3','tieude'=>'Tổ chức thành công Giải bóng đá ngành TT&TT mở rộng','tieudekhongdau'=>changeTitle('Tổ chức thành công Giải bóng đá ngành TT&TT mở rộng'),'urlhinh'=>'http://i.baohatinh.vn/news/1634/105d0122857t6686l8.jpg','tomtat'=>'Sau 2 ngày thi đấu, sáng 28/8, Giải bóng đá nam ngành Thông tin và truyền thông mở rộng chào mừng kỷ niệm ngày truyền thống đã diễn ra thành công tốt đẹp.','noidung'=>'Giải được tổ chức từ ngày 26-28/8, với sự tham gia của 6 đội bóng: Sở TT&TT, Viettel Hà Tĩnh, Bưu điện Hà Tĩnh, VNPT Hà Tĩnh, Cty Cổ phần Vạn Xuân và FPT Hà Tĩnh. Với tinh thần thi đấu nhiệt tình, quyết liệt các đội đã cống hiến cho khán giả những trận đấu đầy kịch tính, bất ngờ với nhiều bàn thắng đẹp mắt.','ngaydang'=>Carbon::now()],
-          ['user_id' => '3','tieude'=>'Tổ chức thành công Giải bóng đá ngành TT&TT mở rộng','tieudekhongdau'=>changeTitle('Tổ chức thành công Giải bóng đá ngành TT&TT mở rộng'),'urlhinh'=>'http://i.baohatinh.vn/news/1634/105d0122857t6686l8.jpg','tomtat'=>'Sau 2 ngày thi đấu, sáng 28/8, Giải bóng đá nam ngành Thông tin và truyền thông mở rộng chào mừng kỷ niệm ngày truyền thống đã diễn ra thành công tốt đẹp.','noidung'=>'Giải được tổ chức từ ngày 26-28/8, với sự tham gia của 6 đội bóng: Sở TT&TT, Viettel Hà Tĩnh, Bưu điện Hà Tĩnh, VNPT Hà Tĩnh, Cty Cổ phần Vạn Xuân và FPT Hà Tĩnh. Với tinh thần thi đấu nhiệt tình, quyết liệt các đội đã cống hiến cho khán giả những trận đấu đầy kịch tính, bất ngờ với nhiều bàn thắng đẹp mắt.','ngaydang'=>date("2016-08-26")]
+          ['user_id' => '3','tieude'=>'Tổ chức thành công Giải bóng đá ngành TT&TT mở rộng','tieudekhongdau'=>changeTitle('Tổ chức thành công Giải bóng đá ngành TT&TT mở rộng'),'urlhinh'=>'http://i.baohatinh.vn/news/1634/105d0122857t6686l8.jpg','tomtat'=>'Sau 2 ngày thi đấu, sáng 28/8, Giải bóng đá nam ngành Thông tin và truyền thông mở rộng chào mừng kỷ niệm ngày truyền thống đã diễn ra thành công tốt đẹp.','noidung'=>'Giải được tổ chức từ ngày 26-28/8, với sự tham gia của 6 đội bóng: Sở TT&TT, Viettel Hà Tĩnh, Bưu điện Hà Tĩnh, VNPT Hà Tĩnh, Cty Cổ phần Vạn Xuân và FPT Hà Tĩnh. Với tinh thần thi đấu nhiệt tình, quyết liệt các đội đã cống hiến cho khán giả những trận đấu đầy kịch tính, bất ngờ với nhiều bàn thắng đẹp mắt.','ngaydang'=>Carbon::now(),'ghichu'=>'ghichu'],
+          ['user_id' => '3','tieude'=>'Tổ chức thành công Giải bóng đá ngành TT&TT mở rộng','tieudekhongdau'=>changeTitle('Tổ chức thành công Giải bóng đá ngành TT&TT mở rộng'),'urlhinh'=>'http://i.baohatinh.vn/news/1634/105d0122857t6686l8.jpg','tomtat'=>'Sau 2 ngày thi đấu, sáng 28/8, Giải bóng đá nam ngành Thông tin và truyền thông mở rộng chào mừng kỷ niệm ngày truyền thống đã diễn ra thành công tốt đẹp.','noidung'=>'Giải được tổ chức từ ngày 26-28/8, với sự tham gia của 6 đội bóng: Sở TT&TT, Viettel Hà Tĩnh, Bưu điện Hà Tĩnh, VNPT Hà Tĩnh, Cty Cổ phần Vạn Xuân và FPT Hà Tĩnh. Với tinh thần thi đấu nhiệt tình, quyết liệt các đội đã cống hiến cho khán giả những trận đấu đầy kịch tính, bất ngờ với nhiều bàn thắng đẹp mắt.','ngaydang'=>date("2016-08-26"),'ghichu'=>'ghichu']
+
+      ]);
+
+    }
+}
+
+class PhongBanTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+      DB::table('phongban')->delete();
+      DB::table('phongban')->insert([
+          ['tenphongban' => 'Ban Giám Đốc'],
+          ['tenphongban' => 'Văn Phòng'],
+          ['tenphongban' => 'Phòng Phát triển Ứng dụng'],
+          ['tenphongban' => 'Phòng Đào Tạo'],
+          ['tenphongban' => 'Phòng Cổng - Sàn'],
+          ['tenphongban' => 'Bộ Phận Kinh Doanh - Dịch Vụ']
+
+
+      ]);
+
+    }
+}
+
+class ChucVuTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+      DB::table('chucvu')->delete();
+      DB::table('chucvu')->insert([
+          ['chucvu' => 'Giám Đốc'],
+          ['chucvu' => 'P.Giám Đốc'],
+          ['chucvu' => 'Trưởng Phòng'],
+          ['chucvu' => 'Nhân viên']
+
+
 
       ]);
 

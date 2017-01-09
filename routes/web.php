@@ -56,7 +56,10 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
 });
 
 Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){
+  
   Route::get('/', 'DieuHanhController@getDieuHanhCongViec');
+
+  Route::post('/them-cong-viec', 'DieuHanhController@postThemCongViec');
 });
 
 

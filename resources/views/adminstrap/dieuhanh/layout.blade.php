@@ -4,11 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HT ITC | Dashboard</title>
+    <title>HT ITC | E-OFFICE</title>
     <base href="{{asset('')}}">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
     <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
   </head>
   <body>
@@ -29,16 +34,11 @@
           <ul class="nav navbar-nav">
             <li><a href="adminstrap">Bảng Điều khiển</a></li>
             <li class="active"><a href="adminstrap/dieu-hanh-cong-viec">Điều hành công việc</a></li>
-            @if (Auth::user()->quyen > 1 )
-            <li><a href="adminstrap/lich-cong-tac-all">Lịch</a></li>
-            <li><a href="adminstrap/tin-tuc-all">Tin tức</a></li>
-            <li><a href="adminstrap/cong-van-all">Công văn</a></li>
-            @endif
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="#">Welcome, {{ Auth::user()->name }}</a></li> -->
-            <li><a href="/">Trang chủ</a></li>
+            <li><a href="/">Website</a></li>
             <li>
               <a href="{{ url('/logout') }}"
                   onclick="event.preventDefault();
@@ -68,7 +68,7 @@
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a type="button" data-toggle="modal" data-target="#">Thêm Công việc</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#addCongViec">Thêm Công việc</a></li>
               </ul>
             </div>
           </div>
@@ -76,13 +76,7 @@
       </div>
     </header>
 
-    <section id="breadcrumb">
-      <div class="container">
-        <ol class="breadcrumb">
-          <li class="active">Điều hành công việc</li>
-        </ol>
-      </div>
-    </section>
+
 
     <section id="main">
       <div class="container">
@@ -91,39 +85,81 @@
 
 
             <div class="list-group">
-              <a href="adminstrap" class="list-group-item active main-color-bg">
+              <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#congViec">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Điều hành công việc cá nhân
               </a>
-              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Sắp hết hạn <span class="badge"></span></a>
-              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tất cả <span class="badge">2</span></a>
-              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Trể hạn <span class="badge">3</span></a>
-              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Chưa xử lý <span class="badge"></span></a>
-              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đang xử lý <span class="badge">2</span></a>
-              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đã xử lý <span class="badge">3</span></a>
+              <div id="congViec" class="panel-collapse collapse in">
+                <a class="list-group-item">
+                  <span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Sắp hết hạn <span class="badge">0</span>
+                </a>
+                <a class="list-group-item">
+                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Việc gấp chưa xử lý <span class="badge">0</span>
+                </a>
+                <a class="list-group-item" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongViec">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Tất cả <span class="caret"></span><span class="badge">2</span>
+                </a>
+                <div id="tatCaCongViec" class="panel-collapse collapse">
+                  <a class="list-group-item">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Trể hạn <span class="badge">3</span>
+                  </a>
+                  <a class="list-group-item">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Chưa xử lý <span class="badge">5</span>
+                  </a>
+                  <a class="list-group-item">
+                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đang xử lý <span class="badge">2</span>
+                  </a>
+                  <a class="list-group-item">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đã xử lý <span class="badge">3</span>
+                  </a>
+                </div>
+              </div>
+
+              <script type="text/javascript">
+                $('.collapse').on('shown.bs.collapse', function(){
+                  $(this).parent().find(".glyphicon-chevron-right").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-down");
+                  }).on('hidden.bs.collapse', function(){
+                    $(this).parent().find(".glyphicon-chevron-down").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-right");
+                });
+              </script>
+
             </div>
 
-            <div class="well">
-              <h4>Đã hoàn thành</h4>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                </div>
-              </div>
 
-              <h4>Chưa hoàn thành</h4>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                    40%
-                </div>
-              </div>
 
-              <h4>Chậm tiến độ</h4>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
-                    20%
-                </div>
+            <div class="list-group">
+              <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#congVan">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Quản lý công văn
+              </a>
+              <div id="congVan" class="panel-collapse collapse">
+                <a class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span></a>
+                <a class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="badge">2</span></a>
               </div>
             </div>
+
+            <div class="list-group">
+              <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#nhanSu">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Quản lý nhân sự
+              </a>
+              <div id="nhanSu" class="panel-collapse collapse">
+                <a class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span></a>
+                <a class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="badge">2</span></a>
+              </div>
+            </div>
+
+            <div class="list-group">
+              <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#tienIch">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Tiện ích
+              </a>
+              <div id="tienIch" class="panel-collapse collapse">
+                <a class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Lịch làm việc <span class="badge">0</span></a>
+                <a class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đăng kí xe <span class="badge">2</span></a>
+                <a class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Phòng họp <span class="badge">0</span></a>
+                <a class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Theo dõi ra/vào <span class="badge">2</span></a>
+
+              </div>
+            </div>
+
+
 
           </div>
           <div class="col-md-9">
@@ -139,15 +175,99 @@
     </footer>
 
 
+    <!-- Them Cong viec -->
+    <div class="modal fade" id="addCongViec" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form action="adminstrap/dieu-hanh-cong-viec/them-cong-viec" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+              <input type="hidden" name="ngaydang" value="<?php echo date('Y-m-d'); ?>"/>
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Thêm Công việc</h4>
+              </div>
+              <div class="modal-body">
+
+                <div class="form-group">
+                  <label>Tên công việc</label>
+                  <input type="text" class="form-control" name="tenCongViec" placeholder="Nhập tên công việc" required="" autofocus="" />
+                </div>
+
+                <div class="form-group">
+                  <label>Giao việc cho</label>
+
+                    <select id="chkveg" name="thucHien[]" multiple="multiple" >
+                      @foreach ($thanhvien as $tv)
+                        <option value="{{$tv->id}}">{{$tv->name}}</option>
+                      @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Tệp đính kèm <span class="glyphicon glyphicon-paperclip"></span></label>
+                    <input type="file" name="tepDinhKem"/>
+                </div>
+
+                <div class="form-group">
+                  <label>Yêu cầu công việc</label>
+                  <textarea class="form-control" name="yeuCauCongViec" rows="5" placeholder="Nhập yêu cầu công việc" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Việc gấp</label>
+                    <select name="viecGap" class="form-control">
+                      <option value="0" selected="">Không gấp</option>
+                      <option value="1">Gấp</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Hạn xử lý</label>
+                    <input type="datetime-local" name="hanXuLy" required="" class="form-control"/>
+                </div>
+
+              </div>
+
+
+
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary">Thêm Việc</button>
+              </div>
+
+              <script type="text/javascript">
+
+                $(function() {
+
+                    $('#chkveg').multiselect({
+
+                        includeSelectAllOption: true
+                    });
+
+
+
+                });
+
+              </script>
+        </form>
+        </div>
+      </div>
+    </div>
+
+
+
 
   <script>
-     CKEDITOR.replace( 'noidung' );
+     CKEDITOR.replace( 'yeuCauCongViec' );
  </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+
+
+
   </body>
 </html>

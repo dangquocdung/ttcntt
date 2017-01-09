@@ -18,9 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('chucvu');
-            $table->string('dienthoai');
-            $table->string('didong');
+            $table->integer('phongban_id')->default('2');
+            $table->integer('chucvu_id')->default('4');
+            $table->string('dienthoai')->nullable();
+            $table->string('didong')->nullable();
+            $table->string('tenhinh')->nullable();
             $table->integer('quyen')->default('0');
             $table->rememberToken();
             $table->timestamps();

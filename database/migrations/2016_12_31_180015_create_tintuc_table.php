@@ -19,10 +19,11 @@ class CreateTintucTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('tieude');
             $table->string('tieudekhongdau');
-            $table->string('urlhinh');
+            $table->string('urlhinh')->nullable();
             $table->text('tomtat');
             $table->text('noidung');
             $table->date('ngaydang');
+            $table->text('ghichu')->nullable();
             $table->timestamps();
         });
     }

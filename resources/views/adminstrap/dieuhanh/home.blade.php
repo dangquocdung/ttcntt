@@ -30,12 +30,44 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading main-color-bg">
+    <h3 class="panel-title">Thông tin tiện ích</h3>
   </div>
+  <div class="panel-body">
+    <div class="col-md-3">
+      <div class="well dash-box">
+        <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 10</h2>
+        <h4>Lịch làm việc</h4>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="well dash-box">
+        <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 15</h2>
+        <h4>Đăng kí xe</h4>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="well dash-box">
+        <h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 20</h2>
+        <h4>Đăng kí phòng họp</h4>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="well dash-box">
+        <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 25</h2>
+        <h4>Thông tin nhân sự</h4>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Latest Users -->
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Danh sách công việc</h3>
+      <h3 class="panel-title">Luồng công việc</h3>
     </div>
     <div class="panel-body">
       <div class="table-responsive">
