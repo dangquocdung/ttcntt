@@ -49,7 +49,7 @@
           @foreach ($thanhvien as $tv)
           <tr>
             <td>{{$tv->name}}</td>
-            <td>{{$tv->chucvu}}</td>
+            <td>{{$tv->chucvu->chucvu}}</td>
             <td>{{$tv->email}}</td>
             <td>{{$tv->didong}}</td>
           </tr>
