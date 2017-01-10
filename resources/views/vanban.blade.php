@@ -59,18 +59,22 @@
                               <div class="events-body">
                                   <div class="row">
                                     <div class="events-desc">
-                                      <p>Ngày tháng: {{$cv->ngaydang}}<p>
-                                      <p>Số văn bản: {{$cv->socv}}<p>
-                                      <p>Tiêu đề: {{$cv->tieude}}</p>
-                                      <p>Người đăng: {{$cv->user->name}}</p>
-                                      <p>Ghi chú: {{$cv->ghichu}}</p>
+                                      <p><strong>Ngày tháng:</strong> {{$cv->ngaydang}}<p>
+                                      <p><strong>Số văn bản:</strong> {{$cv->socv}}<p>
+                                      <p><strong>Tiêu đề:</strong> {{$cv->tieude}}</p>
+                                      <p><strong>Người đăng:</strong> {{$cv->user->name}}</p>
+                                      <p><strong>Chức vụ:</strong> {{$cv->user->chucvu->chucvu}}</p>
+
 
                                       @if (Auth::user())
+                                        @if (strlen(trim($cv->ghichu))>0)
+                                          <p><strong>Ghi chú:</strong> {{$cv->ghichu}}</p>
+                                        @endif
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a>
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
                                       @else
-                                      <p>Văn bản: Yêu cầu <a href="login">Đăng nhập</a></p>
+                                      <p><strong>Văn bản:</strong> Yêu cầu <a href="login">Đăng nhập</a></p>
                                       @endif
 
 

@@ -32,4 +32,14 @@ class User extends Authenticatable
     {
     	return $this->hasMany('App\LichCongTac','user_id','id');
     }
+
+    public function chucvu()
+    {
+      return $this->belongsTo('App\ChucVu','chucvu_id','id');
+    }
+
+    public function phongban()
+    {
+      return $this->belongsTo('App\PhongBan','phongban_id','id');
+    }
 }

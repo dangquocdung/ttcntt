@@ -49,7 +49,7 @@
 
                                 </div>
                                 <div class="events-desc">
-                                  {{$tt->tomtat}}
+                                  {{$tt->tomtat}}.<a href="tin-tuc/{{$tt->id}}"><em>..đọc tiếp</em></a>
                                 </div>
 
 

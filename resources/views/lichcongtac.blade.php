@@ -46,12 +46,14 @@
                               <div class="events-body">
                                   <div class="row">
                                     <div class="events-desc">
-                                      <p>Ngày tháng: {{$lct->ngaythang}}<p>
-                                      <p>Nội dung: {{$lct->noidung}}<p>
-                                      <p>Địa điểm: {{$lct->diadiem}}</p>
-                                      <p>Bắt đầu: {{$lct->batdau}}</p>
-                                      <p>Kết thúc (dự kiến): {{$lct->ketthuc}}</p>
-                                      <p>Ghi chú: {{$lct->ghichu}}</p>
+                                      <p><strong>Ngày tháng:</strong> {{$lct->ngaythang}}<p>
+                                      <p><strong>Nội dung:</strong> {{$lct->noidung}}<p>
+                                      <p><strong>Địa điểm:</strong> {{$lct->diadiem}}</p>
+                                      <p><strong>Bắt đầu:</strong> {{$lct->batdau}}</p>
+                                      <p><strong>Kết thúc (dự kiến):</strong> {{$lct->ketthuc}}</p>
+                                      @if (strlen(trim($lct->ghichu))>0)
+                                        <p><strong>Ghi chú:</strong> {{$lct->ghichu}}</p>
+                                      @endif
 
                                     </div>
                                   </div>
