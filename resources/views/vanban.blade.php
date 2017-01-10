@@ -64,10 +64,14 @@
                                       <p>Tiêu đề: {{$cv->tieude}}</p>
                                       <p>Người đăng: {{$cv->user->name}}</p>
                                       <p>Ghi chú: {{$cv->ghichu}}</p>
+
+                                      @if (Auth::user())
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a>
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
                                       <a href="/upload/vanban/pdf/{{$cv->vanban}}" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-
+                                      @else
+                                      <p>Văn bản: Yêu cầu <a href="login">Đăng nhập</a></p>
+                                      @endif
 
 
                                     </div>

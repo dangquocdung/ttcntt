@@ -42,8 +42,14 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            @yield('menu-active')
-
+            <li><a href="/">Trang chủ</a></li>
+            <li><a href="/gioi-thieu">Giới thiệu</a></li>
+            <li><a href="/nang-luc">Năng lực</a></li>
+            <li><a href="/dich-vu">Dịch vụ</a></li>
+            <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
+            <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
+            <li><a href="/tin-tuc">Tin tức <span class="badge" style="background-color:orange !important;">{{$stt}}</span></a></li>
+            <li><a href="/lien-he">Liên hệ</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>

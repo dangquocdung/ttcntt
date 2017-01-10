@@ -230,7 +230,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-            <button type="reset" class="btn btn-default">Làm lại</button>
+
             <button type="submit" class="btn btn-primary">Đăng</button>
           </div>
     </form>
@@ -279,7 +279,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-            <button type="reset" class="btn btn-default">Làm lại</button>
+
             <button type="submit" class="btn btn-primary">Đăng</button>
           </div>
     </form>
@@ -324,7 +324,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-            <button type="reset" class="btn btn-danger">Làm lại</button>
+            
             <button type="submit" class="btn btn-primary">Đăng</button>
           </div>
     </form>

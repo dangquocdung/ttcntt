@@ -4,6 +4,7 @@ use App\User;
 use App\DichVu;
 use App\TinTuc;
 use App\LichCongTac;
+use App\CongVan;
 
 
 
@@ -56,48 +57,28 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
 });
 
 Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){
-  
+
   Route::get('/', 'DieuHanhController@getDieuHanhCongViec');
 
   Route::post('/them-cong-viec', 'DieuHanhController@postThemCongViec');
 });
 
+Route::get('/', 'FrontController@getTrangChu');
 
+Route::get('/gioi-thieu', 'FrontController@getGioiThieu');
 
+Route::get('/nang-luc', 'FrontController@getNangLuc');
 
-Route::get('/', function () {
-    // return view('trangchu');
-    $dichvu = DichVu::orderby('id','asc')->get();
-    $doingu = User::where('quyen','>','0')->orderby('id','asc')->get();
-    return view('trangchu',['dichvu'=>$dichvu, 'doingu'=>$doingu]);
-});
+Route::get('/dich-vu', 'FrontController@getDichVu');
 
-Route::get('/gioi-thieu', function () {
-    return view('gioithieu');
-});
+Route::get('/tin-tuc', 'FrontController@getTinTuc');
 
-Route::get('/nang-luc', function () {
-    return view('nangluc');
-});
-Route::get('/dich-vu', function () {
-    return view('dichvu');
-});
-Route::get('/tin-tuc', function () {
-    $tintuc = TinTuc::orderby('ngaydang','desc')->paginate(10);
-    return view('tintuc',['tintuc'=>$tintuc]);
-});
+Route::get('/tin-tuc/{id}', 'FrontController@getChiTietTin');
 
-Route::get('/tin-tuc/{id}', function ($id) {
-    $tin = TinTuc::find($id);
-    return view('chitiettin',['tin'=>$tin]);
-});
+Route::get('/lien-he', 'FrontController@getLienHe');
 
-Route::get('/lien-he', function () {
-    return view('lienhe');
-});
-Route::get('/bien-dao-viet-nam', function () {
-    return view('biendao');
-});
+Route::get('/bien-dao-viet-nam', 'FrontController@getBienDao');
+
 Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
 
 Route::get('/van-ban', 'FrontController@getCongVan');
