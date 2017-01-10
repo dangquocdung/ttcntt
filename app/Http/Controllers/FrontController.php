@@ -9,6 +9,7 @@ use App\DichVu;
 use App\TinTuc;
 use App\LichCongTac;
 use App\CongVan;
+use App\ThongDiep;
 
 class FrontController extends Controller
 {
@@ -80,9 +81,6 @@ class FrontController extends Controller
 
   }
 
-  public function get(){
-
-  }
 
   public function getLichCongTac() {
       $ngaythang = LichCongTac::select('ngaythang')->orderby('ngaythang','desc')->groupby('ngaythang')->get();
@@ -94,5 +92,18 @@ class FrontController extends Controller
       $ngaydang = CongVan::select('ngaydang')->orderby('ngaydang','desc')->groupby('ngaydang')->get();
       $congvan = CongVan::orderby('ngaydang', 'desc')->orderby('giodang', 'desc')->get();
       return view('vanban',['congvan'=>$congvan, 'ngaydang'=>$ngaydang]);
+  }
+
+  public function postGoiThongDiep(Request $request){
+
+    $td = new ThongDiep;
+
+    $td->name = $request->name;
+    $td->email = $request->email;
+    $td->mes = $request->message;
+    $td->save();
+
+    return redirect('/');
+
   }
 }

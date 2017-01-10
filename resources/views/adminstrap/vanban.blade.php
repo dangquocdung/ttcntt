@@ -39,8 +39,8 @@
             <td>{{$vb->ghichu}}</td>
 
             <td>
-              <a class="btn btn-default" onclick="return confirm('Bạn muốn sửa mục này??')" data-toggle="modal" data-target="#editVanBan{{$vb->id}}">Edit</a>
-              <a class="btn btn-danger" onclick="return confirm('Bạn muốn xóa mục này??')" href="/adminstrap/xoa-van-ban/{{$vb->id}}">Delete</a>
+              <a class="btn btn-default" onclick="return confirm('Bạn muốn sửa mục này?')" data-toggle="modal" data-target="#editVanBan{{$vb->id}}">Edit</a>
+              <a class="btn btn-danger" onclick="return confirm('Bạn muốn xóa mục này?')" href="/adminstrap/xoa-van-ban/{{$vb->id}}">Delete</a>
             </td>
           </tr>
 

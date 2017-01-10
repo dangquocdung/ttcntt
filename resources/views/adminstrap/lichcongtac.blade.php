@@ -39,8 +39,8 @@
             <td>{{$lct->ketthuc}}</td>
             <td>{!!$lct->ghichu!!}</td>
             <td>
-              <a class="btn btn-default" onclick="return confirm('Bạn muốn sửa mục này??')" data-toggle="modal" data-target="#editLichCongTac{{$lct->id}}">Edit</a>
-              <a class="btn btn-danger" onclick="return confirm('Bạn muốn xóa mục này??')" href="/adminstrap/xoa-lich-cong-tac/{{$lct->id}}">Delete</a></td>
+              <a class="btn btn-default" onclick="return confirm('Bạn muốn sửa mục này?')" data-toggle="modal" data-target="#editLichCongTac{{$lct->id}}">Edit</a>
+              <a class="btn btn-danger" onclick="return confirm('Bạn muốn xóa mục này?')" href="/adminstrap/xoa-lich-cong-tac/{{$lct->id}}">Delete</a></td>
           </tr>
           <!-- Edit LichCongTac -->
           <div class="modal fade" id="editLichCongTac{{$lct->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

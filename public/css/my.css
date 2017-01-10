@@ -99,3 +99,115 @@
 .navbar-brand > img {
     display:inline !important;
 }
+
+.footer_area {
+    background: #58cdec none repeat scroll 0 0;
+    padding: 20px 0 40px;
+}
+
+.title-footer {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: red;
+}
+
+.single_address {
+    margin-top: 15px;
+}
+.fix {
+    overflow: hidden;
+}
+
+.address_icon {
+    float: left;
+    margin-right: 15px;
+}
+
+#googleMap {
+    height: 290px;
+    width: 100%;
+    margin: 15px 0px 0px;
+}
+
+.contract_us {
+    margin-top: 15px;
+}
+
+.address_icon span {
+    border: 1px solid #2abfe7;
+    width: 70px;
+    height: 70px;
+    background: #86dbf1;
+    color: white;
+    display: block;
+    line-height: 70px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.address_text p {
+    color: white;
+    font-size: 16px;
+    padding: 12px 0 0;
+}
+
+.address_text p span {
+    color: red;
+}
+
+
+.input_change {
+    margin-bottom: 8px;
+}
+.inputt {
+    position: relative;
+}
+.message_icon {
+    border-right: 1px solid #2abfe7;
+    color: #fff;
+    font-size: 19px;
+    height: 46px;
+    left: 0;
+    line-height: 30px;
+    padding: 6px 20px;
+    position: absolute;
+    top: 0;
+    width: 56px;
+}
+
+#name, #email{
+    background: #86dbf1 none repeat scroll 0 0;
+    border: 1px solid #2abfe7;
+    border-radius: 0;
+    color: #fff;
+    height: 46px;
+    padding-left: 67px;
+}
+
+#mes {
+    background: #86dbf1 none repeat scroll 0 0;
+    border: 1px solid #2abfe7;
+    border-radius: 0;
+    color: #fff;
+    height: 120px;
+    padding-left: 65px;
+}
+
+.sunmite_button {
+    margin-top: 20px;
+}
+
+.sunmite_button button {
+    padding: 10px 20px;
+    border: 1px solid white ;
+    text-transform: uppercase;
+    color: white;
+    background: transparent;
+    font-weight: bold;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+}

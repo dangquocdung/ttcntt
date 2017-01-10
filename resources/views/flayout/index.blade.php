@@ -49,7 +49,7 @@
             <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
             <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
             <li><a href="/tin-tuc">Tin tức <span class="badge" style="background-color:orange !important;">{{$stt}}</span></a></li>
-            <li><a href="/lien-he">Liên hệ</a></li>
+            
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
@@ -103,7 +103,7 @@
     @yield('content')
 
 
-    <div class="section-c">
+    <!-- <div class="section-c">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -119,10 +119,68 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <div class="footer_area">
+  		<div class="container">
+  			<div class="row">
+  				<!--section title-->
+  				<div class=" col-sm-12 col-md-12 col-lg-12">
+  					<div class="section_title service_color">
+  						<h2 class="title-footer"><span>Trung tâm CNTT&TT Hà Tĩnh</span></h2>
+  					</div>
+  				</div>
+  				<!--end section title-->
+  			</div>
+  			<div class="row">
+  				<div class="col-sm-4 col-md-4 col-lg-4">
+  					<div class="single_address fix">
+  						<div class="address_icon"><span><i class="fa fa-map-marker"></i></span></div>
+  						<div class="address_text"><p><span>Địa chỉ:</span> Số 18 Đường 26-3, TP.Hà Tĩnh, Hà Tĩnh.</p></div>
+  					</div>
+  					<div class="single_address fix">
+  						<div class="address_icon"><span><i class="fa fa-phone"></i></span></div>
+  						<div class="address_text"><p><span>Điện Thoại:</span>  (+039) 385 3926</p></div>
+  					</div>
+  					<div class="single_address fix">
+  						<div class="address_icon"><span><i class="fa fa-envelope-o"></i></span></div>
+  						<div class="address_text"><p><span>Email: </span> info@itc.hatinh.vn</p></div>
+  					</div>
+  				</div>
+
+  				<div class="col-sm-4 col-md-4 col-lg-4">
+
+                    <div id="googleMap"></div>
+
+  				</div>
+
+  				<div class="col-sm-4 col-md-4 col-lg-4">
+  					<form action="/goi-thong-diep" method="post">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+  						<div class="contract_us">
+  							<div class="inputt input_change">
+  								<span class="message_icon"><i class="fa fa-user"></i></span>
+  								<input type="text" name="name" class="form-control" id="name" placeholder="Họ và Tên" required="">
+  							</div>
+  							<div class="inputt input_change">
+  								<span class="message_icon"><i class="fa fa-envelope-o"></i></span>
+  								<input type="email" name="email" class="form-control" id="email" placeholder="Email" required="">
+  							</div>
+  							<div class="inputt">
+  								<span class="message_icon"><i class="fa fa-external-link"></i></span>
+  								<textarea class="form-control" name="message" rows="4" id="mes" placeholder="Thông điệp" required=""></textarea>
+  							</div>
+  							<div class="sunmite_button">
+  								<button type="submit">Gởi Thông điệp</button>
+  							</div>
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
 
     <footer>
-
       <div class="container">
           <p>Copyright Đặng Quốc Dũng © 2017. All rights reserved.</p>
       </div>
