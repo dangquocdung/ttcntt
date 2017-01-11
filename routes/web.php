@@ -1,14 +1,5 @@
 <?php
 
-use App\User;
-use App\DichVu;
-use App\TinTuc;
-use App\LichCongTac;
-use App\CongVan;
-
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,6 +52,10 @@ Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLog
   Route::get('/', 'DieuHanhController@getDieuHanhCongViec');
 
   Route::post('/them-cong-viec', 'DieuHanhController@postThemCongViec');
+
+  Route::get('/cho-tiep-nhan', 'XuLyCongViecController@getChoTiepNhan');
+
+
 });
 
 Route::get('/', 'FrontController@getTrangChu');

@@ -68,7 +68,7 @@
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a type="button" data-toggle="modal" data-target="#addCongViec">Thêm Công việc</a></li>
+                <li><a id="themCongViec" type="button" data-toggle="modal" data-target="#addCongViec">Thêm Công việc</a></li>
               </ul>
             </div>
           </div>
@@ -89,27 +89,29 @@
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Điều hành công việc cá nhân
               </a>
               <div id="congViec" class="panel-collapse collapse in">
-                <a class="list-group-item">
+                <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/cho-tiep-nhan">
+                  <span class="glyphicon glyphicon-bell" aria-hidden="true"></span> Chờ tiếp nhận <span class="badge">{{$tcvcncxl}}</span>
+                </a>
+                <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/sap-het-han">
                   <span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Sắp hết hạn <span class="badge">0</span>
                 </a>
-                <a class="list-group-item">
+                <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/viec-gap-chua-xu-ly">
                   <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Việc gấp chưa xử lý <span class="badge">0</span>
                 </a>
                 <a class="list-group-item" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongViec">
-                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Tất cả <span class="caret"></span><span class="badge">2</span>
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Tất cả <span class="caret"></span><span class="badge">{{$tcvcn}}</span>
                 </a>
                 <div id="tatCaCongViec" class="panel-collapse collapse">
-                  <a class="list-group-item">
-                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Trể hạn <span class="badge">3</span>
+
+
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/dang-xu-ly">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đang xử lý <span class="badge">{{$tcvcndxl}}</span>
                   </a>
-                  <a class="list-group-item">
-                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Chưa xử lý <span class="badge">5</span>
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-xu-ly">
+                    <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Đã xử lý <span class="badge">{{$tcvcnxl}}</span>
                   </a>
-                  <a class="list-group-item">
-                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đang xử lý <span class="badge">2</span>
-                  </a>
-                  <a class="list-group-item">
-                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đã xử lý <span class="badge">3</span>
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/tre-han">
+                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đã quá hạn <span class="badge">0</span>
                   </a>
                 </div>
               </div>
@@ -197,7 +199,7 @@
                 <div class="form-group">
                   <label>Giao việc cho</label>
 
-                    <select id="chkveg" name="thucHien[]" multiple="multiple" >
+                    <select id="chkveg" name="thucHien[]" multiple="multiple" required>
                       @foreach ($thanhvien as $tv)
                         <option value="{{$tv->id}}">{{$tv->name}}</option>
                       @endforeach
@@ -260,6 +262,15 @@
 
   <script>
      CKEDITOR.replace( 'yeuCauCongViec' );
+ </script>
+
+ <script type="text/javascript">
+
+ $('#themCongViec').click(function(){
+
+   $('input[type=datetime-local]').val(new Date().toJSON().slice(0,19));
+ })
+
  </script>
 
     <!-- Bootstrap core JavaScript
