@@ -95,13 +95,15 @@
                 <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/sap-het-han">
                   <span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Sắp hết hạn <span class="badge">0</span>
                 </a>
-                <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/viec-gap-chua-xu-ly">
-                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Việc gấp chưa xử lý <span class="badge">0</span>
+
+                <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-tu-choi">
+                  <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đã từ chối <span class="badge">{{$tcvcndtc}}</span>
                 </a>
                 <a class="list-group-item" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongViec">
                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Tất cả <span class="caret"></span><span class="badge">{{$tcvcn}}</span>
                 </a>
-                <div id="tatCaCongViec" class="panel-collapse collapse">
+
+                <div id="tatCaCongViec" class="panel-collapse collapse in">
 
 
                   <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/dang-xu-ly">
@@ -110,10 +112,12 @@
                   <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-xu-ly">
                     <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Đã xử lý <span class="badge">{{$tcvcnxl}}</span>
                   </a>
-                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/tre-han">
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-qua-han">
                     <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đã quá hạn <span class="badge">0</span>
                   </a>
+
                 </div>
+
               </div>
 
               <script type="text/javascript">
@@ -183,7 +187,6 @@
         <div class="modal-content">
           <form action="adminstrap/dieu-hanh-cong-viec/them-cong-viec" method="POST" enctype="multipart/form-data">
               <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-              <input type="hidden" name="ngaydang" value="<?php echo date('Y-m-d'); ?>"/>
 
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -225,7 +228,7 @@
 
                 <div class="form-group">
                     <label>Hạn xử lý</label>
-                    <input type="datetime-local" name="hanXuLy" required="" class="form-control"/>
+                    <input type="date" name="hanXuLy" required="" class="form-control"/>
                 </div>
 
               </div>
@@ -262,15 +265,6 @@
 
   <script>
      CKEDITOR.replace( 'yeuCauCongViec' );
- </script>
-
- <script type="text/javascript">
-
- $('#themCongViec').click(function(){
-
-   $('input[type=datetime-local]').val(new Date().toJSON().slice(0,19));
- })
-
  </script>
 
     <!-- Bootstrap core JavaScript

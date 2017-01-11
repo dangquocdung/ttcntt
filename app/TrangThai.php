@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class TrangThai extends Model
 {
     //
-    protected $table = 'taoviec';
+    protected $table = 'trangthai';
 
     public function taoviec()
     {

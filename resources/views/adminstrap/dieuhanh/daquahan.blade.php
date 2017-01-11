@@ -4,7 +4,7 @@
   <!-- Latest Users -->
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Công việc chờ tiếp nhận</h3>
+      <h3 class="panel-title">Công việc đã quá hạn</h3>
     </div>
     <div class="panel-body">
       <div class="table-responsive">
@@ -14,22 +14,24 @@
               <th>Người tạo</th>
               <th>Chủ đề</th>
               <th>Ngày tạo</th>
+              <th>Tiến độ</th>
               <th>Hạn xử lý</th>
               <th>Yêu cầu</th>
               <th></th>
             </tr>
             <?php $i=1 ?>
-            @foreach ($chotiepnhan as $ctn)
+            @foreach ($daquahan as $ctn)
             <tr>
               <td>{{$i}}</td>
               <td>{{$ctn->user->name}}</td>
               <td>{{$ctn->taoviec->tencongviec}}</td>
               <td>{{$ctn->taoviec->thoigiantao}}</td>
+              <td>{{$ctn->tiendo}}%</td>
               <td>{{$ctn->taoviec->hanxuly}}</td>
               <td>{!!$ctn->taoviec->yeucaucongviec!!}</td>
               <td>
-                <button type="button" class="btn btn-sm btn-success"  data-toggle="modal" data-target="#CongViec{{$ctn->id}}">Chi tiết</button>
-                <button type="button" class="btn btn-sm btn-info"  data-toggle="modal" data-target="#ChuyenTiep{{$ctn->id}}">Chuyển Tiếp</button>
+                <button type="button" class="btn btn-sm btn-success"  data-toggle="modal" data-target="#CongViec{{$ctn->id}}">Cập nhật tiến độ</button>
+
               </td>
             </tr>
             <?php $i++; ?>
@@ -37,8 +39,7 @@
             <div class="modal fade" id="CongViec{{$ctn->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                  <form action="adminstrap/dieu-hanh-cong-viec/xu-ly-cong-viec/{{$ctn->id}}" method="POST" enctype="multipart/form-data">
-                      <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+
 
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -71,19 +72,9 @@
                             <p><strong>Hạn xử lý:</strong> <span>{{$ctn->taoviec->hanxuly}}</span></p>
                         </div>
 
-                        <div class="form-group">
-                          <label class="radio-inline"><input id="tiepnhan" type="radio" name="hanhdong" value="4" checked>Tiếp nhận</label>
-                          <label class="radio-inline"><input id="tuchoi" type="radio" name="hanhdong" value="2">Từ chối</label>
-                        </div>
-
 
                       </div>
 
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-                        <button type="submit" class="btn btn-primary">Xử lý</button>
-
-                      </div>
                 </form>
                 </div>
               </div>

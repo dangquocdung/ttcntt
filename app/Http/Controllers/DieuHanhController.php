@@ -27,6 +27,8 @@ class DieuHanhController extends Controller
         $trangthai = TrangThai::orderby('id','asc')->get();
         view()->share('trangthai',$trangthai);
 
+        $xuly = XuLy::all();
+        view()->share('xuly',$xuly);
 
         // $tcvcn = TaoViec::where('thuchien','=',Auth::user()->id)->count();
         // view()->share('tcvcn',$tcvcn);
@@ -51,6 +53,8 @@ class DieuHanhController extends Controller
 
         $tcvcncxl = XuLy::where('user_id',Auth::user()->id)->where('trangthai_id','1')->count();
 
+        $tcvcndtc = XuLy::where('user_id',Auth::user()->id)->where('trangthai_id','2')->count();
+
         $tcvcndxl = XuLy::where('user_id',Auth::user()->id)->where('tiendo','>','0')->where('tiendo','<','100')->count();
 
         $tcvcnxl = XuLy::where('user_id',Auth::user()->id)->where('tiendo','100')->count();
@@ -59,7 +63,7 @@ class DieuHanhController extends Controller
 
 
 
-        return view('adminstrap.dieuhanh.home',['tendauviec'=>$tendauviec,'tcvcn'=>$tcvcn, 'tcvcncxl'=>$tcvcncxl, 'tcvcndxl'=>$tcvcndxl, 'tcvcnxl'=>$tcvcnxl]);
+        return view('adminstrap.dieuhanh.home',['tendauviec'=>$tendauviec,'tcvcn'=>$tcvcn, 'tcvcncxl'=>$tcvcncxl, 'tcvcndxl'=>$tcvcndxl, 'tcvcnxl'=>$tcvcnxl,'tcvcndtc'=>$tcvcndtc]);
 
         // return view('adminstrap.dieuhanh.home');
 

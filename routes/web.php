@@ -54,6 +54,14 @@ Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLog
   Route::post('/them-cong-viec', 'DieuHanhController@postThemCongViec');
 
   Route::get('/cho-tiep-nhan', 'XuLyCongViecController@getChoTiepNhan');
+  Route::get('/da-tu-choi', 'XuLyCongViecController@getDaTuChoi');
+  Route::get('/dang-xu-ly', 'XuLyCongViecController@getDangXuLy');
+  Route::get('/da-xu-ly', 'XuLyCongViecController@getDaXuLy');
+  Route::get('/sap-het-han', 'XuLyCongViecController@getSapHetHan');
+  Route::get('/da-qua-han', 'XuLyCongViecController@getDaQuaHan');
+
+
+  Route::post('/xu-ly-cong-viec/{id}', 'XuLyCongViecController@postXuLyCongViec');
 
 
 });

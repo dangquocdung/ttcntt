@@ -24,7 +24,7 @@ class CreateTaoviecTable extends Migration
             $table->string('tepdinhkem')->nullable();
             $table->text('yeucaucongviec');
             $table->boolean('viecgap');
-            $table->dateTime('hanxuly');
+            $table->date('hanxuly');
             $table->integer('tiendo');
             $table->timestamps();
         });
