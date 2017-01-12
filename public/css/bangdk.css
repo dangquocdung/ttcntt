@@ -1,0 +1,17 @@
+.main-color-bg {
+    background-color: #0574ba !important;
+    border-color: #0574ba !important;
+    color: #ffffff !important;
+}
+
+.list-group-item1 {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border: 1px solid #ddd;
+}
+
+.list-group-item1>.badge {
+    float: right;
+}
