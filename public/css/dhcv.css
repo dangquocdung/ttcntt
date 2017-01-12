@@ -1,3 +1,9 @@
+.main-color-bg {
+    background-color: #0574ba !important;
+    border-color: #0574ba !important;
+    color: #ffffff !important;
+}
+
 .list-group-item1 {
     position: relative;
     display: block;
