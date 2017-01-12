@@ -50,7 +50,7 @@
           </tr>
           @foreach ($tendauviec as $lcv)
             <tr>
-              <td data-toggle="collapse" data-parent="#accordion" href="#theoDoi{{$lcv->id}}"><span class="caret"></span> {{$lcv->tencongviec}}</td>
+              <td data-toggle="collapse" data-parent="#accordion" href="#theoDoi{{$lcv->id}}"><span class="caret"></span> <strong>{{$lcv->tencongviec}}</strong></td>
               <td>{{$lcv->user->name}}</td>
               <td>{{$lcv->thoigiantao}}</td>
               <td>{{$lcv->hanxuly}}</td>
@@ -58,12 +58,12 @@
             </tr>
             @foreach ($xuly as $xl)
               @if ($xl->taoviec_id == $lcv->id )
-              <tr id="theoDoi{{$lcv->id}}" class="panel-collapse collapse">
-                  <td><span class="glyphicon glyphicon-arrow-right"></span> {{$xl->user->name}}</td>
-                  <td>{{$xl->trangthai->trangthai}}</td>
-                  <td>{{$xl->taoviec->tencongviec}}</td>
-                  <td>{{$xl->taoviec->hanxuly}}</td>
-                  <td>{{$xl->tiendo}}%</td>
+              <tr id="theoDoi{{$lcv->id}}" class="info panel-collapse collapse">
+                  <td><span class="glyphicon glyphicon-arrow-right"></span> <small>{{$xl->user->name}}</small></td>
+                  <td><small>{{$xl->trangthai->trangthai}}</small></td>
+                  <td><a href="/upload/taoviec/xuly/{{$xl->tepdinhkem}}"><small>{{$xl->tepdinhkem}}</small></a></td>
+                  <td><small>{{$xl->taoviec->hanxuly}}</small></td>
+                  <td><small>{{$xl->tiendo}}%</small></td>
               </tr>
               @endif
             @endforeach
