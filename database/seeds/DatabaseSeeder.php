@@ -200,7 +200,7 @@ class TrangThaiTableSeeder extends Seeder
     {
       DB::table('trangthai')->delete();
       DB::table('trangthai')->insert([
-          ['trangthai' => 'Chờ tiếp nhận'],          
+          ['trangthai' => 'Chờ tiếp nhận'],
           ['trangthai' => 'Đã Từ chối'],
           ['trangthai' => 'Đã chuyển tiếp'],
           ['trangthai' => 'Đã tiếp nhận'],

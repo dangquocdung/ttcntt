@@ -233,9 +233,6 @@
 
               </div>
 
-
-
-
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                 <button type="submit" class="btn btn-primary">Thêm Việc</button>
@@ -265,6 +262,7 @@
 
   <script>
      CKEDITOR.replace( 'yeuCauCongViec' );
+     CKEDITOR.replace( 'noiDungXuLy' );
  </script>
 
     <!-- Bootstrap core JavaScript

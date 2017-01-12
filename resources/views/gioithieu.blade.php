@@ -24,8 +24,8 @@
         </div>
         <div class="panel-body">
 
-            <a href="upload/ttcntt-tt-ht.jpg">
-              <img class="img-responsive" src="upload/ttcntt-tt-ht.jpg" style="display:block; margin:0 auto; border-radius:5px" width="80%">
+            <a class="fancybox" href="upload/ttcntt-tt-ht.jpg">
+              <img class="img-responsive" src="upload/ttcntt-tt-ht.jpg" style="display:block; margin:0 auto; border-radius:5px;" width="100%">
             </a>
             <br>
 

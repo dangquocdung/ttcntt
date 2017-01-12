@@ -147,13 +147,49 @@ class XuLyCongViecController extends Controller
 
       $xuly = XuLy::find($id);
 
+        $taoviec = TaoViec::find($xuly->taoviec_id);
+        if ($taoviec->trangthai_id==1) {
+          $taoviec->trangthai_id = $request->hanhdong;
+        }
+        $taoviec->save();
+
       $xuly->trangthai_id = $request->hanhdong;
-
-      $xuly->tiendo = '1';
-
+      $xuly->tiendo = '10';
       $xuly->save();
 
       return redirect('adminstrap/dieu-hanh-cong-viec/cho-tiep-nhan');
+
+
+    }
+
+    public function postCapNhatCongViec(Request $request, $id){
+
+      $xuly = XuLy::find($id);
+
+      $xuly->noidung = $request->noiDungXuLy;
+      $xuly->tiendo = $request->tienDoXuLy;
+
+      if ($request->hasfile('tepDinhKem')){
+
+        $file = $request->file('tepDinhKem');
+
+        $name = $file->getClientOriginalName();
+
+        $tdk = str_random(4)."_".$name;
+
+        while (file_exists("upload/taoviec/xuly/".$tdk)){
+          $tdk = str_random(4)."_name";
+        }
+
+        $file->move("upload/taoviec/xuly",$tdk);
+
+        $xuly->tepdinhkem = $tdk;
+
+      }
+
+      $xuly->save();
+
+      return redirect('adminstrap/dieu-hanh-cong-viec/dang-xu-ly');
 
 
     }

@@ -62,6 +62,7 @@ Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLog
 
 
   Route::post('/xu-ly-cong-viec/{id}', 'XuLyCongViecController@postXuLyCongViec');
+  Route::post('/dang-xu-ly/{id}', 'XuLyCongViecController@postCapNhatCongViec');
 
 
 });

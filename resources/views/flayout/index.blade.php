@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/owl.carousel.css">
     <link rel="stylesheet" href="/css/owl.theme.css">
     <link rel="stylesheet" href="/css/owl.transitions.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/my.css">
 
@@ -49,7 +50,7 @@
             <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
             <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
             <li><a href="/tin-tuc">Tin tức <span class="badge" style="background-color:orange !important;">{{$stt}}</span></a></li>
-            
+
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
@@ -190,6 +191,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/jquery.eeyellow.Timeline.js"></script>
+    <script type="text/javascript" src="/js/jquery.fancybox.pack.js?v=2.1.6"></script>
 
 
     <script type="text/javascript">
@@ -198,11 +200,14 @@
           carousel: true,
           carouselTime: 3000
         });
+
+        //fancybox
+
+        $(".fancybox").fancybox();
       });
 
     </script>
     <script type="text/javascript">
-
       $(document).ready(function() {
 
         var owl = $("#owl-demo");
