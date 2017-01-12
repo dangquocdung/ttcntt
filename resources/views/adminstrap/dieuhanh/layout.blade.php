@@ -89,17 +89,17 @@
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Điều hành công việc cá nhân
               </a>
               <div id="congViec" class="panel-collapse collapse in">
-                <a class="list-group-item bg-info" href="/adminstrap/dieu-hanh-cong-viec/cho-tiep-nhan">
+                <a class="bg-info list-group-item" href="/adminstrap/dieu-hanh-cong-viec/cho-tiep-nhan">
                   <span class="glyphicon glyphicon-bell" aria-hidden="true"></span> Chờ tiếp nhận <span class="badge">{{$tcvcncxl}}</span>
                 </a>
-                <a class="list-group-item bg-danger" href="/adminstrap/dieu-hanh-cong-viec/sap-het-han">
+                <a class="bg-danger list-group-item" href="/adminstrap/dieu-hanh-cong-viec/sap-het-han">
                   <span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Sắp hết hạn <span class="badge">0</span>
                 </a>
 
-                <a class="list-group-item bg-warning" href="/adminstrap/dieu-hanh-cong-viec/da-tu-choi">
+                <a class="bg-warning list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-tu-choi">
                   <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đã từ chối <span class="badge">{{$tcvcndtc}}</span>
                 </a>
-                <a class="list-group-item bg-primary" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongViec">
+                <a class="bg-success list-group-item" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongViec">
                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Tất cả <span class="caret"></span><span class="badge">{{$tcvcn}}</span>
                 </a>
 
