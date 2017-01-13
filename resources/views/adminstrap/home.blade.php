@@ -14,19 +14,19 @@
     <div class="col-md-3">
       <div class="well dash-box">
         <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{$slct}}</h2>
-        <h4>Lịch công tác</h4>
+        <h4><a href="/lich-cong-tac" target="_blank">Lịch công tác</a></h4>
       </div>
     </div>
     <div class="col-md-3">
       <div class="well dash-box">
         <h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> {{$stt}}</h2>
-        <h4>Tin tức</h4>
+        <h4><a href="/tin-tuc" target="_blank">Tin tức</a></h4>
       </div>
     </div>
     <div class="col-md-3">
       <div class="well dash-box">
         <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{$scv}}</h2>
-        <h4>Công văn</h4>
+        <h4><a href="/van-ban" target="_blank">Văn bản</a></h4>
       </div>
     </div>
   </div>
