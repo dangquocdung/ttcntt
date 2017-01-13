@@ -63,6 +63,7 @@
             <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap/dieu-hanh-cong-viec">E-Office</a> <small> Văn phòng điện tử</small></h1>
           </div>
           <div class="col-md-2">
+            @if (Auth::user() && Auth::user()->quyen > 1 )
             <div class="dropdown create">
               <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Tạo mới
@@ -72,6 +73,7 @@
                 <li><a id="themCongViec" type="button" data-toggle="modal" data-target="#addCongViec">Thêm Công việc</a></li>
               </ul>
             </div>
+            @endif
           </div>
         </div>
       </div>

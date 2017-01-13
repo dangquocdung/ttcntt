@@ -64,6 +64,7 @@
             <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap">Bảng điều khiển</a> <small> dùng để quản trị nội dung</small></h1>
           </div>
           <div class="col-md-2">
+            @if (Auth::user() && Auth::user()->quyen > 1 )
             <div class="dropdown create">
               <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Tạo Nội dung
@@ -75,6 +76,7 @@
                 <li><a type="button" data-toggle="modal" data-target="#addVanBan">Thêm Văn bản - Tài liệu</a></li>
               </ul>
             </div>
+            @endif
           </div>
         </div>
       </div>
