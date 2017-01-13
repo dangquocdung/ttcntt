@@ -44,12 +44,16 @@
                         </div>
                         <div class="events-body">
                             <div class="row">
-                                <div class="col-md-6 pull-left">
-                                    <a href="tin-tuc/{{$tt->id}}"><img class="events-object img-responsive img-rounded" src="upload/tintuc/{{$tt->urlhinh}}" /></a>
 
+                              @if (str(len($tt->urlhinh))>0)
+                                <div class="col-md-6 pull-left">
+                                    <a href="tin-tuc/{{$tt->id}}">
+                                      <img class="events-object img-responsive img-rounded" src="upload/tintuc/{{$tt->urlhinh}}" />
+                                    </a>
                                 </div>
+                              @endif
                                 <div class="events-desc">
-                                  {{$tt->tomtat}}.<a href="tin-tuc/{{$tt->id}}"><em>..đọc tiếp</em></a>
+                                  {{$tt->tomtat}}.<a href="tin-tuc/{{$tt->id}}"><em>đọc tiếp...</em></a>
                                 </div>
 
 
