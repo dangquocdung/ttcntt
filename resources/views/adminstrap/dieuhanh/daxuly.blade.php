@@ -30,7 +30,7 @@
               <td>{{$ctn->taoviec->hanxuly}}</td>
               <td>{!!$ctn->taoviec->yeucaucongviec!!}</td>
               <td>
-                <button type="button" class="btn btn-sm btn-success"  data-toggle="modal" data-target="#CongViec{{$ctn->id}}">Cập nhật tiến độ</button>
+                <button type="button" class="btn btn-sm btn-success"  data-toggle="modal" data-target="#CongViec{{$ctn->id}}">Chi tiết</button>
 
               </td>
             </tr>
@@ -68,6 +68,15 @@
                        <div class="form-group">
                             <p><strong>Hạn xử lý:</strong> <span>{{$ctn->taoviec->hanxuly}}</span></p>
                         </div>
+                        <hr>
+                        <div class="form-group">
+                          <p><strong>Nội dung xử lý: </strong></p>
+                          <p>{!! $ctn->noidung !!}</p>
+                        </div>
+                        <div class="form-group">
+                          <p><strong>File đính kèm: </strong> <span>{{$ctn->tepdinhkem}}</span></p>
+                        </div>
+
                     </div>
                 </div>
               </div>
