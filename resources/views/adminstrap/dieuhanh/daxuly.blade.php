@@ -3,7 +3,7 @@
 
   <!-- Latest Users -->
   <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-heading main-color-bg">
       <h3 class="panel-title">Công việc đã xử lý</h3>
     </div>
     <div class="panel-body">

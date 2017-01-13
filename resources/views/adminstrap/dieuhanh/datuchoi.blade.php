@@ -3,7 +3,7 @@
 
   <!-- Latest Users -->
   <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-heading main-color-bg">
       <h3 class="panel-title">Công việc đã từ chối</h3>
     </div>
     <div class="panel-body">
@@ -29,7 +29,7 @@
               <td>{!!$ctn->taoviec->yeucaucongviec!!}</td>
               <td>
                 <button type="button" class="btn btn-sm btn-success"  data-toggle="modal" data-target="#CongViec{{$ctn->id}}">Chi tiết</button>
-                
+
               </td>
             </tr>
             <?php $i++; ?>

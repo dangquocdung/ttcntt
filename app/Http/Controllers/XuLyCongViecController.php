@@ -80,7 +80,7 @@ class XuLyCongViecController extends Controller
 
       $tcvcnxl = XuLy::where('user_id',Auth::user()->id)->where('tiendo','100')->count();
 
-      $dangxuly = XuLy::where('user_id',Auth::user()->id)->where('trangthai_id','4')->orderby('id','desc')->get();
+      $dangxuly = XuLy::where('user_id',Auth::user()->id)->where('tiendo','>','0')->orderby('id','desc')->get();
 
       return view('adminstrap.dieuhanh.dangxuly',['dangxuly'=>$dangxuly,'tcvcn'=>$tcvcn, 'tcvcncxl'=>$tcvcncxl, 'tcvcndxl'=>$tcvcndxl, 'tcvcnxl'=>$tcvcnxl,'tcvcndtc'=>$tcvcndtc]);
 
@@ -99,7 +99,7 @@ class XuLyCongViecController extends Controller
 
       $tcvcnxl = XuLy::where('user_id',Auth::user()->id)->where('tiendo','100')->count();
 
-      $daxuly = XuLy::where('user_id',Auth::user()->id)->where('trangthai_id','4')->orderby('id','desc')->get();
+      $daxuly = XuLy::where('user_id',Auth::user()->id)->where('tiendo','100')->orderby('id','desc')->get();
 
       return view('adminstrap.dieuhanh.daxuly',['daxuly'=>$daxuly,'tcvcn'=>$tcvcn, 'tcvcncxl'=>$tcvcncxl, 'tcvcndxl'=>$tcvcndxl, 'tcvcnxl'=>$tcvcnxl,'tcvcndtc'=>$tcvcndtc]);
 
