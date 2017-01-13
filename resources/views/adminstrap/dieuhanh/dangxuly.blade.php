@@ -24,7 +24,7 @@
             <tr>
               <td>{{$i}}</td>
               <td>{{$ctn->taoviec->user->name}}</td>
-              <td>{{$ctn->taoviec->tencongviec}}</td>
+              <td><a data-toggle="modal" data-target="#NoiDungCongViec{{$ctn->id}}">{{$ctn->taoviec->tencongviec}}</a></td>
               <td>{{$ctn->taoviec->thoigiantao}}</td>
               <td>{{$ctn->tiendo}}%</td>
               <td>{{$ctn->taoviec->hanxuly}}</td>
@@ -34,6 +34,55 @@
 
               </td>
             </tr>
+            <!-- Chitiet Cong viec -->
+            <div class="modal fade" id="NoiDungCongViec{{$ctn->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Chi tiết Công việc</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-group">
+                          @if ($ctn->taoviec->viecgap)
+                            <label>Việc gấp</label>
+                          @endif
+                        </div>
+
+                        <div class="form-group">
+                          <p><strong>Người tạo: </strong> <span>{{$ctn->user->name}}</span></p>
+                        </div>
+
+                        <div class="form-group">
+                          <p><strong>Tên công việc: </strong> <span>{{$ctn->taoviec->tencongviec}}</span></p>
+                        </div>
+                        @if (strlen(trim($ctn->taoviec->tepdinhkem))>0)
+                        <div class="form-group">
+                          <p><strong>Tệp đính kèm: </strong><a href="/upload/taoviec/{{$ctn->taoviec->tepdinhkem}}"></a></p>
+                        </div>
+                        @endif
+                        <div class="form-group">
+                          <p><strong>Yêu cầu công việc: </strong>
+                          <p>{!! $ctn->taoviec->yeucaucongviec !!}</p>
+                        </div>
+                       <div class="form-group">
+                            <p><strong>Hạn xử lý:</strong> <span>{{$ctn->taoviec->hanxuly}}</span></p>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                          <p><strong>Nội dung đã xử lý: </strong></p>
+                          <p>{!! $ctn->noidung !!}</p>
+                        </div>
+                        @if (strlen(trim($ctn->tepdinhkem))>0)
+                        <div class="form-group">
+                          <p><strong>File đính kèm: </strong> <a href="/upload/taoviec/xuly/{{$ctn->tepdinhkem}}">{{$ctn->tepdinhkem}}</a></p>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+              </div>
+            </div>
+
             <?php $i++; ?>
             <!-- Chitiet Cong viec -->
             <div class="modal fade" id="CongViec{{$ctn->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
