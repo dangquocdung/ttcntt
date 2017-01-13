@@ -45,7 +45,7 @@
                         <div class="events-body">
                             <div class="row">
 
-                              @if (str(len($tt->urlhinh))>0)
+                              @if (strlen(trim($tt->urlhinh))>0)
                                 <div class="col-md-6 pull-left">
                                     <a href="tin-tuc/{{$tt->id}}">
                                       <img class="events-object img-responsive img-rounded" src="upload/tintuc/{{$tt->urlhinh}}" />
