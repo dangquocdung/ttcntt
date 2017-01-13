@@ -57,10 +57,11 @@
                         <div class="form-group">
                           <p><strong>Tên công việc: </strong> <span>{{$ctn->taoviec->tencongviec}}</span></p>
                         </div>
+                        @if (strlen(trim($ctn->taoviec->tepdinhkem))>0)
                         <div class="form-group">
-                          <p><strong>Tệp đính kèm: </strong></p>
-                          <p><a href="/upload/taoviec/{{$ctn->taoviec->tepdinhkem}}"><span class="glyphicon glyphicon-paperclip"></span></a></p>
+                          <p><strong>Tệp đính kèm: </strong><a href="/upload/taoviec/{{$ctn->taoviec->tepdinhkem}}"></a></p>
                         </div>
+                        @endif
                         <div class="form-group">
                           <p><strong>Yêu cầu công việc: </strong>
                           <p>{!! $ctn->taoviec->yeucaucongviec !!}</p>
@@ -73,9 +74,11 @@
                           <p><strong>Nội dung xử lý: </strong></p>
                           <p>{!! $ctn->noidung !!}</p>
                         </div>
+                        @if (strlen(trim($ctn->tepdinhkem))>0)
                         <div class="form-group">
-                          <p><strong>File đính kèm: </strong> <span>{{$ctn->tepdinhkem}}</span></p>
+                          <p><strong>File đính kèm: </strong> <a href="/upload/taoviec/xuly/{{$ctn->tepdinhkem}}">{{$ctn->tepdinhkem}}</a></p>
                         </div>
+                        @endif
 
                     </div>
                 </div>
