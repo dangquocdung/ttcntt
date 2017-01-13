@@ -59,7 +59,7 @@ class DieuHanhController extends Controller
 
         $tcvcnxl = XuLy::where('user_id',Auth::user()->id)->where('tiendo','100')->count();
 
-        $tendauviec = TaoViec::orderby('id','desc')->get();
+        $tendauviec = TaoViec::where('nguoitao',Auth::user()->id)->orderby('id','desc')->get();
 
 
 

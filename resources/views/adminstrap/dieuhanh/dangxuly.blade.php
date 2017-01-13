@@ -3,7 +3,7 @@
 
   <!-- Latest Users -->
   <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-heading main-color-bg">
       <h3 class="panel-title">Công việc đang xử lý</h3>
     </div>
     <div class="panel-body">
@@ -23,7 +23,7 @@
             @foreach ($dangxuly as $ctn)
             <tr>
               <td>{{$i}}</td>
-              <td>{{$ctn->user->name}}</td>
+              <td>{{$ctn->taoviec->user->name}}</td>
               <td>{{$ctn->taoviec->tencongviec}}</td>
               <td>{{$ctn->taoviec->thoigiantao}}</td>
               <td>{{$ctn->tiendo}}%</td>

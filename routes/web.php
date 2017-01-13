@@ -70,6 +70,9 @@ Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLog
   Route::post('/dang-xu-ly/{id}', 'XuLyCongViecController@postCapNhatCongViec');
 
 
+  Route::get('/danh-sach-thanh-vien', 'QuanLyNhanSuController@getDanhSachThanhVien');
+
+
 });
 
 Route::get('/', 'FrontController@getTrangChu');

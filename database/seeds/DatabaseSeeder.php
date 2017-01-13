@@ -181,6 +181,7 @@ class ChucVuTableSeeder extends Seeder
           ['chucvu' => 'Giám Đốc'],
           ['chucvu' => 'P.Giám Đốc'],
           ['chucvu' => 'Trưởng Phòng'],
+          ['chucvu' => 'P.Trưởng Phòng'],
           ['chucvu' => 'Nhân viên']
 
 

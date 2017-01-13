@@ -138,8 +138,12 @@
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Quản lý công văn
               </a>
               <div id="congVan" class="panel-collapse collapse">
-                <a class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span></a>
-                <a class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="badge">2</span></a>
+                <a class="list-group-item">
+                  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span>
+                </a>
+                <a class="list-group-item">
+                  <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="badge">2</span>
+                </a>
               </div>
             </div>
 
@@ -147,9 +151,13 @@
               <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#nhanSu">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Quản lý nhân sự
               </a>
-              <div id="nhanSu" class="panel-collapse collapse">
-                <a class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span></a>
-                <a class="list-group-item"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="badge">2</span></a>
+              <div id="nhanSu" class="panel-collapse collapse in">
+                <a class="bg-info list-group-item1" href="/adminstrap/dieu-hanh-cong-viec/danh-sach-thanh-vien">
+                  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Danh sách thành viên <span class="badge">{{count($thanhvien)}}</span>
+                </a>
+                <a class="bg-warning list-group-item1" href="/adminstrap/dieu-hanh-cong-viec/danh-sach-thanh-vien">
+                  <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Xếp loại nhân viên
+                </a>
               </div>
             </div>
 
@@ -202,12 +210,24 @@
 
                 <div class="form-group">
                   <label>Giao việc cho</label>
-
                     <select id="chkveg" name="thucHien[]" multiple="multiple" required>
+                    @if (Auth::user()->chucvu_id < 3)
                       @foreach ($thanhvien as $tv)
-                        <option value="{{$tv->id}}">{{$tv->name}}</option>
+                        <option value="{{$tv->id}}" selected="">{{$tv->name}}</option>
                       @endforeach
+
+                    @elseif(Auth::user()->chucvu_id == 3)
+                      @foreach ($thanhvien as $tv)
+                        @if ($tv->phongban_id == Auth::user()->phongban_id)
+                          <option value="{{$tv->id}}" selected="">{{$tv->name}}</option>
+                        @endif
+                      @endforeach
+                    @else
+                      <option value="{{Auth::user()->id}}" selected="" disabled="">{{Auth::user()->name}}</option>
+                    @endif
                     </select>
+
+
                 </div>
                 <div class="form-group">
                     <label>Tệp đính kèm <span class="glyphicon glyphicon-paperclip"></span></label>
