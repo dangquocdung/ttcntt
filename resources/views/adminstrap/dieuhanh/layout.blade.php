@@ -84,6 +84,12 @@
         <div class="row">
           <div class="col-md-3">
 
+            <div class="list-group">
+              <a  class="list-group-item active main-color-bg" href="/adminstrap/dieu-hanh-cong-viec">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Theo dõi công việc đã tạo
+              </a>
+            </div>
+
 
             <div class="list-group">
               <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#congViec">
