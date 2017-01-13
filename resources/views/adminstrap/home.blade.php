@@ -63,7 +63,7 @@
                   <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                   @if ( Auth::user()->id==$tv->id )
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
-                    <button onclick="return confirm('Bạn muốn xóa user này?')" type="submit" class="btn btn-danger">Delete</button>
+                    
                   @elseif ( Auth::user()->quyen == 5)
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
                     <button onclick="return confirm('Bạn muốn xóa user này?')" type="submit" class="btn btn-danger">Delete</button>
