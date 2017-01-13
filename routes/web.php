@@ -46,6 +46,8 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
   Route::post('/van-ban/tim-kiem', 'BackController@postVanBanTimKiem');
 
   Route::put('/edit-user/{id}', 'BackController@putEditUser');
+  Route::delete('/delete-user/{id}', 'BackController@deleteUser');
+
 
 
 });

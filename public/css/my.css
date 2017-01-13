@@ -176,7 +176,7 @@
     width: 56px;
 }
 
-#name, #email{
+#name_mes, #email_mes{
     background: #86dbf1 none repeat scroll 0 0;
     border: 1px solid #2abfe7;
     border-radius: 0;
@@ -185,7 +185,7 @@
     padding-left: 67px;
 }
 
-#mes {
+#message_mes {
     background: #86dbf1 none repeat scroll 0 0;
     border: 1px solid #2abfe7;
     border-radius: 0;

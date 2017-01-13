@@ -161,15 +161,15 @@
   						<div class="contract_us">
   							<div class="inputt input_change">
   								<span class="message_icon"><i class="fa fa-user"></i></span>
-  								<input type="text" name="name" class="form-control" id="name" placeholder="Họ và Tên" required="">
+  								<input type="text" name="name" class="form-control" id="name_mes" placeholder="Họ và Tên" required="">
   							</div>
   							<div class="inputt input_change">
   								<span class="message_icon"><i class="fa fa-envelope-o"></i></span>
-  								<input type="email" name="email" class="form-control" id="email" placeholder="Email" required="">
+  								<input type="email" name="email" class="form-control" id="email_mes" placeholder="Email" required="">
   							</div>
   							<div class="inputt">
   								<span class="message_icon"><i class="fa fa-external-link"></i></span>
-  								<textarea class="form-control" name="message" rows="4" id="mes" placeholder="Thông điệp" required=""></textarea>
+  								<textarea class="form-control" name="message" rows="4" id="message_mes" placeholder="Thông điệp" required=""></textarea>
   							</div>
   							<div class="sunmite_button">
   								<button type="submit">Gởi Thông điệp</button>

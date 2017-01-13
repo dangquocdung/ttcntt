@@ -198,9 +198,8 @@
         @foreach ($doingu as $dn)
           <div class="item2">
             <img src="upload/team/{{$dn->tenhinh}}" alt="">
-
             <p class="name">{{$dn->name}}</p>
-            <p class="chucvu">{{$dn->chucvu}}</p>
+            <p class="chucvu">{{$dn->chucvu->chucvu}}</p>
             <p class="didong">{{$dn->didong}}</p>
 
           </div>

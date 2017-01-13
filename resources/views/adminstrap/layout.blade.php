@@ -31,7 +31,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="adminstrap">Bảng Điều khiển</a></li>
             <li><a href="adminstrap/dieu-hanh-cong-viec">Điều hành công việc</a></li>
-            @if (Auth::user()->quyen > 1 )
+            @if (Auth::user()->quyen == 5 )
             <li><a href="adminstrap/lich-cong-tac-all">Lịch</a></li>
             <li><a href="adminstrap/tin-tuc-all">Tin tức</a></li>
             <li><a href="adminstrap/van-ban-all">Công văn</a></li>

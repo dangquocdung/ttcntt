@@ -483,9 +483,22 @@ class BackController extends Controller
           $usr->tenhinh = $Hinh;
 
         }
+        else{
+          $usr->tenhinh = 'man1.jpg';
+
+        }
 
         $usr->save();
         return redirect('adminstrap');
     }
+
+
+    public function deleteUser($id)
+    {
+        $usr = User::find($id);
+        $usr->delete();
+        return redirect('adminstrap');
+    }
+
 
 }

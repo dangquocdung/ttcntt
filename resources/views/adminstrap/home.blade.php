@@ -54,9 +54,23 @@
             <td>{{$tv->email}}</td>
             <td>{{$tv->didong}}</td>
             <td>
-              @if (Auth::user() && Auth::user()->quyen > 2)
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+              @if (Auth::user())
+
+
+
+                <form action="adminstrap/delete-user/{{$tv->id}}" method="POST" enctype="multipart/form-data">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+                  @if ( Auth::user()->id==$tv->id )
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
+                    <button onclick="return confirm('Bạn muốn xóa user này?')" type="submit" class="btn btn-danger">Delete</button>
+                  @elseif ( Auth::user()->quyen == 5)
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
+                    <button onclick="return confirm('Bạn muốn xóa user này?')" type="submit" class="btn btn-danger">Delete</button>
+
+                  @endif
+                </form>
+
                 <!-- Chitiet Cong viec -->
                 <div class="modal fade" id="user{{$tv->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                   <div class="modal-dialog" role="document">
@@ -90,49 +104,58 @@
                               <input type="text" class="form-control" name="didong" value="{{$tv->didong}}" required>
                             </div>
 
-                            <div class="form-group">
-                              <label>Phòng Ban:</label>
-                              <select name="phongban" class="form-control">
+                            @if ( Auth::user()->quyen == 5)
 
-                                @foreach ($phongban as $pb)
-                                  @if ($tv->phongban_id==$pb->id)
-                                    <option value="{{$pb->id}}" selected="">{{$pb->tenphongban}}</option>
-                                  @else
-                                    <option value="{{$pb->id}}">{{$pb->tenphongban}}</option>
-                                  @endif
+                              <div class="form-group">
+                                <label>Phòng Ban:</label>
+                                <select name="phongban" class="form-control">
 
-                                @endforeach
+                                  @foreach ($phongban as $pb)
+                                    @if ($tv->phongban_id==$pb->id)
+                                      <option value="{{$pb->id}}" selected="">{{$pb->tenphongban}}</option>
+                                    @else
+                                      <option value="{{$pb->id}}">{{$pb->tenphongban}}</option>
+                                    @endif
+
+                                  @endforeach
 
 
-                              </select>
+                                </select>
 
-                            </div>
+                              </div>
 
-                            <div class="form-group">
-                              <label>Chức vụ:</label>
-                              <select name="chucvu" class="form-control">
-                                @foreach ($chucvu as $chuc)
-                                  @if ($tv->chucvu_id==$chuc->id)
-                                    <option value="{{$chuc->id}}" selected="">{{$chuc->chucvu}}</option>
-                                  @else
-                                    <option value="{{$chuc->id}}">{{$chuc->chucvu}}</option>
-                                  @endif
-                                @endforeach
-                              </select>
-                            </div>
+                              <div class="form-group">
+                                <label>Chức vụ:</label>
+                                <select name="chucvu" class="form-control">
+                                  @foreach ($chucvu as $chuc)
+                                    @if ($tv->chucvu_id==$chuc->id)
+                                      <option value="{{$chuc->id}}" selected="">{{$chuc->chucvu}}</option>
+                                    @else
+                                      <option value="{{$chuc->id}}">{{$chuc->chucvu}}</option>
+                                    @endif
+                                  @endforeach
+                                </select>
+                              </div>
 
-                            <div class="form-group">
-                              <label>Level:</label>
-                              <select name="level" class="form-control">
-                                @foreach ($level as $lv)
-                                  @if ($tv->quyen==$lv->id)
-                                    <option value="{{$lv->id}}" selected="">{{$lv->level}}</option>
-                                  @else
-                                    <option value="{{$lv->id}}">{{$lv->level}}</option>
-                                  @endif
-                                @endforeach
-                              </select>
-                            </div>
+                              <div class="form-group">
+                                <label>Level:</label>
+                                <select name="level" class="form-control">
+                                  @foreach ($level as $lv)
+                                    @if ($tv->quyen==$lv->id)
+                                      <option value="{{$lv->id}}" selected="">{{$lv->level}}</option>
+                                    @else
+                                      <option value="{{$lv->id}}">{{$lv->level}}</option>
+                                    @endif
+                                  @endforeach
+                                </select>
+                              </div>
+                            @else
+
+                                <input type="hidden" name="phongban" value="{{$tv->phongban_id}}">
+                                <input type="hidden" name="chucvu" value="{{$tv->chucvu_id}}">
+                                <input type="hidden" name="level" value="{{$tv->quyen}}">
+
+                            @endif
 
                             <div class="form-group">
                                 <label>Tệp đính kèm <span class="glyphicon glyphicon-paperclip"></span></label>
