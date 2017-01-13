@@ -98,7 +98,7 @@
 
                         <div class="form-group">
                           <label>Nội dung xử lý:</label>
-                          <textarea class="form-control" name="noiDungXuLy" rows="5" placeholder="Nhập yêu cầu công việc" required>{{$ctn->noidung}}</textarea>
+                          <textarea class="form-control" name="noiDungXuLy" rows="5" placeholder="Nhập nội dung đã xử lý" required>{{$ctn->noidung}}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -121,8 +121,6 @@
                                 }
 
                                ?>
-
-
 
                             </div>
                         </div>
