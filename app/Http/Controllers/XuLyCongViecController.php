@@ -169,6 +169,16 @@ class XuLyCongViecController extends Controller
       $xuly->noidung = $request->noiDungXuLy;
       $xuly->tiendo = $request->tienDoXuLy;
 
+      if ($request->tienDoXuLy == 100){
+
+        $taoviec = TaoViec::find($xuly->taoviec_id);
+
+          $taoviec->trangthai_id = '6';
+
+        $taoviec->save();
+
+      }
+
       if ($request->hasfile('tepDinhKem')){
 
         $file = $request->file('tepDinhKem');
