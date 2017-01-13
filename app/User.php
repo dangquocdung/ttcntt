@@ -58,4 +58,9 @@ class User extends Authenticatable
     {
       return $this->belongsTo('App\PhongBan','phongban_id','id');
     }
+
+    public function level()
+    {
+      return $this->belongsTo('App\Level','quyen','id');
+    }
 }

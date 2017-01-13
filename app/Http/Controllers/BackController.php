@@ -13,6 +13,9 @@ use App\LichCongTac;
 use App\TinTuc;
 use App\CongVan;
 use App\User;
+use App\PhongBan;
+use App\ChucVu;
+use App\Level;
 
 class BackController extends Controller
 {
@@ -30,6 +33,15 @@ class BackController extends Controller
 
         $thanhvien = User::orderby('id','asc')->get();
         view()->share('thanhvien',$thanhvien);
+
+        $phongban = PhongBan::orderby('id','asc')->get();
+        view()->share('phongban',$phongban);
+
+        $chucvu = ChucVu::orderby('id','asc')->get();
+        view()->share('chucvu',$chucvu);
+
+        $level = Level::orderby('id','asc')->get();
+        view()->share('level',$level);
 
         $slct = LichCongTac::count();
         view()->share('slct',$slct);
@@ -441,6 +453,39 @@ class BackController extends Controller
 
       return view('adminstrap.vanban-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'vanban'=>$vanban]);
 
+    }
+
+    public function putEditUser(Request $request, $id)
+    {
+        $usr = User::find($id);
+
+        $usr->name = $request->hovaten;
+        $usr->dienthoai = $request->dienthoai;
+        $usr->didong = $request->didong;
+        $usr->phongban_id = $request->phongban;
+        $usr->chucvu_id = $request->chucvu;
+        $usr->quyen = $request->level;
+
+        if ($request->hasfile('hinhanh')){
+
+          $file = $request->file('hinhanh');
+
+          $name = $file->getClientOriginalName();
+
+          $Hinh = str_random(4)."_".$name;
+
+          while (file_exists("upload/team/".$Hinh)){
+            $Hinh = str_random(4)."_name";
+          }
+
+          $file->move("upload/team",$Hinh);
+
+          $usr->tenhinh = $Hinh;
+
+        }
+
+        $usr->save();
+        return redirect('adminstrap');
     }
 
 }

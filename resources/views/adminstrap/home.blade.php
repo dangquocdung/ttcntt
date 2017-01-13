@@ -45,6 +45,7 @@
             <th>Chức vụ</th>
             <th>Email</th>
             <th>Số điện thoại</th>
+            <th></th>
           </tr>
           @foreach ($thanhvien as $tv)
           <tr>
@@ -52,6 +53,107 @@
             <td>{{$tv->chucvu->chucvu}}</td>
             <td>{{$tv->email}}</td>
             <td>{{$tv->didong}}</td>
+            <td>
+              @if (Auth::user() && Auth::user()->quyen > 2)
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+                <!-- Chitiet Cong viec -->
+                <div class="modal fade" id="user{{$tv->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <form action="adminstrap/edit-user/{{$tv->id}}" method="POST" enctype="multipart/form-data">
+                          <input type="hidden" name="_method" value="PUT">
+                          <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Thông tin người dùng</h4>
+                          </div>
+                          <div class="modal-body">
+
+                            <div class="form-group">
+                              <label>Họ và Tên:</label>
+                              <input type="text" class="form-control" name="hovaten" value="{{$tv->name}}" required>
+                            </div>
+
+                            <div class="form-group">
+                              <label>Email:</label>
+                              <input type="text" class="form-control" name="email" value="{{$tv->email}}" disabled="">
+                            </div>
+
+                            <div class="form-group">
+                              <label>Điện thoại:</label>
+                              <input type="text" class="form-control" name="dienthoai" value="{{$tv->dienthoail}}">
+                            </div>
+
+                            <div class="form-group">
+                              <label>Di động:</label>
+                              <input type="text" class="form-control" name="didong" value="{{$tv->didong}}" required>
+                            </div>
+
+                            <div class="form-group">
+                              <label>Phòng Ban:</label>
+                              <select name="phongban" class="form-control">
+
+                                @foreach ($phongban as $pb)
+                                  @if ($tv->phongban_id==$pb->id)
+                                    <option value="{{$pb->id}}" selected="">{{$pb->tenphongban}}</option>
+                                  @else
+                                    <option value="{{$pb->id}}">{{$pb->tenphongban}}</option>
+                                  @endif
+
+                                @endforeach
+
+
+                              </select>
+
+                            </div>
+
+                            <div class="form-group">
+                              <label>Chức vụ:</label>
+                              <select name="chucvu" class="form-control">
+                                @foreach ($chucvu as $chuc)
+                                  @if ($tv->chucvu_id==$chuc->id)
+                                    <option value="{{$chuc->id}}" selected="">{{$chuc->chucvu}}</option>
+                                  @else
+                                    <option value="{{$chuc->id}}">{{$chuc->chucvu}}</option>
+                                  @endif
+                                @endforeach
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <label>Level:</label>
+                              <select name="level" class="form-control">
+                                @foreach ($level as $lv)
+                                  @if ($tv->quyen==$lv->id)
+                                    <option value="{{$lv->id}}" selected="">{{$lv->level}}</option>
+                                  @else
+                                    <option value="{{$lv->id}}">{{$lv->level}}</option>
+                                  @endif
+                                @endforeach
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tệp đính kèm <span class="glyphicon glyphicon-paperclip"></span></label>
+                                <input type="file" name="hinhanh"/>
+                                <a href="/upload/team/{{$tv->tenhinh}}">{{$tv->tenhinh}}</a>
+                            </div>
+
+                          </div>
+
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
+
+                          </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+
+              @endif
+          </td>
           </tr>
           @endforeach
       </table>

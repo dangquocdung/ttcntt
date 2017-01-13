@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
         // $this->call(PhongBanTableSeeder::class);
         // $this->call(ChucVuTableSeeder::class);
 
-        $this->call(TrangThaiTableSeeder::class);
+        // $this->call(TrangThaiTableSeeder::class);
+        $this->call(LevelTableSeeder::class);
 
 
     }
@@ -208,5 +209,26 @@ class TrangThaiTableSeeder extends Seeder
           ['trangthai' => 'Đã hoàn thành']
       ]);
 
+    }
+}
+
+class LevelTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+      DB::table('level')->delete();
+      DB::table('level')->insert([
+          ['level' => 'Khách'],
+          ['level' => 'Cấp 1'],
+          ['level' => 'Cấp 2'],
+          ['level' => 'Cấp 3'],
+          ['level' => 'Admin']
+
+      ]);
     }
 }

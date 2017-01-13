@@ -45,6 +45,9 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
   Route::post('/tin-tuc/tim-kiem', 'BackController@postTinTucTimKiem');
   Route::post('/van-ban/tim-kiem', 'BackController@postVanBanTimKiem');
 
+  Route::put('/edit-user/{id}', 'BackController@putEditUser');
+
+
 });
 
 Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){
