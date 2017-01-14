@@ -29,8 +29,8 @@
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="adminstrap">Bảng Điều khiển</a></li>
-            <li><a href="adminstrap/dieu-hanh-cong-viec">Điều hành công việc</a></li>
+            <li class="active"><a href="adminstrap">Quản trị Nội Dung</a></li>
+            <li><a href="adminstrap/dieu-hanh-cong-viec">Văn Phòng Thông Minh (iO)</a></li>
             @if (Auth::user()->quyen == 5 )
             <li><a href="adminstrap/lich-cong-tac-all">Lịch</a></li>
             <li><a href="adminstrap/tin-tuc-all">Tin tức</a></li>
@@ -96,7 +96,7 @@
           <div class="col-md-3">
             <div class="list-group">
               <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> Văn phòng Thông minh (i0)
+                <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> Văn phòng Thông minh (iO)
               </a>
             </div>
 

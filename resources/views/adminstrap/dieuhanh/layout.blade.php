@@ -33,8 +33,8 @@
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav">
-            <li><a href="adminstrap">Bảng Điều khiển</a></li>
-            <li class="active"><a href="adminstrap/dieu-hanh-cong-viec">Điều hành công việc</a></li>
+            <li><a href="adminstrap">Quản trị Nội Dung</a></li>
+            <li class="active"><a href="adminstrap/dieu-hanh-cong-viec">Văn Phòng Thông Minh (iO)</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -60,7 +60,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap/dieu-hanh-cong-viec">iOffice</a> <small> Văn phòng điện tử</small></h1>
+            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap/dieu-hanh-cong-viec">iOffice</a> <small> Văn phòng thông minh</small></h1>
           </div>
           <div class="col-md-2">
             @if (Auth::user() && Auth::user()->quyen > 1 )
