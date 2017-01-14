@@ -101,13 +101,7 @@
                 <a class="bg-info list-group-item1" href="/adminstrap/dieu-hanh-cong-viec/cho-tiep-nhan">
                   <span class="glyphicon glyphicon-bell" aria-hidden="true"></span> Chờ tiếp nhận <span class="badge">{{$tcvcncxl}}</span>
                 </a>
-                <a class="bg-danger list-group-item1" href="/adminstrap/dieu-hanh-cong-viec/sap-het-han">
-                  <span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Sắp hết hạn <span class="badge">0</span>
-                </a>
 
-                <a class="bg-warning list-group-item1" href="/adminstrap/dieu-hanh-cong-viec/da-tu-choi">
-                  <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đã từ chối <span class="badge">{{$tcvcndtc}}</span>
-                </a>
                 <a class="bg-success list-group-item1" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongViec">
                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Tất cả <span class="caret"></span><span class="badge">{{$tcvcn}}</span>
                 </a>
@@ -126,6 +120,14 @@
                   </a>
 
                 </div>
+
+                <a class="bg-danger list-group-item1" href="/adminstrap/dieu-hanh-cong-viec/sap-het-han">
+                  <span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Sắp hết hạn <span class="badge">0</span>
+                </a>
+
+                <a class="bg-warning list-group-item1" href="/adminstrap/dieu-hanh-cong-viec/da-tu-choi">
+                  <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đã từ chối <span class="badge">{{$tcvcndtc}}</span>
+                </a>
 
               </div>
 
