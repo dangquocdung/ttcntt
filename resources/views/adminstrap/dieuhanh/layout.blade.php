@@ -151,7 +151,7 @@
                 <a class="bg-danger list-group-item1" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongVanDen">
                   <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span>
                 </a>
-                <div id="tatCaCongVanDen" class="panel-collapse collapse in">
+                <div id="tatCaCongVanDen" class="panel-collapse collapse">
 
 
                   <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/dang-xu-ly">
@@ -173,7 +173,7 @@
                   <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="badge">2</span>
                 </a>
 
-                <div id="tatCaCongVanDi" class="panel-collapse collapse in">
+                <div id="tatCaCongVanDi" class="panel-collapse collapse">
 
 
                   <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/dang-xu-ly">
