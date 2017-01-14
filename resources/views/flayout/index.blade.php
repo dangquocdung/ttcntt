@@ -80,7 +80,7 @@
 
                       <li class="divider"></li>
 
-                      <li><a href="/adminstrap/dieu-hanh-cong-viec">Văn phòng điện tử (E-Office)</a></li>
+                      <li><a href="/adminstrap/dieu-hanh-cong-viec">Văn phòng Thông minh (iO)</a></li>
 
                       <li class="divider"></li>
 
