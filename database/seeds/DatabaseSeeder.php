@@ -19,11 +19,13 @@ class DatabaseSeeder extends Seeder
         // $this->call(CongVanTableSeeder::class);
 
         // $this->call(DichVuTableSeeder::class);
-        // $this->call(PhongBanTableSeeder::class);
+
+        // $this->call(DonViTableSeeder::class);
+        $this->call(PhongBanTableSeeder::class);
         // $this->call(ChucVuTableSeeder::class);
 
         // $this->call(TrangThaiTableSeeder::class);
-        $this->call(LevelTableSeeder::class);
+        // $this->call(LevelTableSeeder::class);
 
 
     }
@@ -143,6 +145,27 @@ class TinTucTableSeeder extends Seeder
     }
 }
 
+class DonViTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+      DB::table('donvi')->delete();
+      DB::table('donvi')->insert([
+          ['tendonvi' => 'Sở Thông Tin Truyền Thông','capquanly'=>'2','donvicha'=>'1'],
+          ['tendonvi' => 'Trung Tâm CNTT và Truyền Thông', 'capquanly' =>'3','donvicha'=>'1']
+
+      ]);
+
+    }
+}
+
+
+
 class PhongBanTableSeeder extends Seeder
 {
     /**
@@ -154,13 +177,14 @@ class PhongBanTableSeeder extends Seeder
     {
       DB::table('phongban')->delete();
       DB::table('phongban')->insert([
-          ['tenphongban' => 'Ban Giám Đốc'],
-          ['tenphongban' => 'Văn Phòng'],
-          ['tenphongban' => 'Phòng Phát triển Ứng dụng'],
-          ['tenphongban' => 'Phòng Đào Tạo'],
-          ['tenphongban' => 'Phòng Cổng - Sàn'],
-          ['tenphongban' => 'Bộ Phận Kinh Doanh - Dịch Vụ']
-
+          ['tenphongban' => 'Ban Giám Đốc', 'donvi_id'=>'2'],
+          ['tenphongban' => 'Văn Phòng', 'donvi_id'=>'2'],
+          ['tenphongban' => 'Phòng Phát triển Ứng dụng', 'donvi_id'=>'2'],
+          ['tenphongban' => 'Phòng Đào Tạo', 'donvi_id'=>'2'],
+          ['tenphongban' => 'Phòng Cổng - Sàn', 'donvi_id'=>'2'],
+          ['tenphongban' => 'Bộ Phận Kinh Doanh - Dịch Vụ', 'donvi_id'=>'2'],
+          ['tenphongban' => 'Ban Giám Đốc', 'donvi_id'=>'1'],
+          ['tenphongban' => 'Phòng CNTT', 'donvi_id'=>'1']
 
       ]);
 

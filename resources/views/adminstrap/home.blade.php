@@ -43,30 +43,30 @@
           <tr>
             <th>Họ và Tên</th>
             <th>Chức vụ</th>
-            <th>Email</th>
-            <th>Số điện thoại</th>
+            <th>Phòng/Ban</th>
+            <th>Đơn vị</th>
+
             <th></th>
           </tr>
           @foreach ($thanhvien as $tv)
           <tr>
             <td>{{$tv->name}}</td>
             <td>{{$tv->chucvu->chucvu}}</td>
-            <td>{{$tv->email}}</td>
-            <td>{{$tv->didong}}</td>
+            <td>{{$tv->phongban->tenphongban}}</td>
+            <td>{{$tv->phongban->donvi->tendonvi}}</td>
+
             <td>
               @if (Auth::user())
-
-
 
                 <form action="adminstrap/delete-user/{{$tv->id}}" method="POST" enctype="multipart/form-data">
                   <input type="hidden" name="_method" value="DELETE">
                   <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                   @if ( Auth::user()->id==$tv->id )
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
-                    
+                    <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
+
                   @elseif ( Auth::user()->quyen == 5)
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
-                    <button onclick="return confirm('Bạn muốn xóa user này?')" type="submit" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#user{{$tv->id}}">Edit</button>
+                    <button onclick="return confirm('Bạn muốn xóa user này?')" type="submit" class="btn btn-sm btn-danger">Delete</button>
 
                   @endif
                 </form>
@@ -106,15 +106,17 @@
 
                             @if ( Auth::user()->quyen == 5)
 
+
+
                               <div class="form-group">
                                 <label>Phòng Ban:</label>
-                                <select name="phongban" class="form-control">
+                                <select name="phongban" class="form-control" >
 
                                   @foreach ($phongban as $pb)
                                     @if ($tv->phongban_id==$pb->id)
-                                      <option value="{{$pb->id}}" selected="">{{$pb->tenphongban}}</option>
+                                      <option value="{{$pb->id}}" selected="">{{$pb->tenphongban}} | {{$pb->donvi->tendonvi}}</option>
                                     @else
-                                      <option value="{{$pb->id}}">{{$pb->tenphongban}}</option>
+                                      <option value="{{$pb->id}}">{{$pb->tenphongban}} | {{$pb->donvi->tendonvi}}</option>
                                     @endif
 
                                   @endforeach

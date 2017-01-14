@@ -13,6 +13,7 @@ use App\LichCongTac;
 use App\TinTuc;
 use App\CongVan;
 use App\User;
+use App\DonVi;
 use App\PhongBan;
 use App\ChucVu;
 use App\Level;
@@ -33,6 +34,9 @@ class BackController extends Controller
 
         $thanhvien = User::orderby('id','asc')->get();
         view()->share('thanhvien',$thanhvien);
+
+        $donvi = DonVi::orderby('id','asc')->get();
+        view()->share('donvi',$donvi);
 
         $phongban = PhongBan::orderby('id','asc')->get();
         view()->share('phongban',$phongban);

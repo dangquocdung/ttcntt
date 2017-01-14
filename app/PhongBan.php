@@ -15,5 +15,10 @@ class PhongBan extends Model
       return $this->hasMany('App\User','phongban_id','id');
     }
 
+    public function donvi()
+    {
+      return $this->belongsTo('App\DonVi','donvi_id','id');
+    }
+
 
 }

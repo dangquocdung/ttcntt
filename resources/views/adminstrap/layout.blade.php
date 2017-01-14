@@ -95,8 +95,14 @@
         <div class="row">
           <div class="col-md-3">
             <div class="list-group">
+              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item active main-color-bg">
+                <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> Văn phòng Thông minh (i0)
+              </a>
+            </div>
+
+            <div class="list-group">
               <a href="adminstrap" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Cá nhân
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Cập nhật thông tin
               </a>
               <a href="/adminstrap/lich-cong-tac" class="bg-danger list-group-item1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Lịch công tác <span class="badge">{{$lct1}}</span></a>
               <a href="/adminstrap/tin-tuc" class="bg-success list-group-item1"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tin tức đã đăng <span class="badge">{{$tt1}}</span></a>
@@ -363,6 +369,21 @@
       $("#imgInp").change(function(){
           readURL(this);
       });
+
+    </script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      $("#donvi").change(function(){
+        var idDonVi = $(this).val();
+        // alert(idDonVi);
+        $.get('ajax/phongban/'+idDonVi, function(data){
+          $("#phongban").html(data);
+        });
+      });
+
+    });
 
     </script>
 

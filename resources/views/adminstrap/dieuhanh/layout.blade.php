@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HT ITC | E-OFFICE</title>
+    <title>HT ITC | iOFFICE</title>
     <base href="{{asset('')}}">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +60,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap/dieu-hanh-cong-viec">E-Office</a> <small> Văn phòng điện tử</small></h1>
+            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap/dieu-hanh-cong-viec">iOffice</a> <small> Văn phòng điện tử</small></h1>
           </div>
           <div class="col-md-2">
             @if (Auth::user() && Auth::user()->quyen > 1 )

@@ -52,6 +52,12 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
 
 });
 
+Route::group(['prefix'=>'ajax'],function(){
+
+  Route::get('/phongban/{idDonVi}', 'AjaxController@getPhongBan');
+
+});
+
 Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){
 
   Route::get('/', 'DieuHanhController@getDieuHanhCongViec');
