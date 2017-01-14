@@ -145,7 +145,7 @@
               <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#congVan">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Gởi nhận công văn
               </a>
-              <div id="congVan" class="panel-collapse collapse">
+              <div id="congVan" class="panel-collapse collapse in">
                 <a class="bg-danger list-group-item1" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongVanDen">
                   <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span>
                 </a>
