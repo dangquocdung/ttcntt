@@ -149,7 +149,7 @@
               </a>
               <div id="congVan" class="panel-collapse collapse in">
                 <a class="bg-danger list-group-item1" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongVanDen">
-                  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span>
+                  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="caret"><span class="badge">0</span>
                 </a>
                 <div id="tatCaCongVanDen" class="panel-collapse collapse">
 
@@ -170,7 +170,7 @@
 
 
                 <a class="bg-success list-group-item1" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongVanDi">
-                  <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="badge">2</span>
+                  <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="caret"><span class="badge">2</span>
                 </a>
 
                 <div id="tatCaCongVanDi" class="panel-collapse collapse">
