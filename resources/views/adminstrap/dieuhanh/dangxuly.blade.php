@@ -19,10 +19,10 @@
 
               <th></th>
             </tr>
-            <?php $i=1 ?>
+            <?php $tt=1 ?>
             @foreach ($dangxuly as $ctn)
             <tr>
-              <td>{{$i}}</td>
+              <td>{{$tt}}</td>
               <td>{{$ctn->taoviec->user->name}}</td>
               <td><a data-toggle="modal" data-target="#NoiDungCongViec{{$ctn->id}}">{{$ctn->taoviec->tencongviec}}</a></td>
               <td>{{$ctn->taoviec->thoigiantao}}</td>
@@ -83,7 +83,7 @@
               </div>
             </div>
 
-            <?php $i++; ?>
+            <?php $tt++; ?>
             <!-- Chitiet Cong viec -->
             <div class="modal fade" id="CongViec{{$ctn->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">

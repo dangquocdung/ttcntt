@@ -143,15 +143,49 @@
 
             <div class="list-group">
               <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#congVan">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Quản lý công văn
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Gởi nhận công văn
               </a>
               <div id="congVan" class="panel-collapse collapse">
-                <a class="list-group-item">
+                <a class="bg-danger list-group-item1" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongVanDen">
                   <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="badge">0</span>
                 </a>
-                <a class="list-group-item">
+                <div id="tatCaCongVanDen" class="panel-collapse collapse in">
+
+
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/dang-xu-ly">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đang xử lý <span class="badge">{{$tcvcndxl}}</span>
+                  </a>
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-xu-ly">
+                    <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Đã xử lý <span class="badge">{{$tcvcnxl}}</span>
+                  </a>
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-qua-han">
+                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đã quá hạn <span class="badge">0</span>
+                  </a>
+
+                </div>
+
+
+
+
+                <a class="bg-success list-group-item1" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongVanDi">
                   <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Công văn đi <span class="badge">2</span>
                 </a>
+
+                <div id="tatCaCongVanDi" class="panel-collapse collapse in">
+
+
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/dang-xu-ly">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đang xử lý <span class="badge">{{$tcvcndxl}}</span>
+                  </a>
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-xu-ly">
+                    <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Đã xử lý <span class="badge">{{$tcvcnxl}}</span>
+                  </a>
+                  <a class="list-group-item" href="/adminstrap/dieu-hanh-cong-viec/da-qua-han">
+                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Đã quá hạn <span class="badge">0</span>
+                  </a>
+
+                </div>
+
               </div>
             </div>
 
