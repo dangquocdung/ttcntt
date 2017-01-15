@@ -70,7 +70,8 @@
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a id="themCongViec" type="button" data-toggle="modal" data-target="#addCongViec">Thêm Công việc</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#addCongViec">Tạo Công việc</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#addCongVan">Tạo Công văn</a></li>
               </ul>
             </div>
             @endif
@@ -147,9 +148,7 @@
               <a  class="list-group-item active main-color-bg" data-toggle="collapse" data-parent="#accordion" href="#congVan">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Gởi nhận công văn
               </a>
-              <a class="bg-info list-group-item1" href="/adminstrap/dieu-hanh-cong-viec/them-moi-cong-van">
-                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Tạo Công Văn <span class="caret"></span><span class="badge">0</span>
-              </a>
+
               <div id="congVan" class="panel-collapse collapse in">
                 <a class="bg-danger list-group-item1" data-toggle="collapse" data-parent="#accordion" href="#tatCaCongVanDen">
                   <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Công văn đến <span class="caret"></span><span class="badge">0</span>
@@ -237,7 +236,7 @@
     </footer>
 
 
-    <!-- Them Cong viec -->
+    <!-- Tao Cong viec -->
     <div class="modal fade" id="addCongViec" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -246,7 +245,7 @@
 
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Thêm Công việc</h4>
+                <h4 class="modal-title" id="myModalLabel">Tạo Công việc</h4>
               </div>
               <div class="modal-body">
 
@@ -320,6 +319,82 @@
                 });
 
               </script>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tao Cong van -->
+    <div class="modal fade" id="addCongVan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form action="adminstrap/dieu-hanh-cong-viec/tao-cong-van" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Tạo Công Văn</h4>
+              </div>
+              <div class="modal-body">
+
+                <div class="form-group">
+                  <label>Nơi phát hành</label>
+                  <input type="text" class="form-control" value="Noi Phat Hanh" disabled="" />
+                </div>
+                <div class="form-group">
+                  <label>Ngày phát hành</label>
+                  <input type="text" class="form-control" value="<?php echo now(); ?>" disabled="" />
+                </div>
+
+                <div class="form-group">
+                    <label>Loại văn bản</label>
+                    <select name="loaivb" class="form-control" autofocus="">
+                      <option value="0" selected="">Quyết Định</option>
+                      <option value="1">Công Văn</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Số/KH văn bản</label>
+                  <input type="text" class="form-control" name="sovb" placeholder="Nhập số, kí hiệu văn bản" required="" />
+                </div>
+
+                <div class="form-group">
+                  <label>Trích yếu văn bản</label>
+                  <input type="text" class="form-control" name="trichyeuvb" placeholder="Nhập trích yêu văn bản" required="" />
+                </div>
+
+                <div class="form-group">
+                    <label>Người kí</label>
+                    <select name="nguoikivb" class="form-control" autofocus="" required="">
+                      <option value="0">Nguyen Van A</option>
+                      <option value="1">Nguyen Van B</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Độ khẩn</label>
+                    <select name="dokhanvb" class="form-control">
+                      <option value="1" selected="">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tệp văn bản <span class="glyphicon glyphicon-paperclip"></span></label>
+                    <input type="file" name="tepDinhKem"/>
+                </div>
+
+
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary">Gởi</button>
+              </div>
+
+
         </form>
         </div>
       </div>
