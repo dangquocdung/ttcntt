@@ -340,11 +340,7 @@
                 <div class="form-group">
                   <label>Nơi phát hành</label>
                   <input type="text" class="form-control" value="Noi Phat Hanh" disabled="" />
-                </div>
-                <div class="form-group">
-                  <label>Ngày phát hành</label>
-                  <input type="date" class="form-control" value="" required=""/>
-                </div>
+                </div>              
 
                 <div class="form-group">
                     <label>Loại văn bản</label>

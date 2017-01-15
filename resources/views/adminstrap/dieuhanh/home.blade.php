@@ -20,8 +20,8 @@
             <tr>
               <td data-toggle="collapse" data-parent="#accordion" href="#theoDoi{{$lcv->id}}"><span class="caret"></span> <strong>{{$lcv->tencongviec}}</strong></td>
               <td>{{$lcv->user->name}}</td>
-              <td>{{$lcv->thoigiantao}}</td>
-              <td>{{$lcv->hanxuly}}</td>
+              <td>{{ Carbon\Carbon::parse($lcv->thoigiantao)->format('d-m-Y') }}</td>
+              <td>{{ Carbon\Carbon::parse($lcv->hanxuly)->format('d-m-Y') }}</td>
               <td>{{$lcv->trangthai->trangthai}}</td>
             </tr>
             @foreach ($xuly as $xl)
