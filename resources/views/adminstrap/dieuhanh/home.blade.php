@@ -41,6 +41,37 @@
     </div>
   </div>
 
+  <!-- Theo doi cong van -->
+  <div class="panel panel-default">
+    <div class="panel-heading main-color-bg">
+      <h3 class="panel-title">Theo dõi trạng thái công văn đã tạo</h3>
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+      <table class="table table-striped table-hover">
+          <tr>
+            <th>Ngày tạo</th>
+            <th>Loại VB</th>
+            <th>Số/KH</th>
+            <th>Trích yếu</th>
+            <th>File văn bản</th>
+            <th>Trạng Thái</th>
+          </tr>
+          @foreach ($tenvanban as $tvb)
+          <tr>
+            <td>{{ Carbon\Carbon::parse($tvb->create_at)->format('d-m-Y') }}</td>
+            <td>{{ $tvb->loaivb_id }}</td>
+            <td>{{ $tvb->sovb }}</td>
+            <td>{{ $tvb->trichyeuvb }}</td>
+            <td><a href="/upload/taocongvan/{{ $tvb->tepvanban}}"><span class="glyphicon glyphicon-paperclip"></span></a></td>
+            <td>{{ $tvb->trangthaivb_id}}</td>
+          </tr>
+          @endforeach
+      </table>
+    </div>
+    </div>
+  </div>
+
   <!-- Tien ich -->
 
   <div class="panel panel-default">

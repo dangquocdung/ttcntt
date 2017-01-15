@@ -345,14 +345,16 @@
 
                 <div class="form-group">
                   <label>Ngày ban hành</label>
-                  <input type="date" class="form-control" name="ngaybanhanhvb" autofocus=""/>
+                  <input type="date" class="form-control" name="ngaybanhanhvb" required=""/>
                 </div>
 
                 <div class="form-group">
                     <label>Loại văn bản</label>
                     <select name="loaivb_id" class="form-control">
-                      <option value="0" selected="">Quyết Định</option>
-                      <option value="1">Công Văn</option>
+                      @foreach ($loaivb as $lvb)
+                      <option value="{{$lvb->id}}">{{$lvb->tenloaivb}}</option>
+                      @endforeach
+
                     </select>
                 </div>
 
@@ -369,15 +371,16 @@
                 <div class="form-group">
                     <label>Người kí</label>
                     <select name="nguoikivb_id" class="form-control" required="">
-                      <option value="0">Nguyen Van A</option>
-                      <option value="1">Nguyen Van B</option>
+                      <option value="1">Nguyen Van A</option>
+                      <option value="2">Nguyen Van B</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Độ khẩn</label>
                     <select name="dokhanvb_id" class="form-control">
-                      <option value="1" selected="">1</option>
+                      <option value="0" selected="">0</option>
+                      <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
                     </select>
@@ -385,7 +388,7 @@
 
                 <div class="form-group">
                     <label>Tệp văn bản <span class="glyphicon glyphicon-paperclip"></span></label>
-                    <input type="file" name="tepDinhKem"/>
+                    <input type="file" name="tepvanban" required=""/>
                 </div>
 
 

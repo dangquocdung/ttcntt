@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(DichVuTableSeeder::class);
 
         // $this->call(DonViTableSeeder::class);
-        $this->call(PhongBanTableSeeder::class);
+        $this->call(LoaiVBTableSeeder::class);
         // $this->call(ChucVuTableSeeder::class);
 
         // $this->call(TrangThaiTableSeeder::class);
@@ -253,6 +253,33 @@ class LevelTableSeeder extends Seeder
           ['level' => 'Cấp 2'],
           ['level' => 'Cấp 3'],
           ['level' => 'Admin']
+
+      ]);
+    }
+}
+
+class LoaiVBTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+      DB::table('loaivb')->delete();
+      DB::table('loaivb')->insert([
+          ['tenloaivb' => 'Thông báo'],
+          ['tenloaivb' => 'Báo cáo'],
+          ['tenloaivb' => 'Kế hoạch'],
+          ['tenloaivb' => 'Chương trình'],
+          ['tenloaivb' => 'Giấy mời'],
+          ['tenloaivb' => 'Quyết định'],
+          ['tenloaivb' => 'Chỉ thị'],
+          ['tenloaivb' => 'Giấy phép'],
+          ['tenloaivb' => 'Công văn']
+
+
 
       ]);
     }

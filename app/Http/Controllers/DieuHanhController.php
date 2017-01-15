@@ -12,6 +12,7 @@ use App\User;
 use App\TaoViec;
 use App\XuLy;
 use App\TrangThai;
+use App\VanBan;
 
 
 class DieuHanhController extends Controller
@@ -29,6 +30,9 @@ class DieuHanhController extends Controller
 
         $xuly = XuLy::all();
         view()->share('xuly',$xuly);
+
+        $loaivb = LoaiVB::all();
+        view()->share('loaivb',$loaivb);
 
         // $tcvcn = TaoViec::where('thuchien','=',Auth::user()->id)->count();
         // view()->share('tcvcn',$tcvcn);
@@ -61,9 +65,11 @@ class DieuHanhController extends Controller
 
         $tendauviec = TaoViec::where('nguoitao',Auth::user()->id)->orderby('id','desc')->get();
 
+        $tenvanban = VanBan::where('user_id',Auth::user()->id)->orderby('id','desc')->get();
 
 
-        return view('adminstrap.dieuhanh.home',['tendauviec'=>$tendauviec,'tcvcn'=>$tcvcn, 'tcvcncxl'=>$tcvcncxl, 'tcvcndxl'=>$tcvcndxl, 'tcvcnxl'=>$tcvcnxl,'tcvcndtc'=>$tcvcndtc]);
+
+        return view('adminstrap.dieuhanh.home',['tenvanban'=>$tenvanban,'tendauviec'=>$tendauviec,'tcvcn'=>$tcvcn, 'tcvcncxl'=>$tcvcncxl, 'tcvcndxl'=>$tcvcndxl, 'tcvcnxl'=>$tcvcnxl,'tcvcndtc'=>$tcvcndtc]);
 
         // return view('adminstrap.dieuhanh.home');
 
@@ -143,7 +149,7 @@ class DieuHanhController extends Controller
     {
 
       //Them cong viec vao TaoViec
-      $cv = new TaoViec;
+      $cv = new VanBan;
 
       $cv->user_id = Auth::user()->id;
       $cv->ngaybanhanhvb = $request->ngaybanhanhvb;

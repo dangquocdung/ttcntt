@@ -19,13 +19,13 @@ class CreateVanbanTable extends Migration
              $table->integer('user_id')->unsigned();
              $table->foreign('user_id')->references('id')->on('users');
              $table->date('ngaybanhanhvb');
-             $table->datetime('ngaynhanvb');
+             $table->datetime('ngaynhanvb')->nullable();
              $table->integer('loaivb_id');
              $table->string('sovb');
              $table->string('trichyeuvb');
              $table->string('tepvanban');
              $table->integer('nguoikivb_id');
-             $table->integer('dokhanvb_id');
+             $table->integer('dokhanvb');
              $table->integer('trangthaivb_id');
              $table->timestamps();
          });
