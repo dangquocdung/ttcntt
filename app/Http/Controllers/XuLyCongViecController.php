@@ -12,6 +12,7 @@ use App\User;
 use App\TaoViec;
 use App\XuLy;
 use App\TrangThai;
+use App\LoaiVB;
 
 
 class XuLyCongViecController extends Controller
@@ -25,6 +26,9 @@ class XuLyCongViecController extends Controller
 
       $trangthai = TrangThai::orderby('id','asc')->get();
       view()->share('trangthai',$trangthai);
+
+      $loaivb = LoaiVB::all();
+      view()->share('loaivb',$loaivb);
 
 
     }
