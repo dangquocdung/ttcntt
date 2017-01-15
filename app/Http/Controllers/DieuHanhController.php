@@ -158,7 +158,7 @@ class DieuHanhController extends Controller
       $cv->sovb = $request->sovb;
       $cv->trichyeuvb = $request->trichyeuvb;
       $cv->nguoikivb_id = $request->nguoikivb_id;
-      $cv->dokhanvb_id = $request->dokhanvb_id;
+      $cv->dokhanvb_id = $request->dokhanvb;
       $cv->trangthaivb_id = '1';
 
 
