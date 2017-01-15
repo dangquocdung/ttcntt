@@ -344,8 +344,13 @@
                 </div>
 
                 <div class="form-group">
+                  <label>Ngày ban hành</label>
+                  <input type="date" class="form-control" name="ngaybanhanhvb" value="{{Carbon\Carbon::today()}}"  />
+                </div>
+
+                <div class="form-group">
                     <label>Loại văn bản</label>
-                    <select name="loaivb" class="form-control" autofocus="">
+                    <select name="loaivb_id" class="form-control" autofocus="">
                       <option value="0" selected="">Quyết Định</option>
                       <option value="1">Công Văn</option>
                     </select>
@@ -363,7 +368,7 @@
 
                 <div class="form-group">
                     <label>Người kí</label>
-                    <select name="nguoikivb" class="form-control" autofocus="" required="">
+                    <select name="nguoikivb_id" class="form-control" autofocus="" required="">
                       <option value="0">Nguyen Van A</option>
                       <option value="1">Nguyen Van B</option>
                     </select>
@@ -371,7 +376,7 @@
 
                 <div class="form-group">
                     <label>Độ khẩn</label>
-                    <select name="dokhanvb" class="form-control">
+                    <select name="dokhanvb_id" class="form-control">
                       <option value="1" selected="">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
