@@ -138,4 +138,48 @@ class DieuHanhController extends Controller
       };
 
     }
+
+    public function postTaoCongVan(Request $request)
+    {
+
+      //Them cong viec vao TaoViec
+      $cv = new TaoViec;
+
+      $cv->user_id = Auth::user()->id;
+      $cv->ngaybanhanhvb = $request->ngaybanhanhvb;
+      $cv->loaivb_id = $request->loaivb_id;
+      $cv->sovb = $request->sovb;
+      $cv->trichyeuvb = $request->trichyeuvb;
+      $cv->nguoikivb_id = $request->nguoikivb_id;
+      $cv->dokhanvb_id = $request->dokhanvb_id;
+      $cv->trangthaivb_id = '1';
+
+
+      if ($request->hasfile('tepvanban')){
+
+        $file = $request->file('tepvanban');
+
+        $name = $file->getClientOriginalName();
+
+        $tdk = str_random(4)."_".$name;
+
+        while (file_exists("upload/taocongvan/".$tdk)){
+          $tdk = str_random(4)."_name";
+        }
+
+        $file->move("upload/taocongvan",$tdk);
+
+        $cv->tepvanban = $tdk;
+
+      }
+
+      $cv->save();
+
+
+      return redirect('adminstrap/dieu-hanh-cong-viec');
+
+
+
+
+    }
 }
