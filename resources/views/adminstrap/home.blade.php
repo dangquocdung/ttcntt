@@ -160,7 +160,7 @@
                             @endif
 
                             <div class="form-group">
-                                <label>Tệp đính kèm <span class="glyphicon glyphicon-paperclip"></span></label>
+                                <label>Hình ảnh <span class="glyphicon glyphicon-paperclip"></span></label>
                                 <input type="file" name="hinhanh"/>
                                 <a href="/upload/team/{{$tv->tenhinh}}">{{$tv->tenhinh}}</a>
                             </div>
