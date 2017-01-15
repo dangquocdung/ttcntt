@@ -13,6 +13,7 @@ use App\TaoViec;
 use App\XuLy;
 use App\TrangThai;
 use App\VanBan;
+use App\LoaiVB;
 
 
 class DieuHanhController extends Controller
