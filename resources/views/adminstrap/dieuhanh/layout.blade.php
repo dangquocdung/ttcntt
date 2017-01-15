@@ -71,6 +71,7 @@
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                 <li><a type="button" data-toggle="modal" data-target="#addCongViec">Tạo Công việc</a></li>
+                <li class="divider"></li>
                 <li><a type="button" data-toggle="modal" data-target="#addCongVan">Tạo Công văn</a></li>
               </ul>
             </div>
@@ -340,7 +341,7 @@
                 <div class="form-group">
                   <label>Nơi phát hành</label>
                   <input type="text" class="form-control" value="Noi Phat Hanh" disabled="" />
-                </div>              
+                </div>
 
                 <div class="form-group">
                     <label>Loại văn bản</label>

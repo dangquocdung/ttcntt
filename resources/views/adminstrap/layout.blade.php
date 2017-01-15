@@ -72,7 +72,9 @@
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                 <li><a type="button" data-toggle="modal" data-target="#addLichCongTac">Thêm Lịch công tác</a></li>
+                <li class="divider"></li>
                 <li><a type="button" data-toggle="modal" data-target="#addTinTuc">Thêm Tin tức - Sự kiện</a></li>
+                <li class="divider"></li>
                 <li><a type="button" data-toggle="modal" data-target="#addVanBan">Thêm Văn bản - Tài liệu</a></li>
               </ul>
             </div>
