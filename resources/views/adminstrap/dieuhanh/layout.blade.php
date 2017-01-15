@@ -340,12 +340,12 @@
 
                 <div class="form-group">
                   <label>Nơi phát hành</label>
-                  <input type="text" class="form-control" value="Noi Phat Hanh" disabled="" />
+                  <input type="text" class="form-control" value="{{ Auth::user()->phongban->donvi->tendonvi}}" disabled="" />
                 </div>
 
                 <div class="form-group">
                   <label>Ngày ban hành</label>
-                  <input type="date" class="form-control" name="ngaybanhanhvb" value="{{Carbon\Carbon::today()}}" autofocus=""/>
+                  <input type="date" class="form-control" name="ngaybanhanhvb" autofocus=""/>
                 </div>
 
                 <div class="form-group">
