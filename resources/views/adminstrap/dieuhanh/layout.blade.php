@@ -343,14 +343,7 @@
                 </div>
                 <div class="form-group">
                   <label>Ngày phát hành</label>
-                  <input type="date" class="form-control" value="
-                  <?php
-                    $timezone = "Asia/Ho_Chi_Minh";
-                    date_default_timezone_set($timezone);
-                    $today = date("Y-m-d");
-                    echo $today();
-                    ?>
-                    " required=""/>
+                  <input type="date" class="form-control" value="" required=""/>
                 </div>
 
                 <div class="form-group">
