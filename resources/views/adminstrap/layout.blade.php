@@ -315,7 +315,7 @@
               <input type="text" class="form-control" name="socv" placeholder="Nhập Số / Kí hiệu văn bản" required="" autofocus="" />
             </div>
             <div class="form-group">
-              <label>Tiêu đề Văn bản</label>
+              <label>Trích yếu Văn bản</label>
               <input type="text" class="form-control" name="tieude" placeholder="Nhập Tiêu đề văn bản" required="" />
             </div>
             <div class="form-group">

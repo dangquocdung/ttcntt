@@ -61,7 +61,7 @@
                                     <div class="events-desc">
                                       <p><strong>Ngày tháng:</strong> {{$cv->ngaydang}}<p>
                                       <p><strong>Số văn bản:</strong> {{$cv->socv}}<p>
-                                      <p><strong>Tiêu đề:</strong> {{$cv->tieude}}</p>
+                                      <p><strong>Trích yếu:</strong> {{$cv->tieude}}</p>
                                       <p><strong>Người đăng:</strong> {{$cv->user->name}}</p>
                                       <p><strong>Chức vụ:</strong> {{$cv->user->chucvu->chucvu}}</p>
 
