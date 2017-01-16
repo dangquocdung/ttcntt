@@ -92,6 +92,36 @@ class FrontController extends Controller
 
   }
 
+  public function getTheGioiViTinh(){
+
+  		$url = "http://www.pcworld.com.vn/articles.rss";
+  		$xml = simplexml_load_file($url);
+
+      DiemBao::getQuery()->delete();
+
+
+  		foreach($xml->channel->item as $entry){
+
+  			$tindb = new DiemBao;
+
+        $tindb->loaitin_id = '1';
+        $tindb->title = $entry->title;
+        $tindb->tieudekhongdau = 'tieu-de-khong-dau';
+        $tindb->description = $entry->description;
+        $tindb->link = $entry->link;
+        $tindb->pubDate = $entry->pubDate;
+
+  			$tindb->save();
+
+
+
+  		}
+
+    $diembao = DiemBao::orderby('pubDate','desc')->paginate(10);
+    return view('diembao',['diembao'=>$diembao]);
+
+  }
+
 
 
 

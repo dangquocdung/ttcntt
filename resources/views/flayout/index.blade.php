@@ -67,6 +67,8 @@
                   <li><a href="/diem-bao/the-gioi-so"> Thế giới số</a></li>
                   <li><a href="/diem-bao/khoi-nghiep"> Khởi nghiệp</a></li>
                   <li><a href="/diem-bao/cong-nghe-360"> Công nghệ 360</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/the-gioi-vi-tinh"> PC World VN</a></li>
                 </ul>
             </li>
 
