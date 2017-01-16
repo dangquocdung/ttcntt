@@ -104,8 +104,8 @@ class FrontController extends Controller
 
   		foreach($xml->channel->item as $entry){
 
-        $diembao["title" => $entry->title,"media" => $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes(),"description" => $entry->description,"link" => $entry->link, "pubDate" => $entry->pubDate);
-      
+        $diembao["title" => $entry->title;"media" => $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes();"description" => $entry->description;"link" => $entry->link; "pubDate" => $entry->pubDate);
+
 
   		}
 
