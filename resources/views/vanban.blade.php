@@ -33,7 +33,7 @@
           <dl>
             <?php $i=1 ?>
             @foreach ($ngaydang as $nd)
-              <dt data-toggle="collapse" data-parent="#accordion" href="#{{ Carbon\Carbon::parse($nd->ngaydang)->format('d-m-Y') }}">{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }} <span class="caret"></span></dt>
+              <dt data-toggle="collapse" data-parent="#accordion" href="#{{ Carbon\Carbon::parse($nd->ngaydang)->format('d-m-Y') }}">{{ Carbon\Carbon::parse($nd->ngaydang)->format('d-m-Y') }} <span class="caret"></span></dt>
 
                 @if ($i==1)
                   <div id="{{ Carbon\Carbon::parse($nd->ngaydang)->format('d-m-Y') }}" class="collapse in">
