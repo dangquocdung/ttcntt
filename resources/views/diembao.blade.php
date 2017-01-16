@@ -56,9 +56,10 @@
                 <?php $i++ ?>
             @endforeach
 
-            {!! $diembao->render() !!}
+
 
           </dl>
+          {!! $diembao->render() !!}
         </div>
       </div>
 
