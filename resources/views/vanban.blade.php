@@ -31,10 +31,16 @@
       <div class="col-md-8">
         <div class="VivaTimeline">
           <dl>
-            @foreach ($ngaydang as $nd)
-              <dt>{{ Carbon\Carbon::parse($nd->ngaydang)->format('d-m-Y') }}</dt>
+            <?php $i=1 ?>
+            @foreach ($ngaydang as $nt)
+              <dt data-toggle="collapse" data-parent="#accordion" href="#{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}">{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }} <span class="caret"></span></dt>
 
-                  <?php $i=1 ?>
+                @if ($i==1)
+                  <div id="{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}" class="collapse in">
+
+                @else
+                  <div id="{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}" class="collapse">
+                @endif
                   @foreach ($congvan as $cv)
                     @if ($cv->ngaydang == $nd->ngaydang)
                       @if ( $i%2 == 1)
@@ -86,6 +92,7 @@
                       <?php $i++ ?>
                     @endif
                   @endforeach
+                </div>
               @endforeach
           </dl>
         </div>
