@@ -59,17 +59,9 @@
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="/tin-tuc"> Tin Trung tâm</a></li>
                   <li class="divider"></li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                          Điểm báo <span class="caret"></span>
-                      </a>
+                  <li><a href="/diem-bao/thoi-su"> Thời sự</a></li>
+                  <li><a href="/diem-bao/vien-thong"> Viễn Thông</a></li>
 
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="/diem-bao/thoi-su"> Thời sự</a></li>
-                        <li class="divider"></li>
-                        <li><a href="/diem-bao/vien-thong"> Viễn Thông</a></li>
-                      </ul>
-                  </li>
                 </ul>
             </li>
 
@@ -82,6 +74,7 @@
             <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
 
             @if (Auth::guest())
+            
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       <i class="fa fa-user"></i> <span class="caret"></span>

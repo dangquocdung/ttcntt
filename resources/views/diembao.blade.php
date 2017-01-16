@@ -32,17 +32,14 @@
                     <div class="time">{{$db->pubDate}}</div>
                     <div class="events">
                         <div class="events-header">
-                          {{$db->title}}
+                          <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
 
                         </div>
                         <div class="events-body">
                             <div class="row">
                                 <div class="events-desc">
                                   {!! $db->description !!}
-                                  <a href="{{$db->link}}" target="_blank"><em>đọc tiếp</em></a>
                                 </div>
-
-
                             </div>
 
                         </div>
