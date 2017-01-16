@@ -57,9 +57,9 @@
                 </a>
 
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="/login"> Tin Trung tâm</a></li>
+                  <li><a href="/tin-tuc"> Tin Trung tâm</a></li>
                   <li class="divider"></li>
-                  <li><a href="/register"> Điểm báo</a></li>
+                  <li><a href="/diem-bao"> Điểm báo</a></li>
                 </ul>
             </li>
 
