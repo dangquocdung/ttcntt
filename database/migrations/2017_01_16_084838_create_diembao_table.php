@@ -15,15 +15,12 @@ class CreateDiembaoTable extends Migration
      {
          Schema::create('diembao', function (Blueprint $table) {
              $table->increments('id');
-             $table->integer('user_id')->unsigned();
-             $table->foreign('user_id')->references('id')->on('users');
-             $table->string('tieude');
+             $table->integer('loaitin_id')->unsigned();
+             $table->string('title');
              $table->string('tieudekhongdau');
-             $table->string('urlhinh')->nullable();
-             $table->text('tomtat');
-             $table->text('noidung');
-             $table->date('ngaydang');
-             $table->text('ghichu')->nullable();
+             $table->text('description');
+             $table->string('link');
+             $table->datetime('pubDate');
              $table->timestamps();
          });
      }
