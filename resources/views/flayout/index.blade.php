@@ -57,6 +57,17 @@
 
               
             </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <i class="fa fa-user"></i> <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/login"><i class="fa fa-key" aria-hidden="true"></i> Đăng nhập</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký</a></li>
+                </ul>
+            </li>
 
 
           </ul>
