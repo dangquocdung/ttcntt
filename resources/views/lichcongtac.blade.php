@@ -22,14 +22,19 @@
           <dl>
             @foreach ($ngaythang as $nt)
               <dt data-toggle="collapse" data-parent="#accordion" href="#{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}">{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}</dt>
+                <?php $i=1 ?>
+                @if ($i==1)
+                  <div id="{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}" class="collapse in">
+                @else
+                  <div id="{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}" class="collapse">
+                @endif
 
-                  <?php $i=1 ?>
                   @foreach ($lichcongtac as $lct)
                     @if ($lct->ngaythang == $nt->ngaythang)
                       @if ( $i%2 == 1)
-                        <dd id="{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}" class="collapse pos-left clearfix">
+                        <dd class="pos-left clearfix">
                       @else
-                        <dd id="{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}" class="collapse pos-right clearfix">
+                        <dd class="pos-right clearfix">
                       @endif
                           <div class="circ"></div>
                           <div class="time">{{$lct->batdau}}</div>
@@ -63,6 +68,7 @@
                       <?php $i++ ?>
                     @endif
                   @endforeach
+                </div>
               @endforeach
           </dl>
 
