@@ -29,7 +29,7 @@
               @endif
 
                     <div class="circ"></div>
-                    <div class="time">{{$db->pubDate}}</div>
+                    <div class="time">{{ Carbon\Carbon::parse($db->pubDate)->format('d-m-Y H:m:s') }}</div>
                     <div class="events">
                         <div class="events-header">
                           <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
