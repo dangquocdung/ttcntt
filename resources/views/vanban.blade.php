@@ -32,7 +32,7 @@
         <div class="VivaTimeline">
           <dl>
             @foreach ($ngaydang as $nd)
-              <dt>{{$nd->ngaydang}}</dt>
+              <dt>{{ Carbon\Carbon::parse($nd->ngaydang)->format('d-m-Y') }}</dt>
 
                   <?php $i=1 ?>
                   @foreach ($congvan as $cv)

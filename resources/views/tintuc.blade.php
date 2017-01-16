@@ -29,7 +29,7 @@
               @endif
 
                     <div class="circ"></div>
-                    <div class="time">{{$tt->ngaydang}}</div>
+                    <div class="time">{{ Carbon\Carbon::parse($tt->ngaydang)->format('d-m-Y') }}</div>
                     <div class="events">
                         <div class="events-header">
                           {{$tt->tieude}}

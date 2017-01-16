@@ -21,7 +21,7 @@
         <div class="VivaTimeline">
           <dl>
             @foreach ($ngaythang as $nt)
-              <dt>{{$nt->ngaythang}}</dt>
+              <dt>{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}</dt>
 
                   <?php $i=1 ?>
                   @foreach ($lichcongtac as $lct)
