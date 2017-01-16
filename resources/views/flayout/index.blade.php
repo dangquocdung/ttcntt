@@ -208,7 +208,7 @@
 
     <footer>
       <div class="container">
-          <p>Copyright Đặng Quốc Dũng © 2017. All rights reserved.</p>
+          <p>Copyright <a href="danquocdung.com">Đặng Quốc Dũng</a> © 2017. All rights reserved.</p>
       </div>
     </footer>
 
