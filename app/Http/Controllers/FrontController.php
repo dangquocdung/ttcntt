@@ -62,9 +62,9 @@ class FrontController extends Controller
 
   }
 
-  public function getDiemBao(){
+  public function getDiemBao($loaitin){
 
-  		$url = "http://ictnews.vn/rss/thoi-su";
+  		$url = "http://ictnews.vn/rss/".$loaitin;
   		$xml = simplexml_load_file($url);
 
       DiemBao::getQuery()->delete();

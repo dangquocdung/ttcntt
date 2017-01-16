@@ -67,7 +67,7 @@
                       <ul class="dropdown-menu" role="menu">
                         <li><a href="/diem-bao/thoi-su"> Thời sự</a></li>
                         <li class="divider"></li>
-                        <li><a href="/diem-bao"> Điểm báo</a></li>
+                        <li><a href="/diem-bao/vien-thong"> Viễn Thông</a></li>
                       </ul>
                   </li>
                 </ul>
@@ -76,6 +76,7 @@
 
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
             <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
             <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
             <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
