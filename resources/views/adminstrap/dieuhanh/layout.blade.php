@@ -235,7 +235,7 @@
     </section>
 
     <footer id="footer">
-      <p>Copyright <a href="danquocdung.com">Đặng Quốc Dũng</a>, &copy; 2017. All rights reserved.</p>
+      <p>Copyright <a href="http://danquocdung.com">Đặng Quốc Dũng</a> &copy; 2017. All rights reserved.</p>
     </footer>
 
 
