@@ -56,6 +56,8 @@
                 <?php $i++ ?>
             @endforeach
 
+            {!! $diembao->render() !!}
+
           </dl>
         </div>
       </div>

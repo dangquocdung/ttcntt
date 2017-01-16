@@ -97,20 +97,27 @@ class FrontController extends Controller
   		$url = "http://www.pcworld.com.vn/articles.rss";
   		$xml = simplexml_load_file($url);
 
-      // DiemBao::getQuery()->delete();
+      DiemBao::getQuery()->delete();
 
       $diembao = array();
 
+      foreach($xml->channel->item as $entry){
 
-  		foreach($xml->channel->item as $entry){
+  			$tindb = new DiemBao;
 
-        $diembao["title" => $entry->title;"media" => $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes();"description" => $entry->description;"link" => $entry->link; "pubDate" => $entry->pubDate);
+        $tindb->loaitin_id = '1';
+        $tindb->title = $entry->title;
+        $tin->media = $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes();
+        $tindb->description = $entry->description;
+        $tindb->link = $entry->link;
+        $tindb->pubDate = $entry->pubDate;
 
+  			$tindb->save();
 
   		}
 
-    // $diembao = DiemBao::orderby('pubDate','desc')->paginate(10);
-    return view('diembao',['diembao'=>$diembao]);
+    $diembao = DiemBao::orderby('pubDate','desc')->paginate(10);
+    return view('diembao',['diembao'=>$diembao]);    
 
   }
 
