@@ -57,7 +57,7 @@
                 </a>
 
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="/tin-tuc"> Tin Trung tâm</a></li>
+                  <li><a href="/tin-tuc"> Tin Nội bộ</a></li>
                   <li class="divider"></li>
                   <li><a href="/the-gioi-vi-tinh"> PC World VN</a></li>
                   <li class="divider"></li>
