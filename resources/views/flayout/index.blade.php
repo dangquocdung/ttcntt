@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="keywords" content="web design, web app, software">
-    <meta name="author" content="Đặng Quốc Dũng">
+    <meta name="keywords" content="hà tĩnh, ha-tinh, web design, web app, software">
+    <meta name="keywords" content="Dũng Thịnh, Dung-Thinh, Web App, Mobile App, Native App, IoT, Internet of Things, Computer, Web Developer, Hosting, Software, Networking, Hardware, Server, VPS, Cloud, Android, iOS ">
+    <meta name="author" content="Đặng Quốc Dũng, Dang-Quoc-Dung">
     @yield('title')
     <base href="{{asset('')}}">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
@@ -49,7 +50,18 @@
             <li><a href="/dich-vu">Dịch vụ</a></li>
             <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
             <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
-            <li><a href="/tin-tuc">Tin tức <span class="badge" style="background-color:orange !important;">{{$stt}}</span></a></li>
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  Tin tức <span class="caret"></span>
+              </a>
+
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/tin-tuc">Tin nội bộ</a></li>
+                <li class="divider"></li>
+                <li><a href="/diem-bao">Điểm báo</li>
+              </ul>
+            </li>
+
 
           </ul>
           <ul class="nav navbar-nav navbar-right">
