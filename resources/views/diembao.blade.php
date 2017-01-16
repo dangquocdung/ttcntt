@@ -39,7 +39,7 @@
                             <div class="row">
                               @if (strlen(trim($db->media))>0)
                                 <div class="col-md-6 pull-left">
-                                    <a href="{{$db->link}}">
+                                    <a class="fancybox" href="{{$db->media}}">
                                       <img class="events-object img-responsive img-rounded" src="{{$db->media}}" />
                                     </a>
                                 </div>
