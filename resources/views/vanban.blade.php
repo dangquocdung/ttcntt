@@ -41,6 +41,8 @@
                 @else
                   <div id="{{ Carbon\Carbon::parse($nd->ngaydang)->format('d-m-Y') }}" class="collapse">
                 @endif
+
+                  <?php $i=1 ?>
                   @foreach ($congvan as $cv)
                     @if ($cv->ngaydang == $nd->ngaydang)
                       @if ( $i%2 == 1)
