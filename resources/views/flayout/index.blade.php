@@ -50,12 +50,7 @@
             <li><a href="/dich-vu">Dịch vụ</a></li>
             <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
             <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
-
-
-
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                   Tin tức <span class="caret"></span>
               </a>
@@ -66,6 +61,10 @@
                 <li><a href="/diem-bao">Điểm báo </li>
               </ul>
             </li>
+
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
             <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
             <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
