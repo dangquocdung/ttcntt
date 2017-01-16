@@ -59,7 +59,10 @@
 
 
           </dl>
-          {!! $diembao->render() !!}
+          <div class="clearfix">
+            {!! $diembao->render() !!}
+          </div>
+
         </div>
       </div>
 
