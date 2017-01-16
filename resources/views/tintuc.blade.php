@@ -47,13 +47,13 @@
 
                               @if (strlen(trim($tt->urlhinh))>0)
                                 <div class="col-md-6 pull-left">
-                                    <a href="tin-tuc/{{$tt->id}}">
-                                      <img class="events-object img-responsive img-rounded" src="upload/tintuc/{{$tt->urlhinh}}" />
+                                    <a class="fancybox" href="/upload/tintuc/{{$tt->urlhinh}}">
+                                      <img class="events-object img-responsive img-rounded" src="/upload/tintuc/{{$tt->urlhinh}}" />
                                     </a>
                                 </div>
                               @endif
                                 <div class="events-desc">
-                                  {{$tt->tomtat}}.<a href="tin-tuc/{{$tt->id}}"><em>đọc tiếp...</em></a>
+                                  {{$tt->tomtat}}.<a href="/tin-tuc/{{$tt->id}}"><em>đọc tiếp...</em></a>
                                 </div>
 
 
