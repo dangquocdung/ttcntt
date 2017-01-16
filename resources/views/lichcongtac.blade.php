@@ -46,7 +46,7 @@
                               <div class="events-body">
                                   <div class="row">
                                     <div class="events-desc">
-                                      <p><strong>Ngày tháng:</strong> {{$lct->ngaythang}}<p>
+                                      <p><strong>Ngày tháng:</strong> {{ Carbon\Carbon::parse($lct->ngaythang)->format('d-m-Y') }}<p>
                                       <p><strong>Nội dung:</strong> {!!$lct->noidung!!}<p>
                                       <p><strong>Địa điểm:</strong> {{$lct->diadiem}}</p>
                                       <p><strong>Bắt đầu:</strong> {{$lct->batdau}}</p>
