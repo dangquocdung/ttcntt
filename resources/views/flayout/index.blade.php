@@ -61,7 +61,12 @@
                   <li class="divider"></li>
                   <li><a href="/diem-bao/thoi-su"> Thời sự</a></li>
                   <li><a href="/diem-bao/vien-thong"> Viễn Thông</a></li>
-
+                  <li><a href="/diem-bao/internet"> Internet</a></li>
+                  <li><a href="/diem-bao/cntt"> Công nghệ Thông tin</a></li>
+                  <li><a href="/diem-bao/kinh-doanh"> Kinh Doanh</a></li>
+                  <li><a href="/diem-bao/the-gioi-so"> Thế giới số</a></li>
+                  <li><a href="/diem-bao/khoi-nghiep"> Khởi nghiệp</a></li>
+                  <li><a href="/diem-bao/cong-nghe-360"> Công nghệ 360</a></li>
                 </ul>
             </li>
 
@@ -74,7 +79,7 @@
             <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
 
             @if (Auth::guest())
-            
+
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       <i class="fa fa-user"></i> <span class="caret"></span>
