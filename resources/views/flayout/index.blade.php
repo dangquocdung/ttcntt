@@ -50,22 +50,16 @@
             <li><a href="/dich-vu">Dịch vụ</a></li>
             <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
             <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                  Tin tức <span class="caret"></span>
-              </a>
 
-              
-            </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <i class="fa fa-user"></i> <span class="caret"></span>
+                    Tin Tức <span class="caret"></span>
                 </a>
 
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="/login"><i class="fa fa-key" aria-hidden="true"></i> Đăng nhập</a></li>
+                  <li><a href="/login"> Tin Trung tâm</a></li>
                   <li class="divider"></li>
-                  <li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký</a></li>
+                  <li><a href="/register"> Điểm báo</a></li>
                 </ul>
             </li>
 
