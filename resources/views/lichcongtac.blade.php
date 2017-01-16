@@ -21,15 +21,15 @@
         <div class="VivaTimeline">
           <dl>
             @foreach ($ngaythang as $nt)
-              <dt>{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}</dt>
+              <dt data-toggle="collapse" data-parent="#accordion" href="#tatCaCongViec">{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}</dt>
 
                   <?php $i=1 ?>
                   @foreach ($lichcongtac as $lct)
                     @if ($lct->ngaythang == $nt->ngaythang)
                       @if ( $i%2 == 1)
-                        <dd class="pos-left clearfix">
+                        <dd id="tatCaCongViec" class="collapse pos-left clearfix">
                       @else
-                        <dd class="pos-right clearfix">
+                        <dd id="tatCaCongViec" class="collapse pos-right clearfix">
                       @endif
                           <div class="circ"></div>
                           <div class="time">{{$lct->batdau}}</div>
@@ -66,7 +66,7 @@
               @endforeach
           </dl>
 
-        
+
 
         </div>
       </div>
