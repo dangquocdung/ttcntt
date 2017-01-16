@@ -211,8 +211,3 @@
     -o-transition: 1s;
     -ms-transition: 1s;
 }
-
-.pagination {
-    margin: 25px 0 20px;
-    border-radius: 2px;
-}

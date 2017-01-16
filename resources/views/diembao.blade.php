@@ -59,7 +59,7 @@
 
 
           </dl>
-          <div class="clearfix">
+          <div class="text-center">
             {!! $diembao->render() !!}
           </div>
 
