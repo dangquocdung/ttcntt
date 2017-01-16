@@ -99,17 +99,17 @@ class FrontController extends Controller
 
       // DiemBao::getQuery()->delete();
 
-      $diembao = [];
+      $diembao = array();
 
 
   		foreach($xml->channel->item as $entry){
 
-        $diembao->loaitin_id = '1';
-        $diembao->title = $entry->title;
-        $diembao->media = $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes();
-        $diembao->description = $entry->description;
-        $diembao->link = $entry->link;
-        $diembao->pubDate = $entry->pubDate;
+        $diembao["title"] = $entry->title;
+        $diembao["media"] = $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes();
+        $diembao["description"] = $entry->description;
+        $diembao["link"] = $entry->link;
+        $diembao["pubDate"] = $entry->pubDate;
+        
   		}
 
     // $diembao = DiemBao::orderby('pubDate','desc')->paginate(10);
