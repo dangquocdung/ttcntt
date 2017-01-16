@@ -9,7 +9,7 @@
 @section('content')
 <div class="title-bar">
   <div class="container">
-    <h1>Tin tức - Sự kiện</h1>
+    <h1>Tin tức - Sự kiện Nội bộ</h1>
   </div>
 </div>
 
