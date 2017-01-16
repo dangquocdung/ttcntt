@@ -96,10 +96,13 @@ Route::get('/tin-tuc', 'FrontController@getTinTuc');
 
 Route::get('/tin-tuc/{id}', 'FrontController@getChiTietTin');
 
+
 Route::get('/bien-dao-viet-nam', 'FrontController@getBienDao');
 
 Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
 
 Route::get('/van-ban', 'FrontController@getCongVan');
+
+Route::get('/diem-bao', 'FrontController@getDiemBao');
 
 Route::post('/goi-thong-diep', 'FrontController@postGoiThongDiep');

@@ -61,6 +61,13 @@ class FrontController extends Controller
 
   }
 
+  public function getDiemBao(){
+
+    $diembao = DiemBao::orderby('ngaydang','desc')->paginate(10);
+    return view('diembao',['diembao'=>$diembao]);
+
+  }
+
   public function getChiTietTin($id){
 
     $tin = TinTuc::find($id);
