@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Dũng Thịnh, Dung-Thinh, Web App, Mobile App, Native App, IoT, Internet of Things, Computer, Web Developer, Hosting, Software, Networking, Hardware, Server, VPS, Cloud, Android, iOS ">
     <meta name="author" content="Đặng Quốc Dũng, Dang-Quoc-Dung">
-    <title>Dang-Quoc-Dung | iOFFICE</title>
+    <title>Văn phòng Thông minh | iOFFICE</title>
     <base href="{{asset('')}}">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
