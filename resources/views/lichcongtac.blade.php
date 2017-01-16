@@ -65,6 +65,11 @@
                   @endforeach
               @endforeach
           </dl>
+
+          <div class="text-center">
+            {!! $lichcongtac->render() !!}
+          </div>
+
         </div>
       </div>
 

@@ -68,6 +68,10 @@
             @endforeach
 
           </dl>
+
+          <div class="text-center">
+            {!! $tintuc->render() !!}
+          </div>
         </div>
       </div>
 
