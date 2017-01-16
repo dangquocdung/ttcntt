@@ -76,7 +76,7 @@ class FrontController extends Controller
 
         $tindb->loaitin_id = '1';
         $tindb->title = $entry->title;
-        $tindb->tieudekhongdau = 'tieu-de-khong-dau';
+
         $tindb->description = $entry->description;
         $tindb->link = $entry->link;
         $tindb->pubDate = $entry->pubDate;
@@ -106,7 +106,7 @@ class FrontController extends Controller
 
         $tindb->loaitin_id = '1';
         $tindb->title = $entry->title;
-        $tindb->tieudekhongdau = 'tieu-de-khong-dau';
+        $tindb->media = $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes();
         $tindb->description = $entry->description;
         $tindb->link = $entry->link;
         $tindb->pubDate = $entry->pubDate;

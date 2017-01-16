@@ -17,7 +17,7 @@ class CreateDiembaoTable extends Migration
              $table->increments('id');
              $table->integer('loaitin_id')->unsigned();
              $table->string('title');
-             $table->string('tieudekhongdau');
+             $table->string('media')->nullable();
              $table->text('description');
              $table->string('link');
              $table->datetime('pubDate');
