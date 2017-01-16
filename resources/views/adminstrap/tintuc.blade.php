@@ -38,8 +38,8 @@
             <td>{{$tt->ghichu}}</td>
 
             <td>
-              <a class="btn btn-default" onclick="return confirm('Bạn muốn sửa mục này?')" data-toggle="modal" data-target="#editTinTuc{{$tt->id}}">Edit</a>
-              <a class="btn btn-danger" onclick="return confirm('Bạn muốn xóa mục này?')" href="/adminstrap/xoa-tin-tuc/{{$tt->id}}">Delete</a>
+              <a class="btn btn-sm btn-default" onclick="return confirm('Bạn muốn sửa mục này?')" data-toggle="modal" data-target="#editTinTuc{{$tt->id}}">Edit</a>
+              <a class="btn btn-sm btn-danger" onclick="return confirm('Bạn muốn xóa mục này?')" href="/adminstrap/xoa-tin-tuc/{{$tt->id}}">Delete</a>
             </td>
           </tr>
 
