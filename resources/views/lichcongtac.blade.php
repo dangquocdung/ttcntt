@@ -21,7 +21,7 @@
         <div class="VivaTimeline">
           <dl>
             @foreach ($ngaythang as $nt)
-              <dt data-toggle="collapse" data-parent="#accordion" href="#{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}">{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}</dt>
+              <dt data-toggle="collapse" data-parent="#accordion" href="#{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}">{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }} <span class="caret"></span></dt>
                 <?php $i=1 ?>
                 @if ($i==1)
                   <div id="{{ Carbon\Carbon::parse($nt->ngaythang)->format('d-m-Y') }}" class="collapse in">
