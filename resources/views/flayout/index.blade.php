@@ -61,14 +61,14 @@
                   <li class="divider"></li>
                   <li><a href="/the-gioi-vi-tinh"> PC World VN</a></li>
                   <li class="divider"></li>
-                  <li><a href="/diem-bao/thoi-su"> Thời sự</a></li>
-                  <li><a href="/diem-bao/vien-thong"> Viễn Thông</a></li>
-                  <li><a href="/diem-bao/internet"> Internet</a></li>
-                  <li><a href="/diem-bao/cntt"> Công nghệ Thông tin</a></li>
-                  <li><a href="/diem-bao/kinh-doanh"> Kinh Doanh</a></li>
-                  <li><a href="/diem-bao/the-gioi-so"> Thế giới số</a></li>
-                  <li><a href="/diem-bao/khoi-nghiep"> Khởi nghiệp</a></li>
-                  <li><a href="/diem-bao/cong-nghe-360"> Công nghệ 360</a></li>
+                  <li><a href="/diem-bao/thoi-su"> ICTnews: Thời sự</a></li>
+                  <li><a href="/diem-bao/vien-thong"> ICTnews: Viễn Thông</a></li>
+                  <li><a href="/diem-bao/internet"> ICTnews: Internet</a></li>
+                  <li><a href="/diem-bao/cntt"> ICTnews: Công nghệ Thông tin</a></li>
+                  <li><a href="/diem-bao/kinh-doanh"> ICTnews: Kinh Doanh</a></li>
+                  <li><a href="/diem-bao/the-gioi-so"> ICTnews: Thế giới số</a></li>
+                  <li><a href="/diem-bao/khoi-nghiep"> ICTnews: Khởi nghiệp</a></li>
+                  <li><a href="/diem-bao/cong-nghe-360"> ICTnews: Công nghệ 360</a></li>
 
                 </ul>
             </li>

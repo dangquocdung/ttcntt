@@ -79,9 +79,20 @@ class FrontController extends Controller
 
         $tindb->loaitin_id = '1';
         $tindb->title = $entry->title;
-        // $tindb->media = substr($entry->description, strpos($entry->description,'src="'), strlen($entry->description)-strpos($entry->description,'.jpg'));
 
-        $tindb->description = str_replace(' ]]>','',$entry->description);
+        $src = strpos($entry->description,'src')+5;
+        $jpg = strpos($entry->description,'jpg')+3;
+        $imglen = $jpg - $src;
+
+        $tindb->media = substr($entry->description, $src, $imglen);
+
+
+        // $tindb->media = substr($entry->description, strpos($entry->description,'src="'), strlen($entry->description)-strpos($entry->description,'.jpg'));
+        $br = strpos($entry->description,'</br>') + 6;
+
+        $description = substr($entry->description, $br);
+
+        $tindb->description = str_replace(' ]]>','', $description);
         $tindb->link = $entry->link;
         $tindb->pubDate = $entry->pubDate;
 
