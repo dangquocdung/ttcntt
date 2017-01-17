@@ -59,17 +59,17 @@
 
       <!--section title-->
       <div class="col-md-3">
-        <a href="http://www.hatinh.gov.vn/"><img src="/upload/banner/congttdt.jpg"></a>
+        <a href="http://www.hatinh.gov.vn/" target="_blank"><img src="/upload/banner/congttdt.jpg"></a>
       </div>
 
       <!--section title-->
       <div class="col-md-3">
-        <a href="http://hatinhtrade.com.vn/"><img src="/upload/banner/santmdt.jpg"></a>
+        <a href="http://hatinhtrade.com.vn/" target="_blank"><img src="/upload/banner/santmdt.jpg"></a>
       </div>
 
       <!--section title-->
       <div class="col-md-3">
-        <a href="http://113.160.178.189:8686/"><img src="/upload/banner/dbnganh.jpg"></a>
+        <a href="http://113.160.178.189:8686/" target="_blank"><img src="/upload/banner/dbnganh.jpg"></a>
       </div>
 
       <!--section title-->
