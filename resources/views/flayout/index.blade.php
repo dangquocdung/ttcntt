@@ -74,8 +74,8 @@
             </li>
 
 
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <!-- </ul>
+          <ul class="nav navbar-nav navbar-right"> -->
             <!-- <li><a href="https://www.facebook.com/hatinhitc/"><i class="fa fa-facebook"></i></a></li> -->
             <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
             <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
@@ -306,7 +306,7 @@
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587daeb9f12bee24"></script> 
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587daeb9f12bee24"></script>
 
     </body>
     </html>
