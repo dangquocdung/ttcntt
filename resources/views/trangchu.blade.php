@@ -87,7 +87,7 @@
         <h2>Dịch vụ của chúng tôi</h2>
       </div>
 
-      @foreach ($dichvu as $dv)
+      @foreach ($dichvu2 as $dv)
         <div class="col-md-3">
           <i class="fa {{$dv->fa}}"></i>
 

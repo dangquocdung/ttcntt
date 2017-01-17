@@ -32,9 +32,12 @@ class FrontController extends Controller
 
   public function getTrangChu(){
     $dichvu = DichVu::orderby('id','asc')->get();
+
+    $dichvu2 = DichVu::orderby('id','asc')->limit(4)->get();
+
     $doingu = User::where('quyen','>','0')->where('phongban_id','<','7')->orderby('chucvu_id','asc')->get();
 
-    return view('trangchu',['dichvu'=>$dichvu, 'doingu'=>$doingu]);
+    return view('trangchu',['dichvu'=>$dichvu,'dichvu2'=>$dichvu2, 'doingu'=>$doingu]);
   }
 
   public function getGioiThieu(){
