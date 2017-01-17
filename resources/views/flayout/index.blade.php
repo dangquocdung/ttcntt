@@ -44,7 +44,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/">Trang chủ</a></li>
+            <!-- <li><a href="/">Trang chủ</a></li> -->
             <li><a href="/gioi-thieu">Giới thiệu</a></li>
             <li><a href="/nang-luc">Năng lực</a></li>
             <li><a href="/dich-vu">Dịch vụ</a></li>
@@ -76,7 +76,7 @@
 
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="https://www.facebook.com/hatinhitc/"><i class="fa fa-facebook"></i></a></li> -->
+            <li><a href="https://www.facebook.com/hatinhitc/"><i class="fa fa-facebook"></i></a></li>
             <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
             <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
             <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
