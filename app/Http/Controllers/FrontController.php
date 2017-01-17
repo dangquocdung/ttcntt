@@ -33,7 +33,7 @@ class FrontController extends Controller
   public function getTrangChu(){
     $dichvu = DichVu::orderby('id','asc')->get();
 
-    $dichvu2 = DichVu::orderby('id','asc')->limit(4)->get();
+    $dichvu2 = DichVu::orderby('id','asc')->limit(4)->offset(2)->get();
 
     $doingu = User::where('quyen','>','0')->where('phongban_id','<','7')->orderby('chucvu_id','asc')->get();
 
