@@ -99,12 +99,12 @@
 
 .navbar-brand > img {
     display: inline !important;
-    padding-top: 8px;
+    padding-top: 10px;
 }
 
 .navbar-nav > li > a {
     padding-top: 25px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 .footer_area {
