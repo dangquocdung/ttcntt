@@ -80,7 +80,7 @@ class FrontController extends Controller
         $tindb->loaitin_id = '1';
         $tindb->title = $entry->title;
 
-        $tindb->description = $entry->description;
+        $tindb->description = str_replace(' ]]>','',$entry->description);
         $tindb->link = $entry->link;
         $tindb->pubDate = $entry->pubDate;
 
