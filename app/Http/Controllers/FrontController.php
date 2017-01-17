@@ -82,6 +82,10 @@ class FrontController extends Controller
 
         $src = strpos($entry->description,'src')+5;
         $jpg = strpos($entry->description,'jpg')+3;
+
+        if ($jpg == 3) {
+          $jpg = strpos($entry->description,'png')+3;
+        }
         $imglen = $jpg - $src;
 
         $tindb->media = substr($entry->description, $src, $imglen);
