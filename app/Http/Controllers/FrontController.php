@@ -76,7 +76,7 @@ class FrontController extends Controller
   		foreach($xml->channel->item as $entry){
 
   			$tindb = new DiemBao;
-
+        
         $tindb->loaitin_id = '1';
         $tindb->title = $entry->title;
 
