@@ -103,8 +103,9 @@ Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
 
 Route::get('/van-ban', 'FrontController@getCongVan');
 
-Route::get('/diem-bao/{loaitin}', 'FrontController@getDiemBao');
+Route::get('/diem-bao/ictnews/{loaitin}', 'FrontController@getDiemBao');
 
-Route::get('/the-gioi-vi-tinh', 'FrontController@getTheGioiViTinh');
+Route::get('/diem-bao/the-gioi-vi-tinh', 'FrontController@getTheGioiViTinh');
+
 
 Route::post('/goi-thong-diep', 'FrontController@postGoiThongDiep');
