@@ -32,13 +32,9 @@
       @else
         <div class="item">
       @endif
-        <img src="/img/{{$dv->hinh}}.jpg" alt="">
-        <div class="carousel-caption">
-          <h3>{{$dv->ten}}</h3>
-
+          <img src="/img/{{$dv->hinh}}.jpg" alt="">
 
         </div>
-      </div>
       <?php $i++ ?>
     @endforeach
   </div>
