@@ -61,15 +61,15 @@
                   <li class="divider"></li>
                   <li><a href="/diem-bao/the-gioi-vi-tinh"> PC World VN</a></li>
                   <li class="divider"></li>
-                  <li><a href="/diem-bao/itcnews/thoi-su"> ICTnews: Thời sự</a></li>
-                  <li><a href="/diem-bao/itcnews/vien-thong"> ICTnews: Viễn Thông</a></li>
-                  <li><a href="/diem-bao/itcnews/internet"> ICTnews: Internet</a></li>
-                  <li><a href="/diem-bao/itcnews/cntt"> ICTnews: Công nghệ Thông tin</a></li>
-                  <li><a href="/diem-bao/itcnews/kinh-doanh"> ICTnews: Kinh Doanh</a></li>
-                  <li><a href="/diem-bao/itcnews/the-gioi-so"> ICTnews: Thế giới số</a></li>
-                  <li><a href="/diem-bao/itcnews/khoi-nghiep"> ICTnews: Khởi nghiệp</a></li>
-                  <li><a href="/diem-bao/itcnews/cong-nghe-360"> ICTnews: Công nghệ 360</a></li>
-                
+                  <li><a href="/diem-bao/ictnews/thoi-su"> ICTnews: Thời sự</a></li>
+                  <li><a href="/diem-bao/ictnews/vien-thong"> ICTnews: Viễn Thông</a></li>
+                  <li><a href="/diem-bao/ictnews/internet"> ICTnews: Internet</a></li>
+                  <li><a href="/diem-bao/ictnews/cntt"> ICTnews: Công nghệ Thông tin</a></li>
+                  <li><a href="/diem-bao/ictnews/kinh-doanh"> ICTnews: Kinh Doanh</a></li>
+                  <li><a href="/diem-bao/ictnews/the-gioi-so"> ICTnews: Thế giới số</a></li>
+                  <li><a href="/diem-bao/ictnews/khoi-nghiep"> ICTnews: Khởi nghiệp</a></li>
+                  <li><a href="/diem-bao/ictnews/cong-nghe-360"> ICTnews: Công nghệ 360</a></li>
+
 
 
                 </ul>

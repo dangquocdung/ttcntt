@@ -12,7 +12,35 @@
 */
 
 Auth::routes();
+
 Route::get('home', 'BackController@getAdminStrap');
+
+Route::get('/', 'FrontController@getTrangChu');
+
+Route::get('/gioi-thieu', 'FrontController@getGioiThieu');
+
+Route::get('/nang-luc', 'FrontController@getNangLuc');
+
+Route::get('/dich-vu', 'FrontController@getDichVu');
+
+Route::get('/tin-tuc', 'FrontController@getTinTuc');
+
+Route::get('/tin-tuc/{id}', 'FrontController@getChiTietTin');
+
+
+Route::get('/bien-dao-viet-nam', 'FrontController@getBienDao');
+
+Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
+
+Route::get('/van-ban', 'FrontController@getCongVan');
+
+Route::get('/diem-bao/ictnews/{loaitin}', 'FrontController@getDiemBao');
+
+Route::get('/diem-bao/the-gioi-vi-tinh', 'FrontController@getTheGioiViTinh');
+
+
+Route::post('/goi-thong-diep', 'FrontController@postGoiThongDiep');
+
 
 Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
 
@@ -83,29 +111,3 @@ Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLog
 
 
 });
-
-Route::get('/', 'FrontController@getTrangChu');
-
-Route::get('/gioi-thieu', 'FrontController@getGioiThieu');
-
-Route::get('/nang-luc', 'FrontController@getNangLuc');
-
-Route::get('/dich-vu', 'FrontController@getDichVu');
-
-Route::get('/tin-tuc', 'FrontController@getTinTuc');
-
-Route::get('/tin-tuc/{id}', 'FrontController@getChiTietTin');
-
-
-Route::get('/bien-dao-viet-nam', 'FrontController@getBienDao');
-
-Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
-
-Route::get('/van-ban', 'FrontController@getCongVan');
-
-Route::get('/diem-bao/ictnews/{loaitin}', 'FrontController@getDiemBao');
-
-Route::get('/diem-bao/the-gioi-vi-tinh', 'FrontController@getTheGioiViTinh');
-
-
-Route::post('/goi-thong-diep', 'FrontController@postGoiThongDiep');

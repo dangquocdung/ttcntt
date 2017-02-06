@@ -193,7 +193,22 @@
 <div class="section-d">
   <div class="container">
     <div class="row">
-      <h2>Đội ngũ</h2>
+      <!-- <h2>Đội ngũ</h2> -->
+      <!-- <div id="owl-demo" class="owl-carousel owl-theme">
+        @foreach ($doingu as $dn)
+          <div class="item2">
+            <img src="upload/team/{{$dn->tenhinh}}" alt="">
+            <p class="name">{{$dn->name}}</p>
+            <p class="chucvu">{{$dn->chucvu->chucvu}}</p>
+            <p class="didong">{{$dn->didong}}</p>
+
+          </div>
+
+        @endforeach
+
+      </div> -->
+
+      <h2>Tin Tức</h2>
       <div id="owl-demo" class="owl-carousel owl-theme">
         @foreach ($doingu as $dn)
           <div class="item2">

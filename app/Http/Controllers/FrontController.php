@@ -65,6 +65,7 @@ class FrontController extends Controller
 
   }
 
+
   public function getDiemBao($loaitin){
 
   		$url = "http://ictnews.vn/rss/".$loaitin;
@@ -101,15 +102,14 @@ class FrontController extends Controller
         $tindb->pubDate = $entry->pubDate;
 
   			$tindb->save();
-
-
-
   		}
 
     $diembao = DiemBao::orderby('pubDate','desc')->paginate(10);
     return view('diembao',['diembao'=>$diembao]);
 
   }
+
+
 
   public function getTheGioiViTinh(){
 
