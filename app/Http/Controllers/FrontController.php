@@ -31,14 +31,57 @@ class FrontController extends Controller
   }
 
   public function getTrangChu(){
+
     $dichvu = DichVu::orderby('id','asc')->get();
 
     $dichvu2 = DichVu::orderby('id','asc')->limit(4)->offset(1)->get();
 
     $doingu = User::where('quyen','>','0')->where('phongban_id','<','7')->orderby('chucvu_id','asc')->get();
 
-    return view('trangchu',['dichvu'=>$dichvu,'dichvu2'=>$dichvu2, 'doingu'=>$doingu]);
+    $url = "http://ictnews.vn/rss/thoi-su";
+
+    $xml = simplexml_load_file($url);
+
+    DiemBao::getQuery()->delete();
+
+
+    foreach($xml->channel->item as $entry){
+
+      $tindb = new DiemBao;
+
+      $tindb->loaitin_id = '1';
+      $tindb->title = $entry->title;
+
+      $src = strpos($entry->description,'src')+5;
+      $jpg = strpos($entry->description,'jpg')+3;
+
+      if ($jpg == 3) {
+        $jpg = strpos($entry->description,'png')+3;
+      }
+      $imglen = $jpg - $src;
+
+      $tindb->media = substr($entry->description, $src, $imglen);
+
+
+      // $tindb->media = substr($entry->description, strpos($entry->description,'src="'), strlen($entry->description)-strpos($entry->description,'.jpg'));
+      $br = strpos($entry->description,'</br>') + 6;
+
+      $description = substr($entry->description, $br);
+
+      $tindb->description = str_replace(' ]]>','', $description);
+      $tindb->link = $entry->link;
+      $tindb->pubDate = $entry->pubDate;
+
+      $tindb->save();
+    }
+
+    $diembao = DiemBao::orderby('pubDate','desc')->get();
+
+
+    return view('trangchu',['dichvu'=>$dichvu,'dichvu2'=>$dichvu2, 'diembao'=>$diembao]);
   }
+
+
 
   public function getGioiThieu(){
 
