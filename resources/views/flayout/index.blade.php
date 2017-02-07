@@ -239,16 +239,26 @@
 
         var owl = $("#owl-demo");
 
+        var owl-lienket = $("#owl-lienket");
+
+        owl-lienket.owlCarousel({
+          items:4,
+          loop:true,
+          margin:10,
+          autoplay:true,
+          autoplayTimeout:1000,
+          autoplayHoverPause:true
+
+             // itemsMobile disabled - inherit from itemsTablet option
+        });
+
         owl.owlCarousel({
             items : 5, //10 items above 1000px browser width
             itemsDesktop : [1000,5], //5 items between 1000px and 901px
             itemsDesktopSmall : [900,3], // betweem 900px and 601px
             itemsTablet: [600,2], //2 items between 600 and 0
-            itemsMobile : false,
-            loop:true,            
-            autoplay:true,
-            autoplayTimeout:1000,
-            autoplayHoverPause:true
+            itemsMobile : false
+
              // itemsMobile disabled - inherit from itemsTablet option
         });
 
