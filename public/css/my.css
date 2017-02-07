@@ -242,7 +242,8 @@
 }
 
 #owl-sanpham .item{
-  margin: 0 10px;
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
 
@@ -256,7 +257,7 @@
     bottom:0;
     background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
     height:60px;
-    width:91.5%;
+    width:100%;
     padding:5px 10px;
     -webkit-transition: all 500ms ease 0s;
     -o-transition: all 500ms ease 0s;
