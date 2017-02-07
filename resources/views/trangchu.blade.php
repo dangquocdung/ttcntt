@@ -33,6 +33,10 @@
         <div class="item">
       @endif
           <img src="/img/{{$dv->hinh}}.jpg" alt="">
+          <div class="content_news">
+            <p>noi dung minh hoa</p>
+
+          </div>
 
         </div>
       <?php $i++ ?>
