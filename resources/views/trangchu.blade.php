@@ -52,26 +52,25 @@
 <div class="lienket_area" id="lienket">
   <div class="container">
     <div class="row">
+      <h2>Tin Tức</h2>
+      <div id="owl-demo" class="owl-carousel owl-theme">
+        @foreach ($diembao as $db)
+          <div class="item2">
+            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+            <p class="name">{{$db->title}}</p>
+          </div>
+        @endforeach
 
-      <!--section title-->
-      <div class="item col-md-3 col-xs-6">
-        <a href="http://www.hatinh.gov.vn/" target="_blank"><img src="/upload/banner/congttdt.jpg"></a>
       </div>
 
-      <!--section title-->
-      <div class="item col-md-3 col-xs-6">
-        <a href="http://hatinhtrade.com.vn/" target="_blank"><img src="/upload/banner/santmdt.jpg"></a>
+      <div class="customNavigation">
+        <a class="btn prev">Trước</a>
+        <a class="btn next">Sau</a>
+        <a class="btn play">Tự động</a>
+        <a class="btn stop">Dừng</a>
       </div>
 
-      <!--section title-->
-      <div class="item col-md-3 col-xs-6">
-        <a href="http://113.160.178.189:8686/" target="_blank"><img src="/upload/banner/dbnganh.jpg"></a>
-      </div>
 
-      <!--section title-->
-      <div class="item col-md-3 col-xs-6">
-        <a href="/bien-dao-viet-nam"><img src="/upload/banner/biendao.jpg"></a>
-      </div>
     </div>
   </div>
 </div>
