@@ -22,15 +22,7 @@
               <td>{{$lcv->user->name}}</td>
               <td>{{ Carbon\Carbon::parse($lcv->thoigiantao)->format('d-m-Y') }}</td>
               <td>{{ Carbon\Carbon::parse($lcv->hanxuly)->format('d-m-Y') }}</td>
-              <td>
-                <?php
-                  if ($lcv->trangthai_id == 6){
-                    echo "<span class="glyphicon glyphicon-search" aria-hidden="true"></span>"
-                  }else{
-                    echo $lcv->trangthai_id;
-                  }
-                 ?>
-              </td>
+              <td>{{$lcv->trangthai->trangthai}}</td>
             </tr>
             @foreach ($xuly as $xl)
               @if ($xl->taoviec_id == $lcv->id )
