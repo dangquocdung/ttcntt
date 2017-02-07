@@ -55,14 +55,14 @@
     <div class="row">
 
       <div id="owl-lienket" class="owl-carousel owl-theme">
-        @foreach ($diembao as $db)
+
           <div class="item2">
-            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+            <a href="http://hatinh.gov.vn" target="_blank"><img src="/upload/banner/congttdt.jpg" alt=""></a>
             <div class="content_news">
               <p>noi dung minh hoa</p>
             </div>
           </div>
-        @endforeach
+
 
       </div>
 
