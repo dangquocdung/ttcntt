@@ -52,12 +52,11 @@
 <div class="lienket_area" id="lienket">
   <div class="container">
     <div class="row">
-      
+
       <div id="owl-lienket" class="owl-carousel owl-theme">
         @foreach ($diembao as $db)
           <div class="item2">
             <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
-            <p class="name">{{$db->title}}</p>
           </div>
         @endforeach
 

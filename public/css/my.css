@@ -79,7 +79,8 @@
   text-align: center;
   margin: 2%;
 }
-.section-d #owl-demo .item2 img{
+
+.item2 img{
   position: relative;
   border: 1px solid #333;
   margin: 2%;
@@ -89,14 +90,14 @@
 
 }
 
-.section-d #owl-demo .item2 img {
+.item2 img {
   max-width: 100%;
 
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.section-d #owl-demo .item2:hover img {
+.item2:hover img {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
