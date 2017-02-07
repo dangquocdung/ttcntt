@@ -52,7 +52,7 @@
 <div class="lienket_area" id="lienket">
   <div class="container">
     <div class="row">
-      <h2>Tin Tức</h2>
+      
       <div id="owl-lienket" class="owl-carousel owl-theme">
         @foreach ($diembao as $db)
           <div class="item2">
@@ -63,12 +63,7 @@
 
       </div>
 
-      <div class="customNavigation">
-        <a class="btn prev">Trước</a>
-        <a class="btn next">Sau</a>
-        <a class="btn play">Tự động</a>
-        <a class="btn stop">Dừng</a>
-      </div>
+
 
 
     </div>
