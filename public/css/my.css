@@ -242,8 +242,14 @@
     -ms-transition: 1s;
 }
 
-.lienket_area img{
+#owl-lienket .item2 img{
+  padding-bottom: 20px;
+  width: 80%
+}
+
+#owl-lienket .item2 img{
   padding-bottom: 0;
+  width: 100%
 }
 
 #owl-lienket .item2 .content_news {
