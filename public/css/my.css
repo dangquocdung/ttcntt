@@ -253,5 +253,7 @@
 #owl-sanpham .item p{
   position: absolute;
   bottom: 0;
-  padding: 5px 10px;
+  background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
+  height: 50px;
+  
 }
