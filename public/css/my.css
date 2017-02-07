@@ -243,12 +243,18 @@
 
 #owl-sanpham .item{
   margin-top: 20px;
+  background: none;
+  position: relative;
+  overflow: hidden;
 
 }
 
 
 #owl-sanpham .item img{
+  display: block;
   width: 100%;
+  height: auto;
+  float: none;
 }
 
 
@@ -258,7 +264,7 @@
     background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
     height:60px;
     width:100%;
-  
+
     -webkit-transition: all 500ms ease 0s;
     -o-transition: all 500ms ease 0s;
     transition: all 500ms ease 0s;
