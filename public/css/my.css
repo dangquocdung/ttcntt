@@ -241,6 +241,10 @@
     -ms-transition: 1s;
 }
 
+#owl-sanpham .item{
+  padding: 0 10px;
+}
+
 
 #owl-sanpham .item img{
   width: 100%;
