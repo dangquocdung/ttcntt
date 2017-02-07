@@ -239,18 +239,7 @@
 
         var owl = $("#owl-demo");
 
-        var owl-lienket = $("#owl-lienket");
-
-        owl-lienket.owlCarousel({
-          items:4,
-          loop:true,
-          margin:10,
-          autoplay:true,
-          autoplayTimeout:1000,
-          autoplayHoverPause:true
-
-             // itemsMobile disabled - inherit from itemsTablet option
-        });
+        
 
         owl.owlCarousel({
             items : 5, //10 items above 1000px browser width
