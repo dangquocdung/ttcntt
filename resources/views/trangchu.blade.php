@@ -63,6 +63,27 @@
             </div>
           </div>
 
+          <div class="item2">
+            <a href="http://hatinh.gov.vn" target="_blank"><img src="/upload/banner/congttdt.jpg" alt=""></a>
+            <div class="content_news">
+              <p>noi dung minh hoa</p>
+            </div>
+          </div>
+
+          <div class="item2">
+            <a href="http://hatinh.gov.vn" target="_blank"><img src="/upload/banner/congttdt.jpg" alt=""></a>
+            <div class="content_news">
+              <p>noi dung minh hoa</p>
+            </div>
+          </div>
+
+          <div class="item2">
+            <a href="http://hatinh.gov.vn" target="_blank"><img src="/upload/banner/congttdt.jpg" alt=""></a>
+            <div class="content_news">
+              <p>noi dung minh hoa</p>
+            </div>
+          </div>
+
 
       </div>
 
