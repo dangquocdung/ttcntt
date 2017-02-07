@@ -57,13 +57,11 @@
       <div id="owl-lienket" class="owl-carousel owl-theme">
 
         @foreach ($diembao as $db)
-          <div class="item2">
-            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+          <div class="item-lienket">
+            <img src="{{$db->media}}" alt="">
             <div class="content_news">
               <p>{{$db->title}}</p>
-
             </div>
-
           </div>
         @endforeach
 
