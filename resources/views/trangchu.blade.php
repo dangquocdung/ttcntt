@@ -57,7 +57,7 @@
       <div id="owl-sanpham" class="owl-carousel owl-theme">
 
         @foreach ($diembao as $db)
-          <div class="item2">
+          <div class="item">
             <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
             <p class="name">{{$db->title}}</p>
           </div>

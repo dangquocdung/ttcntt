@@ -240,3 +240,8 @@
     -o-transition: 1s;
     -ms-transition: 1s;
 }
+
+
+#owl-sanpham .item img{
+  width: 100%;
+}
