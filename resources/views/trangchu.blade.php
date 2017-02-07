@@ -53,7 +53,7 @@
   <div class="container">
     <div class="row">
       <h2>Tin Tức</h2>
-      <div id="owl-demo" class="owl-carousel owl-theme">
+      <div id="owl-lienket" class="owl-carousel owl-theme">
         @foreach ($diembao as $db)
           <div class="item2">
             <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
