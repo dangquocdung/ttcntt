@@ -242,6 +242,7 @@
 }
 
 #owl-sanpham .item{
+  margin: 0 10px;
   margin-top: 20px;
   background: none;
   position: relative;
