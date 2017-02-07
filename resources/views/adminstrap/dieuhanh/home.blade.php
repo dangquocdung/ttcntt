@@ -22,13 +22,48 @@
               <td>{{$lcv->user->name}}</td>
               <td>{{ Carbon\Carbon::parse($lcv->thoigiantao)->format('d-m-Y') }}</td>
               <td>{{ Carbon\Carbon::parse($lcv->hanxuly)->format('d-m-Y') }}</td>
-              <td>{{$lcv->trangthai->trangthai}}</td>
+              <td>
+                <?php
+                switch ($lcv->trangthai_id){
+                  case 1:
+                    echo '<span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="color: red"></span>'.' '.$lcv->trangthai->trangthai;
+                    break;
+                  case 4:
+                    echo '<span class="glyphicon glyphicon-expand" aria-hidden="true" style="color: blue"></span>'.' '.$lcv->trangthai->trangthai;
+                    break;
+                  case 6:
+                    echo '<span class="glyphicon glyphicon-ok-circle" aria-hidden="true" style="color: green"></span>'.' '.$lcv->trangthai->trangthai;
+                    break;
+                  default:
+                    echo $lcv->trangthai->trangthai;
+                }
+
+                ?>
+
+              </td>
             </tr>
             @foreach ($xuly as $xl)
               @if ($xl->taoviec_id == $lcv->id )
               <tr id="theoDoi{{$lcv->id}}" class="info panel-collapse collapse">
                   <td><span class="glyphicon glyphicon-arrow-right"></span> <small>{{$xl->user->name}}</small></td>
-                  <td><small>{{$xl->trangthai->trangthai}}</small></td>
+                  <td><small>
+                    <?php
+                    switch ($xl->trangthai_id){
+                      case 1:
+                        echo '<span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="color: red"></span>'.' '.$xl->trangthai->trangthai;
+                        break;
+                      case 4:
+                        echo '<span class="glyphicon glyphicon-expand" aria-hidden="true" style="color: blue"></span>'.' '.$xl->trangthai->trangthai;
+                        break;
+                      case 6:
+                        echo '<span class="glyphicon glyphicon-ok-circle" aria-hidden="true" style="color: green"></span>'.' '.$xl->trangthai->trangthai;
+                        break;
+                      default:
+                        echo $xl->trangthai->trangthai;
+                    }
+
+                    ?>
+                  </small></td>
                   <td><a href="/upload/taoviec/xuly/{{$xl->tepdinhkem}}"><small>{{$xl->tepdinhkem}}</small></a></td>
                   <td><small>{{$xl->taoviec->hanxuly}}</small></td>
                   <td><small>{{$xl->tiendo}}%</small></td>
