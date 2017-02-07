@@ -50,11 +50,11 @@
 </div>
 
 
-<div class="lienket_area" id="lienket">
+<div class="sanpham_area">
   <div class="container">
     <div class="row">
 
-      <div id="owl-lienket" class="owl-carousel owl-theme">
+      <div id="owl-sanpham" class="owl-carousel owl-theme">
 
         @foreach ($diembao as $db)
           <div class="item2">
