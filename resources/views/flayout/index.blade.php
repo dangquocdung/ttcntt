@@ -285,60 +285,7 @@
 
       });
 
-    </script>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        var owl = $("#owl-sanpham");
-
-
-
-        owl.owlCarousel({
-            items : 3, //10 items above 1000px browser width
-            itemsDesktop : [1000,3], //5 items between 1000px and 901px
-            itemsDesktopSmall : [900,2], // betweem 900px and 601px
-            itemsTablet: [600,2], //2 items between 600 and 0
-            itemsMobile : false,
-            autoPlay: true
-
-             // itemsMobile disabled - inherit from itemsTablet option
-        });
-
-        // Custom Navigation Events
-        $(".next").click(function(){
-          owl.trigger('owl.next');
-        })
-        $(".prev").click(function(){
-          owl.trigger('owl.prev');
-        })
-        $(".play").click(function(){
-          owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-        })
-        $(".stop").click(function(){
-          owl.trigger('owl.stop');
-        })
-
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        })
-
-      });
-
-    </script>
+    </script>    
 
     <!-- Google Map js -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRKmIRjZ9GPop3H4nOvRx9G9_--QHBAJo&callback=initMap" type="text/javascript"></script>
