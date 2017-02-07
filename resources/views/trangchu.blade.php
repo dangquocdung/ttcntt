@@ -195,7 +195,7 @@
         @foreach ($diembao as $db)
           <div class="item2">
             <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
-            <p class="name"><a href="{{$db->link}}" target="_blank">{{$db->title}}</a></p>
+            <p class="name">{{$db->title}}</p>
           </div>
         @endforeach
 
