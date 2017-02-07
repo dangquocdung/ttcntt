@@ -14,8 +14,9 @@
   font-size: 24px;
 }
 
-.lienket_area {
+.sanpham_area {
     background: #e6ebf1;
+    padding-bottom: 30px;
 }
 
 
@@ -243,7 +244,7 @@
 
 #owl-sanpham .item{
   margin: 0 10px;
-  margin-top: 20px;
+  margin-top: 40px;
   background: none;
   position: relative;
   overflow: hidden;
