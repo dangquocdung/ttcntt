@@ -242,7 +242,11 @@
     -ms-transition: 1s;
 }
 
+#owl-lienket .item2{
 
+  width: 200px;
+
+}
 
 #owl-lienket .item2 img{
   padding-bottom: 0;
@@ -255,7 +259,7 @@
     bottom:0;
     background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
     height:60px;
-    width:200px;;
+    width:200px;
     padding:5px 10px;
     -webkit-transition: all 500ms ease 0s;
     -o-transition: all 500ms ease 0s;
