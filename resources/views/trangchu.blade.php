@@ -58,11 +58,13 @@
 
         @foreach ($diembao as $db)
           <div class="item">
-            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
-            <div class="content_news">
-              {{$db->title}}
+            <div class="container">
+              <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+              <div class="content_news">
+                {{$db->title}}
+              </div>
             </div>
-            
+
           </div>
         @endforeach
 
