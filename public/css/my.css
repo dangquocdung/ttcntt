@@ -242,7 +242,7 @@
     -ms-transition: 1s;
 }
 
-.item .content_news {
+#owl-lienket .item2 .content_news {
     position:absolute;
     bottom:0;
     background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
@@ -253,6 +253,6 @@
     -o-transition: all 500ms ease 0s;
     transition: all 500ms ease 0s;
 }
-.item:hover .content_news {
+#owl-lienket .item2:hover .content_news {
     height:55%;
 }

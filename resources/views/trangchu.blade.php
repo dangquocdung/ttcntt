@@ -33,10 +33,7 @@
         <div class="item">
       @endif
           <img src="/img/{{$dv->hinh}}.jpg" alt="">
-          <div class="content_news">
-            <p>noi dung minh hoa</p>
 
-          </div>
 
         </div>
       <?php $i++ ?>
@@ -61,6 +58,9 @@
         @foreach ($diembao as $db)
           <div class="item2">
             <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+            <div class="content_news">
+              <p>noi dung minh hoa</p>
+            </div>
           </div>
         @endforeach
 
