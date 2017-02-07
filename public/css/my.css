@@ -245,3 +245,8 @@
 #owl-sanpham .item img{
   width: 100%;
 }
+
+#owl-sanpham .item p{
+  position: absolute;
+  bottom: 0;
+}
