@@ -114,7 +114,7 @@
         </div>
         <div class="panel-body">
 
-          <div ng-app = "mainApp" ng-controller = "studentController">
+          <div ng-app = "didong" ng-controller = "didongController">
              Chọn đầu số: <select ng-model = "student.firstName">
                             <option value="033" selected="selected">0168</option>
                             <option value="044">0169</option>
@@ -129,9 +129,9 @@
           </div>
 
           <script>
-             var mainApp = angular.module("mainApp", []);
+             var mainApp = angular.module("didong", []);
 
-             mainApp.controller('studentController', function($scope) {
+             mainApp.controller('didongController', function($scope) {
                 $scope.student = {
                    firstName: "033",
                    lastName: "1234567",
@@ -149,6 +149,61 @@
 
         </div>
       </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Chuyển đổi số điện thoại từ 11 thành 10 số</h4>
+        </div>
+        <div class="panel-body">
+
+          <div ng-app = "codinh" ng-controller = "codinhController">
+             Chọn đầu số: <select ng-model = "student.firstName">
+                            <option value="239" selected="selected">Hà Tĩnh</option>
+                            <option value="238">Nghệ An</option>
+                            <option value="237">Thanh Hoá</option>
+                            <option value="236">Đà Nẵng</option>
+                            <option value="235">Quảng Nam</option>
+                            <option value="234">Thừa Thiên - Huế</option>
+                            <option value="233">Quảng Trị</option>
+                            <option value="232">Quảng Bình</option>
+                            <option value="216">Yên Bái </option>
+                            <option value="215">Điện Biên</option>
+                            <option value="214">Lào Cai</option>
+                            <option value="213">Lai Châu</option>
+                            <option value="212">Sơn La</option>
+                          </select>
+
+
+
+             Số máy bàn: <input type = "text" ng-model = "student.lastName"><br>
+             <br>
+
+             Số điện thoại mới: <strong>{{student.fullName()}}</strong>
+          </div>
+
+          <script>
+             var mainApp = angular.module("codinh", []);
+
+             mainApp.controller('codinhController', function($scope) {
+                $scope.student = {
+                   firstName: "239",
+                   lastName: "3123456",
+
+                   fullName: function() {
+                      var studentObject;
+                      studentObject = $scope.student;
+
+
+                      return studentObject.firstName + " " + studentObject.lastName;
+                   }
+                };
+             });
+          </script>
+
+        </div>
+      </div>
+
     </div>
     <div class="col-md-4">
       <ul class="list-group">
