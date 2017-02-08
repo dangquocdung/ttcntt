@@ -140,12 +140,17 @@
                       var studentObject;
                       studentObject = $scope.student;
 
-                      if (studentObject.firstName == "0168"){
-
-                        studentObject.firstName == "033";
-
+                      switch(studentObject.firstName) {
+                          case '0168':
+                              studentObject.firstNam = '033';
+                              break;
+                          case '0169':
+                              studentObject.firstNam = '044';
+                              break;
+                          default:
+                              studentObject.firstNam = '033';
                       }
-                      
+
                       return studentObject.firstName + " " + studentObject.lastName;
                    }
                 };
