@@ -155,7 +155,7 @@
                       studentObject = $scope.codinh;
 
 
-                      return studentObject.firstName + " " + studentObject.lastName;
+                      return "(" + studentObject.firstName + ") " + studentObject.lastName;
                    }
                 };
              });
