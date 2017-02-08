@@ -125,7 +125,7 @@
              Nhập phần còn lại: <input type = "text" ng-model = "student.lastName"><br>
              <br>
 
-             Số điện thoại mới: {{student.fullName()}}
+             Số điện thoại mới: <strong>{{student.fullName()}}</strong>
           </div>
 
           <script>
