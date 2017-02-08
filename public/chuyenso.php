@@ -108,7 +108,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      
+
 
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -118,7 +118,7 @@
 
           <div ng-app = "codinh" ng-controller = "codinhController">
 
-             Chọn đầu số: <select ng-model = "codinh.firstName">
+             Chọn tỉnh: <select ng-model = "codinh.firstName">
                             <option value="239" selected="selected">Hà Tĩnh</option>
                             <option value="238">Nghệ An</option>
                             <option value="237">Thanh Hoá</option>
@@ -143,9 +143,9 @@
           </div>
 
           <script>
-             var mainApp2 = angular.module("codinh", []);
+             var appCoDinh = angular.module("codinh", []);
 
-             mainApp2.controller('codinhController', function($scope) {
+             appCoDinh.controller('codinhController', function($scope) {
                 $scope.codinh = {
                    firstName: "239",
                    lastName: "3123456",
