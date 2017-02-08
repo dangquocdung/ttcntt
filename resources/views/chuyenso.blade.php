@@ -38,11 +38,7 @@
 
           </div>
           <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-          <script type="text/javascript">
-
-          function Main($scope){
-            $scope.name = 'dang quoc dung';
-          }
+          
 
           </script>
 
