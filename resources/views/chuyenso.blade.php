@@ -26,24 +26,27 @@
         <div class="panel-body">
 
 
-          <div ng-app = "" ng-controller = "chuyensoController">
-            <div class="form-group">
-              <label>Số điện thoại cần chuyển</label>
-              <input type="text" class="form-control" placeholder="Nhập số điện thoại cần chuyển"  autofocus="" ng-model = "name" />
-            </div>
-
-            <div class="form-group">
-              <label>Số điện thoại mới: {{name}}</label>
-            </div>
+          <div ng-app = "" ng-controller = "studentController">
+            Enter first name: <input type = "text" ng-model = "student.firstName"><br>
+            Enter last name: <input type = "text" ng-model = "student.lastName"><br>
+            <br>
+            You are entering: {{student.fullName()}}
 
           </div>
           <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-          <script type="text/javascript">
+          <script>
+             function studentController($scope) {
+                $scope.student = {
+                   firstName: "Mahesh",
+                   lastName: "Parashar",
 
-          function chuyensoController($scope){
-            $scope.name = 'dang quoc dung';
-          }
-
+                   fullName: function() {
+                      var studentObject;
+                      studentObject = $scope.student;
+                      return studentObject.firstName + " " + studentObject.lastName;
+                   }
+                };
+             }
           </script>
 
         </div>
