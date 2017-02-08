@@ -110,7 +110,7 @@
     <div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title">Tiện ích</h4>
+          <h4 class="panel-title">Chuyển đổi số điện thoại từ 11 thành 10 số</h4>
         </div>
         <div class="panel-body">
 
