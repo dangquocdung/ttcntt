@@ -139,6 +139,13 @@
                    fullName: function() {
                       var studentObject;
                       studentObject = $scope.student;
+
+                      if (studentObject.firstName == "0168"){
+
+                        studentObject.firstName == "033";
+
+                      }
+                      
                       return studentObject.firstName + " " + studentObject.lastName;
                    }
                 };
