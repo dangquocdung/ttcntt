@@ -115,11 +115,17 @@
         <div class="panel-body">
 
           <div ng-app = "mainApp" ng-controller = "studentController">
-             Enter first name: <input type = "text" ng-model = "student.firstName"><br><br>
-             Enter last name: <input type = "text" ng-model = "student.lastName"><br>
+             Chọn đầu số: <select ng-model = "student.firstName">
+                            <option value="0168">0168</option>
+                            <option value="0169">0169</option>
+                          </select>
+
+
+
+             Nhập phần còn lại: <input type = "text" ng-model = "student.lastName"><br>
              <br>
 
-             You are entering: {{student.fullName()}}
+             Số điện thoại mới: {{student.fullName()}}
           </div>
 
           <script>
