@@ -100,7 +100,7 @@
 
 <div class="title-bar">
   <div class="container">
-    <h1>Năng Lực</h1>
+    <h1>Tiện ích</h1>
   </div>
 </div>
 
@@ -110,7 +110,7 @@
     <div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title">Năng lực của chúng tôi</h4>
+          <h4 class="panel-title">Tiện ích</h4>
         </div>
         <div class="panel-body">
 
