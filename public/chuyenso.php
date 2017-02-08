@@ -142,13 +142,13 @@
 
                       switch(studentObject.firstName) {
                           case '0168':
-                              studentObject.firstNam = '033';
+                              studentObject.firstName = '033';
                               break;
                           case '0169':
-                              studentObject.firstNam = '044';
+                              studentObject.firstName = '044';
                               break;
                           default:
-                              studentObject.firstNam = '033';
+                              studentObject.firstName = '033';
                       }
 
                       return studentObject.firstName + " " + studentObject.lastName;
