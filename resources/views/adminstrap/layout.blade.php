@@ -33,6 +33,8 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="adminstrap">Quản trị Nội Dung</a></li>
             <li><a href="adminstrap/dieu-hanh-cong-viec">Văn Phòng Thông Minh (iO)</a></li>
+            <li><a href="adminstrap/so-tay-ca-nhan">Sổ tay cá nhân (Notepad)</a></li>
+
             @if (Auth::user()->quyen == 5 )
             <li><a href="adminstrap/lich-cong-tac-all">Lịch</a></li>
             <li><a href="adminstrap/tin-tuc-all">Tin tức</a></li>
@@ -101,6 +103,12 @@
             <div class="list-group">
               <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> Văn phòng Thông minh (iO)
+              </a>
+            </div>
+
+            <div class="list-group">
+              <a href="adminstrap/so-tay-ca-nhan" class="list-group-item active main-color-bg">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Sổ tay cá nhân (Notepad)
               </a>
             </div>
 
