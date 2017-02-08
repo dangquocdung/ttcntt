@@ -111,3 +111,8 @@ Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLog
 
 
 });
+
+Route::group(['prefix'=>'adminstrap/so-tay-ca-nhan','middleware'=>'adminLogin'],function(){
+
+  Route::get('/', 'SoTayController@getSoTay');
+});
