@@ -25,17 +25,20 @@
         </div>
         <div class="panel-body">
 
-
-          <div ng-app = "" ng-controller = "studentController">
-            Enter first name: <input type = "text" ng-model = "student.firstName"><br>
-            Enter last name: <input type = "text" ng-model = "student.lastName"><br>
-            <br>
-            You are entering: {{student.fullName()}}
-
-          </div>
           <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+          <div ng-app = "mainApp" ng-controller = "studentController">
+             Enter first name: <input type = "text" ng-model = "student.firstName"><br><br>
+             Enter last name: <input type = "text" ng-model = "student.lastName"><br>
+             <br>
+
+             You are entering: {{student.fullName()}}
+          </div>
+
           <script>
-             function studentController($scope) {
+             var mainApp = angular.module("mainApp", []);
+
+             mainApp.controller('studentController', function($scope) {
                 $scope.student = {
                    firstName: "Mahesh",
                    lastName: "Parashar",
@@ -46,8 +49,9 @@
                       return studentObject.firstName + " " + studentObject.lastName;
                    }
                 };
-             }
+             });
           </script>
+
 
         </div>
       </div>
