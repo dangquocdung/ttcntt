@@ -26,7 +26,7 @@
         <div class="panel-body">
 
 
-          <div ng-app = "">
+          <div ng-app = "Main">
             <div class="form-group">
               <label>Số điện thoại cần chuyển</label>
               <input type="text" class="form-control" placeholder="Nhập số điện thoại cần chuyển"  autofocus="" ng-model = "name" />
@@ -38,6 +38,13 @@
 
           </div>
           <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+          <script type="text/javascript">
+
+          function Main($scope){
+            $scope.name = 'dang quoc dung';
+          }
+
+          </script>
 
         </div>
       </div>
