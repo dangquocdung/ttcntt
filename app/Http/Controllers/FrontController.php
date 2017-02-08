@@ -95,6 +95,12 @@ class FrontController extends Controller
 
   }
 
+  public function getChuyenSo(){
+
+    return view('chuyenso');
+
+  }
+
   public function getDichVu(){
 
     return view('dichvu');

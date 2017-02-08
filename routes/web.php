@@ -21,6 +21,8 @@ Route::get('/gioi-thieu', 'FrontController@getGioiThieu');
 
 Route::get('/nang-luc', 'FrontController@getNangLuc');
 
+Route::get('/chuyen-so', 'FrontController@getChuyenSo');
+
 Route::get('/dich-vu', 'FrontController@getDichVu');
 
 Route::get('/tin-tuc', 'FrontController@getTinTuc');
