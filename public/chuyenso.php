@@ -116,7 +116,7 @@
 
           <div ng-app = "mainApp" ng-controller = "studentController">
              Chọn đầu số: <select ng-model = "student.firstName">
-                            <option value="0168" selected="">0168</option>
+                            <option value="0168" selected="selected">0168</option>
                             <option value="0169">0169</option>
                           </select>
 
