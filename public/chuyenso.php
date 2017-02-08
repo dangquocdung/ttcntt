@@ -133,7 +133,7 @@
 
              mainApp.controller('studentController', function($scope) {
                 $scope.student = {
-                   firstName: "0168",
+                   firstName: "033",
                    lastName: "1234567",
 
                    fullName: function() {
