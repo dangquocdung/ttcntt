@@ -116,8 +116,8 @@
 
           <div ng-app = "mainApp" ng-controller = "studentController">
              Chọn đầu số: <select ng-model = "student.firstName">
-                            <option value="0168" selected="selected">0168</option>
-                            <option value="0169">0169</option>
+                            <option value="033" selected="selected">0168</option>
+                            <option value="044">0169</option>
                           </select>
 
 
@@ -140,16 +140,6 @@
                       var studentObject;
                       studentObject = $scope.student;
 
-                      switch(studentObject.firstName) {
-                          case '0168':
-                              studentObject.firstName = '033';
-                              break;
-                          case '0169':
-                              studentObject.firstName = '044';
-                              break;
-                          default:
-                              studentObject.firstName = '033';
-                      }
 
                       return studentObject.firstName + " " + studentObject.lastName;
                    }
