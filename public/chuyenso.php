@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/my.css">
 
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
 
 
   </head>
@@ -254,7 +256,7 @@
     <script src="js/owl.carousel.js"></script>
     <script src="js/jquery.eeyellow.Timeline.js"></script>
     <script type="text/javascript" src="/js/jquery.fancybox.pack.js?v=2.1.6"></script>
-    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
 
 
     <script type="text/javascript">
