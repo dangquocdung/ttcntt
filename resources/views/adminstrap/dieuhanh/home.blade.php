@@ -1,4 +1,4 @@
-@extends('adminstrap.dieuhanh.layout')
+@extends('adminstrap.layout')
 @section('content')
 
   <!-- Latest Users -->
