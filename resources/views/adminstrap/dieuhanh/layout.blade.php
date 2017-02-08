@@ -37,6 +37,8 @@
           <ul class="nav navbar-nav">
             <li><a href="adminstrap">Quản trị Nội Dung</a></li>
             <li class="active"><a href="adminstrap/dieu-hanh-cong-viec">Văn Phòng Thông Minh (iO)</a></li>
+            <li><a href="adminstrap/so-tay-ca-nhan">Sổ tay cá nhân (Notepad)</a></li>
+
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -93,6 +95,12 @@
             <div class="list-group">
               <a  class="list-group-item active main-color-bg" href="/adminstrap/dieu-hanh-cong-viec">
                 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Theo dõi công việc đã tạo
+              </a>
+            </div>
+
+            <div class="list-group">
+              <a href="adminstrap/so-tay-ca-nhan" class="list-group-item active main-color-bg">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Sổ tay cá nhân (Notepad)
               </a>
             </div>
 
