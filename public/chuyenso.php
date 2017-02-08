@@ -108,48 +108,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">Chuyển đổi số điện thoại từ 11 thành 10 số</h4>
-        </div>
-        <div class="panel-body">
-
-          <div ng-app = "didong" ng-controller = "didongController">
-             Chọn đầu số: <select ng-model = "student.firstName">
-                            <option value="033" selected="selected">0168</option>
-                            <option value="044">0169</option>
-                          </select>
-
-
-
-             Nhập phần còn lại: <input type = "text" ng-model = "student.lastName"><br>
-             <br>
-
-             Số điện thoại mới: <strong>{{student.fullName()}}</strong>
-          </div>
-
-          <script>
-             var mainApp = angular.module("didong", []);
-
-             mainApp.controller('didongController', function($scope) {
-                $scope.student = {
-                   firstName: "033",
-                   lastName: "1234567",
-
-                   fullName: function() {
-                      var studentObject;
-                      studentObject = $scope.student;
-
-
-                      return studentObject.firstName + " " + studentObject.lastName;
-                   }
-                };
-             });
-          </script>
-
-        </div>
-      </div>
-
+      
 
       <div class="panel panel-default">
         <div class="panel-heading">
