@@ -33,7 +33,7 @@
             </div>
 
             <div class="form-group">
-              <label>Số điện thoại mới: <span ng-bind = "name"></span></label>
+              <label>Số điện thoại mới: {{name}}</label>
             </div>
 
           </div>
