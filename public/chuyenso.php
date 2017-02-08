@@ -153,12 +153,12 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title">Chuyển đổi số điện thoại từ 11 thành 10 số</h4>
+          <h4 class="panel-title">Chuyển đổi mã vùng điện thoại cố định</h4>
         </div>
         <div class="panel-body">
 
           <div ng-app = "codinh" ng-controller = "codinhController">
-             Chọn đầu số: <select ng-model = "student.firstName">
+             Chọn đầu số: <select ng-model = "codinh.firstName">
                             <option value="239" selected="selected">Hà Tĩnh</option>
                             <option value="238">Nghệ An</option>
                             <option value="237">Thanh Hoá</option>
@@ -176,23 +176,23 @@
 
 
 
-             Số máy bàn: <input type = "text" ng-model = "student.lastName"><br>
+             Số máy bàn: <input type = "text" ng-model = "codinh.lastName"><br>
              <br>
 
-             Số điện thoại mới: <strong>{{student.fullName()}}</strong>
+             Số điện thoại mới: <strong>{{codinh.fullName()}}</strong>
           </div>
 
           <script>
              var mainApp = angular.module("codinh", []);
 
              mainApp.controller('codinhController', function($scope) {
-                $scope.student = {
+                $scope.codinh = {
                    firstName: "239",
                    lastName: "3123456",
 
                    fullName: function() {
                       var studentObject;
-                      studentObject = $scope.student;
+                      studentObject = $scope.codinh;
 
 
                       return studentObject.firstName + " " + studentObject.lastName;
