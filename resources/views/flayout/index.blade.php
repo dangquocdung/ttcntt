@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/my.css">
 
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
 
 
   </head>
@@ -285,7 +288,7 @@
 
       });
 
-    </script>    
+    </script>
 
     <!-- Google Map js -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRKmIRjZ9GPop3H4nOvRx9G9_--QHBAJo&callback=initMap" type="text/javascript"></script>
