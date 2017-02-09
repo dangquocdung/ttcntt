@@ -6,24 +6,21 @@
   </div>
 
   <!-- Latest Users -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Mục lục</h3>
-    </div>
-    <div class="panel-body">
-      <div class="table-responsive">
-      <table class="table table-striped table-hover">
-          <tr>
-            <th>Thời gian</th>
-            <th>Địa điểm</th>
-            <th>Tiêu đề</th>
-            <th>Nội dung</th>
 
-            <th></th>
-          </tr>
+  <div class="panel-body">
+    <div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <tr>
+          <th>Thời gian</th>
+          <th>Địa điểm</th>
+          <th>Tiêu đề</th>
+          <th>Nội dung</th>
 
-      </table>
-    </div>
-    </div>
+          <th></th>
+        </tr>
+
+    </table>
   </div>
+
+</div>
 @endsection

@@ -93,14 +93,14 @@
           <div class="col-md-3">
 
             <div class="list-group">
-              <a  class="list-group-item active main-color-bg" href="/adminstrap/dieu-hanh-cong-viec">
-                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Theo dõi công việc đã tạo
+              <a href="adminstrap/so-tay-ca-nhan" class="list-group-item active main-color-bg">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Sổ tay cá nhân (Notepad)
               </a>
             </div>
 
             <div class="list-group">
-              <a href="adminstrap/so-tay-ca-nhan" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Sổ tay cá nhân (Notepad)
+              <a  class="list-group-item active main-color-bg" href="/adminstrap/dieu-hanh-cong-viec">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Theo dõi công việc đã tạo
               </a>
             </div>
 
