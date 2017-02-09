@@ -107,75 +107,103 @@
 <div class="main">
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
-
+    <div class="col-md-8" ng-app = "codinh" ng-controller = "codinhController">
 
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">Chuyển đổi mã vùng điện thoại cố định</h4>
         </div>
         <div class="panel-body">
-
-          <div ng-app = "codinh" ng-controller = "codinhController">
-            <div class="form-group">
-
-               <label>Chọn tỉnh</label>
-               <select class="form-control" ng-model = "codinh.firstName">
-                              <option value="239" selected="selected">Hà Tĩnh</option>
-                              <option value="238">Nghệ An</option>
-                              <option value="237">Thanh Hoá</option>
-                              <option value="236">Đà Nẵng</option>
-                              <option value="235">Quảng Nam</option>
-                              <option value="234">Thừa Thiên - Huế</option>
-                              <option value="233">Quảng Trị</option>
-                              <option value="232">Quảng Bình</option>
-                              <option value="216">Yên Bái </option>
-                              <option value="215">Điện Biên</option>
-                              <option value="214">Lào Cai</option>
-                              <option value="213">Lai Châu</option>
-                              <option value="212">Sơn La</option>
-                            </select>
-            </div>
-
-            <div class="form-group">
-              <label>Số máy bàn:</label>
-              <input type="text" class="form-control" ng-model = "codinh.lastName" />
-            </div>
-
-            <div class="form-group">
-              <label>Số điện thoại mới: <strong>{{codinh.fullName()}}</strong></label>
-            </div>
-
-
-
-
-
-
-
-
+          <div class="form-group">
+             <label>Chọn tỉnh</label>
+             <select class="form-control" ng-model = "codinh.firstName">
+                <option value="239" selected="selected">Hà Tĩnh</option>
+                <option value="238">Nghệ An</option>
+                <option value="237">Thanh Hoá</option>
+                <option value="236">Đà Nẵng</option>
+                <option value="235">Quảng Nam</option>
+                <option value="234">Thừa Thiên - Huế</option>
+                <option value="233">Quảng Trị</option>
+                <option value="232">Quảng Bình</option>
+                <option value="216">Yên Bái </option>
+                <option value="215">Điện Biên</option>
+                <option value="214">Lào Cai</option>
+                <option value="213">Lai Châu</option>
+                <option value="212">Sơn La</option>
+              </select>
           </div>
-
-          <script>
-             var appCoDinh = angular.module("codinh", []);
-
-             appCoDinh.controller('codinhController', function($scope) {
-                $scope.codinh = {
-                   firstName: "239",
-                   lastName: "3123456",
-
-                   fullName: function() {
-                      var studentObject;
-                      studentObject = $scope.codinh;
-
-
-                      return "(" + studentObject.firstName + ") " + studentObject.lastName;
-                   }
-                };
-             });
-          </script>
-
+          <div class="form-group">
+            <label>Số máy bàn:</label>
+            <input type="text" class="form-control" ng-model = "codinh.lastName" />
+          </div>
+          <div class="form-group">
+            <p style="text-align: center; font-weight:bold">Số điện thoại mới:</p>
+            <p style="text-align: center; font-weight:bold; font-size:2em; color: red">{{codinh.fullName()}}</p>
+          </div>
         </div>
       </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Chuyển đổi số thuê bao di động từ 11 về 10 số</h4>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+             <label>Đầu số</label>
+             <select class="form-control" ng-model = "didong.firstName">
+                <option value="033" selected="selected">0168</option>
+                <option value="034">0169</option>
+
+              </select>
+          </div>
+          <div class="form-group">
+            <label>7 Số kế tiếp:</label>
+            <input type="text" class="form-control" ng-model = "didong.lastName" />
+          </div>
+          <div class="form-group">
+            <p style="text-align: center; font-weight:bold">Số điện thoại mới:</p>
+            <p style="text-align: center; font-weight:bold; font-size:2em; color: red">{{didong.fullName()}}</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <script>
+
+         var appCoDinh = angular.module("codinh", []);
+
+         appCoDinh.controller('codinhController', function($scope) {
+
+            $scope.codinh = {
+               firstName: "239",
+               lastName: "3123456",
+
+               fullName: function() {
+                  var studentObject;
+                  studentObject = $scope.codinh;
+
+
+                  return "(" + studentObject.firstName + ") " + studentObject.lastName;
+               }
+            };
+
+            $scope.didong = {
+               firstName: "033",
+               lastName: "1234567",
+
+               fullName: function() {
+                  var studentObject;
+                  studentObject = $scope.didong;
+
+
+                  return studentObject.firstName + " " + studentObject.lastName;
+               }
+            };
+
+
+         });
+      </script>
 
     </div>
     <div class="col-md-4">
