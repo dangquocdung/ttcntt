@@ -48,11 +48,43 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <!-- <li><a href="/">Trang chủ</a></li> -->
-            <li><a href="/gioi-thieu">Giới thiệu</a></li>
-            <li><a href="/nang-luc">Năng lực</a></li>
-            <li><a href="/dich-vu">Dịch vụ</a></li>
-            <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
-            <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    Giới thiệu <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/gioi-thieu"> Tổng quan</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/nang-luc"> Năng lực</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/dich-vu"> Dịch vụ</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    Tra cứu <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
+                  <li class="divider"></li>
+                  <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    Tiện ích <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/chuyen-so">Chuyển số điện thoại </a></li>
+                </ul>
+            </li>
+
+
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
