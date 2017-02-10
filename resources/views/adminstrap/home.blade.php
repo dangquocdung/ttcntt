@@ -1,5 +1,20 @@
 @extends('adminstrap.layout')
+
+@section('css')
+  @include('adminstrap.css')
+@endsection
+
+@section('header')
+  @include('adminstrap.header')
+@endsection
+
+@section('left-menu')
+  @include('adminstrap.left-menu')
+@endsection
+
 @section('content')
+<div class="col-md-9">
+
 <div class="panel panel-default">
   <div class="panel-heading main-color-bg">
     <h3 class="panel-title">Tổng quan trang web</h3>
@@ -178,11 +193,17 @@
                 </div>
 
               @endif
-          </td>
+            </td>
           </tr>
           @endforeach
       </table>
     </div>
-    </div>
   </div>
+</div>
+</div>
+@endsection
+
+
+@section('modal')
+  @include('adminstrap.modal')
 @endsection

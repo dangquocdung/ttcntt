@@ -1,4 +1,16 @@
 @extends('adminstrap.layout')
+
+@section('css')
+  @include('adminstrap.css')
+@endsection
+
+@section('header')
+  @include('adminstrap.header')
+@endsection
+
+@section('left-menu')
+  @include('adminstrap.left-menu')
+@endsection
 @section('content')
 <div class="panel panel-default">
   <div class="panel-heading main-color-bg">

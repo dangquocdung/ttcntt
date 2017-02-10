@@ -1,5 +1,21 @@
-@extends('adminstrap.dieuhanh.layout')
+@extends('adminstrap.layout')
+
+@section('css')
+  @include('adminstrap.dieuhanh.css')
+@endsection
+
+@section('header')
+  @include('adminstrap.dieuhanh.header')
+@endsection
+
+@section('left-menu')
+  @include('adminstrap.dieuhanh.left-menu')
+@endsection
+
+
 @section('content')
+<div class="col-md-9">
+
 
   <!-- Latest Users -->
   <div class="panel panel-default">
@@ -140,9 +156,11 @@
       </div>
     </div>
   </div>
+</div>
 
 
+@endsection
 
-
-
+@section('modal')
+  @include('adminstrap.dieuhanh.modal')
 @endsection

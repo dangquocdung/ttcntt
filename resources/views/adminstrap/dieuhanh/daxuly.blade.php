@@ -1,4 +1,18 @@
-@extends('adminstrap.dieuhanh.layout')
+@extends('adminstrap.layout')
+
+@section('css')
+  @include('adminstrap.dieuhanh.css')
+@endsection
+
+
+@section('header')
+  @include('adminstrap.dieuhanh.header')
+@endsection
+
+@section('left-menu')
+  @include('adminstrap.dieuhanh.left-menu')
+@endsection
+
 @section('content')
 
   <!-- Latest Users -->
@@ -91,4 +105,8 @@
     </div>
 </div>
 
+@endsection
+
+@section('modal')
+  @include('adminstrap.dieuhanh.modal')
 @endsection

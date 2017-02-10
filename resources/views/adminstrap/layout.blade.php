@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Dũng Thịnh, Dung-Thinh, Web App, Mobile App, Native App, IoT, Internet of Things, Computer, Web Developer, Hosting, Software, Networking, Hardware, Server, VPS, Cloud, Android, iOS ">
     <meta name="author" content="Đặng Quốc Dũng, Dang-Quoc-Dung">
-    <title>Quản trị Nội dung</title>
+    <title>Trung tâm CNTT-TT Hà Tĩnh</title>
     <base href="{{asset('')}}">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/bangdk.css" rel="stylesheet">
-    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
-    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+    @yield('css')
+
+
+
+
+
   </head>
   <body>
 
@@ -31,8 +34,7 @@
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="adminstrap">Quản trị Nội Dung</a></li>
-            <li><a href="adminstrap/dieu-hanh-cong-viec">Văn Phòng Thông Minh (iO)</a></li>
+            <li><a href="adminstrap">Quản trị Nội Dung</a></li>
             <li><a href="adminstrap/so-tay-ca-nhan">Sổ tay cá nhân (Notepad)</a></li>
 
             @if (Auth::user()->quyen == 5 )
@@ -61,118 +63,20 @@
       </div>
     </nav>
 
-    <header id="header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10">
-            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <a href="adminstrap">Quản trị Nội dung</a> <small> dùng để cập nhật dữ liệu lên website</small></h1>
-          </div>
-          <div class="col-md-2">
-            @if (Auth::user() && Auth::user()->quyen > 1 )
-            <div class="dropdown create">
-              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Tạo Nội dung
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a type="button" data-toggle="modal" data-target="#addLichCongTac">Thêm Lịch công tác</a></li>
-                <li class="divider"></li>
-                <li><a type="button" data-toggle="modal" data-target="#addTinTuc">Thêm Tin tức - Sự kiện</a></li>
-                <li class="divider"></li>
-                <li><a type="button" data-toggle="modal" data-target="#addVanBan">Thêm Văn bản - Tài liệu</a></li>
-              </ul>
-            </div>
-            @endif
-          </div>
-        </div>
-      </div>
-    </header>
+    @yield('header')
 
-    <!-- <section id="breadcrumb">
-      <div class="container">
-        <ol class="breadcrumb">
-          <li class="active">Dashboard</li>
-        </ol>
-      </div>
-    </section> -->
+
 
     <section id="main">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <div class="list-group">
-              <a href="adminstrap/dieu-hanh-cong-viec" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> Văn phòng Thông minh (iO)
-              </a>
-            </div>
 
-            <div class="list-group">
-              <a href="adminstrap/so-tay-ca-nhan" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Sổ tay cá nhân (Notepad)
-              </a>
-            </div>
-
-            <div class="list-group">
-              <a href="adminstrap" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Cập nhật thông tin
-              </a>
-              <a href="/adminstrap/lich-cong-tac" class="bg-danger list-group-item1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Lịch công tác <span class="badge">{{$lct1}}</span></a>
-              <a href="/adminstrap/tin-tuc" class="bg-success list-group-item1"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tin tức đã đăng <span class="badge">{{$tt1}}</span></a>
-              <a href="/adminstrap/van-ban" class="bg-info list-group-item1"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Công văn đã đăng <span class="badge">{{$cv1}}</span></a>
-            </div>
-
-            <div class="well">
-              <h4>Tỉ lệ đầu việc</h4>
-              <div class="progress">
-                <?php
-                 if ($slct>0){
-                   $i = ($lct1/$slct)*100;
-
-                 }else{
-                   $i = 0;
-                 }
-                 ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                    {{$i}}%
-                </div>
-              </div>
-              <h4>Tỉ lệ đăng tin </h4>
-              <div class="progress">
-                <?php
-                 if ($stt>0){
-                   $i = ($tt1/$stt)*100;
-
-                 }else{
-                   $i = 0;
-                 }
-                 ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                      {{$i}}%
-                </div>
-              </div>
-
-              <h4>Tỉ lệ đăng công văn </h4>
-              <div class="progress">
-                <?php
-                 if ($scv>0){
-                   $i = ($cv1/$scv)*100;
-
-                 }else{
-                   $i = 0;
-                 }
-                ?>
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{$i}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$i}}%;">
-                      {{$i}}%
-                </div>
-              </div>
-            </div>
+            @yield('left-menu')
 
 
-          </div>
-          <div class="col-md-9">
-            <!-- Website Overview -->
             @yield('content')
-          </div>
+
+          
         </div>
       </div>
     </section>
@@ -183,222 +87,7 @@
 
 <!-- Modals -->
 
-<!-- Add LichCongTac -->
-<div class="modal fade" id="addLichCongTac" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <form action="adminstrap/them-lich-cong-tac" method="POST">
-          <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Thêm Lịch Công Tác</h4>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label>Ngày tháng</label>
-              <input type="date" class="form-control" name="ngaythang" value="<?php echo date('Y-m-d'); ?>">
-            </div>
-            <div class="form-group">
-              <label>Nội dung</label>
-              <input type="text" class="form-control" name="noidung" placeholder="Nhập nội dung công việc" required="" autofocus="">
-            </div>
-            <div class="form-group">
-              <label>Địa điểm</label>
-              <input type="text" class="form-control" name="diadiem" placeholder="Nhập địa điểm thực hiện công việc" required="">
-            </div>
-            <div class="form-group">
-              <label>Giờ bắt đầu</label>
-              <input type="time" class="form-control" name="batdau" value="batdau" required="">
-            </div>
-            <script type="text/javascript">
-              $(function(){
-                $('input[type="time"][value="batdau"]').click(function(){
-                  var d = new Date(),
-                      h = d.getHours(),
-                      m = d.getMinutes();
-                  if(h < 10) h = '0' + h;
-                  if(m < 10) m = '0' + m;
-                  $(this).attr({
-                    'value': h + ':' + m
-                  });
-                });
-              });
-            </script>
-            <div class="form-group">
-              <label>Giờ kết thúc (dự kiến)</label>
-              <input type="time" class="form-control" name="ketthuc" value="ketthuc" required="">
-            </div>
-            <script type="text/javascript">
-              $(function(){
-                $('input[type="time"][value="ketthuc"]').click(function(){
-                  var d = new Date(),
-                      h = d.getHours() + 1,
-                      m = d.getMinutes();
-                  if(h < 10) h = '0' + h;
-                  if(m < 10) m = '0' + m;
-                  $(this).attr({
-                    'value': h + ':' + m
-                  });
-                });
-              });
-            </script>
-            <div class="form-group">
-              <label>Ghi chú</label>
-              <textarea class="form-control" name="ghichu" placeholder="Nhập ghi chú"></textarea>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-
-            <button type="submit" class="btn btn-primary">Đăng</button>
-          </div>
-    </form>
-    </div>
-  </div>
-</div>
-
-<!-- Add Tin Tuc -->
-<div class="modal fade" id="addTinTuc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <form action="adminstrap/them-tin-tuc" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-          <input type="hidden" name="ngaydang" value="<?php echo date('Y-m-d'); ?>"/>
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Thêm Tin tức - Sự kiện</h4>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label>Tiêu đề</label>
-              <input type="text" class="form-control" name="tieude" placeholder="Nhập Tiêu đề" required="" autofocus="">
-            </div>
-            <div class="form-group">
-              <label>Tóm tắt</label>
-              <textarea type="text" class="form-control" name="tomtat" rows="3" placeholder="Nhập tóm tắt" required=""></textarea>
-            </div>
-            <div class="form-group">
-                <label>Hình Ảnh</label>
-                <input type="file" id="imgInp" name="hinhanh" />
-                <br>
-                <img id="blah" src="" width="80%" style="display:block; margin: 0 auto"/>
-            </div>
-            <div class="form-group">
-                <label>Nội dung</label>
-                <textarea name="noidung" id="demo" class="form-control ckeditor" rows="5"></textarea>
-            </div>
-
-
-            <div class="form-group">
-              <label>Ghi chú</label>
-              <textarea class="form-control" name="ghichu" rows="3" placeholder="Nhập ghi chú"></textarea>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-
-            <button type="submit" class="btn btn-primary">Đăng</button>
-          </div>
-    </form>
-    </div>
-  </div>
-</div>
-
-<!-- Add Cong Van -->
-<div class="modal fade" id="addVanBan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <form action="adminstrap/them-van-ban" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-          <input type="hidden" name="ngaydang" value="<?php echo date('Y-m-d'); ?>"/>
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Thêm Công văn - Tài Liệu</h4>
-          </div>
-          <div class="modal-body">
-
-            <div class="form-group">
-              <label>Số / Kí hiệu văn bản</label>
-              <input type="text" class="form-control" name="socv" placeholder="Nhập Số / Kí hiệu văn bản" required="" autofocus="" />
-            </div>
-            <div class="form-group">
-              <label>Trích yếu Văn bản</label>
-              <input type="text" class="form-control" name="tieude" placeholder="Nhập Tiêu đề văn bản" required="" />
-            </div>
-            <div class="form-group">
-                <label>File Văn bản</label>
-                <input type="file" name="vanban" required="" />
-            </div>
-
-            <div class="form-group">
-              <label>Ghi chú</label>
-              <textarea class="form-control" name="ghichu" rows="3" placeholder="Nhập ghi chú"></textarea>
-            </div>
-
-
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-
-            <button type="submit" class="btn btn-primary">Đăng</button>
-          </div>
-    </form>
-    </div>
-  </div>
-</div>
-
-
-  <script>
-     CKEDITOR.replace( 'noidung' );
- </script>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-
-      function readURL(input) {
-
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
-
-            reader.readAsDataURL(input.files[0]);
-        }
-      }
-
-      $("#imgInp").change(function(){
-          readURL(this);
-      });
-
-    </script>
-    <script type="text/javascript">
-
-    $(document).ready(function(){
-
-      $("#donvi").change(function(){
-        var idDonVi = $(this).val();
-        // alert(idDonVi);
-        $.get('ajax/phongban/'+idDonVi, function(data){
-          $("#phongban").html(data);
-        });
-      });
-
-    });
-
-    </script>
-
+@yield('modal')
 
   </body>
 </html>
