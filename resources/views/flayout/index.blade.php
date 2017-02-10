@@ -80,7 +80,7 @@
                 </a>
 
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="/chuyen-so">Chuyển số điện thoại </a></li>
+                  <li><a href="/chuyen-so">Chuyển mã vùng </a></li>
                 </ul>
             </li>
 
