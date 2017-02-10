@@ -18,7 +18,7 @@
 
             <div class="form-group">
               <label>Địa điểm</label>
-              <input type="text" class="form-control" name="địa điểm" placeholder="Địa điểm" required="" autofocus="" />
+              <input type="text" class="form-control" name="diadiem" placeholder="Địa điểm" required="" autofocus="" />
             </div>
 
             <div class="form-group">
