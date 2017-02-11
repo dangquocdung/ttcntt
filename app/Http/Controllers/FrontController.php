@@ -11,6 +11,7 @@ use App\DiemBao;
 use App\LichCongTac;
 use App\CongVan;
 use App\ThongDiep;
+use App\SanPham;
 
 class FrontController extends Controller
 {
@@ -76,9 +77,10 @@ class FrontController extends Controller
     }
 
     $diembao = DiemBao::orderby('pubDate','desc')->get();
+    $sanpham = SanPham::orderby('id','desc')->get();
 
 
-    return view('trangchu',['dichvu'=>$dichvu,'dichvu2'=>$dichvu2, 'diembao'=>$diembao]);
+    return view('trangchu',['dichvu'=>$dichvu,'dichvu2'=>$dichvu2, 'diembao'=>$diembao, 'sanpham'=>$sanpham]);
   }
 
 

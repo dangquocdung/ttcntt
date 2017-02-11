@@ -56,11 +56,11 @@
 
       <div id="owl-sanpham" class="owl-carousel owl-theme">
 
-        @foreach ($diembao as $db)
+        @foreach ($sanpham as $sp)
           <div class="item">
-            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+            <a href="{{$sp->lienket}}" target="_blank"><img src="upload/banner/{{$db->hinhanh}}" alt=""></a>
             <div class="content_news">
-              {{$db->title}}
+              {{$sp->tieude}}
             </div>
           </div>
         @endforeach
@@ -68,7 +68,7 @@
       </div>
     </div>
   </div>
-  
+
 </div>
 
 <div class="section-a">
