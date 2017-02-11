@@ -77,11 +77,10 @@
 
 
 .section-d #owl-demo .item2{
-  margin: 0 10px;
-    margin-top: 40px;
-    background: none;
-    position: relative;
-    overflow: hidden;
+  text-align: center;
+  margin: 2%;
+  position: relative;
+  overflow: hidden;
 }
 .section-d #owl-demo .item2 img{
   position: relative;
@@ -114,8 +113,6 @@
   height: 60px;
   width: 100%;
   padding: 5px 10px;
-  font-weight: bold
-
 }
 
 .btn-link {
