@@ -111,16 +111,9 @@
   height: 60px;
   width: 100%;
   padding: 5px 10px;
+  font-weight: bold
 
 }
-
-.section-d #owl-demo .item2 p .name{
-  font-weight: bold !important;
-
-}
-
-
-
 
 .btn-link {
     width: 100%;
