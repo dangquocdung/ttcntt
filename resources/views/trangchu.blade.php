@@ -59,13 +59,14 @@
         @foreach ($sanpham as $sp)
           <div class="item">
             <a href="{{$sp->lienket}}" target="_blank"><img src="upload/banner/{{$sp->hinhanh}}" alt=""></a>
-            <div class="content_news">
-              {{$sp->tieude}}
-            </div>
+
           </div>
         @endforeach
 
       </div>
+
+
+
     </div>
   </div>
 
@@ -190,7 +191,11 @@
         @foreach ($diembao as $db)
           <div class="item2">
             <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
-            <p class="name">{{$db->title}}</p>
+            <div class="content_news">
+              <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
+
+
+            </div>
           </div>
         @endforeach
 
