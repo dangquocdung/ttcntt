@@ -77,8 +77,11 @@
 
 
 .section-d #owl-demo .item2{
-  text-align: center;
-  margin: 2%;
+  margin: 0 10px;
+    margin-top: 40px;
+    background: none;
+    position: relative;
+    overflow: hidden;
 }
 .section-d #owl-demo .item2 img{
   position: relative;
