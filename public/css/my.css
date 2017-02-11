@@ -104,7 +104,7 @@
 
 
 
-.section-d #owl-demo .item2 p{
+.section-d #owl-demo .item2 .name{
   position: absolute;
   bottom: 0;
   background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
