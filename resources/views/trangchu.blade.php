@@ -58,7 +58,7 @@
 
         @foreach ($sanpham as $sp)
           <div class="item">
-            <a href="{{$sp->lienket}}" target="_blank"><img src="upload/banner/{{$db->hinhanh}}" alt=""></a>
+            <a href="{{$sp->lienket}}" target="_blank"><img src="upload/banner/{{$sp->hinhanh}}" alt=""></a>
             <div class="content_news">
               {{$sp->tieude}}
             </div>
