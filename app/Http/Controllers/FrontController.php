@@ -77,7 +77,7 @@ class FrontController extends Controller
     }
 
     $diembao = DiemBao::orderby('pubDate','desc')->get();
-    $sanpham = SanPham::orderby('id','desc')->get();
+    $sanpham = SanPham::orderby('id','asc')->get();
 
 
     return view('trangchu',['dichvu'=>$dichvu,'dichvu2'=>$dichvu2, 'diembao'=>$diembao, 'sanpham'=>$sanpham]);
