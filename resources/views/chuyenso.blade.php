@@ -28,19 +28,19 @@
           <div class="form-group">
              <label>Chọn tỉnh</label>
              <select class="form-control" ng-model = "codinh.firstName">
-                <option value="239" selected="selected">Hà Tĩnh</option>
-                <option value="238">Nghệ An</option>
-                <option value="237">Thanh Hoá</option>
-                <option value="236">Đà Nẵng</option>
-                <option value="235">Quảng Nam</option>
-                <option value="234">Thừa Thiên - Huế</option>
-                <option value="233">Quảng Trị</option>
-                <option value="232">Quảng Bình</option>
-                <option value="216">Yên Bái </option>
-                <option value="215">Điện Biên</option>
-                <option value="214">Lào Cai</option>
-                <option value="213">Lai Châu</option>
-                <option value="212">Sơn La</option>
+                <option value="0239" selected="selected">Hà Tĩnh</option>
+                <option value="0238">Nghệ An</option>
+                <option value="0237">Thanh Hoá</option>
+                <option value="0236">Đà Nẵng</option>
+                <option value="0235">Quảng Nam</option>
+                <option value="0234">Thừa Thiên - Huế</option>
+                <option value="0233">Quảng Trị</option>
+                <option value="0232">Quảng Bình</option>
+                <option value="0216">Yên Bái </option>
+                <option value="0215">Điện Biên</option>
+                <option value="0214">Lào Cai</option>
+                <option value="0213">Lai Châu</option>
+                <option value="0212">Sơn La</option>
               </select>
           </div>
           <div class="form-group">
