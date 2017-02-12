@@ -87,7 +87,7 @@
          appCoDinh.controller('codinhController', function($scope) {
 
             $scope.codinh = {
-               firstName: "239",
+               firstName: "0239",
                lastName: "3123456",
 
                fullName: function() {
