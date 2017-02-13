@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(LichCongTacTableSeeder::class);
         // $this->call(CongVanTableSeeder::class);
 
-        $this->call(DichVuTableSeeder::class);
+        // $this->call(DichVuTableSeeder::class);
 
         // $this->call(DonViTableSeeder::class);
         // $this->call(LoaiVBTableSeeder::class);
@@ -26,6 +26,8 @@ class DatabaseSeeder extends Seeder
 
         // $this->call(TrangThaiTableSeeder::class);
         // $this->call(LevelTableSeeder::class);
+        $this->call(SanPhamTableSeeder::class);
+
 
 
     }
@@ -282,6 +284,26 @@ class LoaiVBTableSeeder extends Seeder
 
 
 
+      ]);
+    }
+}
+
+
+class SanPhamTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+      DB::table('sanpham')->delete();
+      DB::table('sanpham')->insert([
+          ['tieude' => 'Cổng thông tin điện tử Hà Tĩnh','hinhanh' => 'congttdt.jpg','lienket' => 'http://www.hatinh.gov.vn'],
+          ['tieude' => 'Sàn Giao dịch','hinhanh' => 'santmdt.jpg','lienket' => 'http://hatinhtrade.com.vn'],
+          ['tieude' => 'Danh bạ ngành','hinhanh' => 'dbnganh.jpg','lienket' => 'http://113.160.178.189:8686/'],
+          ['tieude' => 'Biển đảo Việt Nam','hinhanh' => 'biendao.jpg','lienket' => '/bien-dao-viet-nam']
       ]);
     }
 }

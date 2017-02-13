@@ -142,7 +142,7 @@
 
                       <li class="divider"></li>
 
-                      <li><a href="/adminstrap/dieu-hanh-cong-viec">Văn phòng Thông minh (iO)</a></li>
+                      <li><a href="/adminstrap/so-tay-ca-nhan">Sổ tay cá nhân</a></li>
 
                       <li class="divider"></li>
 
