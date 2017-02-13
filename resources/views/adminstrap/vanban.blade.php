@@ -104,3 +104,7 @@
   </div>
 </div>
 @endsection
+
+@section('modal')
+  @include('adminstrap.modal')
+@endsection
