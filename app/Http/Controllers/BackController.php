@@ -50,11 +50,21 @@ class BackController extends Controller
         $slct = LichCongTac::count();
         view()->share('slct',$slct);
 
+        $lichcongtacall = LichCongTac::orderby('id','desc')->limit(5)->get();
+        view()->share('lichcongtacall',$lichcongtacall);
+
         $stt = TinTuc::count();
         view()->share('stt',$stt);
 
+        $tintucall = TinTuc::orderby('id','desc')->limit(5)->get();
+        view()->share('tintucall',$tintucall);
+
         $scv = CongVan::count();
         view()->share('scv',$scv);
+
+        $vanbanall = CongVan::orderby('id','desc')->limit(5)->get();
+        view()->share('vanbanall',$vanbanall);
+
 
     }
 

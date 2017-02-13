@@ -6,8 +6,8 @@
       <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Cập nhật thông tin
     </a>
     <a href="/adminstrap/lich-cong-tac" class="bg-danger list-group-item1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Lịch công tác <span class="badge">{{$lct1}}</span></a>
-    <a href="/adminstrap/tin-tuc" class="bg-success list-group-item1"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tin tức đã đăng <span class="badge">{{$tt1}}</span></a>
-    <a href="/adminstrap/van-ban" class="bg-info list-group-item1"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Công văn đã đăng <span class="badge">{{$cv1}}</span></a>
+    <a href="/adminstrap/tin-tuc" class="bg-success list-group-item1"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Tin nội bộ<span class="badge">{{$tt1}}</span></a>
+    <a href="/adminstrap/van-ban" class="bg-info list-group-item1"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Văn bản <span class="badge">{{$cv1}}</span></a>
   </div>
 
   <div class="well">
