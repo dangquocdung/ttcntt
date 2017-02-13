@@ -12,6 +12,7 @@
   @include('adminstrap.left-menu')
 @endsection
 @section('content')
+<div class="col-md-9 col-lg-9">
 <div class="panel panel-default">
   <div class="panel-heading main-color-bg">
     <h3 class="panel-title">Tin tức đã đăng</h3>
@@ -107,4 +108,5 @@
       </div>
     </div>
   </div>
+</div>
 @endsection

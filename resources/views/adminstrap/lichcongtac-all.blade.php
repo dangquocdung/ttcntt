@@ -13,13 +13,14 @@
 @endsection
 
 @section('content')
+<div class="col-md-9 col-lg-9">
 <div class="panel panel-default">
   <div class="panel-heading main-color-bg">
     <h3 class="panel-title">Lịch công tác</h3>
   </div>
   <div class="panel-body">
     <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-9">
               <!-- <input class="form-control" type="submit" placeholder="Filter Pages..."> -->
               <form action="adminstrap/lich-cong-tac-all/tim-kiem" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -115,4 +116,5 @@
       </div>
     </div>
   </div>
+</div>
 @endsection
