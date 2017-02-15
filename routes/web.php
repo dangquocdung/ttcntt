@@ -75,8 +75,9 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
   Route::post('/tin-tuc/tim-kiem', 'BackController@postTinTucTimKiem');
   Route::post('/van-ban/tim-kiem', 'BackController@postVanBanTimKiem');
 
-  Route::put('/edit-user/{id}', 'BackController@putEditUser');
-  Route::delete('/delete-user/{id}', 'BackController@deleteUser');
+  Route::get('/user-all', 'BackController@getUserAll');
+  Route::put('/user-all/edit/{id}', 'BackController@putEditUser');
+  Route::delete('/user-all/delete/{id}', 'BackController@deleteUser');
 
 
 
@@ -101,13 +102,10 @@ Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLog
   Route::get('/sap-het-han', 'XuLyCongViecController@getSapHetHan');
   Route::get('/da-qua-han', 'XuLyCongViecController@getDaQuaHan');
 
-
   Route::post('/xu-ly-cong-viec/{id}', 'XuLyCongViecController@postXuLyCongViec');
   Route::post('/dang-xu-ly/{id}', 'XuLyCongViecController@postCapNhatCongViec');
 
-
   Route::get('/danh-sach-thanh-vien', 'QuanLyNhanSuController@getDanhSachThanhVien');
-
 
   Route::post('/tao-cong-van', 'DieuHanhController@postTaoCongVan');
 

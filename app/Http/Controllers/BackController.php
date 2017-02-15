@@ -469,6 +469,14 @@ class BackController extends Controller
 
     }
 
+
+    public function getUserAll()
+    {
+
+      return view('adminstrap.user-all');
+    }
+
+
     public function putEditUser(Request $request, $id)
     {
         $usr = User::find($id);
@@ -503,7 +511,7 @@ class BackController extends Controller
         }
 
         $usr->save();
-        return redirect('adminstrap');
+        return redirect('adminstrap/user-all');
     }
 
 
@@ -511,7 +519,7 @@ class BackController extends Controller
     {
         $usr = User::find($id);
         $usr->delete();
-        return redirect('adminstrap');
+        return redirect('adminstrap/user-all');
     }
 
 

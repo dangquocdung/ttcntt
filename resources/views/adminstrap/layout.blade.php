@@ -41,6 +41,7 @@
             <li><a href="adminstrap/lich-cong-tac-all">Lịch</a></li>
             <li><a href="adminstrap/tin-tuc-all">Tin tức</a></li>
             <li><a href="adminstrap/van-ban-all">Công văn</a></li>
+            <li><a href="adminstrap/user-all">Users</a></li>
             @endif
           </ul>
 
