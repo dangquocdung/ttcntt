@@ -121,4 +121,7 @@ Route::group(['prefix'=>'adminstrap/so-tay-ca-nhan','middleware'=>'userLogin'],f
   Route::get('/', 'SoTayController@getSoTay');
 
   Route::post('/them-ghi-chu', 'SoTayController@postThemGhiChu');
+  Route::post('/them-ghi-chu', 'SoTayController@postThemGhiChu');
+  Route::put('/sua-ghi-chu/{id}', 'SoTayController@putGhiChu');
+  Route::delete('/xoa-ghi-chu/{id}', 'SoTayController@deleteGhiChu');
 });

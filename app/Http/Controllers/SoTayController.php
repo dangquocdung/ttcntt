@@ -48,8 +48,28 @@ class SoTayController extends Controller
 
     return redirect('adminstrap/so-tay-ca-nhan');
 
-
-
   }
+
+  public function putGhiChu(Request $request, $id)
+  {
+      $gc = SoTay::find($id);
+
+      $gc->tieude = $request->tieude;
+      $gc->diadiem = $request->diadiem;
+      $gc->noidung = $request->noidung;
+
+
+      $gc->save();
+      return redirect('adminstrap/so-tay-ca-nhan');
+  }
+
+
+  public function deleteGhiChu($id)
+  {
+      $gc = SoTay::find($id);
+      $gc->delete();
+      return redirect('adminstrap/so-tay-ca-nhan');
+  }
+
 
 }
