@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AdminLoginMiddleware
+class UserLoginMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class AdminLoginMiddleware
      */
     public function handle($request, Closure $next, $guard = null)
     {
-      if (Auth::guard($guard)->check() && Auth::user()->quyen == 5) {
+      if (Auth::guard($guard)->check()) {
         return $next($request);
       }else{
         return redirect('login');

@@ -44,7 +44,7 @@ Route::get('/diem-bao/the-gioi-vi-tinh', 'FrontController@getTheGioiViTinh');
 Route::post('/goi-thong-diep', 'FrontController@postGoiThongDiep');
 
 
-Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
+Route::group(['prefix'=>'adminstrap','middleware'=>'userLogin'],function(){
 
   Route::get('/', 'BackController@getAdminStrap');
   Route::get('/lich-cong-tac', 'BackController@getLichCongTac');
@@ -75,13 +75,17 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
   Route::post('/tin-tuc/tim-kiem', 'BackController@postTinTucTimKiem');
   Route::post('/van-ban/tim-kiem', 'BackController@postVanBanTimKiem');
 
+
+});
+
+Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
+
   Route::get('/user-all', 'BackController@getUserAll');
   Route::put('/user-all/edit/{id}', 'BackController@putEditUser');
   Route::delete('/user-all/delete/{id}', 'BackController@deleteUser');
 
-
-
 });
+
 
 Route::group(['prefix'=>'ajax'],function(){
 
@@ -89,7 +93,7 @@ Route::group(['prefix'=>'ajax'],function(){
 
 });
 
-Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLogin'],function(){
+Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'userLogin'],function(){
 
   Route::get('/', 'DieuHanhController@getDieuHanhCongViec');
 
@@ -112,7 +116,7 @@ Route::group(['prefix'=>'adminstrap/dieu-hanh-cong-viec','middleware'=>'adminLog
 
 });
 
-Route::group(['prefix'=>'adminstrap/so-tay-ca-nhan','middleware'=>'adminLogin'],function(){
+Route::group(['prefix'=>'adminstrap/so-tay-ca-nhan','middleware'=>'userLogin'],function(){
 
   Route::get('/', 'SoTayController@getSoTay');
 
