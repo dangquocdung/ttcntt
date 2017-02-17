@@ -23,6 +23,7 @@
         <tr>
           <th>Tiêu đề</th>
           <th>Địa điểm</th>
+          <th><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span></th>
           <th>Thời gian tạo</th>
           <th>Thời gian sửa</th>
           <th></th>
@@ -32,6 +33,14 @@
           <tr>
             <td data-toggle="collapse" data-parent="#accordion" href="#noiDung{{$gc->id}}"><span class="caret"></span> <strong>{{$gc->tieude}}</strong></td>
             <td>{{$gc->diadiem}}</td>
+
+            <td>
+              @if (strlen(trim($gc->tepdinhkem)) > 4)
+              <a href="/upload/sotay/{{$gc->tepdinhkem}}"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span></a>
+
+              @endif
+            </td>
+
             <td>{{$gc->created_at}}</td>
             <td>{{$gc->updated_at}}</td>
             <td>
@@ -45,8 +54,9 @@
           </tr>
 
           <tr id="noiDung{{$gc->id}}" class="info panel-collapse collapse">
-              <td colspan="5">{!! $gc->noidung !!}</td>
+              <td colspan="6">{!! $gc->noidung !!}</td>
           </tr>
+
 
           <div class="modal fade" id="ghichu{{$gc->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -73,6 +83,13 @@
                       <div class="form-group">
                         <label>Nội dung</label>
                         <textarea class="form-control" name="noidung" rows="5" required autofocus="">{!! $gc->noidung !!}</textarea>
+                      </div>
+
+                      <div class="form-group">
+                          <label>Tệp đính kèm</label>
+                          <input type="file" name="tepdinhkem"/>
+                          <br>
+                          <span class="glyphicon glyphicon-paperclip"></span><a href="/upload/sotay/{{$gc->tepdinhkem}}">  {{$gc->tepdinhkem}}</a>
                       </div>
 
 

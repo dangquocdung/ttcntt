@@ -44,6 +44,28 @@ class SoTayController extends Controller
     $gc->diadiem = $request->diadiem;
     $gc->noidung = $request->noidung;
 
+    if ($request->hasfile('tepdinhkem')){
+
+      $file = $request->file('tepdinhkem');
+
+      $name = $file->getClientOriginalName();
+
+      $tdk = str_random(4)."_".$name;
+
+      while (file_exists("upload/sotay/".$tdk)){
+        $tdk = str_random(4)."_name";
+      }
+
+      $file->move("upload/sotay",$tdk);
+
+      $gc->tepdinhkem = $tdk;
+
+    }else{
+
+      $gc->tepdinhkem = "";
+
+    }
+
     $gc->save();
 
     return redirect('adminstrap/so-tay-ca-nhan');
@@ -57,6 +79,24 @@ class SoTayController extends Controller
       $gc->tieude = $request->tieude;
       $gc->diadiem = $request->diadiem;
       $gc->noidung = $request->noidung;
+
+      if ($request->hasfile('tepdinhkem')){
+
+        $file = $request->file('tepdinhkem');
+
+        $name = $file->getClientOriginalName();
+
+        $tdk = str_random(4)."_".$name;
+
+        while (file_exists("upload/sotay/".$tdk)){
+          $tdk = str_random(4)."_name";
+        }
+
+        $file->move("upload/sotay",$tdk);
+
+        $gc->tepdinhkem = $tdk;
+
+      }
 
 
       $gc->save();
