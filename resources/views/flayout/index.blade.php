@@ -323,7 +323,7 @@
     </script>
 
     <!-- Google Map js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRKmIRjZ9GPop3H4nOvRx9G9_--QHBAJo&callback=initMap" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClqb4ClPasKU8unirsY-uT9mw2t7G7d8k&callback=initMap" type="text/javascript"></script>
     <script>
         function initialize() {
           var mapOptions = {

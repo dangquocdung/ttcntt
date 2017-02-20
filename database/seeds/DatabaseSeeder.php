@@ -15,19 +15,20 @@ class DatabaseSeeder extends Seeder
 
 
         // $this->call(DichVuTableSeeder::class);
+        $this->call(SanPhamTableSeeder::class);
 
-        $this->call(DonViTableSeeder::class);
-        $this->call(LoaiVBTableSeeder::class);
-        $this->call(ChucVuTableSeeder::class);
-
-        $this->call(TrangThaiTableSeeder::class);
-        $this->call(LevelTableSeeder::class);
+        // $this->call(DonViTableSeeder::class);
+        // $this->call(LoaiVBTableSeeder::class);
+        // $this->call(ChucVuTableSeeder::class);
+        //
+        // $this->call(TrangThaiTableSeeder::class);
+        // $this->call(LevelTableSeeder::class);
 
         // $this->call(UsersTableSeeder::class);
         // $this->call(TinTucTableSeeder::class);
         // $this->call(LichCongTacTableSeeder::class);
         // $this->call(CongVanTableSeeder::class);
-        //$this->call(SanPhamTableSeeder::class);
+
 
 
 
@@ -120,7 +121,7 @@ class DichVuTableSeeder extends Seeder
     {
       DB::table('dichvu')->delete();
       DB::table('dichvu')->insert([
-          ['ten' => 'Chúc Mừng Năm Mới Đinh Dậu 2017', 'tenkhongdau'=>changeTitle('Chúc Mừng Năm Mới Đinh Dậu 2017'), 'hinh'=>'cmnm', 'diengiai' => 'Năm mới hạnh phúc bình an đến - Ngày Xuân vinh hoa phú quý về', 'fa'=>'fa-graduation-cap'],
+          ['ten' => 'Chúc Mừng Năm Mới Đinh Dậu 2017', 'tenkhongdau'=>changeTitle('Chúc Mừng Năm Mới Đinh Dậu 2017'), 'hinh'=>'dinhdau2017', 'diengiai' => 'Năm mới hạnh phúc bình an đến - Ngày Xuân vinh hoa phú quý về', 'fa'=>'fa-graduation-cap'],
           ['ten' => 'Tư vấn - Quản lý Dự án', 'tenkhongdau'=>changeTitle('Tư vấn - Quản lý Dự án'), 'hinh'=>'tuvanqlda', 'diengiai' => 'Tư vấn, quản lý các dự án, hạng mục công việc về các lĩnh vực công nghệ thông tin, truyền thông, xuất bản và báo chí.', 'fa'=>'fa-users'],
           ['ten' => 'Ứng dụng CNTT trong CCHC và Chính phủ điện tử', 'tenkhongdau'=>changeTitle('Ứng dụng CNTT trong CCHC và Chính phủ điện tử'), 'hinh'=>'thietke', 'diengiai' => '<p>Thiết kế, xây dựng, cho thuê công trình công nghệ thông tin:</p><p>Phần mềm và hệ thống phần mềm</p><p>Cơ sở dữ liệu và hệ thống cơ sở dữ liệu</p><p>Cho thuê trọn gói hệ thống CNTT trong Cải cách hành chính</p>', 'fa'=>'fa-youtube-play'],
           ['ten' => 'Dịch vụ mạng và Hạ tầng', 'tenkhongdau'=>changeTitle('Dịch vụ mạng và Hạ tầng'), 'hinh'=>'hatangmang', 'diengiai' => '<p>Hoạt động quản trị vận hành cơ sở hạ tầng công nghệ thông tin và truyền thông.</p><p> Dịch vụ thiết kế triển khai hệ thống mạng.</p><p> Dịch vụ bảo trì phần cứng.</p>', 'fa'=>'fa-cogs'],
