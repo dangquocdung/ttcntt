@@ -71,7 +71,7 @@ class FrontController extends Controller
 
       $tindb->description = str_replace(' ]]>','', $description);
       $tindb->link = $entry->link;
-      $tindb->pubDate = $entry->pubDate;
+      //$tindb->pubDate = $entry->pubDate;
 
       $tindb->save();
     }

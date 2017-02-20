@@ -12,21 +12,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
 
-        // $this->call(TinTucTableSeeder::class);
-        // $this->call(LichCongTacTableSeeder::class);
-        // $this->call(CongVanTableSeeder::class);
 
         // $this->call(DichVuTableSeeder::class);
 
-        // $this->call(DonViTableSeeder::class);
-        // $this->call(LoaiVBTableSeeder::class);
-        // $this->call(ChucVuTableSeeder::class);
+        $this->call(DonViTableSeeder::class);
+        $this->call(LoaiVBTableSeeder::class);
+        $this->call(ChucVuTableSeeder::class);
 
-        // $this->call(TrangThaiTableSeeder::class);
-        // $this->call(LevelTableSeeder::class);
-        $this->call(SanPhamTableSeeder::class);
+        $this->call(TrangThaiTableSeeder::class);
+        $this->call(LevelTableSeeder::class);
+
+        // $this->call(UsersTableSeeder::class);
+        // $this->call(TinTucTableSeeder::class);
+        // $this->call(LichCongTacTableSeeder::class);
+        // $this->call(CongVanTableSeeder::class);
+        //$this->call(SanPhamTableSeeder::class);
 
 
 
@@ -185,9 +186,7 @@ class PhongBanTableSeeder extends Seeder
           ['tenphongban' => 'Phòng Phát triển Ứng dụng', 'donvi_id'=>'2'],
           ['tenphongban' => 'Phòng Đào Tạo', 'donvi_id'=>'2'],
           ['tenphongban' => 'Phòng Cổng - Sàn', 'donvi_id'=>'2'],
-          ['tenphongban' => 'Bộ Phận Kinh Doanh - Dịch Vụ', 'donvi_id'=>'2'],
-          ['tenphongban' => 'Ban Giám Đốc', 'donvi_id'=>'1'],
-          ['tenphongban' => 'Phòng CNTT', 'donvi_id'=>'1']
+          ['tenphongban' => 'Bộ Phận Kinh Doanh - Dịch Vụ', 'donvi_id'=>'2']
 
       ]);
 
