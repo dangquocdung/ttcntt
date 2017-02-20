@@ -150,7 +150,7 @@ class FrontController extends Controller
 
         $tindb->description = str_replace(' ]]>','', $description);
         $tindb->link = $entry->link;
-        $tindb->pubDate = $entry->pubDate;
+        // $tindb->pubDate = $entry->pubDate;
 
   			$tindb->save();
   		}
@@ -178,7 +178,7 @@ class FrontController extends Controller
         $tindb->media = $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes();
         $tindb->description = $entry->description;
         $tindb->link = $entry->link;
-        $tindb->pubDate = $entry->pubDate;
+        // $tindb->pubDate = $entry->pubDate;
 
   			$tindb->save();
 
