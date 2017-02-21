@@ -126,23 +126,17 @@ class DieuHanhController extends Controller
       foreach ($thuchien as $th){
 
         $xl = new XuLy;
-
         $xl->taoviec_id = $vm;
-
         $xl->user_id = $th;
-
         $xl->tiendo = '0';
         $xl->trangthai_id = '1';
-
         $xl->noidung = '';
-
         $xl->thoigian = Carbon::now();
         $xl->save();
 
-        return redirect('adminstrap/dieu-hanh-cong-viec');
+      }
 
-
-      };
+      return redirect('adminstrap/dieu-hanh-cong-viec');
 
     }
 
@@ -179,14 +173,9 @@ class DieuHanhController extends Controller
         $cv->tepvanban = $tdk;
 
       }
-
+      
       $cv->save();
 
-
       return redirect('adminstrap/dieu-hanh-cong-viec');
-
-
-
-
     }
 }
