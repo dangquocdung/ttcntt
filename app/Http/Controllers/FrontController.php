@@ -210,6 +210,12 @@ class FrontController extends Controller
 
   }
 
+  public function getNongThonMoi(){
+
+    return view('nongthonmoi');
+
+  }
+
 
   public function getLichCongTac() {
       $ngaythang = LichCongTac::select('ngaythang')->orderby('ngaythang','desc')->groupby('ngaythang')->get();

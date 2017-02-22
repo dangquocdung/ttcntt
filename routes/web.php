@@ -32,6 +32,9 @@ Route::get('/tin-tuc/{id}', 'FrontController@getChiTietTin');
 
 Route::get('/bien-dao-viet-nam', 'FrontController@getBienDao');
 
+Route::get('/nong-thon-moi', 'FrontController@getNongThonMoi');
+
+
 Route::get('/lich-cong-tac', 'FrontController@getLichCongTac');
 
 Route::get('/van-ban', 'FrontController@getCongVan');

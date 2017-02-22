@@ -15,9 +15,10 @@ class DatabaseSeeder extends Seeder
 
 
         // $this->call(DichVuTableSeeder::class);
-        $this->call(SanPhamTableSeeder::class);
+        // $this->call(SanPhamTableSeeder::class);
 
         // $this->call(DonViTableSeeder::class);
+        $this->call(PhongBanTableSeeder::class);
         // $this->call(LoaiVBTableSeeder::class);
         // $this->call(ChucVuTableSeeder::class);
         //
