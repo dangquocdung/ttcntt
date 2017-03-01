@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--*************************************************-->
+    <!-- Tác giả: Đặng Quốc Dũng - PGD TTCNTT-TT Hà Tĩnh -->
+    <!-- Email: dungthinhvn@gmail.com - Phone:0986242487 -->
+    <!--      Website: http://www.dangquocdung.com       -->
+    <!--*************************************************-->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +64,25 @@
                   <li class="divider"></li>
                   <li><a href="/nang-luc"> Năng lực</a></li>
                   <li class="divider"></li>
-                  <li><a href="/dich-vu"> Dịch vụ</a></li>
+                  <li><a href="/san-pham"> Sản phẩm</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/doi-ngu"> Đội ngũ quản lý</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    Dịch vụ <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/dich-vu"> Triết lý kinh doanh </a></li>
+                  <li class="divider"></li>
+                  <li><a href="/phan-mem"> DV Phần mềm / Software</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/phan-cung"> DV Phần cứng / Hardware </a></li>
+                  <li class="divider"></li>
+                  <li><a href="/dao-tao"> DV Đào tạo </a></li>
                 </ul>
             </li>
 
@@ -107,6 +131,17 @@
 
 
 
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    Tuyển dụng <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#"> Thông điệp </li>
+                  <li class="divider"></li>
+                  <li><a href="#"> Vị trí cần tuyển</a></li>
                 </ul>
             </li>
 
