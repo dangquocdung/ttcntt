@@ -27,7 +27,7 @@
           <br>
           <label>Địa chỉ: số 18 đường 26-3, TP. Hà Tĩnh, tỉnh Hà Tĩnh</label>
           <br>
-          <label>Điện thoại: 0393.853926</label>
+          <label>Điện thoại: 0239.3853926</label>
 
         </div>
       </div>
