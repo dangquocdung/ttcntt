@@ -76,7 +76,7 @@
                 </a>
 
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="/dich-vu"> Triết lý kinh doanh </a></li>
+                  <li><a href="/dich-vu"> Giới thiệu </a></li>
                   <li class="divider"></li>
                   <li><a href="/phan-mem"> DV Phần mềm / Software</a></li>
                   <li class="divider"></li>
