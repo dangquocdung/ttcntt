@@ -139,9 +139,9 @@
                 </a>
 
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#"> Thông điệp </li>
+                  <li><a href="/thong-diep"> Thông điệp </li>
                   <li class="divider"></li>
-                  <li><a href="#"> Vị trí cần tuyển</a></li>
+                  <li><a href="/vi-tri-tuyen-dung"> Vị trí cần tuyển</a></li>
                 </ul>
             </li>
 
@@ -238,11 +238,11 @@
   					</div>
   					<div class="single_address fix">
   						<div class="address_icon"><span><i class="fa fa-phone"></i></span></div>
-  						<div class="address_text"><p><span>Điện Thoại:</span>  (+039) 385 3926</p></div>
+  						<div class="address_text"><p><span>Điện Thoại:</span>  (+0239) 385 3926</p></div>
   					</div>
   					<div class="single_address fix">
   						<div class="address_icon"><span><i class="fa fa-envelope-o"></i></span></div>
-  						<div class="address_text"><p><span>Email: </span> info@itc.hatinh.vn</p></div>
+  						<div class="address_text"><p><span>Email: </span> ttcntthatinh@gmail.com</p></div>
   					</div>
   				</div>
 
