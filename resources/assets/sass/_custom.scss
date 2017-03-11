@@ -51,58 +51,6 @@
 }
 
 .section-a{
-
-  padding: 20px 0;
-  text-align: center;
-  background: $main-color;
-  color: set-text-color($main-color);
-
-
-
-  #owl-sanpham {
-
-    .item{
-
-      margin: 0 10px;
-      margin-top: 20px;
-      background: none;
-      position: relative;
-      overflow: hidden;
-
-      img{
-        display: block;
-        width: 100%;
-        height: auto;
-        float: none;
-        max-width: 100%;
-        -moz-transition: all 0.3s;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-      }
-
-
-      &:hover {
-        img {
-        -moz-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        }
-      }
-    }
-  }
-
-}
-
-.section-b{
-  background:#e6ebf1;
-  padding: 20px 0;
-
-  img{
-    width:100%;
-  }
-}
-
-.section-c{
   padding: 20px 0;
   text-align: center;
   background: $main-color;
@@ -144,6 +92,62 @@
   }
 
 }
+
+
+
+.section-b{
+  background:#e6ebf1;
+  padding: 20px 0;
+
+  img{
+    width:100%;
+  }
+}
+
+.section-c{
+
+  padding: 20px 0;
+  text-align: center;
+  background: $main-color;
+  color: set-text-color($main-color);
+
+  #owl-sanpham {
+
+    .item{
+
+      margin: 0 10px;
+      margin-top: 20px;
+      background: none;
+      position: relative;
+      overflow: hidden;
+
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+        float: none;
+        max-width: 100%;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+
+        &:hover {
+
+          -moz-transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+
+        }
+      }
+
+
+
+    }
+  }
+
+}
+
+
 
 
 .section-d{
@@ -291,7 +295,7 @@
 }
 
 footer{
-  padding:30px 0;
+  padding-top:15px;
   background: darken($main-color, 10%);
   color: set-text-color($main-color);
 }

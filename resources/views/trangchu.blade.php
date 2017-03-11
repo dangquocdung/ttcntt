@@ -51,33 +51,38 @@
   </div>
 </div>
 
-
 <div class="section-a">
   <div class="container">
     <div class="row">
+
       <div class="title">
-        <h2>Sản phẩm</h2>
+        <h2>Bản tin Công nghệ</h2>
       </div>
 
-      <div id="owl-sanpham" class="owl-carousel owl-theme">
-
-        @foreach ($sanpham as $sp)
-        @if ($sp->loaihinh == 2)
-          <div class="item">
-            <a href="{{$sp->lienket}}" target="_blank"><img src="./upload/banner/{{$sp->hinhanh}}" alt=""></a>
-
+      <div id="owl-demo" class="owl-carousel owl-theme">
+        @foreach ($diembao as $db)
+          <div class="item2">
+            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+            <div class="content_news">
+              <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
+            </div>
           </div>
-        @endif
         @endforeach
 
       </div>
 
-
+      <div class="customNavigation">
+        <a class="btn prev">Trước</a>
+        <a class="btn next">Sau</a>
+        <a class="btn play">Tự động</a>
+        <a class="btn stop">Dừng</a>
+      </div>
 
     </div>
   </div>
-
 </div>
+
+
 
 <div class="section-b">
   <div class="container">
@@ -172,34 +177,21 @@
 <div class="section-c">
   <div class="container">
     <div class="row">
-
       <div class="title">
-        <h2>Tin Tức</h2>
+        <h2>Sản phẩm</h2>
       </div>
-
-
-      <div id="owl-demo" class="owl-carousel owl-theme">
-        @foreach ($diembao as $db)
-          <div class="item2">
-            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
-            <div class="content_news">
-              <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
-
-
-            </div>
+      <div id="owl-sanpham" class="owl-carousel owl-theme">
+        @foreach ($sanpham as $sp)
+        @if ($sp->loaihinh == 2)
+          <div class="item">
+            <a href="{{$sp->lienket}}" target="_blank"><img src="./upload/banner/{{$sp->hinhanh}}" alt=""></a>
           </div>
+        @endif
         @endforeach
-
-      </div>
-
-      <div class="customNavigation">
-        <a class="btn prev">Trước</a>
-        <a class="btn next">Sau</a>
-        <a class="btn play">Tự động</a>
-        <a class="btn stop">Dừng</a>
       </div>
     </div>
   </div>
+
 </div>
 
 

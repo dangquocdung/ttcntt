@@ -39,12 +39,11 @@ class FrontController extends Controller
 
     $doingu = User::where('quyen','>','0')->where('phongban_id','<','7')->orderby('chucvu_id','asc')->get();
 
-    $url = "http://ictnews.vn/rss/thoi-su";
+    $url = "http://www.pcworld.com.vn/articles.rss";
 
     $xml = simplexml_load_file($url);
 
     DiemBao::getQuery()->delete();
-
 
     foreach($xml->channel->item as $entry){
 
@@ -52,28 +51,13 @@ class FrontController extends Controller
 
       $tindb->loaitin_id = '1';
       $tindb->title = $entry->title;
-
-      $src = strpos($entry->description,'src')+5;
-      $jpg = strpos($entry->description,'jpg')+3;
-
-      if ($jpg == 3) {
-        $jpg = strpos($entry->description,'png')+3;
-      }
-      $imglen = $jpg - $src;
-
-      $tindb->media = substr($entry->description, $src, $imglen);
-
-
-      // $tindb->media = substr($entry->description, strpos($entry->description,'src="'), strlen($entry->description)-strpos($entry->description,'.jpg'));
-      $br = strpos($entry->description,'</br>') + 6;
-
-      $description = substr($entry->description, $br);
-
-      $tindb->description = str_replace(' ]]>','', $description);
+      $tindb->media = $entry->children('http://search.yahoo.com/mrss/')->thumbnail->attributes();
+      $tindb->description = $entry->description;
       $tindb->link = $entry->link;
-      //$tindb->pubDate = $entry->pubDate;
+      // $tindb->pubDate = $entry->pubDate;
 
       $tindb->save();
+
     }
 
     $diembao = DiemBao::orderby('pubDate','desc')->get();

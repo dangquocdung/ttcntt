@@ -18,10 +18,6 @@
     <base href="{{asset('')}}">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
     <link rel="stylesheet" href="/css/jquery.eeyellow.Timeline.css">
-    <link rel="stylesheet" href="/css/jquery.superbox.css">
-    <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/owl.theme.css">
-    <link rel="stylesheet" href="/css/owl.transitions.css">
     <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
     <link rel="stylesheet" href="./assets/css/app.css">
 
@@ -284,7 +280,7 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.eeyellow.Timeline.js"></script>
     <script type="text/javascript" src="/js/jquery.fancybox.pack.js?v=2.1.6"></script>
 
@@ -299,15 +295,10 @@
         //fancybox
 
         $(".fancybox").fancybox();
-      });
 
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
+        //owl.carousel
 
-        var owl = $("#owl-demo");
-
-
+        var owl = $(".owl-carousel");
 
         owl.owlCarousel({
             items : 5, //10 items above 1000px browser width
@@ -316,8 +307,6 @@
             itemsTablet: [600,2], //2 items between 600 and 0
             itemsMobile : false,
             autoPlay: true
-
-             // itemsMobile disabled - inherit from itemsTablet option
         });
 
         // Custom Navigation Events
@@ -333,24 +322,6 @@
         $(".stop").click(function(){
           owl.trigger('owl.stop');
         })
-
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        })
-
       });
 
     </script>
