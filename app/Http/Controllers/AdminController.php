@@ -216,7 +216,7 @@ class AdminController extends Controller
 
     $sanpham->tieude = $request->tieude;
 
-    $sanpham->lienket = $request->lienket;
+    $sanpham->lienket = changeTitle($request->tieude);
 
     if ($request->hasfile('hinhanh')){
 
@@ -276,7 +276,7 @@ class AdminController extends Controller
 
     $sanpham->tieude = $request->tieude;
 
-    $sanpham->lienket = $request->lienket;
+    $sanpham->lienket = changeTitle($request->tieude);
 
     if ($request->hasfile('hinhanh')){
 
