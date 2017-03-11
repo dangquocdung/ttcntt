@@ -126,7 +126,7 @@
         position: absolute;
         bottom: 0;
         background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
-        height: 70px;
+        height: 60px;
         width: 200px;
         -webkit-transition: all 500ms ease 0s;
          -o-transition: all 500ms ease 0s;
@@ -135,7 +135,7 @@
 
       &:hover {
         .content_news {
-            height:70%;
+            height:60%;
         }
 
       }
@@ -273,4 +273,30 @@
             -ms-transition: 1s;
         }
     }
+}
+
+
+
+
+
+
+.title-bar{
+  background: url(../img/showcase.jpg) no-repeat 0 -300px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid $main-color;
+}
+
+.main{
+  margin-top:30px;
+}
+
+footer{
+  padding:30px 0;
+  background: darken($main-color, 10%);
+  color: set-text-color($main-color);
+}
+
+.biendao{
+  text-align: center;
+  margin-bottom: 20px;
 }
