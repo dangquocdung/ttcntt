@@ -10,6 +10,17 @@
     <a href="/adminstrap/van-ban" class="bg-info list-group-item1"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Văn bản <span class="badge">{{$cv1}}</span></a>
   </div>
 
+  @if (Auth::user()->quyen == 5 )
+  <div class="list-group">
+    <a href="adminstrap" class="list-group-item active main-color-bg">
+      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Thiết lập hệ thống
+    </a>
+    <a href="/adminstrap/hinh-slide" class="bg-danger list-group-item1"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Hình Slide <span class="badge">{{$lct1}}</span></a>
+    <a href="/adminstrap/san-pham" class="bg-success list-group-item1"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Sản phầm <span class="badge">{{$tt1}}</span></a>
+    <a href="/adminstrap/doi-tac" class="bg-info list-group-item1"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Đối tác <span class="badge">{{$cv1}}</span></a>
+  </div>
+  @endif
+
   <div class="well">
     <h4>Tỉ lệ đầu việc</h4>
     <div class="progress">

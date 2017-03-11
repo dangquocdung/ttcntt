@@ -280,7 +280,9 @@
 
     <footer>
       <div class="container">
-          <p>Copyright <a href="http://dangquocdung.com">Đặng Quốc Dũng</a> © 2017. All rights reserved.</p>
+          <p>Chịu trách nhiệm nội dung: {{ config('app.CIO', 'Dang Quoc Dung') }} - Giám Đốc {{ config('app.name', 'Dang Quoc Dung') }}</p>
+          <p>&copy;2017 Bản quyền nội dung thuộc {{ config('app.name', 'Dang Quoc Dung') }} | Thiết kế và phát triển: <a href="http://dangquocdung.com" target="_blank">Đặng Quốc Dũng</a> - P.Giám Đốc {{ config('app.name', 'Dang Quoc Dung') }}</p>
+          <p><a href="#">Điều khoản sử dụng thông tin</a> | <a href="#">Chính sách bảo mật</a></p>
       </div>
     </footer>
 

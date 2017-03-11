@@ -18,6 +18,8 @@ use App\PhongBan;
 use App\ChucVu;
 use App\Level;
 
+use App\SanPham;
+
 class BackController extends Controller
 {
     /**
@@ -335,6 +337,8 @@ class BackController extends Controller
       return view('adminstrap.vanban',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'vanban'=>$vanban ]);
     }
 
+
+
     public function postLichCongTacTimKiem(Request $request)
     {
       $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
@@ -380,147 +384,6 @@ class BackController extends Controller
       return view('adminstrap.vanban',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'vanban'=>$vanban ]);
     }
 
-
-    public function getLichCongTacAll()
-    {
-      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
-
-      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
-
-      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
-
-      $lichcongtac = LichCongTac::orderby('id','desc')->get();
-
-      return view('adminstrap.lichcongtac-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'lichcongtac'=>$lichcongtac ]);
-    }
-
-    public function getTinTucAll()
-    {
-      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
-
-      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
-
-      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
-
-      $tintuc = TinTuc::orderby('id','desc')->get();
-
-      return view('adminstrap.tintuc-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'tintuc'=>$tintuc ]);
-    }
-
-    public function getVanBanAll()
-    {
-      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
-
-      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
-
-      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
-
-      $vanban = CongVan::orderby('id','desc')->get();
-
-      return view('adminstrap.vanban-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'vanban'=>$vanban ]);
-    }
-
-
-    public function postLichCongTacAllTimKiem(Request $request){
-
-      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
-
-      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
-
-      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
-
-      $noidung = $request->timkiem;
-
-      $lichcongtac = LichCongTac::where('noidung','like',"%$noidung%")->orderby('id','desc')->get();
-
-      return view('adminstrap.lichcongtac-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'lichcongtac'=>$lichcongtac]);
-
-    }
-
-    public function postTinTucAllTimKiem(Request $request){
-
-      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
-
-      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
-
-      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
-
-      $noidung = $request->timkiem;
-
-      $tintuc = TinTuc::where('noidung','like',"%$noidung%")->orderby('id','desc')->get();
-
-      return view('adminstrap.tintuc-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'tintuc'=>$tintuc]);
-
-    }
-
-    public function postVanBanAllTimKiem(Request $request){
-
-      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
-
-      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
-
-      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
-
-      $noidung = $request->timkiem;
-
-      $vanban = CongVan::where('tieude','like',"%$noidung%")->orwhere('socv','like',"%$noidung%")->orderby('id','desc')->get();
-
-      return view('adminstrap.vanban-all',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'vanban'=>$vanban]);
-
-    }
-
-
-    public function getUserAll()
-    {
-
-      return view('adminstrap.user-all');
-    }
-
-
-    public function putEditUser(Request $request, $id)
-    {
-        $usr = User::find($id);
-
-        $usr->name = $request->hovaten;
-        $usr->dienthoai = $request->dienthoai;
-        $usr->didong = $request->didong;
-        $usr->phongban_id = $request->phongban;
-        $usr->chucvu_id = $request->chucvu;
-        $usr->quyen = $request->level;
-
-        if ($request->hasfile('hinhanh')){
-
-          $file = $request->file('hinhanh');
-
-          $name = $file->getClientOriginalName();
-
-          $Hinh = str_random(4)."_".$name;
-
-          while (file_exists("upload/team/".$Hinh)){
-            $Hinh = str_random(4)."_name";
-          }
-
-          $file->move("upload/team",$Hinh);
-
-          $usr->tenhinh = $Hinh;
-
-        }
-        else{
-          $usr->tenhinh = 'man1.jpg';
-
-        }
-
-        $usr->save();
-        return redirect('adminstrap/user-all');
-    }
-
-
-    public function deleteUser($id)
-    {
-        $usr = User::find($id);
-        $usr->delete();
-        return redirect('adminstrap/user-all');
-    }
 
 
 }

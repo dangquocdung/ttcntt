@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,26 +67,39 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'userLogin'],function(){
   Route::get('/xoa-van-ban/{id}', 'BackController@getXoaCongVan');
   Route::put('/sua-van-ban/{id}', 'BackController@putSuaCongVan');
 
-  Route::get('/lich-cong-tac-all', 'BackController@getLichCongTacAll');
-  Route::get('/tin-tuc-all', 'BackController@getTinTucAll');
-  Route::get('/van-ban-all', 'BackController@getVanBanAll');
 
-  Route::post('/lich-cong-tac-all/tim-kiem', 'BackController@postLichCongTacAllTimKiem');
-  Route::post('/tin-tuc-all/tim-kiem', 'BackController@postTinTucAllTimKiem');
-  Route::post('/van-ban-all/tim-kiem', 'BackController@postVanBanAllTimKiem');
-
-  Route::post('/lich-cong-tac/tim-kiem', 'BackController@postLichCongTacTimKiem');
-  Route::post('/tin-tuc/tim-kiem', 'BackController@postTinTucTimKiem');
-  Route::post('/van-ban/tim-kiem', 'BackController@postVanBanTimKiem');
 
 
 });
 
 Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
 
-  Route::get('/user-all', 'BackController@getUserAll');
-  Route::put('/user-all/edit/{id}', 'BackController@putEditUser');
-  Route::delete('/user-all/delete/{id}', 'BackController@deleteUser');
+  Route::get('/san-pham', 'AdminController@getSanPham');
+  Route::put('/put-san-pham/{id}', 'AdminController@putSanPham');
+  Route::delete('/delete-san-pham/{id}', 'AdminController@deleteSanPham');
+  Route::post('/them-san-pham', 'AdminController@themSanPham');
+
+  Route::get('/hinh-slide', 'AdminController@getHinhSlide');
+  Route::put('/put-hinh-slide/{id}', 'AdminController@putHinhSlide');
+  Route::delete('/delete-hinh-slide/{id}', 'AdminController@deleteHinhSlide');
+  Route::post('/them-hinh-slide', 'AdminController@themHinhSlide');
+
+
+  Route::get('/user-all', 'AdminController@getUserAll');
+  Route::put('/user-all/edit/{id}', 'AdminController@putEditUser');
+  Route::delete('/user-all/delete/{id}', 'AdminController@deleteUser');
+
+  Route::get('/lich-cong-tac-all', 'AdminController@getLichCongTacAll');
+  Route::get('/tin-tuc-all', 'AdminController@getTinTucAll');
+  Route::get('/van-ban-all', 'AdminController@getVanBanAll');
+
+  Route::post('/lich-cong-tac-all/tim-kiem', 'AdminController@postLichCongTacAllTimKiem');
+  Route::post('/tin-tuc-all/tim-kiem', 'AdminController@postTinTucAllTimKiem');
+  Route::post('/van-ban-all/tim-kiem', 'AdminController@postVanBanAllTimKiem');
+
+  Route::post('/lich-cong-tac/tim-kiem', 'AdminController@postLichCongTacTimKiem');
+  Route::post('/tin-tuc/tim-kiem', 'AdminController@postTinTucTimKiem');
+  Route::post('/van-ban/tim-kiem', 'AdminController@postVanBanTimKiem');
 
 });
 

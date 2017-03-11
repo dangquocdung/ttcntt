@@ -11,7 +11,8 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php $i=0 ?>
-    @foreach ($dichvu as $dv)
+    @foreach ($sanpham as $sp)
+    @if ($sp->loaihinh == 1)
       <li data-target="#carousel-example-generic" data-slide-to="{{ $i }}"
         @if ($i == 0)
           class="active"
@@ -20,23 +21,24 @@
         @endif
         ></li>
       <?php $i++ ?>
+    @endif
     @endforeach
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <?php $i=0 ?>
-    @foreach ($dichvu as $dv)
+    @foreach ($sanpham as $sp)
+    @if ($sp->loaihinh == 1)
       @if ($i == 0)
         <div class="item active">
       @else
         <div class="item">
       @endif
-          <img src="/img/{{$dv->hinh}}.jpg" alt="">
-
-
+          <img src="./upload/banner/{{ $sp->hinhanh }}" alt="">
         </div>
       <?php $i++ ?>
+    @endif
     @endforeach
   </div>
   <!-- Controls -->
@@ -57,10 +59,12 @@
       <div id="owl-sanpham" class="owl-carousel owl-theme">
 
         @foreach ($sanpham as $sp)
+        @if ($sp->loaihinh == 2)
           <div class="item">
-            <a href="{{$sp->lienket}}" target="_blank"><img src="upload/banner/{{$sp->hinhanh}}" alt=""></a>
+            <a href="{{$sp->lienket}}" target="_blank"><img src="./upload/banner/{{$sp->hinhanh}}" alt=""></a>
 
           </div>
+        @endif
         @endforeach
 
       </div>
