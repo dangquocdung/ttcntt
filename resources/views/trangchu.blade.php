@@ -199,11 +199,11 @@
   <div class="container">
     <div class="row">
       <h2>TẦM NHÌN, MỤC TIÊU</h2>
-      <p>Nhiệm vụ trọng tâm HTICT là triển khai các dự án, hạng mục trọng điểm về CNTT của tỉnh do Sở TT-TT giao.</p>
-      <p>HTICT - Làm đầu mối triển khai ứng dụng CNTT cho các Sở, Ban, Ngành, Huyện, Thị trên địa bàn tỉnh.</p>
-      <p>HTICT - Hỗ trợ cho các doanh nghiệp trong và ngoài tỉnh triển khai ứng dụng CNTT.</p>
-      <p>HTICT - Luôn là đơn vị tiên phong trong việc áp dụng công nghệ mới trong triển khai các ứng dụng công nghệ thông tin, chính sách nhân sự mới, hiện đại và tiên tiến.</p>
-      <p>HTICT cam kết mang đến những sản phẩm và dịch vụ hoàn hảo nhất, xây dựng niềm tin và sự bền vững giữa khách hàng và chuyên viên tư vấn bởi phong cách làm việc tận tụy, chuyên nghiệp và sáng tạo.</p>
+      <p>TT CNTT Hà Tĩnh có nhiệm vụ trọng tâmlà triển khai các dự án, hạng mục trọng điểm về CNTT của tỉnh do Sở TT-TT giao.</p>
+      <p>1. Làm đầu mối triển khai ứng dụng CNTT cho các Sở, Ban, Ngành, Huyện, Thị, Phường, Xã trên địa bàn tỉnh.</p>
+      <p>2. Hỗ trợ cho các doanh nghiệp trong và ngoài tỉnh triển khai ứng dụng CNTT.</p>
+      <p>3. Luôn là đơn vị tiên phong trong việc áp dụng công nghệ mới trong triển khai các ứng dụng công nghệ thông tin, chính sách nhân sự mới, hiện đại và tiên tiến.</p>
+      <p>4. Cam kết mang đến những sản phẩm và dịch vụ hoàn hảo nhất, xây dựng niềm tin và sự bền vững giữa khách hàng và chuyên viên tư vấn bởi phong cách làm việc tận tụy, chuyên nghiệp và sáng tạo.</p>
     </div>
   </div>
 </div>
