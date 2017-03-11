@@ -305,12 +305,12 @@
                   items:2,
                   nav:true
               },
-              600:{
+              767:{
                   items:4,
                   nav:false
               },
               1000:{
-                  items:6,
+                  items:5,
                   nav:true,
                   loop:false
               }
