@@ -59,7 +59,7 @@
         <h2>Bản tin công nghệ</h2>
       </div>
 
-      <div id="owl-demo" class="owl-carousel owl-theme">
+      <div id="owl-diembao" class="owl-carousel owl-theme">
 
         @foreach ($diembao as $db)
           <div class="item">
@@ -70,6 +70,13 @@
           </div>
         @endforeach
 
+      </div>
+
+
+      <div class="customNavigation">
+
+        <a id="play" class="btn btn-sm btn-success">Chạy</a>
+        <a id="stop" class="btn btn-sm btn-danger">Dừng</a>
       </div>
 
     </div>
@@ -185,6 +192,12 @@
           </div>
         @endif
         @endforeach
+      </div>
+      <br>
+      <div class="customNavigation">
+
+        <a id="playsp" class="btn btn-sm btn-success">Chạy</a>
+        <a id="stopsp" class="btn btn-sm btn-danger">Dừng</a>
       </div>
 
     </div>
