@@ -281,6 +281,8 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/owl.autoplay.js"></script>
+
     <script type="text/javascript" src="js/jquery.eeyellow.Timeline.js"></script>
     <script type="text/javascript" src="/js/jquery.fancybox.pack.js?v=2.1.6"></script>
 
@@ -296,9 +298,13 @@
         $(".fancybox").fancybox();
 
         //owl.carousel
+
         $('.owl-carousel').owlCarousel({
           loop:true,
           margin:10,
+          autoplay:true,
+          autoplayTimeout:1000,
+          autoplayHoverPause:true,
           responsiveClass:true,
           responsive:{
               0:{
@@ -315,6 +321,26 @@
                   loop:false
               }
           }
+
+
+      })
+
+      var owl = $("#owl-diembao");
+
+      $('#play').on('click',function(){
+          owl.trigger('play.owl.autoplay',[1000])
+      })
+      $('#stop').on('click',function(){
+          owl.trigger('stop.owl.autoplay')
+      })
+
+      var owl = $("#owl-sanpham");
+
+      $('#playsp').on('click',function(){
+          owl.trigger('play.owl.autoplay',[1000])
+      })
+      $('#stopsp').on('click',function(){
+          owl.trigger('stop.owl.autoplay')
       })
 
 
