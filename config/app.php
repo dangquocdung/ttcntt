@@ -12,7 +12,8 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Hà Tĩnh ITC',
+    'name' => 'Trung tâm CNTT-TT Hà Tĩnh',
+    'CIO'  => 'Dương Văn Tuấn',
 
     /*
     |--------------------------------------------------------------------------
