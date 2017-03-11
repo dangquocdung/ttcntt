@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="/css/owl.theme.css">
     <link rel="stylesheet" href="/css/owl.transitions.css">
     <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/my.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+
 
     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
@@ -36,21 +36,20 @@
   <body>
     <nav class="navbar navbar-default">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <a class="navbar-brand" style="float:none" href="/">
-
-            <img src="upload/logo.png" alt="HaTinhITC">
-
-          </a>
-
+        <div class="row">
+          <div class="navbar-header">
+            <div class="col-xs-10 banner-brand">
+              <a href="/"><img src="upload/ttcntthatinh.png" alt="{{ config('app.name', 'Dang Quoc Dung') }}" width="100%"></a>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
         </div>
+
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <!-- <li><a href="/">Trang chủ</a></li> -->
@@ -69,7 +68,6 @@
                   <li><a href="/doi-ngu"> Đội ngũ quản lý</a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                     Dịch vụ <span class="caret"></span>
@@ -85,7 +83,6 @@
                   <li><a href="/dao-tao"> DV Đào tạo </a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                     Tra cứu <span class="caret"></span>
@@ -97,7 +94,6 @@
                   <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                     Tiện ích <span class="caret"></span>
@@ -107,9 +103,6 @@
                   <li><a href="/chuyen-so">Chuyển mã vùng </a></li>
                 </ul>
             </li>
-
-
-
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                     Tin Tức <span class="caret"></span>
@@ -145,7 +138,9 @@
                 </ul>
             </li>
 
+          </ul>
 
+          <ul class="nav navbar-nav navbar-right">
           <!-- </ul>
           <ul class="nav navbar-nav navbar-right"> -->
             <!-- <li><a href="https://www.facebook.com/hatinhitc/"><i class="fa fa-facebook"></i></a></li> -->
@@ -195,6 +190,7 @@
               </li>
             @endif
           </ul>
+
         </div><!--/.nav-collapse -->
       </div>
     </nav>

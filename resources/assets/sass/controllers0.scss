@@ -1,0 +1,279 @@
+
+
+.navbar-brand{
+  font-size: 30px;
+  font-weight: bold;
+  color: #f70606 !important;
+
+}
+
+h3{
+  color: red;
+}
+
+.showcase{
+  padding: 0 !important;
+}
+
+
+.showcase h3{
+  color: red;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.showcase p{
+  color: blue;
+  font-size: 24px;
+}
+
+.sanpham_area {
+    background: #e6ebf1;
+    padding-bottom: 30px;
+}
+
+
+
+.panel-body {
+
+    text-align: justify;
+}
+
+.events-desc {
+  text-align: justify;
+}
+
+.events-header{
+  margin-bottom: 5px;
+}
+
+.section-a .fa {
+    border-radius: 5px;
+}
+
+.section-a .block-dichvu {
+  border-radius: 5px;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-toggle {
+
+    float: left;
+    margin-left: 15px;
+  }
+
+.chitiettin img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 10px;
+
+}
+
+.chitiettin{
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.chitiettin h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sua-xoa-item{
+  float: right;
+  margin-right: 10px;
+}
+
+
+#owl-demo .item2{
+  text-align: center;
+  margin: 2%;
+  position: relative;
+  overflow: hidden;
+}
+
+#owl-demo .item2 img{
+
+  display: block;
+  width: 200px;
+  height: 150px;
+  float: none;
+
+
+}
+
+#owl-demo .item2 .content_news{
+  position: absolute;
+  bottom: 0;
+  background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
+  height: 50px;
+  width: 200px;
+
+  -webkit-transition: all 500ms ease 0s;
+   -o-transition: all 500ms ease 0s;
+   transition: all 500ms ease 0s;
+}
+
+#owl-demo .item2:hover .content_news {
+    height:50%;
+}
+
+.btn-link {
+    width: 100%;
+    text-align: right;
+  }
+
+.carousel-caption {
+  top: 0px !important;
+}
+
+.navbar-brand > img {
+    display: inline !important;
+}
+
+.footer_area {
+    background: #58cdec none repeat scroll 0 0;
+    padding: 20px 0 40px;
+}
+
+.title-footer {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: red;
+}
+
+.single_address {
+    margin-top: 15px;
+}
+.fix {
+    overflow: hidden;
+}
+
+.address_icon {
+    float: left;
+    margin-right: 15px;
+}
+
+#googleMap {
+    height: 290px;
+    width: 100%;
+    margin: 15px 0px 0px;
+}
+
+.contract_us {
+    margin-top: 15px;
+}
+
+.address_icon span {
+    border: 1px solid #2abfe7;
+    width: 70px;
+    height: 70px;
+    background: #86dbf1;
+    color: white;
+    display: block;
+    line-height: 70px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.address_text p {
+    color: white;
+    font-size: 16px;
+    padding: 12px 0 0;
+}
+
+.address_text p span {
+    color: red;
+}
+
+
+.input_change {
+    margin-bottom: 8px;
+}
+.inputt {
+    position: relative;
+}
+.message_icon {
+    border-right: 1px solid #2abfe7;
+    color: #fff;
+    font-size: 19px;
+    height: 46px;
+    left: 0;
+    line-height: 30px;
+    padding: 6px 20px;
+    position: absolute;
+    top: 0;
+    width: 56px;
+}
+
+#name_mes, #email_mes{
+    background: #86dbf1 none repeat scroll 0 0;
+    border: 1px solid #2abfe7;
+    border-radius: 0;
+    color: #fff;
+    height: 46px;
+    padding-left: 67px;
+}
+
+#message_mes {
+    background: #86dbf1 none repeat scroll 0 0;
+    border: 1px solid #2abfe7;
+    border-radius: 0;
+    color: #fff;
+    height: 120px;
+    padding-left: 65px;
+}
+
+.sunmite_button {
+    margin-top: 20px;
+}
+
+.sunmite_button button {
+    padding: 10px 20px;
+    border: 1px solid white ;
+    text-transform: uppercase;
+    color: white;
+    background: transparent;
+    font-weight: bold;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+}
+
+#owl-sanpham .item{
+  margin: 0 10px;
+  margin-top: 40px;
+  background: none;
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+#owl-sanpham .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+  float: none;
+}
+
+
+
+#owl-sanpham .item img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#owl-sanpham .item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
