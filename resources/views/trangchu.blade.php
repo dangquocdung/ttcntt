@@ -52,9 +52,12 @@
 </div>
 
 
-<div class="sanpham_area">
+<div class="section-a">
   <div class="container">
     <div class="row">
+      <div class="title">
+        <h2>Sản phẩm</h2>
+      </div>
 
       <div id="owl-sanpham" class="owl-carousel owl-theme">
 
@@ -76,32 +79,12 @@
 
 </div>
 
-<div class="section-a">
-  <div class="container">
-    <div class="row">
-      <div class="title">
-        <h2>Dịch vụ của chúng tôi</h2>
-      </div>
-
-      @foreach ($dichvu2 as $dv)
-        <div class="col-md-3">
-          <i class="fa {{$dv->fa}}"></i>
-
-          <div class="block-dichvu">
-
-            <h3>{{$dv->ten}}</h3>
-            <p>{!!$dv->diengiai!!}</p>
-          </div>
-        </div>
-      @endforeach
-
-    </div>
-  </div>
-</div>
-
 <div class="section-b">
   <div class="container">
     <div class="row">
+      <div class="title">
+        <h2>Dịch vụ</h2>
+      </div>
       <div class="col-md-6">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
           <div class="panel panel-default">
@@ -186,11 +169,15 @@
   </div>
 </div>
 
-<div class="section-d">
+<div class="section-c">
   <div class="container">
     <div class="row">
 
-      <h2>Tin Tức</h2>
+      <div class="title">
+        <h2>Tin Tức</h2>
+      </div>
+
+
       <div id="owl-demo" class="owl-carousel owl-theme">
         @foreach ($diembao as $db)
           <div class="item2">
@@ -216,7 +203,7 @@
 </div>
 
 
-<div class="section-e">
+<div class="section-d">
   <div class="container">
     <div class="row">
       <h2>TẦM NHÌN, MỤC TIÊU</h2>
