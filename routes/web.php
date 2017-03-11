@@ -76,12 +76,12 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){
 
   Route::get('/san-pham', 'AdminController@getSanPham');
   Route::put('/put-san-pham/{id}', 'AdminController@putSanPham');
-  Route::delete('/delete-san-pham/{id}', 'AdminController@deleteSanPham');
+  Route::get('/delete-san-pham/{id}', 'AdminController@deleteSanPham');
   Route::post('/them-san-pham', 'AdminController@themSanPham');
 
   Route::get('/hinh-slide', 'AdminController@getHinhSlide');
   Route::put('/put-hinh-slide/{id}', 'AdminController@putHinhSlide');
-  Route::delete('/delete-hinh-slide/{id}', 'AdminController@deleteHinhSlide');
+  Route::get('/delete-hinh-slide/{id}', 'AdminController@deleteHinhSlide');
   Route::post('/them-hinh-slide', 'AdminController@themHinhSlide');
 
 
