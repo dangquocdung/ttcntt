@@ -10839,14 +10839,14 @@ button.close {
   position: absolute;
   bottom: 0;
   background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
-  height: 70px;
+  height: 60px;
   width: 200px;
   -webkit-transition: all 500ms ease 0s;
   transition: all 500ms ease 0s;
 }
 
 .section-c #owl-demo .item2:hover .content_news {
-  height: 70%;
+  height: 60%;
 }
 
 .section-d {
@@ -10977,6 +10977,27 @@ button.close {
   -moz-transition: 1s;
   -o-transition: 1s;
   -ms-transition: 1s;
+}
+
+.title-bar {
+  background: url(../img/showcase.jpg) no-repeat 0 -300px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #58cdec;
+}
+
+.main {
+  margin-top: 30px;
+}
+
+footer {
+  padding: 30px 0;
+  background: #2abfe7;
+  color: #000000;
+}
+
+.biendao {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 
