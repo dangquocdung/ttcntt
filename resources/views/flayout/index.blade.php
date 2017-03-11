@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
     <link rel="stylesheet" href="./assets/css/app.css">
 
-
     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
 
@@ -278,12 +277,12 @@
       </div>
     </footer>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.eeyellow.Timeline.js"></script>
-    <script type="text/javascript" src="/js/jquery.fancybox.pack.js?v=2.1.6"></script>
 
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/jquery.eeyellow.Timeline.js"></script>
+    <script type="text/javascript" src="/js/jquery.fancybox.pack.js?v=2.1.6"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -297,31 +296,28 @@
         $(".fancybox").fancybox();
 
         //owl.carousel
+        $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  items:2,
+                  nav:true
+              },
+              600:{
+                  items:4,
+                  nav:false
+              },
+              1000:{
+                  items:6,
+                  nav:true,
+                  loop:false
+              }
+          }
+      })
 
-        var owl = $(".owl-carousel");
 
-        owl.owlCarousel({
-            items : 5, //10 items above 1000px browser width
-            itemsDesktop : [1000,5], //5 items between 1000px and 901px
-            itemsDesktopSmall : [900,3], // betweem 900px and 601px
-            itemsTablet: [600,2], //2 items between 600 and 0
-            itemsMobile : false,
-            autoPlay: true
-        });
-
-        // Custom Navigation Events
-        $(".next").click(function(){
-          owl.trigger('owl.next');
-        })
-        $(".prev").click(function(){
-          owl.trigger('owl.prev');
-        })
-        $(".play").click(function(){
-          owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-        })
-        $(".stop").click(function(){
-          owl.trigger('owl.stop');
-        })
       });
 
     </script>

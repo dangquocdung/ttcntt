@@ -53,29 +53,66 @@
 
 <section class="section-a">
 
-  <div class="container">
     <div class="row">
       <div class="title">
         <h2>Bản tin công nghệ</h2>
       </div>
 
-      <div id="owl-demo" class="owl-carousel owl-theme">
+      <div class="large-12 columns">
 
-        @foreach ($diembao as $db)
-          <div class="item">
-            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
-            <div class="content_news">
-              <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
+        <div id="owl-demo" class="owl-carousel owl-theme">
+
+          @foreach ($diembao as $db)
+            <div class="item2">
+              <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+              <div class="content_news">
+                <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
+              </div>
             </div>
-          </div>
-        @endforeach
+          @endforeach
 
+        </div>
+
+        <div class="customNavigation">
+          <a class="btn prev">Trước</a>
+          <a class="btn next">Sau</a>
+          <a class="btn play">Tự động</a>
+          <a class="btn stop">Dừng</a>
+        </div>
       </div>
 
-    </div>
 
   </div>
 
+  <script>
+    $(document).ready(function() {
+      var owl = $(".owl-carousel");
+
+      owl.owlCarousel({
+          items : 5, //10 items above 1000px browser width
+          itemsDesktop : [1000,5], //5 items between 1000px and 901px
+          itemsDesktopSmall : [900,3], // betweem 900px and 601px
+          itemsTablet: [600,2], //2 items between 600 and 0
+          itemsMobile : false,
+          autoPlay: true
+      });
+
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+    })
+
+  </script>
 
 </section>
 
@@ -177,7 +214,7 @@
       <div class="title">
         <h2>Sản phẩm</h2>
       </div>
-      <div id="owl-sanpham" class="owl-carousel owl-theme">
+      <div class="owl-carousel owl-theme">
         @foreach ($sanpham as $sp)
         @if ($sp->loaihinh == 2)
           <div class="item">
@@ -186,7 +223,25 @@
         @endif
         @endforeach
       </div>
-
+      <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+              });
+              $('.play').on('click', function() {
+                owl.trigger('play.owl.autoplay', [1000])
+              })
+              $('.stop').on('click', function() {
+                owl.trigger('stop.owl.autoplay')
+              })
+            })
+          </script>
     </div>
   </div>
 
