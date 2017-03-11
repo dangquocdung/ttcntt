@@ -77,11 +77,6 @@
                     </div>
 
                     <div class="form-group">
-                      <label>Liên kết</label>
-                      <input type="text" class="form-control" name="lienket" value="{{$sp->lienket}}" required=""  />
-                    </div>
-
-                    <div class="form-group">
                       <label>Hình ảnh</label>
                         <input type="file" name="hinhanh"/>
                     </div>
@@ -114,11 +109,6 @@
                 <div class="form-group">
                   <label>Tên</label>
                   <input type="text" class="form-control" name="tieude" required="" autofocus="" />
-                </div>
-
-                <div class="form-group">
-                  <label>Liên kết</label>
-                  <input type="text" class="form-control" name="lienket" required=""  />
                 </div>
 
                 <div class="form-group">
