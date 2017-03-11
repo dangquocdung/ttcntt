@@ -11083,21 +11083,21 @@ p {
   color: #000000;
 }
 
-.section-a #owl-demo .item2 {
+.section-a #owl-demo .item {
   text-align: center;
   margin: 2%;
   position: relative;
   overflow: hidden;
 }
 
-.section-a #owl-demo .item2 img {
+.section-a #owl-demo .item img {
   display: block;
   width: 200px;
   height: 150px;
   float: none;
 }
 
-.section-a #owl-demo .item2 .content_news {
+.section-a #owl-demo .item .content_news {
   position: absolute;
   bottom: 0;
   background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
@@ -11107,7 +11107,7 @@ p {
   transition: all 500ms ease 0s;
 }
 
-.section-a #owl-demo .item2:hover .content_news {
+.section-a #owl-demo .item:hover .content_news {
   height: 60%;
 }
 
