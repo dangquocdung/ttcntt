@@ -273,7 +273,7 @@
       <div class="container">
           <p>Chịu trách nhiệm nội dung: {{ config('app.CIO', 'Dang Quoc Dung') }} - Giám Đốc {{ config('app.name', 'Dang Quoc Dung') }}</p>
           <p>&copy;2017 Bản quyền nội dung thuộc {{ config('app.name', 'Dang Quoc Dung') }} | Thiết kế và phát triển: <a href="http://dangquocdung.com" target="_blank">Đặng Quốc Dũng</a></p>
-          <p><a href="#">Điều khoản sử dụng thông tin</a> | <a href="#">Chính sách bảo mật</a> | Lượt truy cập: <img src="http://www.reliablecounter.com/count.php?page=itc.hatinh.gov.vn&digit=style/plain/6/&reloads=0" alt="" title="" border="0"></a></p>
+          <p><a href="#">Điều khoản sử dụng thông tin</a> | <a href="#">Chính sách bảo mật</a> | Lượt truy cập: <img src="http://www.reliablecounter.com/count.php?page=itc.hatinh.gov.vn&digit=style/plain/12/&reloads=0" alt="" title="" border="0"></a></p>
       </div>
     </footer>
 
