@@ -17,6 +17,8 @@ use App\DonVi;
 use App\PhongBan;
 use App\ChucVu;
 use App\Level;
+use App\ThongDiep;
+
 
 use App\SanPham;
 
@@ -66,6 +68,9 @@ class BackController extends Controller
 
         $vanbanall = CongVan::orderby('id','desc')->limit(5)->get();
         view()->share('vanbanall',$vanbanall);
+
+        $thongdiep = Level::orderby('id','desc')->get();
+        view()->share('thongdiep',$thongdiep);
 
 
     }
@@ -310,6 +315,19 @@ class BackController extends Controller
 
       return view('adminstrap.lichcongtac',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'lichcongtac'=>$lichcongtac ]);
     }
+
+    public function getThongDiep()
+    {
+      $lct1 = LichCongTac::where('user_id','=',Auth::user()->id)->count();
+
+      $tt1 = TinTuc::where('user_id','=',Auth::user()->id)->count();
+
+      $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
+
+
+      return view('adminstrap.thongdiep',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1]);
+    }
+
 
     public function getTinTuc()
     {

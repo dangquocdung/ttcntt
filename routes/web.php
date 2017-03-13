@@ -67,6 +67,9 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'userLogin'],function(){
   Route::get('/xoa-van-ban/{id}', 'BackController@getXoaCongVan');
   Route::put('/sua-van-ban/{id}', 'BackController@putSuaCongVan');
 
+  Route::get('/thong-diep', 'BackController@getThongDiep');
+
+
 
 
 
