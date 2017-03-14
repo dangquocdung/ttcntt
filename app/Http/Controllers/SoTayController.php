@@ -42,7 +42,7 @@ class SoTayController extends Controller
 
     $gc->tieude = $request->tieude;
     $gc->diadiem = $request->diadiem;
-    $gc->noidung = $request->noidung;
+    $gc->noidung = $request->addNoidung;
 
     if ($request->hasfile('tepdinhkem')){
 
@@ -78,7 +78,7 @@ class SoTayController extends Controller
 
       $gc->tieude = $request->tieude;
       $gc->diadiem = $request->diadiem;
-      $gc->noidung = $request->noidung;
+      $gc->noidung = $request->editNoidung;
 
       if ($request->hasfile('tepdinhkem')){
 
