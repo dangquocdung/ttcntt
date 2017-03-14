@@ -33,11 +33,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
     public function map()
     {
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
+
+
 
         //
     }
@@ -76,4 +79,5 @@ class RouteServiceProvider extends ServiceProvider
             require base_path('routes/api.php');
         });
     }
+
 }

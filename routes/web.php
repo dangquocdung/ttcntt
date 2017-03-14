@@ -69,10 +69,6 @@ Route::group(['prefix'=>'adminstrap','middleware'=>'userLogin'],function(){
 
   Route::get('/thong-diep', 'BackController@getThongDiep');
 
-
-
-
-
 });
 
 Route::group(['prefix'=>'adminstrap','middleware'=>'adminLogin'],function(){

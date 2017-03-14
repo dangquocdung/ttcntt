@@ -82,7 +82,7 @@
 
                       <div class="form-group">
                         <label>Nội dung</label>
-                        <textarea class="form-control" name="editNoidung" rows="5" required autofocus="">{!! $gc->noidung !!}</textarea>
+                        <textarea class="form-control" name="noidung" rows="5" required autofocus="">{!! $gc->noidung !!}</textarea>
                       </div>
 
                       <div class="form-group">

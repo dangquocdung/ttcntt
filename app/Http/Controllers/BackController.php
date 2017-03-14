@@ -69,8 +69,7 @@ class BackController extends Controller
         $vanbanall = CongVan::orderby('id','desc')->limit(5)->get();
         view()->share('vanbanall',$vanbanall);
 
-        $thongdiep = Level::orderby('id','desc')->get();
-        view()->share('thongdiep',$thongdiep);
+
 
 
     }
@@ -324,8 +323,16 @@ class BackController extends Controller
 
       $cv1 = CongVan::where('user_id','=',Auth::user()->id)->count();
 
+      $thongdiep = \Response::json(CongVan::get());
 
-      return view('adminstrap.thongdiep',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1]);
+      // view()->share('thongdiep',$thongdiep);
+      //
+      //
+      // return view('adminstrap.thongdiep',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1]);
+
+      // return \Response::json(CongVan::get());
+
+      return \View::make('adminstrap.thongdiep',['lct1'=>$lct1, 'tt1'=>$tt1, 'cv1'=>$cv1, 'thongdiep'=>$thongdiep]);
     }
 
 

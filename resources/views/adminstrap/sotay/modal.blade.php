@@ -1,4 +1,4 @@
-<!-- Tao Cong viec -->
+<!-- Tao So Tay -->
 <div class="modal fade" id="addGhiChu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -23,7 +23,7 @@
 
             <div class="form-group">
               <label>Nội dung</label>
-              <textarea class="form-control" name="addNoidung" rows="5"required></textarea>
+              <textarea class="form-control" name="noidung" rows="5"required></textarea>
             </div>
 
             <div class="form-group">
