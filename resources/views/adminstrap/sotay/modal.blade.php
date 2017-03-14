@@ -23,7 +23,7 @@
 
             <div class="form-group">
               <label>Nội dung</label>
-              <textarea class="form-control" name="noidung" rows="5"required></textarea>
+              <textarea class="form-control" name="addNoidung" rows="5"required></textarea>
             </div>
 
             <div class="form-group">
@@ -45,5 +45,6 @@
 </div>
 
 <script>
-   CKEDITOR.replace( 'noidung' );
+   CKEDITOR.replace( 'addNoidung' );
+   CKEDITOR.replace( 'editNoidung' );
 </script>
