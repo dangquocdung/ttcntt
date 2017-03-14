@@ -45,6 +45,5 @@
 </div>
 
 <script>
-   CKEDITOR.replace( 'addNoidung' );
-   CKEDITOR.replace( 'editNoidung' );
+   CKEDITOR.replace( 'noidung' );
 </script>
