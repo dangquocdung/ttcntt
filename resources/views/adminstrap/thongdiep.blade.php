@@ -15,7 +15,7 @@
 <div class="col-md-9 col-lg-9">
 
 
-  <div class="panel panel-default">
+  <div class="panel panel-default" ng-app = "thongdiep" ng-controller = "thongdiepController">
     <div class="panel-heading main-color-bg">
       <h3 class="panel-title">Thông điệp khách hàng</h3>
     </div>
@@ -44,7 +44,7 @@
               <th>Thông điệp</th>
               <th></th>
             </tr>
-            @foreach($thongdiep as $td)
+            {{-- @foreach($thongdiep as $td)
               @if (strlen(trim($td->mes)) >0 )
               <tr>
                 <td>{{$td->id}}</td>
@@ -54,11 +54,41 @@
                 <td>{{$td->mes}}</td>
               </tr>
               @endif
-            @endforeach
+            @endforeach --}}
+
+            <tr ng-repeat="service in services">
+              {{-- <td>@{{service.name}}</td>
+              <td>@{{service.price}}</td>
+              <td>@{{service.active}}</td>
+              <td></td>
+              <td></td> --}}
+              <td>@{{service.id}}</td>
+              <td>@{{service.created_at}}</td>
+              <td>@{{service.ten}}</td>
+              <td>@{{service.email}}</td>
+              <td>@{{service.mes}}</td>
+            </tr>
+
           </table>
         </div>
       </div>
     </div>
+
+    <script>
+    
+       var appThongDiep = angular.module("thongdiep", []);
+
+
+       appThongDiep.controller('thongdiepController', function($scope) {
+
+         $scope.services = $thongdiep;
+
+
+       });
+
+
+    </script>
+
   </div>
 @endsection
 
