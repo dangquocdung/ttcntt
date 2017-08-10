@@ -8,6 +8,8 @@ $bootstrap-sass-asset-helper: false !default;
 $main-color: #58cdec;
 $icon-size: 60px;
 
+$menu-ngang-color: lighten($main-color, 10%) !default;
+
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -370,7 +372,8 @@ $navbar-height:                    70px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
-$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
+// $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
+$navbar-padding-vertical:          15px;
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;

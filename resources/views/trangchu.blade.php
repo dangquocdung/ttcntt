@@ -10,9 +10,12 @@
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <?php $i=0 ?>
-    @foreach ($sanpham as $sp)
-    @if ($sp->loaihinh == 1)
+    @php
+      $i=0;
+    @endphp
+
+    @foreach ($dichvu as $dv)
+
       <li data-target="#carousel-example-generic" data-slide-to="{{ $i }}"
         @if ($i == 0)
           class="active"
@@ -20,25 +23,30 @@
           class=""
         @endif
         ></li>
-      <?php $i++ ?>
-    @endif
+
+        @php
+          $i++;
+        @endphp
+
     @endforeach
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <?php $i=0 ?>
-    @foreach ($sanpham as $sp)
-    @if ($sp->loaihinh == 1)
+    @php
+      $i=0;
+    @endphp
+    @foreach ($dichvu as $dv)
       @if ($i == 0)
         <div class="item active">
       @else
         <div class="item">
       @endif
-          <img src="./upload/banner/{{ $sp->hinhanh }}" alt="">
+          <img src="./upload/banner/{{ $dv->hinh }}.jpg" alt="">
         </div>
-      <?php $i++ ?>
-    @endif
+        @php
+          $i++;
+        @endphp
     @endforeach
   </div>
   <!-- Controls -->
@@ -51,40 +59,28 @@
   </div>
 </div>
 
-<section class="section-a">
-
+<section class="section-c">
   <div class="container">
     <div class="row">
       <div class="title">
-        <h2>Bản tin công nghệ</h2>
+        <h2>Sản phẩm</h2>
       </div>
-
-      <div id="owl-diembao" class="owl-carousel owl-theme">
-
-        @foreach ($diembao as $db)
+      <div id="owl-sanpham" class="owl-carousel owl-theme">
+        @foreach ($sanpham as $sp)
           <div class="item">
-            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
-            <div class="content_news">
-              <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
-            </div>
+            <a href="{{$sp->lienket}}" target="_blank"><img src="./upload/banner/{{$sp->hinhanh}}" alt=""></a>
           </div>
         @endforeach
-
       </div>
-
-
+      <br>
       <div class="customNavigation">
-
-        <a id="play" class="btn btn-sm btn-success">Chạy</a>
-        <a id="stop" class="btn btn-sm btn-danger">Dừng</a>
+        <a id="playsp" class="btn btn-sm btn-success">Chạy</a>
+        <a id="stopsp" class="btn btn-sm btn-danger">Dừng</a>
       </div>
-
     </div>
-
   </div>
-
-
 </section>
+
 
 
 
@@ -178,30 +174,38 @@
   </div>
 </section>
 
-<section class="section-c">
+<section class="section-a">
+
   <div class="container">
     <div class="row">
       <div class="title">
-        <h2>Sản phẩm</h2>
+        <h2>Bản tin công nghệ</h2>
       </div>
-      <div id="owl-sanpham" class="owl-carousel owl-theme">
-        @foreach ($sanpham as $sp)
-        @if ($sp->loaihinh == 2)
+
+      <div id="owl-diembao" class="owl-carousel owl-theme">
+
+        @foreach ($diembao as $db)
           <div class="item">
-            <a href="{{$sp->lienket}}" target="_blank"><img src="./upload/banner/{{$sp->hinhanh}}" alt=""></a>
+            <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
+            <div class="content_news">
+              <a href="{{$db->link}}" target="_blank">{{$db->title}}</a>
+            </div>
           </div>
-        @endif
         @endforeach
+
       </div>
-      <br>
+
+
       <div class="customNavigation">
 
-        <a id="playsp" class="btn btn-sm btn-success">Chạy</a>
-        <a id="stopsp" class="btn btn-sm btn-danger">Dừng</a>
+        <a id="play" class="btn btn-sm btn-success">Chạy</a>
+        <a id="stop" class="btn btn-sm btn-danger">Dừng</a>
       </div>
 
     </div>
+
   </div>
+
 
 </section>
 

@@ -14,17 +14,17 @@ class DatabaseSeeder extends Seeder
     {
 
 
-        // $this->call(DichVuTableSeeder::class);
-        // $this->call(SanPhamTableSeeder::class);
-
+        $this->call(DichVuTableSeeder::class);
+        $this->call(SanPhamTableSeeder::class);
+        //
         // $this->call(DonViTableSeeder::class);
-        $this->call(PhongBanTableSeeder::class);
+        // $this->call(PhongBanTableSeeder::class);
         // $this->call(LoaiVBTableSeeder::class);
         // $this->call(ChucVuTableSeeder::class);
         //
         // $this->call(TrangThaiTableSeeder::class);
         // $this->call(LevelTableSeeder::class);
-
+        //
         // $this->call(UsersTableSeeder::class);
         // $this->call(TinTucTableSeeder::class);
         // $this->call(LichCongTacTableSeeder::class);
@@ -79,8 +79,6 @@ class LichCongTacTableSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-
-
         DB::table('lichcongtac')->delete();
         DB::table('lichcongtac')->insert([
             ['user_id' => '3','ngaythang'=>date("2017-1-1"), 'noidung' => 'noidung', 'diadiem'=>'diadiem', 'batdau'=>'8:00:00', 'ketthuc'=>'10:30:15', 'ghichu'=>'ghichu'],
@@ -101,8 +99,6 @@ class CongVanTableSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-
-
         DB::table('congvan')->delete();
         DB::table('congvan')->insert([
             ['user_id' => '3','ngaydang'=>date("2017-1-1"), 'giodang'=>'8:00:00', 'socv'=>'123/CV', 'tieude'=>'Tieu de van ban', 'vanban'=>'Noidung cong van', 'ghichu'=>'ghichu']

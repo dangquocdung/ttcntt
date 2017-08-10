@@ -1,5 +1,11 @@
 @media screen and (max-width: 767px) {
 
+  .navbar-header{
+    .banner-brand{
+      height: 50px !important;
+    }
+  }
+
   footer{
     padding-bottom: 40px;
   }

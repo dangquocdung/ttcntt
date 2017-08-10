@@ -34,7 +34,7 @@
         <div class="row">
           <div class="navbar-header">
             <div class="col-xs-10 banner-brand">
-              <a href="/"><img src="upload/ttcntthatinh.png" alt="{{ config('app.name', 'Dang Quoc Dung') }}" width="100%"></a>
+              <a href="/"><img src="upload/banner/ttcntt.png" alt="{{ config('app.name', 'Dang Quoc Dung') }}" width="100%"></a>
             </div>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -44,150 +44,160 @@
             </button>
           </div>
         </div>
+      </div>
 
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <!-- <li><a href="/">Trang chủ</a></li> -->
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    Giới thiệu <span class="caret"></span>
-                </a>
+      <div id="menu-ngang">
+        <div class="container">
 
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/gioi-thieu"> Tổng quan</a></li>
-                  <li class="divider"></li>
-                  <li><a href="/nang-luc"> Năng lực</a></li>
-                  <li class="divider"></li>
-                  <li><a href="/san-pham"> Sản phẩm</a></li>
-                  <li class="divider"></li>
-                  <li><a href="/doi-ngu"> Đội ngũ quản lý</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    Dịch vụ <span class="caret"></span>
-                </a>
-
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/dich-vu"> Giới thiệu </a></li>
-                  <li class="divider"></li>
-                  <li><a href="/phan-mem"> DV Phần mềm / Software</a></li>
-                  <li class="divider"></li>
-                  <li><a href="/phan-cung"> DV Phần cứng / Hardware </a></li>
-                  <li class="divider"></li>
-                  <li><a href="/dao-tao"> DV Đào tạo </a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    Tra cứu <span class="caret"></span>
-                </a>
-
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
-                  <li class="divider"></li>
-                  <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    Tiện ích <span class="caret"></span>
-                </a>
-
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/chuyen-so">Chuyển mã vùng </a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    Tin Tức <span class="caret"></span>
-                </a>
-
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/tin-tuc"> Tin Nội bộ <span class="badge" style="float:right; background-color:orange !important;">{{$stt}}</span></a></li>
-                  <li class="divider"></li>
-                  <li><a href="/diem-bao/the-gioi-vi-tinh"> PC World VN</a></li>
-                  <li class="divider"></li>
-                  <li><a href="/diem-bao/ictnews/thoi-su"> ICTnews: Thời sự</a></li>
-                  <li><a href="/diem-bao/ictnews/vien-thong"> ICTnews: Viễn Thông</a></li>
-                  <li><a href="/diem-bao/ictnews/internet"> ICTnews: Internet</a></li>
-                  <li><a href="/diem-bao/ictnews/cntt"> ICTnews: Công nghệ Thông tin</a></li>
-                  <li><a href="/diem-bao/ictnews/kinh-doanh"> ICTnews: Kinh Doanh</a></li>
-                  <li><a href="/diem-bao/ictnews/the-gioi-so"> ICTnews: Thế giới số</a></li>
-                  <li><a href="/diem-bao/ictnews/khoi-nghiep"> ICTnews: Khởi nghiệp</a></li>
-                  <li><a href="/diem-bao/ictnews/cong-nghe-360"> ICTnews: Công nghệ 360</a></li>
-
-
-
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    Tuyển dụng <span class="caret"></span>
-                </a>
-
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/thong-diep"> Thông điệp </li>
-                  <li class="divider"></li>
-                  <li><a href="/vi-tri-tuyen-dung"> Vị trí cần tuyển</a></li>
-                </ul>
-            </li>
-
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-          <!-- </ul>
-          <ul class="nav navbar-nav navbar-right"> -->
-            <!-- <li><a href="https://www.facebook.com/hatinhitc/"><i class="fa fa-facebook"></i></a></li> -->
-            <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
-
-            @if (Auth::guest())
-
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <!-- <li><a href="/">Trang chủ</a></li> -->
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                      <i class="fa fa-user"></i> <span class="caret"></span>
+                      Giới thiệu <span class="caret"></span>
                   </a>
 
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="/login"><i class="fa fa-key" aria-hidden="true"></i> Đăng nhập</a></li>
+                    <li><a href="/gioi-thieu"> Tổng quan</a></li>
                     <li class="divider"></li>
-                    <li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký</a></li>
+                    <li><a href="/nang-luc"> Năng lực</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/san-pham"> Sản phẩm</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/doi-ngu"> Đội ngũ quản lý</a></li>
                   </ul>
               </li>
-
-            @else
               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i>  {{ Auth::user()->name }} <span class="caret"></span>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      Dịch vụ <span class="caret"></span>
                   </a>
 
                   <ul class="dropdown-menu" role="menu">
-                      <li><a href="/adminstrap">Trang Quản trị</a></li>
-
-                      <li class="divider"></li>
-
-                      <li><a href="/adminstrap/so-tay-ca-nhan">Sổ tay cá nhân</a></li>
-
-                      <li class="divider"></li>
-
-                      <li>
-                          <a href="{{ url('/logout') }}"
-                              onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">Đăng xuất
-                          </a>
-
-                          <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                              {{ csrf_field() }}
-                          </form>
-                      </li>
+                    <li><a href="/dich-vu"> Giới thiệu </a></li>
+                    <li class="divider"></li>
+                    <li><a href="/phan-mem"> DV Phần mềm / Software</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/phan-cung"> DV Phần cứng / Hardware </a></li>
+                    <li class="divider"></li>
+                    <li><a href="/dao-tao"> DV Đào tạo </a></li>
                   </ul>
               </li>
-            @endif
-          </ul>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      Tra cứu <span class="caret"></span>
+                  </a>
 
-        </div><!--/.nav-collapse -->
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="/lich-cong-tac">Lịch Công tác <span class="badge" style="background-color:orange !important;">{{$slct}}</span></a></li>
+                    <li class="divider"></li>
+                    <li><a href="/van-ban">Văn bản <span class="badge" style="background-color:orange !important;">{{$scv}}</span></a></li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      Tiện ích <span class="caret"></span>
+                  </a>
+
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="/chuyen-so">Chuyển mã vùng </a></li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      Tin Tức <span class="caret"></span>
+                  </a>
+
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="/tin-tuc"> Tin Nội bộ <span class="badge" style="float:right; background-color:orange !important;">{{$stt}}</span></a></li>
+                    <li class="divider"></li>
+                    <li><a href="/diem-bao/the-gioi-vi-tinh"> PC World VN</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/diem-bao/ictnews/thoi-su"> ICTnews: Thời sự</a></li>
+                    <li><a href="/diem-bao/ictnews/vien-thong"> ICTnews: Viễn Thông</a></li>
+                    <li><a href="/diem-bao/ictnews/internet"> ICTnews: Internet</a></li>
+                    <li><a href="/diem-bao/ictnews/cntt"> ICTnews: Công nghệ Thông tin</a></li>
+                    <li><a href="/diem-bao/ictnews/kinh-doanh"> ICTnews: Kinh Doanh</a></li>
+                    <li><a href="/diem-bao/ictnews/the-gioi-so"> ICTnews: Thế giới số</a></li>
+                    <li><a href="/diem-bao/ictnews/khoi-nghiep"> ICTnews: Khởi nghiệp</a></li>
+                    <li><a href="/diem-bao/ictnews/cong-nghe-360"> ICTnews: Công nghệ 360</a></li>
+
+
+
+                  </ul>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      Tuyển dụng <span class="caret"></span>
+                  </a>
+
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="/thong-diep"> Thông điệp </li>
+                    <li class="divider"></li>
+                    <li><a href="/vi-tri-tuyen-dung"> Vị trí cần tuyển</a></li>
+                  </ul>
+              </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+            <!-- </ul>
+            <ul class="nav navbar-nav navbar-right"> -->
+              <!-- <li><a href="https://www.facebook.com/hatinhitc/"><i class="fa fa-facebook"></i></a></li> -->
+              <!-- <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li> -->
+
+              @if (Auth::guest())
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <i class="fa fa-user"></i> <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="/login"><i class="fa fa-key" aria-hidden="true"></i> Đăng nhập</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký</a></li>
+                    </ul>
+                </li>
+
+              @else
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i>  {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/adminstrap">Trang Quản trị</a></li>
+
+                        <li class="divider"></li>
+
+                        <li><a href="/adminstrap/so-tay-ca-nhan">Sổ tay cá nhân</a></li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="{{ url('/logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">Đăng xuất
+                            </a>
+
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+              @endif
+            </ul>
+
+          </div><!--/.nav-collapse -->
+
+
+
+        </div>
+
       </div>
+
     </nav>
     @yield('content')
 

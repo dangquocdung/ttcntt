@@ -35,9 +35,9 @@ class FrontController extends Controller
 
     $dichvu = DichVu::orderby('id','asc')->get();
 
-    $dichvu2 = DichVu::orderby('id','asc')->limit(4)->offset(1)->get();
+    // $dichvu2 = DichVu::orderby('id','asc')->limit(4)->offset(1)->get();
 
-    $doingu = User::where('quyen','>','0')->where('phongban_id','<','7')->orderby('chucvu_id','asc')->get();
+    // $doingu = User::where('quyen','>','0')->where('phongban_id','<','7')->orderby('chucvu_id','asc')->get();
 
     $url = "http://www.pcworld.com.vn/articles.rss";
 
@@ -64,7 +64,7 @@ class FrontController extends Controller
     $sanpham = SanPham::orderby('id','asc')->get();
 
 
-    return view('trangchu',['dichvu'=>$dichvu,'dichvu2'=>$dichvu2, 'diembao'=>$diembao, 'sanpham'=>$sanpham]);
+    return view('trangchu',compact('dichvu','sanpham','diembao'));
   }
 
 

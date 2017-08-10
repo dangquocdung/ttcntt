@@ -1,10 +1,15 @@
+
+#menu-ngang{
+  background-color: $menu-ngang-color;
+}
+
 .navbar{
 
   margin-bottom:0;
 
   .navbar-header{
     .banner-brand{
-      padding-top: 10px;
+      height: 200px;
     }
   }
 
@@ -12,14 +17,24 @@
     li{
       a{
         color: set-text-color($main-color) !important;
+        text-transform: uppercase;
+        font-weight: bold;
 
         .fa{
           font-size:18px;
         }
+
       }
     }
   }
 }
+
+.navbar-default{
+  background: #58cdec url(../../img/background_banner.png) top left no-repeat;
+  background-size: 100% auto;
+}
+
+
 
 
 .showcase{
