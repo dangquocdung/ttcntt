@@ -1,11 +1,8 @@
 @extends('flayout.index')
-
 @section('title')
   <title>Trung tâm CNTT & TT tỉnh Hà Tĩnh</title>
 @endsection
-
 @section('content')
-
 <div class="showcase">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -13,9 +10,7 @@
     @php
       $i=0;
     @endphp
-
     @foreach ($dichvu as $dv)
-
       <li data-target="#carousel-example-generic" data-slide-to="{{ $i }}"
         @if ($i == 0)
           class="active"
@@ -23,14 +18,11 @@
           class=""
         @endif
         ></li>
-
         @php
           $i++;
         @endphp
-
     @endforeach
   </ol>
-
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     @php
@@ -58,7 +50,6 @@
   </a>
   </div>
 </div>
-
 <section class="section-c">
   <div class="container">
     <div class="row">
@@ -73,17 +64,9 @@
         @endforeach
       </div>
       <br>
-      <div class="customNavigation">
-        <a id="playsp" class="btn btn-sm btn-success">Chạy</a>
-        <a id="stopsp" class="btn btn-sm btn-danger">Dừng</a>
-      </div>
     </div>
   </div>
 </section>
-
-
-
-
 <section class="section-b">
   <div class="container">
     <div class="row">
@@ -97,9 +80,7 @@
               <h4 class="panel-title">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <i class="fa fa-plus" aria-hidden="true"></i>
-
                   Tư vấn, quản lý các dự án, hạng mục công việc về các lĩnh vực công nghệ thông tin, truyền thông, xuất bản và báo chí.
-
                 </a>
               </h4>
             </div>
@@ -164,8 +145,6 @@
             </div>
           </div>
         </div>
-
-
       </div>
       <div class="col-md-6">
         <img src="img/cpu.jpg">
@@ -173,17 +152,13 @@
     </div>
   </div>
 </section>
-
 <section class="section-a">
-
   <div class="container">
     <div class="row">
       <div class="title">
         <h2>Bản tin công nghệ</h2>
       </div>
-
-      <div id="owl-diembao" class="owl-carousel owl-theme">
-
+      <div id="owl-diembao" class="owl-carousel">
         @foreach ($diembao as $db)
           <div class="item">
             <a href="{{$db->link}}" target="_blank"><img src="{{$db->media}}" alt=""></a>
@@ -192,29 +167,60 @@
             </div>
           </div>
         @endforeach
-
       </div>
+      {{-- <div id="video_carousel" class="owl-carousel video-logo">
+        <div class="item text-center">
+          <a href="https://www.youtube.com/watch?v=hVdTQWASliE">
+            <img class="news-image" src="http://docs.ttdt.dsp.vn/images/images/TheoDongSuKien/50-nam-asean.png" width="100%">
+            <span class="icon-play-vid" style="top: 50%;left: 50%;margin-top: -15px;margin-left: -15px;"></span>
+          </a>
+        </div>
+        <div class="item text-center">
+          <a href="https://www.youtube.com/watch?v=hVdTQWASliE">
+            <img class="news-image" src="http://docs.ttdt.dsp.vn/images/images/TheoDongSuKien/50-nam-asean.png" width="100%">
+            <span class="icon-play-vid" style="top: 50%;left: 50%;margin-top: -15px;margin-left: -15px;"></span>
+          </a>
+        </div>
+        <div class="item text-center">
+          <a href="https://www.youtube.com/watch?v=hVdTQWASliE">
+            <img class="news-image" src="http://docs.ttdt.dsp.vn/images/images/TheoDongSuKien/50-nam-asean.png" width="100%">
+            <span class="icon-play-vid" style="top: 50%;left: 50%;margin-top: -15px;margin-left: -15px;"></span>
+          </a>
+        </div>
+        <div class="item text-center">
+          <a href="https://www.youtube.com/watch?v=hVdTQWASliE">
+            <img class="news-image" src="http://docs.ttdt.dsp.vn/images/images/TheoDongSuKien/50-nam-asean.png" width="100%">
+            <span class="icon-play-vid" style="top: 50%;left: 50%;margin-top: -15px;margin-left: -15px;"></span>
+          </a>
+        </div>
+        <div class="item text-center">
+          <a href="https://www.youtube.com/watch?v=hVdTQWASliE">
+            <img class="news-image" src="http://docs.ttdt.dsp.vn/images/images/TheoDongSuKien/50-nam-asean.png" width="100%">
+            <span class="icon-play-vid" style="top: 50%;left: 50%;margin-top: -15px;margin-left: -15px;"></span>
+          </a>
+        </div>
+        <div class="item text-center">
+          <a href="https://www.youtube.com/watch?v=hVdTQWASliE">
+            <img class="news-image" src="http://docs.ttdt.dsp.vn/images/images/TheoDongSuKien/50-nam-asean.png" width="100%">
+            <span class="icon-play-vid" style="top: 50%;left: 50%;margin-top: -15px;margin-left: -15px;"></span>
+          </a>
+        </div>
 
-
-      <div class="customNavigation">
-
-        <a id="play" class="btn btn-sm btn-success">Chạy</a>
-        <a id="stop" class="btn btn-sm btn-danger">Dừng</a>
-      </div>
-
+        <div class="item text-center">
+          <a href="https://www.youtube.com/watch?v=hVdTQWASliE">
+            <img class="news-image" src="http://docs.ttdt.dsp.vn/images/images/TheoDongSuKien/50-nam-asean.png" width="100%">
+            <span class="icon-play-vid" style="top: 50%;left: 50%;margin-top: -15px;margin-left: -15px;"></span>
+          </a>
+        </div>
+      </div> --}}
     </div>
-
   </div>
-
-
 </section>
-
-
 <section class="section-d">
   <div class="container">
     <div class="row">
       <h2>TẦM NHÌN, MỤC TIÊU</h2>
-      <p>TT CNTT Hà Tĩnh có nhiệm vụ trọng tâmlà triển khai các dự án, hạng mục trọng điểm về CNTT của tỉnh do Sở TT-TT giao.</p>
+      <p>TT CNTT Hà Tĩnh có nhiệm vụ trọng tâm là triển khai các dự án, hạng mục trọng điểm về CNTT của tỉnh do Sở TT-TT giao.</p>
       <p>1. Làm đầu mối triển khai ứng dụng CNTT cho các Sở, Ban, Ngành, Huyện, Thị, Phường, Xã trên địa bàn tỉnh.</p>
       <p>2. Hỗ trợ cho các doanh nghiệp trong và ngoài tỉnh triển khai ứng dụng CNTT.</p>
       <p>3. Luôn là đơn vị tiên phong trong việc áp dụng công nghệ mới trong triển khai các ứng dụng công nghệ thông tin, chính sách nhân sự mới, hiện đại và tiên tiến.</p>
@@ -223,5 +229,4 @@
   </div>
 </section>
 <!-- <div id = "googleMap" style = "width:100%; height:400px;"></div> -->
-
 @endsection
