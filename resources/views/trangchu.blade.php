@@ -42,7 +42,7 @@
       @else
         <div class="item">
       @endif
-          <img src="./upload/banner/{{ $dv->hinh }}.jpg" alt="">
+          <img src="./upload/banner/{{ $dv->hinh }}.png" alt="">
         </div>
         @php
           $i++;
