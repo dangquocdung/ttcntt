@@ -54,7 +54,7 @@
   <div class="container">
     <div class="row">
       <div class="title">
-        <h2>Tin nội bộ</h2>
+        <h2>Tin tức - Sự kiện</h2>
       </div>
       <div id="owl-tnb" class="owl-carousel">
         @foreach ($tinnoibo as $tnb)
@@ -122,7 +122,7 @@
                 </a>
               </h4>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
                 <p>Thiết kế xây dựng công trình công nghệ thông tin: thiết kế phần mềm và hệ thống phần mềm; thiết kế cơ sở dữ liệu và hệ thống cơ sở dữ liệu; thiết kế hệ thống máy tính (thiết kế, tạo lập trang chủ internet, thiết kế hệ thống máy tính tích hợp với phần cứng, phần mềm và với các công nghệ truyền thông).</p>
                 <p>Nghiên cứu, thiết kế, xây dựng chương trình, đề án và ứng dụng các tiến bộ khoa học, công nghệ về các lĩnh vực trên.</p>
