@@ -8292,24 +8292,24 @@ p {
   text-align: center;
   background: #58cdec;
   color: #000000; }
-  .section-a #owl-diembao .item {
+  .section-a #owl-diembao .item, .section-a #owl-tnb .item {
     text-align: center;
     margin: 2%;
     position: relative;
     overflow: hidden; }
-    .section-a #owl-diembao .item img {
+    .section-a #owl-diembao .item img, .section-a #owl-tnb .item img {
       display: block;
       width: 200px;
       height: 150px;
       float: none; }
-    .section-a #owl-diembao .item .content_news {
+    .section-a #owl-diembao .item .content_news, .section-a #owl-tnb .item .content_news {
       position: absolute;
       bottom: 0;
       background: rgba(55, 145, 245, 0.7) none repeat scroll 0 0;
       height: 60px;
       width: 200px;
       transition: all 500ms ease 0s; }
-    .section-a #owl-diembao .item:hover .content_news {
+    .section-a #owl-diembao .item:hover .content_news, .section-a #owl-tnb .item:hover .content_news {
       height: 60%; }
 
 .section-b {
