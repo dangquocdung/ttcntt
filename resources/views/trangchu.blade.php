@@ -59,7 +59,7 @@
       <div id="owl-tnb" class="owl-carousel">
         @foreach ($tinnoibo as $tnb)
           <div class="item">
-            <a href="/tin-tuc/{{$tnb->id}}" target="_blank"><img src="upload/tintuc/{{$tnb->urlhinh}}" alt=""></a>
+            <a href="/tin-tuc/{{$tnb->id}}" target="_blank"><img src="upload/tintuc/{{$tnb->urlhinh}}" alt="" class="img-responsive"></a>
             <div class="content_news">
               <a href="/tin-tuc/{{$tnb->id}}" target="_blank">{{$tnb->tieude}}</a>
             </div>

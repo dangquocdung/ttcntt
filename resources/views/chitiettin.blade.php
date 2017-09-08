@@ -22,7 +22,7 @@
 
             <h2>{{$tin->tieude}}</h2>
 
-            <img src="upload/tintuc/{{$tin->urlhinh}}" alt="">
+            <img src="upload/tintuc/{{$tin->urlhinh}}" alt="" class="img-responsive">
             <br>
             <h4>{{$tin->tomtat}}</h4>
 
