@@ -64,8 +64,6 @@ class AdminController extends Controller
       $vanbanall = CongVan::orderby('id','desc')->limit(5)->get();
       view()->share('vanbanall',$vanbanall);
 
-
-
       $sanpham = SanPham::orderby('id','asc')->get();
       view()->share('sanpham',$sanpham);
 

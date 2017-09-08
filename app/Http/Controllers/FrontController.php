@@ -62,9 +62,9 @@ class FrontController extends Controller
 
     $diembao = DiemBao::orderby('pubDate','desc')->get();
     $sanpham = SanPham::orderby('id','asc')->get();
+    $tinnoibo = TinTuc::orderby('id','desc')->get();
 
-
-    return view('trangchu',compact('dichvu','sanpham','diembao'));
+    return view('trangchu',compact('dichvu','sanpham','diembao','tinnoibo'));
   }
 
 

@@ -50,7 +50,26 @@
   </a>
   </div>
 </div>
-<section class="section-c">
+<section class="section-a">
+  <div class="container">
+    <div class="row">
+      <div class="title">
+        <h2>Tin nội bộ</h2>
+      </div>
+      <div id="owl-diembao" class="owl-carousel">
+        @foreach ($tinnoibo as $tnb)
+          <div class="item">
+            <a href="/tin-tuc/{{$tnb->id}}" target="_blank"><img src="upload/tintuc/{{$tnb->urlhinh}}" alt=""></a>
+            <div class="content_news">
+              <a href="/tin-tuc/{{$tnb->id}}" target="_blank">{{$tnb->tieude}}</a>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </div>
+</section>
+{{-- <section class="section-c">
   <div class="container">
     <div class="row">
       <div class="title">
@@ -66,7 +85,7 @@
       <br>
     </div>
   </div>
-</section>
+</section> --}}
 <section class="section-b">
   <div class="container">
     <div class="row">
@@ -216,6 +235,7 @@
     </div>
   </div>
 </section>
+
 <section class="section-d">
   <div class="container">
     <div class="row">
