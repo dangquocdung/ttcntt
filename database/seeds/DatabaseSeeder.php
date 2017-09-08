@@ -50,20 +50,20 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->delete();
         DB::table('users')->insert([
-              ['name' => 'Dương Văn Tuấn', 'email' => 'duongtuanht81@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'Giám Đốc', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Nguyễn Thanh Lâm', 'email' => 'ntlamht@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'P.Giám Đốc', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Đặng Quốc Dũng', 'email' => 'dungthinhvn@gmail.com', 'password'=>bcrypt('s01awind5'), 'chucvu'=>'P. Giám Đốc', 'dienthoai'=>'039.3854474', 'didong'=>'', 'quyen'=>'1'],
-              ['name' => 'Lê Văn Đương', 'email' => 'leduonghtiac@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Nguyễn Thị Vân', 'email' => 'vdb020185@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Hoàng Dương Liễu', 'email' => 'lieuhd282@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Nguyễn Tiến Dũng', 'email' => 'tiendunght29@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Phạm Thị Thanh Hải', 'email' => 'gdha1606@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Nguyễn Mạnh Hoàng', 'email' => 'hoangchungsg@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Trần Xuân Sơn', 'email' => 'xuansonpc@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Lê Viết Kiên', 'email' => 'kientechnology@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Đậu Minh Phúc', 'email' => 'phuc4t.ht@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Phạm Thị Phương', 'email' => 'phamthiphuong11@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
-              ['name' => 'Chu Bá Dũng', 'email' => 'dung0951070225@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0']
+              // ['name' => 'Dương Văn Tuấn', 'email' => 'duongtuanht81@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'Giám Đốc', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Nguyễn Thanh Lâm', 'email' => 'ntlamht@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'P.Giám Đốc', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              ['name' => 'Đặng Quốc Dũng', 'email' => 'dungthinhvn@gmail.com', 'password'=>bcrypt('s01awind5')]
+              // ['name' => 'Lê Văn Đương', 'email' => 'leduonghtiac@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Nguyễn Thị Vân', 'email' => 'vdb020185@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Hoàng Dương Liễu', 'email' => 'lieuhd282@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Nguyễn Tiến Dũng', 'email' => 'tiendunght29@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Phạm Thị Thanh Hải', 'email' => 'gdha1606@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Nguyễn Mạnh Hoàng', 'email' => 'hoangchungsg@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Trần Xuân Sơn', 'email' => 'xuansonpc@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Lê Viết Kiên', 'email' => 'kientechnology@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Đậu Minh Phúc', 'email' => 'phuc4t.ht@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Phạm Thị Phương', 'email' => 'phamthiphuong11@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0'],
+              // ['name' => 'Chu Bá Dũng', 'email' => 'dung0951070225@gmail.com', 'password'=>bcrypt('123456@'), 'chucvu'=>'0', 'dienthoai'=>'', 'didong'=>'', 'quyen'=>'0']
 
             ]);
     }
