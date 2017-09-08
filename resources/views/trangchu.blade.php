@@ -56,7 +56,7 @@
       <div class="title">
         <h2>Tin nội bộ</h2>
       </div>
-      <div id="owl-diembao" class="owl-carousel">
+      <div id="owl-tnb" class="owl-carousel">
         @foreach ($tinnoibo as $tnb)
           <div class="item">
             <a href="/tin-tuc/{{$tnb->id}}" target="_blank"><img src="upload/tintuc/{{$tnb->urlhinh}}" alt=""></a>
